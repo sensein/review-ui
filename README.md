@@ -6,13 +6,21 @@ A web app for scientists to review LLM-extracted claims and evaluations from res
 
 Requires Python 3.12+ and [uv](https://docs.astral.sh/uv/).
 
-```bash
-uv venv && source .venv/bin/activate
-uv sync
-python main.py
-```
+1. Clone the repository and `cd` into it.
 
-Open http://127.0.0.1:8000 in your browser.
+2. Install dependencies:
+   ```bash
+   uv sync
+   ```
+
+3. Start the server:
+   ```bash
+   uv run python main.py
+   ```
+
+4. Open http://127.0.0.1:8000 in your browser.
+
+The `papers/` directory should contain paper data (XML source files, `claims.json`, `eval_llm.json`) for the UI to display. See the directory structure below for the expected layout.
 
 ## How It Works
 
@@ -31,18 +39,23 @@ The review UI provides two views:
 Reviews are saved to a `reviews/` subdirectory within each paper (or run) directory as `review_{reviewer_name}.json`, so multiple reviewers can work on the same paper independently.
 
 ```
-papers/2025.12.02.691876/
-├── *.source.xml
-├── claims.json
-├── eval_llm.json
-├── reviews/
-│   ├── review_Dr_Smith.json
-│   └── review_Jane_Doe.json
-└── 20260206/
-    ├── claims.json
-    ├── eval_llm.json
-    └── reviews/
-        └── review_Dr_Smith.json
+papers/
+├── 2025.12.02.691876/              # Paper directory (bioRxiv DOI suffix)
+│   ├── 2025.12.02.691876.source.xml  # GROBID-parsed TEI/JATS XML
+│   └── 20260206/                     # Run directory (dated)
+│       ├── claims.json               # Extracted claims
+│       ├── eval_llm.json             # LLM evaluation results
+│       ├── metrics_extract.json      # Extraction metrics
+│       ├── metrics_eval_openeval.json # Evaluation metrics
+│       └── reviews/                  # Created automatically on first save
+│           ├── review_Dr_Smith.json
+│           └── review_Jane_Doe.json
+└── nikbakht_diamond/               # Paper directory (custom name)
+    ├── elife-66429-v2.pdf.tei.xml
+    └── 20260316_anthropic/
+        ├── claims.json
+        ├── eval_llm.json
+        └── reviews/
 ```
 
 ## Tech Stack
