@@ -4,14 +4,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-An automated scientific paper reviewer tool ("OpenEval") that extracts claims from research papers and evaluates them using LLMs. The project processes papers from bioRxiv/medRxiv preprint sources, stored as TEI XML (GROBID-parsed), and produces structured JSON outputs.
+An automated scientific paper reviewer tool that extracts claims from research papers and evaluates them using LLMs. The `cllm` CLI tool processes papers from bioRxiv/medRxiv preprint sources, stored as TEI XML (GROBID-parsed), and produces structured JSON outputs. The review web app ("CLLM Review") lets human scientists review and validate the LLM's output.
 
 ## Setup
 
 - Python 3.12, managed with uv (see `pyproject.toml`)
-- Virtual environment: `uv venv && source .venv/bin/activate`
 - Install deps: `uv sync`
-- Run: `python main.py` → starts FastAPI server at http://127.0.0.1:8000
+- Run: `uv run python main.py` → starts FastAPI server at http://127.0.0.1:8000
 
 ## Architecture
 
@@ -23,50 +22,51 @@ The pipeline has three stages, each producing a JSON artifact per paper:
 
 ## Data Layout
 
-Papers live under `papers/`, organized by bioRxiv DOI suffix (e.g., `papers/2025.12.02.691876/`). Each paper directory contains:
-- `*.source.xml` — TEI XML from GROBID parsing of the PDF
-- `claims.json` — Extracted claims
-- `eval_llm.json` — LLM evaluation results
-- `metrics_*.json` — Cost/token tracking
-- Dated subdirectories (e.g., `20260206/`) for versioned runs
+Papers live under `papers/`, organized by bioRxiv DOI suffix or custom name. Each paper directory contains:
+- `*.source.xml` — TEI or JATS XML from GROBID parsing of the PDF
+- Dated subdirectories (e.g., `20260206/`) for versioned runs, each containing:
+  - `claims*.json` — Extracted claims (naming varies: `claims.json`, `claims_20260206.json`, `claim_updates.json`)
+  - `eval_llm*.json` — LLM evaluation results
+  - `metrics_*.json` — Cost/token tracking
+  - `reviews/` — Per-reviewer review files (`review_{name}.json`), created automatically
 
 The CLI tool used is `cllm` (e.g., `cllm extract <xml> -o claims.json`). Models used include Claude Sonnet.
 
 ## Review Web App
 
-A FastAPI web app for scientists to review LLM-extracted claims and evaluations.
-
 ### Tech Stack
 - **Backend**: FastAPI + Jinja2 templates + uvicorn
 - **Frontend**: Vanilla HTML/CSS/JS (no build step)
-- **Storage**: `review.json` files saved alongside paper data
+- **Storage**: Per-reviewer JSON files in `reviews/` subdirectories
 
 ### File Structure
 ```
 app/
 ├── __init__.py
 ├── api.py          # API router — all REST endpoints
-├── models.py       # Pydantic models (Claim, Result, Review, etc.)
-├── papers.py       # Paper discovery, XML title extraction, data I/O
+├── models.py       # Pydantic models (Claim, Result, Review, ClaimReview, etc.)
+├── papers.py       # Paper discovery, XML title extraction, text extraction, data I/O
 └── static/
     ├── style.css
     └── app.js      # All frontend logic (SPA, two views)
 templates/
-└── index.html      # Single-page HTML shell
+└── index.html      # Single-page HTML shell with instructions
 main.py             # FastAPI app entry point + uvicorn
 ```
 
 ### API Endpoints
 ```
-GET  /                                          → Serve index.html
-GET  /api/papers                                → List all reviewable paper/run combos
-GET  /api/papers/{paper_id}/{run_id}/results    → eval_llm.json with claims inlined
-GET  /api/papers/{paper_id}/{run_id}/review     → review.json (404 if none)
-POST /api/papers/{paper_id}/{run_id}/review     → Save/merge review.json
-POST /api/papers/refresh                        → Clear paper cache
+GET  /                                              → Serve index.html
+GET  /api/papers?reviewer=                          → List all reviewable paper/run combos
+GET  /api/papers/{paper_id}/{run_id}/results        → eval_llm.json with claims inlined
+GET  /api/papers/{paper_id}/text                    → Paper text extracted from XML
+GET  /api/papers/{paper_id}/{run_id}/review?reviewer= → Load reviewer's review (404 if none)
+POST /api/papers/{paper_id}/{run_id}/review         → Save/merge review (reviewer name required)
+POST /api/papers/refresh                            → Clear paper cache
 ```
 
-### Paper Discovery
-- Walks `papers/` for directories containing both `claims*.json` and `eval_llm*.json`
-- `run_id="root"` for files at paper top-level; subdir name for dated runs
-- XML title extraction handles both GROBID TEI (`<title level="a" type="main">`) and JATS (`<article-title>`) formats
+### Key Details
+- **Paper discovery**: Walks `papers/` for directories containing both `claims*.json` and `eval_llm*.json`. Uses glob prefix matching to handle varied file naming.
+- **XML title extraction**: Handles both GROBID TEI (`<title level="a" type="main">`) and JATS (`<article-title>`) formats.
+- **Per-reviewer reviews**: Reviews save as `reviews/review_{name}.json`. Reviewer name is required for all save operations. Changing the reviewer name in the UI loads that reviewer's existing review.
+- **Paper text panel**: Extracts readable text from TEI/JATS XML for a "View in paper" side panel with source highlighting.
