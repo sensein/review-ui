@@ -1,0 +1,14 @@
+{
+  "command": "cllm extract elife-66429-v2.pdf.tei.xml -o claims.json",
+  "model": "claude-sonnet-4-5-20250929",
+  "created_at": 1773713706,
+  "input_tokens": 42254,
+  "cached_tokens": 0,
+  "output_tokens": 10733,
+  "total_tokens": 52987,
+  "input_cost": 0.126762,
+  "cached_cost": 0.0,
+  "output_cost": 0.160995,
+  "total_cost": 0.28775700000000004,
+  "processing_time_sec": 150.26508688926697
+}

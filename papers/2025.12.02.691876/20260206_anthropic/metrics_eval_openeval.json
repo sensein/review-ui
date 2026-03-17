@@ -1,0 +1,14 @@
+{
+  "command": "cllm eval papers/2025.12.02.691876/2025.12.02.691876.source.xml -c papers/2025.12.02.691876/claims.json -o papers/2025.12.02.691876/eval_llm.json",
+  "model": "claude-sonnet-4-5-20250929",
+  "created_at": 1770422300,
+  "input_tokens": 129714,
+  "cached_tokens": 0,
+  "output_tokens": 4292,
+  "total_tokens": 134006,
+  "input_cost": 0.389142,
+  "cached_cost": 0.0,
+  "output_cost": 0.06438,
+  "total_cost": 0.453522,
+  "processing_time_sec": 94.97712206840515
+}

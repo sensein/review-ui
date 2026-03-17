@@ -1,0 +1,144 @@
+[
+  {
+    "result_id": "R1",
+    "claim_ids": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C19",
+      "C20",
+      "C21",
+      "C22",
+      "C23",
+      "C24",
+      "C25",
+      "C26",
+      "C27",
+      "C28",
+      "C29",
+      "C30",
+      "C31",
+      "C32",
+      "C33",
+      "C34",
+      "C50",
+      "C51"
+    ],
+    "result": "Long-Evans rats retain substantial visual form discrimination capacity under red light (626 nm and 652 nm), with performance equivalent to white light, challenging the assumption of functional blindness. Performance degrades at 729 nm and approaches chance at infrared wavelengths (854 nm, 930 nm). The visual capacity under red light is attributed to absorption of red light by photoreceptors rather than spectral leakage from LEDs.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C22, C26, C27 demonstrate statistically non-significant differences between red LED and white light performance (p>0.05), while C28 shows significant degradation at 729 nm (p=0.00). Claims C29, C30 confirm chance-level performance at infrared wavelengths. The control experiment (C31-C34) effectively rules out spectral leakage as an explanation by showing that infrared LEDs with higher short-wavelength emission produced chance performance. The experimental design with appropriate controls, statistical testing, and convergent evidence across wavelengths strongly supports the main finding.",
+    "result_type": "MAJOR"
+  },
+  {
+    "result_id": "R2",
+    "claim_ids": [
+      "C8",
+      "C9",
+      "C10",
+      "C11",
+      "C12",
+      "C13",
+      "C14",
+      "C15",
+      "C16",
+      "C17",
+      "C18",
+      "C39",
+      "C40",
+      "C41",
+      "C42"
+    ],
+    "result": "Prior literature establishes that rats are dichromatic with UV and green cones but lack red cones, have rod-dominated retinas, and show poor wavelength discrimination. Recent ERG studies show conflicting results regarding red light sensitivity, with one study finding no response above 620 nm and another finding significant responses to far-red light.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C8-C18 and C39-C42 accurately summarize established knowledge from cited literature. The authors correctly identify the contradiction between Rocha et al. 2016 (C16-C17) showing no ERG response above 620 nm and Niklaus et al. 2020 (C18, C42) showing significant responses. This sets up the knowledge gap (C43-C44) that motivates the behavioral study. The citations appear appropriate and the characterization of prior work is accurate.",
+    "result_type": "MINOR"
+  },
+  {
+    "result_id": "R3",
+    "claim_ids": [
+      "C35",
+      "C36",
+      "C37",
+      "C38"
+    ],
+    "result": "Red light illumination is widely used in rodent behavioral research under the assumption that it creates functionally dark conditions while allowing experimenter observation, including in place-cell studies, developmental studies, and animal husbandry settings.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C35-C38 are well-supported by extensive citations to published research across multiple domains (behavioral neuroscience, spatial navigation, developmental neuroscience, animal husbandry). The characterization of the common practice and underlying assumption is accurate and establishes the practical significance of the study's findings.",
+    "result_type": "MINOR"
+  },
+  {
+    "result_id": "R4",
+    "claim_ids": [
+      "C43",
+      "C44",
+      "C45",
+      "C46",
+      "C47",
+      "C48",
+      "C49"
+    ],
+    "result": "The gap between physiological photoreceptor activation and behaviorally meaningful visual signals under red light had not been established. The study does not directly measure photoreceptor sensitivity but infers that mechanisms must exist to convert minimal receptor activation into functional signals. Two-photon activation is considered unlikely given the low light intensities used.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C43-C44 correctly identify the knowledge gap motivating the study. C46 provides relevant supporting evidence from optogenetics. C47 is a reasonable inference from the behavioral results, though speculative about mechanisms. C48-C49 appropriately dismiss two-photon activation based on intensity comparisons with cited work. The reasoning is sound though the mechanistic speculation (C47) remains untested.",
+    "result_type": "MINOR"
+  },
+  {
+    "result_id": "R5",
+    "claim_ids": [
+      "C52",
+      "C53"
+    ],
+    "result": "Illumination at 850 nm provides optimal conditions for vision-excluded behavioral studies, as it does not support visual form capacity but remains detectable by standard video cameras, allowing behavioral documentation without providing visual cues to the animal.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C52-C53 represent a practical recommendation directly supported by the experimental findings (C29, C51). The 854 nm condition showed chance-level performance (53\u00b12%, p=0.257 vs chance), confirming lack of visual capacity, while remaining within CMOS/CCD sensitivity ranges. This is a logical and well-supported practical application of the results.",
+    "result_type": "MAJOR"
+  },
+  {
+    "result_id": "R6",
+    "claim_ids": [
+      "C54",
+      "C55",
+      "C56",
+      "C57",
+      "C58",
+      "C59",
+      "C60"
+    ],
+    "result": "Rats are increasingly used as models for visual perception research, demonstrating sophisticated visual capacities including view-invariant object recognition through accessible neural circuits. The present study extends understanding of rat visual capabilities and has implications for experimental design and animal welfare.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C54-C58 accurately characterize the state of rodent vision research with appropriate citations. C59-C60 appropriately contextualize the study's contribution. These claims provide valid scientific context and implications, though they are primarily framing rather than novel findings.",
+    "result_type": "MINOR"
+  },
+  {
+    "result_id": "R7",
+    "claim_ids": [
+      "C61",
+      "C62",
+      "C63",
+      "C64",
+      "C65"
+    ],
+    "result": "The study used four male Long-Evans rats, 8 weeks old at arrival, water-deprived during testing sessions, rewarded with diluted pear juice, under protocols approved by institutional ethics committees.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C61-C65 provide standard methodological details about subjects and procedures. The small sample size (N=4) is a limitation but individual performance curves are shown. Water deprivation for motivation is standard practice. Ethical approval is documented. These are adequately described methodological details.",
+    "result_type": "MINOR"
+  }
+]

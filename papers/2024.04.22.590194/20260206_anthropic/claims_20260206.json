@@ -1,0 +1,1861 @@
+[
+  {
+    "claim_id": "C1",
+    "claim": "Single cell/nucleus RNA sequencing (scRNA-seq) technologies quantitatively describe cell transcriptional phenotypes.",
+    "claim_type": "EXPLICIT",
+    "source": "The use of single cell/nucleus RNA sequencing (scRNA-seq) technologies that quantitively describe cell transcriptional phenotypes is revolutionizing our understanding of cell biology, leading to new insights in cell type identification, disease mechanisms, and drug development.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a general statement about scRNA-seq technology that is supported by established scientific knowledge in the field.",
+    "evidence_type": [
+      "KNOWLEDGE"
+    ]
+  },
+  {
+    "claim_id": "C2",
+    "claim": "scRNA-seq technologies are revolutionizing understanding of cell biology, leading to new insights in cell type identification, disease mechanisms, and drug development.",
+    "claim_type": "EXPLICIT",
+    "source": "The use of single cell/nucleus RNA sequencing (scRNA-seq) technologies that quantitively describe cell transcriptional phenotypes is revolutionizing our understanding of cell biology, leading to new insights in cell type identification, disease mechanisms, and drug development.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This claim reflects the general impact of scRNA-seq technology based on established scientific consensus.",
+    "evidence_type": [
+      "KNOWLEDGE"
+    ]
+  },
+  {
+    "claim_id": "C3",
+    "claim": "The tremendous growth in scRNA-seq data has posed new challenges in efficiently characterizing data-driven cell types.",
+    "claim_type": "EXPLICIT",
+    "source": "The tremendous growth in scRNA-seq data has posed new challenges in efficiently characterizing data-driven cell types and identifying quantifiable marker genes for cell type classification.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is an inference based on the observed growth in scRNA-seq data and the computational challenges that arise.",
+    "evidence_type": [
+      "INFERENCE"
+    ]
+  },
+  {
+    "claim_id": "C4",
+    "claim": "The tremendous growth in scRNA-seq data has posed new challenges in identifying quantifiable marker genes for cell type classification.",
+    "claim_type": "EXPLICIT",
+    "source": "The tremendous growth in scRNA-seq data has posed new challenges in efficiently characterizing data-driven cell types and identifying quantifiable marker genes for cell type classification.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is an inference based on the observed growth in scRNA-seq data and the computational challenges that arise.",
+    "evidence_type": [
+      "INFERENCE"
+    ]
+  },
+  {
+    "claim_id": "C5",
+    "claim": "Machine learning and explainable artificial intelligence have emerged as effective approaches to study large-scale scRNA-seq data.",
+    "claim_type": "EXPLICIT",
+    "source": "The use of machine learning and explainable artificial intelligence has emerged as an effective approach to study large-scale scRNA-seq data.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is based on established knowledge and trends in computational biology.",
+    "evidence_type": [
+      "KNOWLEDGE"
+    ]
+  },
+  {
+    "claim_id": "C6",
+    "claim": "NS-Forest is a random forest machine learning-based algorithm.",
+    "claim_type": "EXPLICIT",
+    "source": "NS-Forest is a random forest machine learning-based algorithm that aims to provide a scalable data-driven solution to identify minimum combinations of necessary and sufficient marker genes that capture cell type identity with maximum classification accuracy.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a direct description of the NS-Forest algorithm presented in the manuscript.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C7",
+    "claim": "NS-Forest aims to identify minimum combinations of necessary and sufficient marker genes that capture cell type identity with maximum classification accuracy.",
+    "claim_type": "EXPLICIT",
+    "source": "NS-Forest is a random forest machine learning-based algorithm that aims to provide a scalable data-driven solution to identify minimum combinations of necessary and sufficient marker genes that capture cell type identity with maximum classification accuracy.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This describes the design goal of the NS-Forest algorithm as stated by the authors.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C8",
+    "claim": "NS-Forest version 4.0 has a companion Python package available at https://github.com/JCVenterInstitute/NSForest.",
+    "claim_type": "EXPLICIT",
+    "source": "Here, we describe the latest version, NS-Forest version 4.0 and its companion Python package (https://github.com/JCVenterInstitute/NSForest), with several enhancements to select marker gene combinations that exhibit highly selective expression patterns among closely related cell types and more efficiently perform marker gene selection for large-scale scRNA-seq data atlases with millions of cells.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a factual statement about the availability of the software package.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C9",
+    "claim": "NS-Forest v4.0 has enhancements to select marker gene combinations that exhibit highly selective expression patterns among closely related cell types.",
+    "claim_type": "EXPLICIT",
+    "source": "Here, we describe the latest version, NS-Forest version 4.0 and its companion Python package (https://github.com/JCVenterInstitute/NSForest), with several enhancements to select marker gene combinations that exhibit highly selective expression patterns among closely related cell types and more efficiently perform marker gene selection for large-scale scRNA-seq data atlases with millions of cells.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This describes the improvements made in version 4.0 as stated by the authors.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C10",
+    "claim": "NS-Forest v4.0 more efficiently performs marker gene selection for large-scale scRNA-seq data atlases with millions of cells.",
+    "claim_type": "EXPLICIT",
+    "source": "Here, we describe the latest version, NS-Forest version 4.0 and its companion Python package (https://github.com/JCVenterInstitute/NSForest), with several enhancements to select marker gene combinations that exhibit highly selective expression patterns among closely related cell types and more efficiently perform marker gene selection for large-scale scRNA-seq data atlases with millions of cells.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This describes the improvements made in version 4.0 as stated by the authors.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C11",
+    "claim": "NS-Forest v4.0 can be used to compare the performance of user-defined marker genes with NS-Forest computationally-derived marker genes based on decision tree classifiers.",
+    "claim_type": "EXPLICIT",
+    "source": "By modularizing the final decision tree step, NS-Forest v4.0 can be used to compare the performance of user-defined marker genes with the NS-Forest computationally-derived marker genes based on the decision tree classifiers.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This describes a new feature of NS-Forest v4.0 as stated by the authors.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C12",
+    "claim": "The On-Target Fraction metric ranges from 0 to 1.",
+    "claim_type": "EXPLICIT",
+    "source": "To quantify how well the identified markers exhibit the desired pattern of being exclusively expressed at high levels within their target cell types, we introduce the On-Target Fraction metric that ranges from 0 to 1, with a metric of 1 assigned to markers that are only expressed within their target cell types and not in cells of any other cell types.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a definition of the On-Target Fraction metric provided by the authors.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C13",
+    "claim": "An On-Target Fraction metric of 1 is assigned to markers that are only expressed within their target cell types and not in cells of any other cell types.",
+    "claim_type": "EXPLICIT",
+    "source": "To quantify how well the identified markers exhibit the desired pattern of being exclusively expressed at high levels within their target cell types, we introduce the On-Target Fraction metric that ranges from 0 to 1, with a metric of 1 assigned to markers that are only expressed within their target cell types and not in cells of any other cell types.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a definition of the On-Target Fraction metric provided by the authors.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C14",
+    "claim": "NS-Forest v4.0 outperforms previous versions on its ability to identify markers with higher On-Target Fraction values for closely related cell types.",
+    "claim_type": "EXPLICIT",
+    "source": "NS-Forest v4.0 outperforms previous versions on its ability to identify markers with higher On-Target Fraction values for closely related cell types and outperforms other marker gene selection approaches at classification with significantly higher F-beta scores when applied to datasets from three human organs - brain, kidney, and lung.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a claim about the performance of NS-Forest v4.0 based on the results presented in the manuscript.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C15",
+    "claim": "NS-Forest v4.0 outperforms other marker gene selection approaches at classification with significantly higher F-beta scores when applied to datasets from three human organs - brain, kidney, and lung.",
+    "claim_type": "EXPLICIT",
+    "source": "NS-Forest v4.0 outperforms previous versions on its ability to identify markers with higher On-Target Fraction values for closely related cell types and outperforms other marker gene selection approaches at classification with significantly higher F-beta scores when applied to datasets from three human organs - brain, kidney, and lung.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a claim about the performance of NS-Forest v4.0 based on the results presented in the manuscript.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C16",
+    "claim": "Cell types can be defined as distinct cell phenotypes that include both canonical cell types and discrete cell states.",
+    "claim_type": "EXPLICIT",
+    "source": "Cell types can be defined as distinct cell phenotypes that include both canonical cell types and discrete cell states (Bakken et al., 2017).",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This definition is supported by a citation to Bakken et al., 2017.",
+    "evidence_type": [
+      "CITATION"
+    ]
+  },
+  {
+    "claim_id": "C17",
+    "claim": "The Human Cell Atlas (HCA) is an effort to define and categorize cell types using advanced single cell technologies.",
+    "claim_type": "EXPLICIT",
+    "source": "Efforts to define and categorize these cell types using advanced single cell technologies have been ongoing over the past decade, including the Human Cell Atlas (HCA) (Regev et al., 2017), the NIH Human BioMolecular Atlas Program (HuBMAP) (HuBMAP Consortium, 2019), and the NIH BRAIN Initiative (Mott et al., 2018).",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is supported by a citation to Regev et al., 2017.",
+    "evidence_type": [
+      "CITATION"
+    ]
+  },
+  {
+    "claim_id": "C18",
+    "claim": "The NIH Human BioMolecular Atlas Program (HuBMAP) is an effort to define and categorize cell types using advanced single cell technologies.",
+    "claim_type": "EXPLICIT",
+    "source": "Efforts to define and categorize these cell types using advanced single cell technologies have been ongoing over the past decade, including the Human Cell Atlas (HCA) (Regev et al., 2017), the NIH Human BioMolecular Atlas Program (HuBMAP) (HuBMAP Consortium, 2019), and the NIH BRAIN Initiative (Mott et al., 2018).",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is supported by a citation to HuBMAP Consortium, 2019.",
+    "evidence_type": [
+      "CITATION"
+    ]
+  },
+  {
+    "claim_id": "C19",
+    "claim": "The NIH BRAIN Initiative is an effort to define and categorize cell types using advanced single cell technologies.",
+    "claim_type": "EXPLICIT",
+    "source": "Efforts to define and categorize these cell types using advanced single cell technologies have been ongoing over the past decade, including the Human Cell Atlas (HCA) (Regev et al., 2017), the NIH Human BioMolecular Atlas Program (HuBMAP) (HuBMAP Consortium, 2019), and the NIH BRAIN Initiative (Mott et al., 2018).",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is supported by a citation to Mott et al., 2018.",
+    "evidence_type": [
+      "CITATION"
+    ]
+  },
+  {
+    "claim_id": "C20",
+    "claim": "An early BRAIN Initiative study of the middle temporal gyrus (MTG) region in the human brain identified 75 distinct brain cell types with a dataset of approximately 16,000 nuclei.",
+    "claim_type": "EXPLICIT",
+    "source": "For example, an early BRAIN Initiative study of the middle temporal gyrus (MTG) region in the human brain identified 75 distinct brain cell types with a dataset of approximately 16,000 nuclei (Hodge et al., 2019).",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is supported by a citation to Hodge et al., 2019.",
+    "evidence_type": [
+      "CITATION"
+    ]
+  },
+  {
+    "claim_id": "C21",
+    "claim": "A recent study on the transcriptomic diversity across the whole human brain revealed 461 cell type clusters and 3313 subclusters, with a final dataset comprised of more than three million cells.",
+    "claim_type": "EXPLICIT",
+    "source": "A recent study on the transcriptomic diversity across the whole human brain revealed 461 cell type clusters and 3313 subclusters, with a final dataset comprised of more than three million cells (Siletti et al., 2023).",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is supported by a citation to Siletti et al., 2023.",
+    "evidence_type": [
+      "CITATION"
+    ]
+  },
+  {
+    "claim_id": "C22",
+    "claim": "The HuBMAP consortium covers the kidney.",
+    "claim_type": "EXPLICIT",
+    "source": "The HuBMAP consortium covers other major human organs, including the kidney (Lake et al., 2023) and lung (Duong, 2024), resulting in a collection of 898 cell types with approximately 280 million cells across multi-omics assays (Jain et al., 2023).",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is supported by a citation to Lake et al., 2023.",
+    "evidence_type": [
+      "CITATION"
+    ]
+  },
+  {
+    "claim_id": "C23",
+    "claim": "The HuBMAP consortium covers the lung.",
+    "claim_type": "EXPLICIT",
+    "source": "The HuBMAP consortium covers other major human organs, including the kidney (Lake et al., 2023) and lung (Duong, 2024), resulting in a collection of 898 cell types with approximately 280 million cells across multi-omics assays (Jain et al., 2023).",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is supported by a citation to Duong, 2024.",
+    "evidence_type": [
+      "CITATION"
+    ]
+  },
+  {
+    "claim_id": "C24",
+    "claim": "The HuBMAP consortium has resulted in a collection of 898 cell types with approximately 280 million cells across multi-omics assays.",
+    "claim_type": "EXPLICIT",
+    "source": "The HuBMAP consortium covers other major human organs, including the kidney (Lake et al., 2023) and lung (Duong, 2024), resulting in a collection of 898 cell types with approximately 280 million cells across multi-omics assays (Jain et al., 2023).",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is supported by a citation to Jain et al., 2023.",
+    "evidence_type": [
+      "CITATION"
+    ]
+  },
+  {
+    "claim_id": "C25",
+    "claim": "There is a lack of a scalable and generalizable marker gene selection method that can systematically characterize newly identified cell types for downstream use cases.",
+    "claim_type": "EXPLICIT",
+    "source": "While the number of cell types being identified in these scRNA-seq data atlases is increasing rapidly, there is a lack of a scalable and generalizable marker gene selection method that can systematically characterize these newly identified cell types for downstream use cases, such as for designing spatial transcriptomics gene panels and semantic representation of cell types in biomedical ontologies.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is an inference based on the current state of the field as described by the authors.",
+    "evidence_type": [
+      "INFERENCE"
+    ]
+  },
+  {
+    "claim_id": "C26",
+    "claim": "Two main approaches have been used to identify cell type-specific marker genes from scRNA-seq data: differential expression (DE) analysis, and manual curation of gene lists using prior domain knowledge.",
+    "claim_type": "EXPLICIT",
+    "source": "Historically, two main approaches have been used to identify cell type-specific marker genes from scRNA-seq data: differential expression (DE) analysis, and manual curation of gene lists using prior domain knowledge.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is based on established knowledge of methods used in the field.",
+    "evidence_type": [
+      "KNOWLEDGE"
+    ]
+  },
+  {
+    "claim_id": "C27",
+    "claim": "The HuBMAP consortium ASCT+B tables use markers found in the scientific literature curated by domain experts for most of the organs in HuBMAP.",
+    "claim_type": "EXPLICIT",
+    "source": "For example, the anatomical structures (AS), cell types (CT), and biomarkers (B) ASCT+B tables (B\u00f6rner et al., 2021) provided by the HuBMAP consortium use markers found in the scientific literature curated by domain experts for most of the organs in HuBMAP (Borner et al., 2024).",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is supported by citations to B\u00f6rner et al., 2021 and Borner et al., 2024.",
+    "evidence_type": [
+      "CITATION"
+    ]
+  },
+  {
+    "claim_id": "C28",
+    "claim": "Manual curation of marker genes from scientific literature is not feasible for large-scale datasets.",
+    "claim_type": "EXPLICIT",
+    "source": "This approach is not only infeasible for large-scale datasets, but also leads to potentially incomplete (missing markers) or redundant (markers of parent cell type being used for child cell type) information for the most granular cell types.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is an inference based on the limitations of manual curation approaches.",
+    "evidence_type": [
+      "INFERENCE"
+    ]
+  },
+  {
+    "claim_id": "C29",
+    "claim": "Manual curation of marker genes from scientific literature leads to potentially incomplete or redundant information for the most granular cell types.",
+    "claim_type": "EXPLICIT",
+    "source": "This approach is not only infeasible for large-scale datasets, but also leads to potentially incomplete (missing markers) or redundant (markers of parent cell type being used for child cell type) information for the most granular cell types.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is an inference based on the limitations of manual curation approaches.",
+    "evidence_type": [
+      "INFERENCE"
+    ]
+  },
+  {
+    "claim_id": "C30",
+    "claim": "DE genes selected by modified Wilcoxon rank sum or related statistical tests are used in the Azimuth web application.",
+    "claim_type": "EXPLICIT",
+    "source": "Alternatively, DE genes selected by modified Wilcoxon rank sum (performed using the \"presto\" R package) or related statistical tests are used in the popular Azimuth (Hao et al., 2021) web application for those cell types represented in the references.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is supported by a citation to Hao et al., 2021.",
+    "evidence_type": [
+      "CITATION"
+    ]
+  },
+  {
+    "claim_id": "C31",
+    "claim": "The DE approach selects genes based on gene expression distributions and adjusted p-values, which does not directly test the ability to classify cell types.",
+    "claim_type": "EXPLICIT",
+    "source": "The DE approach selects genes based on the gene expression distributions and the adjusted p-values produced by a chosen testing method, which does not directly test the ability to classify cell types.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is an inference about the limitations of the DE approach.",
+    "evidence_type": [
+      "INFERENCE"
+    ]
+  },
+  {
+    "claim_id": "C32",
+    "claim": "Cell type classification marker genes must meet four criteria: 1) each gene is expressed in the majority of cells of a given type, 2) each gene displays a binary expression pattern, 3) gene combinations are optimized for cell type classification, and 4) combinations can be reproduced by a generalizable method.",
+    "claim_type": "EXPLICIT",
+    "source": "Therefore, we formally introduce the notion of \"cell type classification marker gene combinations\" for scRNA-seq data, which must meet the following criteria: 1) each gene is expressed in the majority of cells of a given type, 2) each gene displays a \"binary expression pattern\" (i.e., highly expressed in the target cell type and little to no expression in other cell types), 3) gene combinations are optimized for cell type classification using metrics that quantify classification confidence, and 4) combinations can be reproduced by a generalizable method.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a definition provided by the authors for cell type classification marker genes.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C33",
+    "claim": "NS-Forest uses the random forest machine learning algorithm to select informative gene features (or markers) that are optimized for cell type classification.",
+    "claim_type": "EXPLICIT",
+    "source": "NS-Forest uses the random forest machine learning algorithm to select informative gene features (or markers) that are optimized for cell type classification.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This describes the approach used by NS-Forest as stated by the authors.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C34",
+    "claim": "Random forest is a machine learning classification model that is well-known for retaining high explainability.",
+    "claim_type": "EXPLICIT",
+    "source": "Random forest is a machine learning classification model that is well-known for retaining high explainability, which is preferable for biomedical use cases.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is based on established knowledge about random forest algorithms.",
+    "evidence_type": [
+      "KNOWLEDGE"
+    ]
+  },
+  {
+    "claim_id": "C35",
+    "claim": "NS-Forest was first introduced in 2018.",
+    "claim_type": "EXPLICIT",
+    "source": "NS-Forest was first introduced in 2018 as an algorithm that takes in scRNA-seq data and outputs the minimum combination of necessary and sufficient features that capture cell type identity and uniquely characterize a discrete cell phenotype (Bakken et al., 2017).",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a historical fact about the NS-Forest algorithm supported by a citation.",
+    "evidence_type": [
+      "CITATION"
+    ]
+  },
+  {
+    "claim_id": "C36",
+    "claim": "NS-Forest v1.3 was the first publicly released version.",
+    "claim_type": "EXPLICIT",
+    "source": "In NS-Forest v1.3 (Aevermann et al., 2018) (the first publicly released version), the method first produces a list of top gene features (marker candidates) for each cell type ranked by Gini index calculated in the random forest model.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a historical fact about the NS-Forest algorithm supported by a citation.",
+    "evidence_type": [
+      "CITATION"
+    ]
+  },
+  {
+    "claim_id": "C37",
+    "claim": "NS-Forest v1.3 produces a list of top gene features for each cell type ranked by Gini index calculated in the random forest model.",
+    "claim_type": "EXPLICIT",
+    "source": "In NS-Forest v1.3 (Aevermann et al., 2018) (the first publicly released version), the method first produces a list of top gene features (marker candidates) for each cell type ranked by Gini index calculated in the random forest model.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This describes the methodology of NS-Forest v1.3 as stated by the authors.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C38",
+    "claim": "In NS-Forest v1.3, the median gene expression value of each potential marker within the target cell type is calculated as the expression threshold.",
+    "claim_type": "EXPLICIT",
+    "source": "The median gene expression value of each potential marker within the target cell type is calculated as the expression threshold to determine the number of true/false positives/negatives for each marker candidate in each cell type.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This describes the methodology of NS-Forest v1.3 as stated by the authors.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C39",
+    "claim": "In NS-Forest v1.3, the minimum set of markers for each cell type is determined by evaluating the unweighted F1-score following the stepwise addition of each of the ranked genes.",
+    "claim_type": "EXPLICIT",
+    "source": "Finally, the minimum set of markers for each cell type is determined by evaluating the unweighted F1-score following the stepwise addition of each of the ranked genes for each cell type.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This describes the methodology of NS-Forest v1.3 as stated by the authors.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C40",
+    "claim": "NS-Forest v2.0 was developed in 2021.",
+    "claim_type": "EXPLICIT",
+    "source": "NS-Forest v2.0 (Aevermann et al., 2021) was developed in 2021, and introduced the concept of the Binary Expression Score, a metric used to quantify how well a marker gene exhibits a \"binary expression pattern\" in which the marker gene is expressed at high levels in the majority of cells of the target cell type and not in cells of other cell types.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a historical fact about the NS-Forest algorithm supported by a citation.",
+    "evidence_type": [
+      "CITATION"
+    ]
+  },
+  {
+    "claim_id": "C41",
+    "claim": "NS-Forest v2.0 introduced the concept of the Binary Expression Score.",
+    "claim_type": "EXPLICIT",
+    "source": "NS-Forest v2.0 (Aevermann et al., 2021) was developed in 2021, and introduced the concept of the Binary Expression Score, a metric used to quantify how well a marker gene exhibits a \"binary expression pattern\" in which the marker gene is expressed at high levels in the majority of cells of the target cell type and not in cells of other cell types.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This describes a feature of NS-Forest v2.0 as stated by the authors.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C42",
+    "claim": "NS-Forest v2.0 uses Binary Expression Score as a post random forest ranking step to preferentially select genes with the desired binary expression pattern.",
+    "claim_type": "EXPLICIT",
+    "source": "Version 2.0 uses Binary Expression Score as a post random forest ranking step to preferentially select genes with the desired binary expression pattern, in addition to filtering out genes with negative expression levels, after the initial feature selection process from the random forest classifier.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This describes the methodology of NS-Forest v2.0 as stated by the authors.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C43",
+    "claim": "NS-Forest v2.0 builds a one-versus-all decision tree for each marker candidate to derive the optimal expression level for classification.",
+    "claim_type": "EXPLICIT",
+    "source": "Instead of simply using each gene's median expression value within the target cluster to determine its expression threshold, version 2.0 builds a one-versus-all decision tree for each marker candidate to derive the optimal expression level for classification.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This describes the methodology of NS-Forest v2.0 as stated by the authors.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C44",
+    "claim": "In NS-Forest v2.0, the F-beta score is calculated for all possible combinations of the top-ranked, most binary-expressed marker candidates to identify the best combination with the maximum F-beta score.",
+    "claim_type": "EXPLICIT",
+    "source": "Finally, the F-beta score is calculated for all possible combinations of the top-ranked, most binary-expressed marker candidates in order to identify the best combination of markers with the maximum F-beta score.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This describes the methodology of NS-Forest v2.0 as stated by the authors.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C45",
+    "claim": "The F-beta score is the weighted harmonic mean of precision and recall.",
+    "claim_type": "EXPLICIT",
+    "source": "The F-beta score is different from the F1 score in that it is the weighted harmonic mean of the precision and recall (instead of just the harmonic mean), with the beta parameter weight adjustment allowing for emphasis of either precision or recall.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a definition of the F-beta score based on established knowledge in machine learning.",
+    "evidence_type": [
+      "KNOWLEDGE"
+    ]
+  },
+  {
+    "claim_id": "C46",
+    "claim": "In NS-Forest v2.0 and all following versions, beta is set to 0.5 by default to weight precision higher than recall.",
+    "claim_type": "EXPLICIT",
+    "source": "In version 2.0 and all following versions, beta is set to 0.5 by default to weight precision higher than recall, to control for excess false negative values introduced by the dropout technical artifact in scRNA-seq experiments.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This describes a parameter setting in NS-Forest as stated by the authors.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C47",
+    "claim": "NS-Forest v3.9 is algorithmically very similar to version 2.0.",
+    "claim_type": "EXPLICIT",
+    "source": "NS-Forest v3.9 is algorithmically very similar to version 2.0, and mainly differs by the format of the data used as input to the algorithm.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This describes the relationship between NS-Forest versions as stated by the authors.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C48",
+    "claim": "NS-Forest v3.9 takes the annotated data (anndata) object in the .h5ad file format as input.",
+    "claim_type": "EXPLICIT",
+    "source": "Instead of the simple cell-by-gene expression matrix, where each entry contains the log-transformed or normalized expression level of each gene in each cell along with the cluster labels, version 3.9 takes the annotated data (anndata) (Wolf et al., 2018) object in the .h5ad file format as input.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This describes the input format for NS-Forest v3.9 as stated by the authors.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C49",
+    "claim": "NS-Forest v3.9 provides calculation of the Positive Predictive Value (PPV) metric for quantifying classification performance.",
+    "claim_type": "EXPLICIT",
+    "source": "Version 3.9 also provides calculation of the Positive Predictive Value (PPV) metric (precision) for quantifying the classification performance of the algorithm in addition to the F-beta score, emphasizing the pragmatic importance of the predicted positives in many of the applications.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This describes a feature of NS-Forest v3.9 as stated by the authors.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C50",
+    "claim": "One observed weakness in NS-Forest versions 2.0 and 3.9 was lower performance in distinguishing between closely-related cell types with similar transcriptional profiles.",
+    "claim_type": "EXPLICIT",
+    "source": "One of the observed lingering weaknesses in versions 2.0 and 3.9 was the lower performance of NS-Forest marker genes in distinguishing between closely-related cell types with similar transcriptional profiles.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is an observation based on the performance evaluation of previous NS-Forest versions.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C51",
+    "claim": "In the human brain MTG dataset, there exist several closely-related cell type groups within the VIP, PVALB, and L4 neuronal cell subclasses.",
+    "claim_type": "EXPLICIT",
+    "source": "In the human brain middle temporal gyrus (MTG) dataset (Hodge et al., 2019) that was used to develop previous versions of NS-Forest, there exist several of these closely-related cell type groups, especially within the VIP, PVALB, and L4 neuronal cell subclasses (see Results section).",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is an observation about the MTG dataset supported by a citation.",
+    "evidence_type": [
+      "CITATION",
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C52",
+    "claim": "NS-Forest v4.0 adds an enhanced feature selection step to improve discrimination between similar cell types without sacrificing overall classification performance.",
+    "claim_type": "EXPLICIT",
+    "source": "Here, we describe NS-Forest v4.0, which adds an enhanced feature selection step to improve discrimination between similar cell types without sacrificing the overall classification performance.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This describes the main improvement in NS-Forest v4.0 as stated by the authors.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C53",
+    "claim": "The BinaryFirst step in NS-Forest v4.0 enriches for candidate genes that exhibit the binary expression pattern as a feature selection approach prior to the random forest classification step.",
+    "claim_type": "EXPLICIT",
+    "source": "The BinaryFirst strategy effectively reduces the complexity of the input feature set for the random forest classifier, allowing for the preferential selection of informative binary markers during the iterative random forest process and thus resulting in a more distinct set of marker genes.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This describes the BinaryFirst strategy in NS-Forest v4.0 as stated by the authors.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C54",
+    "claim": "The BinaryFirst strategy effectively reduces the complexity of the input feature set for the random forest classifier.",
+    "claim_type": "EXPLICIT",
+    "source": "The BinaryFirst strategy effectively reduces the complexity of the input feature set for the random forest classifier, allowing for the preferential selection of informative binary markers during the iterative random forest process and thus resulting in a more distinct set of marker genes.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This describes the effect of the BinaryFirst strategy as stated by the authors.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C55",
+    "claim": "The BinaryFirst step pre-selects gene candidates that have a Binary Expression Score value greater than or equal to a dataset-specific threshold.",
+    "claim_type": "EXPLICIT",
+    "source": "The BinaryFirst strategy is designed to enrich for candidate genes that exhibit the desired gene expression pattern prior to the random forest feature ranking. This step pre-selects gene candidates that have a Binary Expression Score value that is greater than or equal to a dataset-specific threshold based on the distribution of the Binary Expression Scores of all genes in the dataset (Figure 2).",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "This describes the BinaryFirst step methodology as stated by the authors and shown in Figure 2.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C56",
+    "claim": "In NS-Forest v4.0, four threshold options are implemented for the BinaryFirst step: 'none', 'BinaryFirst_mild', 'BinaryFirst_moderate', or 'BinaryFirst_high'.",
+    "claim_type": "EXPLICIT",
+    "source": "In version 4.0, four threshold options used in the BinaryFirst step were implemented: 'none', 'BinaryFirst_mild', 'BinaryFirst_moderate', or 'BinaryFirst_high' (see Methods).",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This describes the threshold options in NS-Forest v4.0 as stated by the authors.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C57",
+    "claim": "If the BinaryFirst threshold is 'none', the NS-Forest v4.0 algorithm is the same as version 3.9.",
+    "claim_type": "EXPLICIT",
+    "source": "If the threshold is 'none', the algorithm is the same as version 3.9.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This describes the relationship between NS-Forest versions as stated by the authors.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C58",
+    "claim": "As the BinaryFirst thresholding values increase, the number of selected genes decrease.",
+    "claim_type": "EXPLICIT",
+    "source": "As the thresholding values increase, the number of selected genes decrease.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is an observation about the effect of the BinaryFirst threshold as stated by the authors.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C59",
+    "claim": "The BinaryFirst strategy serves as informative dimensionality reduction.",
+    "claim_type": "EXPLICIT",
+    "source": "Thus, the BinaryFirst strategy effectively reduces the feature space that the random forest classifier must search over in the subsequent workflow step of NS-Forest and serves as informative dimensionality reduction.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is an interpretation of the effect of the BinaryFirst strategy as stated by the authors.",
+    "evidence_type": [
+      "INFERENCE"
+    ]
+  },
+  {
+    "claim_id": "C60",
+    "claim": "An scRNA-seq dataset typically contains tens of thousands of genes, but the majority will not be useful as marker genes for any given cell type clusters.",
+    "claim_type": "EXPLICIT",
+    "source": "An scRNA-seq dataset typically contains tens of thousands of genes, but the majority will not be useful as marker genes for any given cell type clusters.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is based on established knowledge about scRNA-seq data.",
+    "evidence_type": [
+      "KNOWLEDGE"
+    ]
+  },
+  {
+    "claim_id": "C61",
+    "claim": "Random forest is an ensemble machine learning method that uses the bagging technique to train a large number of decision trees.",
+    "claim_type": "EXPLICIT",
+    "source": "Random forest is an ensemble machine learning method that uses the bagging technique to train a large number of decision trees.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is based on established knowledge about random forest algorithms.",
+    "evidence_type": [
+      "KNOWLEDGE"
+    ]
+  },
+  {
+    "claim_id": "C62",
+    "claim": "The bagging technique is an iterative procedure of random selection of features and is time-consuming for classifying cell types from scRNA-seq data.",
+    "claim_type": "EXPLICIT",
+    "source": "The bagging technique is an iterative procedure of random selection of features and, therefore, is time-consuming for classifying cell types from scRNA-seq data (Le et al., 2022).",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is supported by a citation to Le et al., 2022.",
+    "evidence_type": [
+      "CITATION"
+    ]
+  },
+  {
+    "claim_id": "C63",
+    "claim": "Random forest classifiers can produce sub-optimal collections of decision trees due to the random selection of available features.",
+    "claim_type": "EXPLICIT",
+    "source": "Because performing an exhaustive search of all possible combinations of features at each split in the decision trees is computationally intractable, random forest classifiers can produce sub-optimal collections of decisions trees due to the random selection of available features (Hastie et al., 2009).",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is supported by a citation to Hastie et al., 2009.",
+    "evidence_type": [
+      "CITATION"
+    ]
+  },
+  {
+    "claim_id": "C64",
+    "claim": "In previous versions of NS-Forest, the large number of genes in the input datasets reduced the likelihood that the optimal genes for classification would be adequately sampled.",
+    "claim_type": "EXPLICIT",
+    "source": "In previous versions of NS-Forest, the large number of genes in the input datasets reduced the likelihood that the optimal genes for classification would be adequately sampled.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is an inference about the limitations of previous NS-Forest versions.",
+    "evidence_type": [
+      "INFERENCE"
+    ]
+  },
+  {
+    "claim_id": "C65",
+    "claim": "BinaryFirst reduces the size of the set of gene candidates, allowing for adequate sampling of all candidate input genes with a reasonable number of decision trees.",
+    "claim_type": "EXPLICIT",
+    "source": "Our hypothesis was that by reducing the size of the set of gene candidates, BinaryFirst would be able to adequately sample all of the candidate input genes with a reasonable number of decision trees, thereby simplifying the task of the random forest classifier, while simultaneously reducing the overall runtime of NS-Forest.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a hypothesis stated by the authors about the effect of BinaryFirst.",
+    "evidence_type": [
+      "SPECULATION"
+    ]
+  },
+  {
+    "claim_id": "C66",
+    "claim": "NS-Forest v4.0 utilizes the BinaryFirst strategy to enhance the stability and classification performance of the random forest classifier by pre-selecting informative features from scRNA-seq data.",
+    "claim_type": "EXPLICIT",
+    "source": "In summary, NS-Forest v4.0 utilizes the BinaryFirst strategy to enhance the stability and classification performance of the random forest classifier by pre-selecting informative features from scRNA-seq data.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a summary statement about NS-Forest v4.0 as stated by the authors.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C67",
+    "claim": "The On-Target Fractions significantly increase as the stringency of BinaryFirst thresholding increases.",
+    "claim_type": "EXPLICIT",
+    "source": "Comparing these three configurations, the On-Target Fractions significantly increase as the stringency of BinaryFirst thresholding increases (Figure 3A), which results in fewer candidate genes for random forest construction (Figure 3B).",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "This is a result from the analysis shown in Figure 3A.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C68",
+    "claim": "Increasing the stringency of BinaryFirst thresholding results in fewer candidate genes for random forest construction.",
+    "claim_type": "EXPLICIT",
+    "source": "Comparing these three configurations, the On-Target Fractions significantly increase as the stringency of BinaryFirst thresholding increases (Figure 3A), which results in fewer candidate genes for random forest construction (Figure 3B).",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "This is a result from the analysis shown in Figure 3B.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C69",
+    "claim": "The gene pre-selection step helps the NS-Forest algorithm better select on-target marker genes while effectively reducing the dimensionality of the input gene space.",
+    "claim_type": "EXPLICIT",
+    "source": "This suggests that the gene pre-selection step helps the NS-Forest algorithm better select on-target marker genes while effectively reducing the dimensionality of the input gene space.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is an inference based on the results of the BinaryFirst analysis.",
+    "evidence_type": [
+      "INFERENCE"
+    ]
+  },
+  {
+    "claim_id": "C70",
+    "claim": "The median PPV increased from NS-Forest v2.0/v3.9 to v4.0 across all 75 clusters in the MTG dataset.",
+    "claim_type": "EXPLICIT",
+    "source": "Improvement is also observed when comparing the performance metrics, as the median PPV and the median On-Target Fraction increased from v2.0/v3.9 to v4.0 across all 75 clusters (Figure 3D).",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "This is a result from the analysis shown in Figure 3D.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C71",
+    "claim": "The median On-Target Fraction increased from NS-Forest v2.0/v3.9 to v4.0 across all 75 clusters in the MTG dataset.",
+    "claim_type": "EXPLICIT",
+    "source": "Improvement is also observed when comparing the performance metrics, as the median PPV and the median On-Target Fraction increased from v2.0/v3.9 to v4.0 across all 75 clusters (Figure 3D).",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "This is a result from the analysis shown in Figure 3D.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C72",
+    "claim": "NS-Forest v4.0 does a better job at identifying marker genes that lead to improved performance at identifying cells that belong to each unique cell type by reducing the number of false positives.",
+    "claim_type": "EXPLICIT",
+    "source": "The improvement in PPV (precision) means that version 4.0 does a better job at identifying marker genes that, when used as features by decision tree classifiers, lead to improved performance at identifying cells that belong to each unique cell type by reducing the number of false positives in this classification task.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is an interpretation of the PPV improvement as stated by the authors.",
+    "evidence_type": [
+      "INFERENCE"
+    ]
+  },
+  {
+    "claim_id": "C73",
+    "claim": "The increase in On-Target Fraction supports that NS-Forest v4.0 is able to identify marker genes that are exclusively expressed at high levels in their target clusters.",
+    "claim_type": "EXPLICIT",
+    "source": "The increase in On-Target Fraction further supports this claim that version 4.0 is able to identify marker genes that are exclusively expressed at high levels in their target clusters.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is an interpretation of the On-Target Fraction improvement as stated by the authors.",
+    "evidence_type": [
+      "INFERENCE"
+    ]
+  },
+  {
+    "claim_id": "C74",
+    "claim": "The improvement in PPV and On-Target Fraction in NS-Forest v4.0 is slightly offset by a small decrease in the median F-beta score.",
+    "claim_type": "EXPLICIT",
+    "source": "This improvement in the PPV and On-Target Fraction is slightly offset by a small decrease in the median F-beta score between the two versions.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is an observation from the performance comparison as stated by the authors.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C75",
+    "claim": "The tradeoff in F-beta score was previously discussed in Aevermann et al. when comparing off-the-shelf random forest marker candidates to candidates re-ranked by Binary Expression Score values.",
+    "claim_type": "EXPLICIT",
+    "source": "The tradeoff in the F-beta score was previously discussed in Aevermann et al. (Aevermann et al., 2021) when comparing the off-the-shelf random forest marker candidates strictly ranked by feature importance (Gini Impurity) to the top candidates re-ranked by their Binary Expression Score values.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is supported by a citation to Aevermann et al., 2021.",
+    "evidence_type": [
+      "CITATION"
+    ]
+  },
+  {
+    "claim_id": "C76",
+    "claim": "Aevermann et al. demonstrated that marker genes selected with significantly higher Binary Expression Scores are more useful for many downstream assays such as RT-PCR and spatial transcriptomics.",
+    "claim_type": "EXPLICIT",
+    "source": "Aevermann et al. demonstrated that the marker genes selected with significantly higher Binary Expression Scores are more useful for many downstream assays such as RT-PCR and spatial transcriptomics.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is supported by a reference to Aevermann et al.",
+    "evidence_type": [
+      "CITATION"
+    ]
+  },
+  {
+    "claim_id": "C77",
+    "claim": "The Binary Expression Scores are higher for NS-Forest v4.0 than for v2.0/3.9, with an average of 0.971 compared to 0.936.",
+    "claim_type": "EXPLICIT",
+    "source": "A similar trend was observed in this current comparison of versions 2.0/3.9 and version 4.0: the Binary Expression Scores are higher for v4.0 than for v2.0/3.9, with an average of 0.971 compared to 0.936.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a result from the comparison of NS-Forest versions.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C78",
+    "claim": "NS-Forest versions 2.0/3.9 identified 168 total marker genes and 154 unique markers for the 75 cell type clusters in the human MTG dataset.",
+    "claim_type": "EXPLICIT",
+    "source": "In total, NS-Forest versions 2.0/3.9 and version 4.0 identified 168 and 167 total marker genes, and 154 and 147 unique markers, respectively, to optimally distinguish between the 75 cell type clusters in the human MTG dataset.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a result from the NS-Forest analysis on the MTG dataset.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C79",
+    "claim": "NS-Forest version 4.0 identified 167 total marker genes and 147 unique markers for the 75 cell type clusters in the human MTG dataset.",
+    "claim_type": "EXPLICIT",
+    "source": "In total, NS-Forest versions 2.0/3.9 and version 4.0 identified 168 and 167 total marker genes, and 154 and 147 unique markers, respectively, to optimally distinguish between the 75 cell type clusters in the human MTG dataset.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a result from the NS-Forest analysis on the MTG dataset.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C80",
+    "claim": "85 of the total markers (approximately 51% of the markers identified by NS-Forest v2.0/3.9) were identified for the same cluster for both NS-Forest v2.0/3.9 and v4.0.",
+    "claim_type": "EXPLICIT",
+    "source": "85 of the total markers (\u223c51% of the markers identified by v2.0/3.9) were identified for the same cluster for both sets.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a result from the comparison of NS-Forest versions on the MTG dataset.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C81",
+    "claim": "The MTG study found that inhibitory neuron types are highly diverse but mostly sparse (45 types and 4,297 nuclei).",
+    "claim_type": "EXPLICIT",
+    "source": "The MTG study found that the inhibitory neuron types are highly diverse but mostly sparse (45 types and 4,297 nuclei), and the excitatory neuron types span brain layers and are most similar to types in the same or adjacent layers (24 types and 10,708 nuclei) (Hodge et al., 2019).",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is supported by a citation to Hodge et al., 2019.",
+    "evidence_type": [
+      "CITATION"
+    ]
+  },
+  {
+    "claim_id": "C82",
+    "claim": "The MTG study found that excitatory neuron types span brain layers and are most similar to types in the same or adjacent layers (24 types and 10,708 nuclei).",
+    "claim_type": "EXPLICIT",
+    "source": "The MTG study found that the inhibitory neuron types are highly diverse but mostly sparse (45 types and 4,297 nuclei), and the excitatory neuron types span brain layers and are most similar to types in the same or adjacent layers (24 types and 10,708 nuclei) (Hodge et al., 2019).",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is supported by a citation to Hodge et al., 2019.",
+    "evidence_type": [
+      "CITATION"
+    ]
+  },
+  {
+    "claim_id": "C83",
+    "claim": "The median On-Target Fraction values are highest for all three subclades (VIP, PVALB, L4) using the 'BinaryFirst_high' configuration.",
+    "claim_type": "EXPLICIT",
+    "source": "These trends are also observed in the median On-Target Fraction values, as this value is the highest for all three subclades using the 'BinaryFirst_high' configuration (Supplementary Figure 1C).",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "This is a result from the analysis shown in Supplementary Figure 1C.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C84",
+    "claim": "The p-value for comparing the mild and high BinaryFirst thresholds for the VIP subclade is statistically significant (p-value = 0.01).",
+    "claim_type": "EXPLICIT",
+    "source": "The p-value for comparing the mild and high BinaryFirst thresholds for the VIP subclade is statistically significant (p-value = 0.01), but the p-values for the L4 subclade and the PVALB subclade are not significant (p-value = 0.37 and 0.07, respectively); this is likely due to the small sample size for the paired t-test (the L4 subclade has 5 distinct cell types and the PVALB subclade has 6, whereas the VIP subclade has 21).",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a statistical result from the analysis of the MTG dataset.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C85",
+    "claim": "The p-values for comparing the mild and high BinaryFirst thresholds for the L4 subclade (p-value = 0.37) and PVALB subclade (p-value = 0.07) are not significant.",
+    "claim_type": "EXPLICIT",
+    "source": "The p-value for comparing the mild and high BinaryFirst thresholds for the VIP subclade is statistically significant (p-value = 0.01), but the p-values for the L4 subclade and the PVALB subclade are not significant (p-value = 0.37 and 0.07, respectively); this is likely due to the small sample size for the paired t-test (the L4 subclade has 5 distinct cell types and the PVALB subclade has 6, whereas the VIP subclade has 21).",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a statistical result from the analysis of the MTG dataset.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C86",
+    "claim": "The non-significant p-values for L4 and PVALB subclades are likely due to small sample size for the paired t-test.",
+    "claim_type": "EXPLICIT",
+    "source": "The p-value for comparing the mild and high BinaryFirst thresholds for the VIP subclade is statistically significant (p-value = 0.01), but the p-values for the L4 subclade and the PVALB subclade are not significant (p-value = 0.37 and 0.07, respectively); this is likely due to the small sample size for the paired t-test (the L4 subclade has 5 distinct cell types and the PVALB subclade has 6, whereas the VIP subclade has 21).",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is an inference about the statistical results as stated by the authors.",
+    "evidence_type": [
+      "INFERENCE"
+    ]
+  },
+  {
+    "claim_id": "C87",
+    "claim": "The kidney dataset has 75 distinct cell types.",
+    "claim_type": "EXPLICIT",
+    "source": "The kidney dataset has 75 distinct cell types, and the lung dataset has 61 cell types at the L5 subclass.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a description of the datasets used in the study.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C88",
+    "claim": "The lung dataset has 61 cell types at the L5 subclass.",
+    "claim_type": "EXPLICIT",
+    "source": "The kidney dataset has 75 distinct cell types, and the lung dataset has 61 cell types at the L5 subclass.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a description of the datasets used in the study.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C89",
+    "claim": "NS-Forest v2.0/3.9 already performs quite well at selecting marker genes for kidney and lung compared to the brain.",
+    "claim_type": "EXPLICIT",
+    "source": "Version 2.0/3.9 already performs quite well at selecting marker genes for these two organs compared to the brain, and hence the improvement of version 4.0 is less obvious.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is an observation from the performance comparison as stated by the authors.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C90",
+    "claim": "The improvement of NS-Forest v4.0 over v2.0/3.9 is less obvious for kidney and lung datasets compared to brain.",
+    "claim_type": "EXPLICIT",
+    "source": "Version 2.0/3.9 already performs quite well at selecting marker genes for these two organs compared to the brain, and hence the improvement of version 4.0 is less obvious.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is an observation from the performance comparison as stated by the authors.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C91",
+    "claim": "In the kidney dataset, the number of false positive classifications is much fewer in NS-Forest v4.0 (198 cells) compared to v2.0/3.9 (312.5 cells).",
+    "claim_type": "EXPLICIT",
+    "source": "It is interesting to note that although the On-Target Fraction is slightly lower, the number of false positive classifications is much fewer in version 4.0 (dropped from an average of 312.5 cells in version 2.0/3.9 to 198 cells in version 4.0), confirming that the version 4.0 marker genes are selected for optimal classification.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a result from the analysis of the kidney dataset.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C92",
+    "claim": "NS-Forest v2.0/3.9 identified 157 total marker genes and 144 unique markers for the kidney dataset.",
+    "claim_type": "EXPLICIT",
+    "source": "NS-Forest v2.0/3.9 and v4.0 identified 157 and 169 total marker genes for the kidney dataset, and 144 and 151 unique markers, respectively, to optimally distinguish between the 75 cell types (Supplementary Tables 2-3).",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a result from the NS-Forest analysis on the kidney dataset.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C93",
+    "claim": "NS-Forest v4.0 identified 169 total marker genes and 151 unique markers for the kidney dataset.",
+    "claim_type": "EXPLICIT",
+    "source": "NS-Forest v2.0/3.9 and v4.0 identified 157 and 169 total marker genes for the kidney dataset, and 144 and 151 unique markers, respectively, to optimally distinguish between the 75 cell types (Supplementary Tables 2-3).",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a result from the NS-Forest analysis on the kidney dataset.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C94",
+    "claim": "117 of the total markers (75% of the markers identified by NS-Forest v2.0/3.9) were identified for the same cluster for both versions in the kidney dataset.",
+    "claim_type": "EXPLICIT",
+    "source": "117 of the total markers (75% of the markers identified by v2.0/3.9) were identified for the same cluster for both sets.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a result from the comparison of NS-Forest versions on the kidney dataset.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C95",
+    "claim": "NS-Forest v2.0/3.9 identified 131 total marker genes and 125 unique markers for the lung L5 dataset.",
+    "claim_type": "EXPLICIT",
+    "source": "NS-Forest v2.0/3.9 and v4.0 identified 131 and 126 total marker genes for the lung L5 dataset, and 125 and 121 unique markers, respectively, to optimally distinguish between the 61 cell types.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a result from the NS-Forest analysis on the lung L5 dataset.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C96",
+    "claim": "NS-Forest v4.0 identified 126 total marker genes and 121 unique markers for the lung L5 dataset.",
+    "claim_type": "EXPLICIT",
+    "source": "NS-Forest v2.0/3.9 and v4.0 identified 131 and 126 total marker genes for the lung L5 dataset, and 125 and 121 unique markers, respectively, to optimally distinguish between the 61 cell types.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a result from the NS-Forest analysis on the lung L5 dataset.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C97",
+    "claim": "107 of the total markers (82% of the markers identified by NS-Forest v2.0/3.9) were identified for the same cluster for both versions in the lung L5 dataset.",
+    "claim_type": "EXPLICIT",
+    "source": "107 of the total markers (82% of the markers identified by v2.0/3.9) were identified for the same cluster for both sets.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a result from the comparison of NS-Forest versions on the lung L5 dataset.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C98",
+    "claim": "It is easier to select marker genes at less granular levels (L4 and L3 subclasses) compared to more granular levels (L5 subclass).",
+    "claim_type": "EXPLICIT",
+    "source": "Similar results were obtained running NS-Forest on the L4 and L3 subclasses (49 and 44 types, respectively) of the same lung dataset (Supplementary Figure 3 and Supplementary Tables 4-5), suggesting that it is easier to select marker genes at less granular levels.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is an inference based on the results of NS-Forest on different annotation levels.",
+    "evidence_type": [
+      "INFERENCE"
+    ]
+  },
+  {
+    "claim_id": "C99",
+    "claim": "The overall runtime of NS-Forest v4.0 is much lower than that of v2.0/3.9 in all three human organ datasets.",
+    "claim_type": "EXPLICIT",
+    "source": "In addition to the improvements in the classification performance, the overall runtime of NS-Forest v4.0 (by default, 'BinaryFirst_high' is used) is much lower than that of v2.0/3.9 in all three human organ datasets (Table 1), with the ratio of runtime (v4.0 to v2.0/3.9) ranging from 0.10 to 0.26 across the datasets.",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "This is a result from the runtime comparison shown in Table 1.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C100",
+    "claim": "The ratio of runtime (NS-Forest v4.0 to v2.0/3.9) ranges from 0.10 to 0.26 across the three datasets.",
+    "claim_type": "EXPLICIT",
+    "source": "In addition to the improvements in the classification performance, the overall runtime of NS-Forest v4.0 (by default, 'BinaryFirst_high' is used) is much lower than that of v2.0/3.9 in all three human organ datasets (Table 1), with the ratio of runtime (v4.0 to v2.0/3.9) ranging from 0.10 to 0.26 across the datasets.",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "This is a result from the runtime comparison shown in Table 1.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C101",
+    "claim": "In all three datasets, the 'BinaryFirst_mild' configuration did not filter out any genes.",
+    "claim_type": "EXPLICIT",
+    "source": "In all three datasets, the 'BinaryFirst_mild' configuration did not filter out any genes, indicating that more than half of the genes have a value of 0 for their Binary Expression Score and thus, a value of 0 for their median expression per cluster.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a result from the BinaryFirst analysis.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C102",
+    "claim": "More than half of the genes in the three datasets have a value of 0 for their Binary Expression Score.",
+    "claim_type": "EXPLICIT",
+    "source": "In all three datasets, the 'BinaryFirst_mild' configuration did not filter out any genes, indicating that more than half of the genes have a value of 0 for their Binary Expression Score and thus, a value of 0 for their median expression per cluster.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is an inference based on the BinaryFirst analysis results.",
+    "evidence_type": [
+      "INFERENCE"
+    ]
+  },
+  {
+    "claim_id": "C103",
+    "claim": "When the high threshold was used, 1-7% of the total original genes passed the BinaryFirst threshold in the three datasets.",
+    "claim_type": "EXPLICIT",
+    "source": "When the high threshold was used, 1-7% of the total original genes passed the BinaryFirst threshold in the three datasets.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a result from the BinaryFirst analysis.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C104",
+    "claim": "The majority of genes in the three datasets have low Binary Expression Scores.",
+    "claim_type": "EXPLICIT",
+    "source": "This demonstrates that the majority of genes in these datasets have low Binary Expression Scores, and that the distribution of Binary Expression Scores in these datasets is heavily right-skewed (Supplementary Figure 4), which is generally true for all scRNA-seq data.",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "This is a result from the analysis shown in Supplementary Figure 4.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C105",
+    "claim": "The distribution of Binary Expression Scores in the three datasets is heavily right-skewed.",
+    "claim_type": "EXPLICIT",
+    "source": "This demonstrates that the majority of genes in these datasets have low Binary Expression Scores, and that the distribution of Binary Expression Scores in these datasets is heavily right-skewed (Supplementary Figure 4), which is generally true for all scRNA-seq data.",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "This is a result from the analysis shown in Supplementary Figure 4.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C106",
+    "claim": "A heavily right-skewed distribution of Binary Expression Scores is generally true for all scRNA-seq data.",
+    "claim_type": "EXPLICIT",
+    "source": "This demonstrates that the majority of genes in these datasets have low Binary Expression Scores, and that the distribution of Binary Expression Scores in these datasets is heavily right-skewed (Supplementary Figure 4), which is generally true for all scRNA-seq data.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a generalization based on the observed pattern in the analyzed datasets.",
+    "evidence_type": [
+      "INFERENCE"
+    ]
+  },
+  {
+    "claim_id": "C107",
+    "claim": "The BinaryFirst step can dramatically reduce the number of candidate genes considered as potential markers and simultaneously provide improvement in important measures of classification performance.",
+    "claim_type": "EXPLICIT",
+    "source": "Overall, the BinaryFirst step can dramatically reduce the number of candidate genes that are considered as potential markers as input to the random forest step and simultaneously provide improvement in important measures of classification performance.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a summary conclusion based on the results presented.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C108",
+    "claim": "The Human Lung Cell Atlas (HLCA) core dataset consists of approximately 0.5 million cells clustered into 61 cell types from healthy lung tissues from 107 individuals.",
+    "claim_type": "EXPLICIT",
+    "source": "To compare the performance of different marker gene selection approaches, the Human Lung Cell Atlas (HLCA) core dataset was used as a common comprehensive data resource, consisting of \u223c0.5 million cells clustered into 61 cell types from healthy lung tissues from 107 individuals (Sikkema et al., 2023).",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is supported by a citation to Sikkema et al., 2023.",
+    "evidence_type": [
+      "CITATION"
+    ]
+  },
+  {
+    "claim_id": "C109",
+    "claim": "The HLCA authors provided cell type-specific marker genes by iteratively subsetting the atlas into sequentially granular classifications and filtering for unique genes within the compartments.",
+    "claim_type": "EXPLICIT",
+    "source": "The HLCA authors provided cell type-specific marker genes by iteratively subsetting the atlas into sequentially granular classifications and filtering for unique genes within the compartments (hereinafter, HLCA markers).",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This describes the method used by the HLCA authors to identify marker genes.",
+    "evidence_type": [
+      "CITATION"
+    ]
+  },
+  {
+    "claim_id": "C110",
+    "claim": "The LungMAP single-cell reference (CellRef) provides integrated information for both human and mouse lungs.",
+    "claim_type": "EXPLICIT",
+    "source": "Meanwhile, the lung single cell community also constructed the LungMAP single-cell reference (CellRef) to provide integrated information for both human and mouse lungs (Guo et al., 2023).",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is supported by a citation to Guo et al., 2023.",
+    "evidence_type": [
+      "CITATION"
+    ]
+  },
+  {
+    "claim_id": "C111",
+    "claim": "The HLCA marker list contains 162 marker genes (1-5 markers per type) for the 61 cell types.",
+    "claim_type": "EXPLICIT",
+    "source": "The HLCA marker list contains 162 marker genes (1-5 markers per type) for the 61 cell types, which shows an expected diagonal pattern in the expression dotplot but with more off-diagonal expressions (Supplementary Figure 5A).",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "This is a result from the analysis of HLCA markers.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C112",
+    "claim": "The CellRef marker list contains 115 marker genes (2-7 markers per type) for the 33 exact matched cell types.",
+    "claim_type": "EXPLICIT",
+    "source": "The CellRef marker list contains 115 marker genes (2-7 markers per type) for the 33 exact matched cell types.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a result from the analysis of CellRef markers.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C113",
+    "claim": "The ASCT+B marker list contains 80 marker genes (3-5 markers per type) for the 18 exact matched cell types.",
+    "claim_type": "EXPLICIT",
+    "source": "The ASCT+B marker list contains 80 marker genes (3-5 markers per type) for the 18 exact matched cell types.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a result from the analysis of ASCT+B markers.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C114",
+    "claim": "The ASCT+B dotplot is sparse because the manual approach based on existing knowledge from the scientific literature does not capture the granularity obtained in single cell-resolution data.",
+    "claim_type": "EXPLICIT",
+    "source": "The ASCT+B dotplot is sparse (Supplementary Figure 5C) because the manual approach based on existing knowledge from the scientific literature does not capture the granularity obtained in single cell-resolution data.",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "This is an inference about the limitations of the ASCT+B approach.",
+    "evidence_type": [
+      "INFERENCE"
+    ]
+  },
+  {
+    "claim_id": "C115",
+    "claim": "The Azimuth marker list contains 535 marker genes (8-10 markers per type) for 56 of the HLCA cell types.",
+    "claim_type": "EXPLICIT",
+    "source": "The Azimuth marker list contains 535 marker genes (8-10 markers per type) for 56 of these cell types (AT0, Hematopoietic stem cells, Hillock-like, Smooth muscle FAM83D+, and pre-TB secretory markers are not available).",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a result from the analysis of Azimuth markers.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C116",
+    "claim": "NS-Forest v4.0 identified 122 marker genes (1-4 marker genes per type) for the 61 finest level cell types in the HLCA core dataset.",
+    "claim_type": "EXPLICIT",
+    "source": "To derive NS-Forest markers, NS-Forest v4.0 was applied to the HLCA core dataset and 122 marker genes (1-4 marker genes per type) for the 61 finest level cell types were identified (Supplementary Table 6).",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a result from the NS-Forest analysis on the HLCA dataset.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C117",
+    "claim": "For the 13 common cell types, NS-Forest marker genes have the highest median F-beta score (0.80), followed by HLCA markers (0.65), CellRef markers (0.39), ASCT+B markers (0.22), and Azimuth markers (0.18).",
+    "claim_type": "EXPLICIT",
+    "source": "For the fair comparison of the 13 common cell types, the NS-Forest marker genes have the highest median F-beta score (0.80), followed by the HLCA markers (0.65), CellRef markers (0.39), ASCT+B markers (0.22), and Azimuth markers (0.18).",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a result from the comparative analysis of marker gene lists.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C118",
+    "claim": "Using all cell types, NS-Forest has the highest median F-beta score (0.71), followed by HLCA (0.43), CellRef (0.38), ASCT+B (0.17), and Azimuth (0.17).",
+    "claim_type": "EXPLICIT",
+    "source": "Similar results were found using all cell types (NS-Forest: 0.71, HLCA: 0.43, CellRef: 0.38, ASCT+B: 0.17, and Azimuth: 0.17).",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a result from the comparative analysis of marker gene lists.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C119",
+    "claim": "The distributions of F-beta scores are significantly different between NS-Forest and all other methods (NS-Forest vs. HLCA: p = 0.0039, NS-Forest vs. CellRef: p = 2.0e-5, NS-Forest vs. ASCT+B: p = 2.1e-6, NS-Forest vs. Azimuth: p = 1.6e-5).",
+    "claim_type": "EXPLICIT",
+    "source": "The distributions of F-beta scores are significantly different between NS-Forest and all other methods (NS-Forest vs. HLCA: p = 0.0039, NS-Forest vs. CellRef: p = 2.0e-5, NS-Forest vs. ASCT+B: p = 2.1e-6, NS-Forest vs. Azimuth: p = 1.6e-5).",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a statistical result from the comparative analysis.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C120",
+    "claim": "The median PPV (precision) scores are high for all five methods (0.89-0.99), with ASCT+B being the highest.",
+    "claim_type": "EXPLICIT",
+    "source": "Surprisingly, the median PPV (precision) scores are high for all five methods (0.89-0.99), with the ASCT+B being the highest, showing no significant difference between NS-Forest and the other methods (NS-Forest vs. HLCA: p = 0.70, NS-Forest vs. CellRef: p = 0.93, NS-Forest vs. ASCT+B: p = 0.81, and NS-Forest vs. Azimuth: p = 0.098).",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a result from the comparative analysis of marker gene lists.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C121",
+    "claim": "There is no significant difference in PPV between NS-Forest and the other methods (NS-Forest vs. HLCA: p = 0.70, NS-Forest vs. CellRef: p = 0.93, NS-Forest vs. ASCT+B: p = 0.81, NS-Forest vs. Azimuth: p = 0.098).",
+    "claim_type": "EXPLICIT",
+    "source": "Surprisingly, the median PPV (precision) scores are high for all five methods (0.89-0.99), with the ASCT+B being the highest, showing no significant difference between NS-Forest and the other methods (NS-Forest vs. HLCA: p = 0.70, NS-Forest vs. CellRef: p = 0.93, NS-Forest vs. ASCT+B: p = 0.81, and NS-Forest vs. Azimuth: p = 0.098).",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a statistical result from the comparative analysis.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C122",
+    "claim": "The median recall values show NS-Forest being the highest (0.58) and ASCT+B being the lowest (0.054) in the 13 common cell types.",
+    "claim_type": "EXPLICIT",
+    "source": "In contrast, the median recall values show a similar trend to the F-beta scores, with NS-Forest being the highest (0.58) and ASCT+B being the lowest (0.054) in the 13 common cell types.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a result from the comparative analysis of marker gene lists.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C123",
+    "claim": "The distributions of recall values are significantly different between NS-Forest and all other methods (NS-Forest vs. HLCA: p = 0.036, NS-Forest vs. CellRef: p = 3.5e-7, NS-Forest vs. ASCT+B: p = 2.0e-6, NS-Forest vs. Azimuth: p = 3.9e-6).",
+    "claim_type": "EXPLICIT",
+    "source": "The distributions of recall values are significantly different between NS-Forest and all other methods (NS-Forest vs. HLCA: p = 0.036, NS-Forest vs. CellRef: p = 3.5e-7, NS-Forest vs. ASCT+B: p = 2.0e-6, and NS-Forest vs. Azimuth: p = 3.9e-6).",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a statistical result from the comparative analysis.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C124",
+    "claim": "Low F-beta and recall values for the other four methods are driven by excessive false negative predictions.",
+    "claim_type": "EXPLICIT",
+    "source": "Low F-beta and recall values for the other four methods are driven by excessive false negative predictions.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is an interpretation of the results as stated by the authors.",
+    "evidence_type": [
+      "INFERENCE"
+    ]
+  },
+  {
+    "claim_id": "C125",
+    "claim": "Comparing all methods, NS-Forest produces the most comprehensive and concise list of marker genes with consistently higher F-beta scores for cell type classification.",
+    "claim_type": "EXPLICIT",
+    "source": "Comparing all methods, NS-Forest produces the most comprehensive and concise list of marker genes with consistently higher F-beta scores for cell type classification.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a summary conclusion based on the comparative analysis results.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C126",
+    "claim": "The main motivation for developing NS-Forest v4.0 was to improve marker gene selection performance on closely related cell types by enriching for markers that exhibit the pattern of being highly and uniquely expressed in their target cell types.",
+    "claim_type": "EXPLICIT",
+    "source": "The main motivation for developing version 4.0 was to improve the marker gene selection performance on closely related cell types by enriching for markers that exhibit the pattern of being highly and uniquely expressed in their target cell types without losing a significant amount of classification power.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This describes the motivation for developing NS-Forest v4.0 as stated by the authors.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C127",
+    "claim": "NS-Forest marker genes can be used for spatial transcriptomics gene panel design in the SpaceTx consortium.",
+    "claim_type": "EXPLICIT",
+    "source": "NS-Forest marker genes can be used for multiple downstream experimental investigations, such as spatial transcriptomics gene panel design in the SpaceTx consortium (Zhang et al., 2023), and to produce marker gene sets designed to capture specific cell type properties.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is supported by a citation to Zhang et al., 2023.",
+    "evidence_type": [
+      "CITATION"
+    ]
+  },
+  {
+    "claim_id": "C128",
+    "claim": "One of the main applications of NS-Forest identified marker genes is contributing to the definition of ontological classes of scRNA-seq data-driven cell types for incorporation into the official Cell Ontology.",
+    "claim_type": "EXPLICIT",
+    "source": "One of the main applications of NS-Forest identified marker genes is contributing to the definition of ontological classes of scRNA-seq data-driven cell types for incorporation into the official Cell Ontology (Diehl et al., 2016), as NS-Forest provides the minimum combinations of marker genes that can serve as a set of definitional characteristics of the cell types (Diehl et al., 2016).",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is supported by a citation to Diehl et al., 2016.",
+    "evidence_type": [
+      "CITATION"
+    ]
+  },
+  {
+    "claim_id": "C129",
+    "claim": "NS-Forest has contributed to the BRAIN Initiative Cell Census Network (BICCN) data ecosystem to derive the necessary and sufficient marker gene knowledge.",
+    "claim_type": "EXPLICIT",
+    "source": "Such efforts have already begun as NS-Forest has contributed to the BRAIN Initiative Cell Census Network (BICCN) data ecosystem to derive the necessary and sufficient marker gene knowledge (Hawrylycz et al., 2023).",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is supported by a citation to Hawrylycz et al., 2023.",
+    "evidence_type": [
+      "CITATION"
+    ]
+  },
+  {
+    "claim_id": "C130",
+    "claim": "The Provisional Cell Ontology (PCL) is generated for human, mouse, and marmoset primary motor cortex.",
+    "claim_type": "EXPLICIT",
+    "source": "As such, the Provisional Cell Ontology (PCL) is generated in this manner for human, mouse, and marmoset primary motor cortex (Tan et al., 2023).",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is supported by a citation to Tan et al., 2023.",
+    "evidence_type": [
+      "CITATION"
+    ]
+  },
+  {
+    "claim_id": "C131",
+    "claim": "There is a current lack of a formal, standardized representation of cell type clusters derived from scRNA-seq data that is widely accepted by the scientific community.",
+    "claim_type": "EXPLICIT",
+    "source": "Among the general single cell community, there is a current lack of a formal, standardized representation of cell type clusters derived from the tremendous amount of scRNA-seq data and their transcriptional characterization that is widely accepted by the scientific community.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is an observation about the current state of the field as stated by the authors.",
+    "evidence_type": [
+      "INFERENCE"
+    ]
+  },
+  {
+    "claim_id": "C132",
+    "claim": "One of the challenges associated with formalizing cell type representation is scaling up semantic knowledge representations to keep up with the rate at which single cell transcriptomic data and analyses are being produced.",
+    "claim_type": "EXPLICIT",
+    "source": "One of the challenges associated with formalizing such a representation is the aspect of scaling up the semantic knowledge representations to keep up with the rate at which single cell transcriptomic data and analyses are being produced today.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is an observation about challenges in the field as stated by the authors.",
+    "evidence_type": [
+      "INFERENCE"
+    ]
+  },
+  {
+    "claim_id": "C133",
+    "claim": "NS-Forest appears well-suited to help alleviate some of the challenges associated with scaling up semantic knowledge representations, especially with the enhancements introduced in version 4.0.",
+    "claim_type": "EXPLICIT",
+    "source": "To this end, NS-Forest appears well-suited to help alleviate some of the challenges associated with such a task, especially with the enhancements introduced in version 4.0.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a conclusion stated by the authors about the potential of NS-Forest.",
+    "evidence_type": [
+      "SPECULATION"
+    ]
+  },
+  {
+    "claim_id": "C134",
+    "claim": "The mild BinaryFirst threshold is set as the median Binary Expression Score.",
+    "claim_type": "EXPLICIT",
+    "source": "The mild threshold is set as the median Binary Expression Score, the moderate threshold is set as the mean Binary Expression Score plus the standard deviation of all scores, and the high threshold is set as the mean Binary Expression Score plus two times the standard deviation.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a definition of the BinaryFirst threshold as stated by the authors.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C135",
+    "claim": "The moderate BinaryFirst threshold is set as the mean Binary Expression Score plus the standard deviation of all scores.",
+    "claim_type": "EXPLICIT",
+    "source": "The mild threshold is set as the median Binary Expression Score, the moderate threshold is set as the mean Binary Expression Score plus the standard deviation of all scores, and the high threshold is set as the mean Binary Expression Score plus two times the standard deviation.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a definition of the BinaryFirst threshold as stated by the authors.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C136",
+    "claim": "The high BinaryFirst threshold is set as the mean Binary Expression Score plus two times the standard deviation.",
+    "claim_type": "EXPLICIT",
+    "source": "The mild threshold is set as the median Binary Expression Score, the moderate threshold is set as the mean Binary Expression Score plus the standard deviation of all scores, and the high threshold is set as the mean Binary Expression Score plus two times the standard deviation.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a definition of the BinaryFirst threshold as stated by the authors.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C137",
+    "claim": "In NS-Forest v4.0, the default BinaryFirst threshold is set to 'BinaryFirst_high'.",
+    "claim_type": "EXPLICIT",
+    "source": "In version 4.0, the default is set to 'BinaryFirst_high,' which is the most stringent threshold that filters the most genes.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This describes the default setting in NS-Forest v4.0 as stated by the authors.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C138",
+    "claim": "The On-Target Fraction is defined for each marker gene g in target cluster T as the ratio of median expression in target cluster to sum of median expressions across all clusters.",
+    "claim_type": "EXPLICIT",
+    "source": "The On-Target Fraction is defined for each marker gene g in target cluster T as, [formula shown in manuscript]",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a mathematical definition provided by the authors.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C139",
+    "claim": "At the cluster level, the On-Target Fraction for each cluster is reported using the median Fraction of its marker genes.",
+    "claim_type": "EXPLICIT",
+    "source": "At the cluster level, we report the On-Target Fraction for each cluster using the median Fraction<sub>gT</sub> of its marker genes.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This describes how the On-Target Fraction is reported as stated by the authors.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C140",
+    "claim": "The median is used as a summary statistic when reporting the On-Target Fraction to account for the non-normal nature of scRNA-seq gene expression distribution.",
+    "claim_type": "EXPLICIT",
+    "source": "We used the median as a summary statistic when reporting the On-Target Fraction to account for the non-normal nature of scRNA-seq gene expression distribution.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This explains the rationale for using the median as stated by the authors.",
+    "evidence_type": [
+      "INFERENCE"
+    ]
+  },
+  {
+    "claim_id": "C141",
+    "claim": "NS-Forest v4.0 is modularized, consisting of 4 main functional modules: preprocessing, NSForesting, evaluating, and plotting.",
+    "claim_type": "EXPLICIT",
+    "source": "To provide a user-friendly software package, NS-Forest v4.0 is now modularized, consisting of 4 main functional modules: preprocessing, NSForesting, evaluating, and plotting.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This describes the structure of the NS-Forest v4.0 software package.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C142",
+    "claim": "NS-Forest v4.0 takes in an anndata object in .h5ad format that contains a cell-by-gene expression matrix and the cell type cluster membership column.",
+    "claim_type": "EXPLICIT",
+    "source": "NS-Forest v4.0 takes in an anndata (Wolf et al., 2018) object in .h5ad format that contains a cell-by-gene expression matrix and the cell type cluster membership column stored in the observation-level (.obs) metadata matrix of the data object.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This describes the input format for NS-Forest v4.0 as stated by the authors.",
+    "evidence_type": [
+      "DATA"
+    ]
+  }
+]

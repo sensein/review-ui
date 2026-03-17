@@ -1,0 +1,1077 @@
+[
+  {
+    "claim_id": "C1",
+    "claim": "GABAergic medium spiny neurons (MSNs) are the dominant neuronal cell type in the striatum, comprising 85\u201395% of striatal neurons.",
+    "claim_type": "EXPLICIT",
+    "source": "The literature from both animal models and humans shows that GABAergic medium spiny neurons (MSNs) are the dominant neuronal cell type in the striatum (85\u201395%)",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "The claim is supported by citations to prior literature (references 2-5) establishing this proportion across species.",
+    "evidence_type": [
+      "CITATION"
+    ]
+  },
+  {
+    "claim_id": "C2",
+    "claim": "D1-type MSNs express the dopamine receptor D1 (DRD1), tachykinin precursor 1 (TAC1), and dynorphin.",
+    "claim_type": "EXPLICIT",
+    "source": "MSNs are divided into two major populations: D1-type MSNs, which express the dopamine receptor D1 (DRD1), tachykinin precursor 1 (TAC1), and dynorphin",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "The claim is supported by citations to prior literature (references 2, 3, 6) documenting these molecular markers.",
+    "evidence_type": [
+      "CITATION"
+    ]
+  },
+  {
+    "claim_id": "C3",
+    "claim": "D2-type MSNs express the dopamine receptor D2 (DRD2), proenkephalin (PENK), and enkephalin.",
+    "claim_type": "EXPLICIT",
+    "source": "D2-type MSNs, which express the dopamine receptor D2 (DRD2), proenkephalin (PENK), and enkephalin",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "The claim is supported by citations to prior literature (references 2, 3, 6) documenting these molecular markers.",
+    "evidence_type": [
+      "CITATION"
+    ]
+  },
+  {
+    "claim_id": "C4",
+    "claim": "D1 and D2 MSN populations are spatially organized into interdigitated striosome and matrix compartments.",
+    "claim_type": "EXPLICIT",
+    "source": "The D1 and D2 populations are spatially organized into interdigitated striosome and matrix compartments that form the structural foundation of basal ganglia function",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "The claim is supported by citations to prior literature (references 3, 7, 8) describing this spatial organization.",
+    "evidence_type": [
+      "CITATION"
+    ]
+  },
+  {
+    "claim_id": "C5",
+    "claim": "The globus pallidus consists of two principal divisions: the external segment (GPe) and the internal segment (GPi).",
+    "claim_type": "EXPLICIT",
+    "source": "The globus pallidus consists of two principal divisions: the external segment (GPe) and the internal segment (GPi)",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "The claim is supported by citations to prior literature (references 3, 16) documenting this anatomical division.",
+    "evidence_type": [
+      "CITATION"
+    ]
+  },
+  {
+    "claim_id": "C6",
+    "claim": "Both GPe and GPi regions are dominated by PV+ GABAergic projection neurons.",
+    "claim_type": "EXPLICIT",
+    "source": "Both regions are dominated by PV+ GABAergic projection neurons",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "The claim is supported by citation to prior literature (reference 17) documenting this cellular composition.",
+    "evidence_type": [
+      "CITATION"
+    ]
+  },
+  {
+    "claim_id": "C7",
+    "claim": "GPe prototypic neurons express PV, LIM homeobox 6 (LHX6), and NK2 homeobox 1 (NKX2-1).",
+    "claim_type": "EXPLICIT",
+    "source": "Within GPe, prototypic neurons express PV, LIM homeobox 6 (LHX6), and NK2 homeobox 1 (NKX2-1)",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "The claim is supported by citations to prior literature (references 18, 19) documenting these molecular markers.",
+    "evidence_type": [
+      "CITATION"
+    ]
+  },
+  {
+    "claim_id": "C8",
+    "claim": "GPe arkypallidal neurons express neuronal PAS domain protein 1 (NPAS1) and forkhead box protein P2 (FOXP2).",
+    "claim_type": "EXPLICIT",
+    "source": "arkypallidal neurons express neuronal PAS domain protein 1 (NPAS1) and forkhead box protein P2 (FOXP2)",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "The claim is supported by citations to prior literature (references 20, 21) documenting these molecular markers.",
+    "evidence_type": [
+      "CITATION"
+    ]
+  },
+  {
+    "claim_id": "C9",
+    "claim": "GPi contains PV+/LHX6+ projection neurons that form the principal output pathway of the basal ganglia.",
+    "claim_type": "EXPLICIT",
+    "source": "GPi contains PV+/LHX6+ projection neurons that form the principal output pathway of the basal ganglia",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "The claim is supported by citations to prior literature (references 16, 17) documenting this neuronal population and its function.",
+    "evidence_type": [
+      "CITATION"
+    ]
+  },
+  {
+    "claim_id": "C10",
+    "claim": "The study generated a multi-region, subcellular-resolution spatial transcriptomic atlas of the human basal ganglia by integrating MERFISH+ and Stereo-seq across four neurotypical donors.",
+    "claim_type": "EXPLICIT",
+    "source": "We generated a multi-region, subcellular-resolution spatial transcriptomic atlas of the human basal ganglia by integrating MERFISH+ and Stereo-seq across four neurotypical donors.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "The claim describes the study design and methodology as stated in the abstract.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C11",
+    "claim": "The datasets profiled approximately 7 million cells spanning the caudate, putamen, nucleus accumbens, and globus pallidus.",
+    "claim_type": "EXPLICIT",
+    "source": "These datasets profiled \u223c7 million cells spanning the caudate, putamen, nucleus accumbens, and globus pallidus",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "The claim is supported by the experimental data collection described in the study.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C12",
+    "claim": "The study resolved 60 transcriptionally distinct cell types in the human basal ganglia.",
+    "claim_type": "EXPLICIT",
+    "source": "These datasets profiled \u223c7 million cells spanning the caudate, putamen, nucleus accumbens, and globus pallidus, resolving 60 transcriptionally distinct cell types.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "The claim is supported by the clustering and cell type classification analysis performed on the MERFISH+ data.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C13",
+    "claim": "A single 20mm x 30mm Stereo-seq chip captured approximately 0.9 million cells.",
+    "claim_type": "EXPLICIT",
+    "source": "A single 20mm x 30mm Stereo-seq chip captured \u223c0.9 million cells (with \u223c0.29 million cells selected for cell type classification)",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "The claim is supported by the experimental data collection from Stereo-seq assays.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C14",
+    "claim": "Across four Stereo-seq assays, approximately 70,000 genes were detected across approximately 3.2 million cells.",
+    "claim_type": "EXPLICIT",
+    "source": "Across four Stereo-seq assays, we obtained genome-wide transcriptomic coverage of \u223c70,000 genes across \u223c3.2 million cells.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "The claim is supported by the experimental data collection from Stereo-seq assays.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C15",
+    "claim": "Four MERFISH+ experiments captured approximately 3.9 million cells at single-molecule resolution over multi-centimeter-scale tissue areas.",
+    "claim_type": "EXPLICIT",
+    "source": "Four MERFISH+ experiments captured \u223c3.9 million cells at single-molecule resolution over multi-centimeter-scale tissue areas.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "The claim is supported by the experimental data collection from MERFISH+ assays.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C16",
+    "claim": "MERFISH+ and Stereo-seq yielded highly concordant results for the spatial distributions of major cell types across corresponding anatomical regions.",
+    "claim_type": "EXPLICIT",
+    "source": "Both methods yielded highly concordant results for the spatial distributions of major cell types across corresponding anatomical regions (Figure S1A).",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "The claim is supported by comparative analysis of the two platforms shown in Figure S1A.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C17",
+    "claim": "The expression levels of the 673 MERFISH+ target genes show strong cross-platform correlation between MERFISH+ and Stereo-seq with a Pearson correlation coefficient of 0.71.",
+    "claim_type": "EXPLICIT",
+    "source": "the expression levels of the 673 MERFISH+ target genes show strong cross-platform correlation between the two modalities (Pearson correlation coefficient of 0.71)",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "The claim is supported by quantitative correlation analysis between the two platforms.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C18",
+    "claim": "Using MERFISH+, approximately 60 transcriptionally distinct cell types were resolved that are separable when embedded in UMAP space.",
+    "claim_type": "EXPLICIT",
+    "source": "Using MERFISH+, we resolve approximately 60 transcriptionally distinct cell types that are separable when embedded in Uniform Manifold Approximation and Projection (UMAP) space of gene-expression data (Figure 2A).",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "The claim is supported by UMAP clustering analysis shown in Figure 2A.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C19",
+    "claim": "The MERFISH+ cell types show strong correspondence with single-nucleus RNA sequencing (snRNA-seq) datasets from the Allen Institute Mammalian Basal Ganglia Consensus Cell Type Atlas.",
+    "claim_type": "EXPLICIT",
+    "source": "These cell types show expression of expected corresponding marker genes (Figure S2) and demonstrate strong correspondence with single-nucleus RNA sequencing (snRNA-seq) datasets from the Allen Institute Mammalian Basal Ganglia Consensus Cell Type Atlas (Allen Institute; RRID:SCR_024672) (Figure 2B)",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "The claim is supported by correlation analysis with reference snRNA-seq data shown in Figure 2B.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C20",
+    "claim": "Twelve major cell classes were identified spanning anterior-to-posterior sections of the human basal ganglia.",
+    "claim_type": "EXPLICIT",
+    "source": "We identify twelve major classes spanning anterior-to-posterior sections (Figure 2C).",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "The claim is supported by the cell type classification analysis shown in Figure 2C.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C21",
+    "claim": "MSNs are divided into six major dopaminergic MSN subtypes: STRd D1 Striosome, STRd D1 Matrix, STRv D1, STRd D2 Striosome, STRd D2 Matrix and STRv D2.",
+    "claim_type": "EXPLICIT",
+    "source": "MSNs segregate into two canonical classes \u2013 D1 and D2 MSNs \u2013 further subdivided into six major dopaminergic MSN subtypes: STRd D1 Striosome, STRd D1 Matrix, STRv D1, STRd D2 Striosome, STRd D2 Matrix and STRv D2 (dorsal striatum, STRd; ventral striatum, STRv) (Figure 2D-E, Figure S3B).",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "The claim is supported by cell type classification analysis shown in Figures 2D-E and S3B.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C22",
+    "claim": "D1 and D2 striosomal MSNs are enriched within striosome compartments, whereas D1 and D2 matrix MSNs predominate in the surrounding matrix.",
+    "claim_type": "EXPLICIT",
+    "source": "Specifically, D1 and D2 striosomal MSNs are enriched within striosome compartments, whereas D1 and D2 matrix MSNs predominate in the surrounding matrix (Figure 2E).",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "The claim is supported by spatial mapping analysis shown in Figure 2E.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C23",
+    "claim": "D2 MSNs constitute approximately 54% of striatal neurons, while D1 MSNs constitute approximately 27%.",
+    "claim_type": "EXPLICIT",
+    "source": "D2 MSNs constitute the largest proportion compared to D1 MSNs (approximately 54 % vs 27 %, respectively).",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "The claim is supported by quantitative analysis of MSN subtype proportions.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C24",
+    "claim": "D1 and D2 MSNs together represent approximately 83% of all striatal neurons.",
+    "claim_type": "EXPLICIT",
+    "source": "D1 and D2 MSNs together represent \u223c83 % of all striatal neurons.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "The claim is supported by quantitative analysis of MSN proportions.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C25",
+    "claim": "D1\u2013D2 hybrid (STR D1D2 Hybrid), striosome-matrix hybrid (STRd D2 Hybrid), and D1 NUDAP (STRv D1 NUDAP) MSNs are primarily localized within the putamen, caudate nucleus, and nucleus accumbens.",
+    "claim_type": "EXPLICIT",
+    "source": "The D1\u2013D2 hybrid (STR D1D2 Hybrid), striosome-matrix hybrid (STRd D2 Hybrid), and D1 NUDAP (Neurochemically Unique Domains in the Accumbens and Putamen) (STRv D1 NUDAP) MSNs are primarily localized within the putamen, caudate nucleus, and nucleus accumbens (Figure 2G)",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "The claim is supported by spatial mapping analysis shown in Figure 2G.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C26",
+    "claim": "D1\u2013D2 hybrid, striosome-matrix hybrid, and D1 NUDAP MSNs are largely absent from the globus pallidus and internal capsule.",
+    "claim_type": "EXPLICIT",
+    "source": "but are largely absent from the globus pallidus and internal capsule.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "The claim is supported by spatial mapping analysis showing absence of these cell types in specific regions.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C27",
+    "claim": "The mixed state of D1-D2 hybrid cell populations is corroborated by colocalization within individual neurons of multiple transcripts of DRD1, DRD2, and prodynorphin (PDYN).",
+    "claim_type": "EXPLICIT",
+    "source": "The mixed state of these cell populations is corroborated by colocalization within individual neurons of multiple transcripts of DRD1, DRD2, and prodynorphin (PDYN), a canonical striosomal MSN marker (Figure 2H).",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "The claim is supported by subcellular transcript localization analysis shown in Figure 2H.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C28",
+    "claim": "Six transcriptionally distinct GP-associated neuronal classes were identified: GPi Shell, GPi Core, GPin-BF Cholinergic, CN LHX6\u2013GBX1, GPe SOX6\u2013CTXND1, and GPe MEIS2\u2013SOX6.",
+    "claim_type": "EXPLICIT",
+    "source": "Analysis of two posterior sections encompassing both internal (GPi) and external (GPe) segments reveal six transcriptionally distinct GP-associated neuronal classes: GPi Shell, GPi Core, GPin-BF Cholinergic, CN LHX6\u2013GBX1, GPe SOX6\u2013CTXND1, and GPe MEIS2\u2013SOX6 (Figure 2I, Figure S4).",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "The claim is supported by cell type classification analysis shown in Figure 2I and Figure S4.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C29",
+    "claim": "GPi Shell and GPi Core neurons are localized to peripheral and central GP regions, respectively.",
+    "claim_type": "EXPLICIT",
+    "source": "As indicated by their nomenclature, GPi Shell and GPi Core neurons are localized to peripheral and central GP regions, respectively (Figure 2J).",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "The claim is supported by spatial mapping analysis shown in Figure 2J.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C30",
+    "claim": "GPe SOX6\u2013CTXND1 and CN LHX6\u2013GBX1 neurons are concentrated within the GPe and show only sparse distributions in other basal ganglia nuclei.",
+    "claim_type": "EXPLICIT",
+    "source": "In contrast, GPe SOX6\u2013CTXND1 and CN LHX6\u2013GBX1 neurons are concentrated within the GPe and show only sparse distributions in other basal ganglia nuclei (Figure 2K).",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "The claim is supported by spatial mapping analysis shown in Figure 2K.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C31",
+    "claim": "OPC\u2013Oligo cells represent the oligodendrocyte lineage and form the most abundant non-neuronal population, comprising 60\u201370% of all non-neuronal cells.",
+    "claim_type": "EXPLICIT",
+    "source": "OPC\u2013Oligo cells represent the oligodendrocyte lineage and form the most abundant non-neuronal population, comprising 60\u201370% of all non-neuronal cells (Figure 3A-left).",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "The claim is supported by quantitative analysis of non-neuronal cell type proportions shown in Figure 3A.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C32",
+    "claim": "The OPC\u2013Oligo lineage includes five transcriptionally distinct subtypes: committed oligodendrocyte progenitors (COP), oligodendrocyte progenitor cells (OPC), Oligo PLEKHG1, immune-associated oligodendrocytes (ImOligo), and Oligo OPALIN.",
+    "claim_type": "EXPLICIT",
+    "source": "This group includes five transcriptionally distinct subtypes: committed oligodendrocyte progenitors (COP), oligodendrocyte progenitor cells (OPC), Oligo PLEKHG1, immune-associated oligodendrocytes (ImOligo), and Oligo OPALIN (Figure 3A-right).",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "The claim is supported by cell type classification analysis shown in Figure 3A.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C33",
+    "claim": "Oligo OPALIN and Oligo PLEKHG1 display complementary spatial distributions.",
+    "claim_type": "EXPLICIT",
+    "source": "Notably, Oligo OPALIN and Oligo PLEKHG1 display complementary spatial distributions (Figure 3B)",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "The claim is supported by spatial mapping analysis shown in Figure 3B.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C34",
+    "claim": "Oligo OPALIN cells are enriched along striatopallidal fiber tracts.",
+    "claim_type": "EXPLICIT",
+    "source": "We found that Oligo OPALIN cells are enriched along striatopallidal fiber tracts (arrows, Figure 3B-right)",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "The claim is supported by spatial mapping analysis shown in Figure 3B.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C35",
+    "claim": "Oligo PLEKHG1 cells are preferentially localized to the internal capsule white matter and globus pallidus, but are sparse in the putamen and caudate nucleus.",
+    "claim_type": "EXPLICIT",
+    "source": "whereas Oligo PLEKHG1 cells are preferentially localized to the internal capsule white matter and globus pallidus, but are sparse in the putamen and caudate nucleus",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "The claim is supported by spatial mapping analysis showing regional enrichment patterns.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C36",
+    "claim": "Six astrocyte subtypes were identified, each defined by distinct marker gene combinations including AQP4, AQP1, SLC6A11, CHI3L1, and ADGRV1.",
+    "claim_type": "EXPLICIT",
+    "source": "Subclustering analysis identifies six astrocyte subtypes, each defined by distinct marker gene combinations that include aquaporin 4 (AQP4), aquaporin 1 (AQP1), solute carrier family 6 member 11 (SLC6A11), chitinase 3-like 1 (CHI3L1), and adhesion G protein-coupled receptor V1 (ADGRV1) (Figure 3D).",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "The claim is supported by subclustering analysis shown in Figure 3D.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C37",
+    "claim": "WM_Astro cells, characterized by high AQP1 expression, are localized primarily to white matter tracts and the peripheral globus pallidus.",
+    "claim_type": "EXPLICIT",
+    "source": "WM_Astro cells, characterized by high AQP1 expression, are localized primarily to white matter tracts and the peripheral globus pallidus (Figure 3H)",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "The claim is supported by spatial mapping analysis shown in Figure 3H.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C38",
+    "claim": "STR_Astro-2 cells, defined by ADGRV1, are enriched in striatum.",
+    "claim_type": "EXPLICIT",
+    "source": "STR_Astro-2 cells, defined by ADGRV1, are enriched in striatum (Figure 3I)",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "The claim is supported by spatial mapping analysis shown in Figure 3I.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C39",
+    "claim": "GP-TH_Astro cells, expressing SLC6A11, are selectively concentrated in the globus pallidus.",
+    "claim_type": "EXPLICIT",
+    "source": "and GP-TH_Astro cells, expressing SLC6A11, are selectively concentrated in the globus pallidus (Figure 3J).",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "The claim is supported by spatial mapping analysis shown in Figure 3J.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C40",
+    "claim": "SLC6A11 (also known as GAT-3) is a GABA transporter that is important for GABA uptake and metabolism in astrocytes.",
+    "claim_type": "EXPLICIT",
+    "source": "For instance, SLC6A11 (also known as GAT-3) is a GABA transporter that is important for GABA uptake and metabolism in astrocytes",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "The claim is supported by citations to prior literature (references 49, 50) documenting the function of SLC6A11.",
+    "evidence_type": [
+      "CITATION"
+    ]
+  },
+  {
+    "claim_id": "C41",
+    "claim": "Cholinergic interneurons and pallidal neuron subtypes exhibit the largest soma volumes (up to approximately 9,400 \u00b5m\u00b3).",
+    "claim_type": "EXPLICIT",
+    "source": "Cholinergic interneurons and globus pallidus neurons including GPi Core, GPi Shell, CN LHX6\u2013GBX1, and GPe MEIS2\u2013SOX6 populations, exhibit the largest median soma volumes (up to \u223c9,400 \u00b5m\u00b3)",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "The claim is supported by quantitative analysis of soma volumes from subcellular transcript localization data shown in Figure 4B.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C42",
+    "claim": "LAMP5+ interneurons and MSNs display markedly smaller soma volumes (approximately 1,800 \u00b5m\u00b3 and approximately 2,500 \u00b5m\u00b3, respectively).",
+    "claim_type": "EXPLICIT",
+    "source": "whereas LAMP5+ interneurons and MSNs display markedly smaller volumes (\u223c1,800 \u00b5m\u00b3 and \u223c2,500 \u00b5m\u00b3, respectively) (Figure 4B).",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "The claim is supported by quantitative analysis of soma volumes from subcellular transcript localization data shown in Figure 4B.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C43",
+    "claim": "SST\u2013CHODL interneurons have among the largest median volumes (approximately 6,200 \u00b5m\u00b3), while SST\u2013ADARB2 interneurons are significantly smaller (approximately 2,300 \u00b5m\u00b3) with p-value = 6.9 x 10^-15.",
+    "claim_type": "EXPLICIT",
+    "source": "for example, SST\u2013CHODL interneurons have among the largest median volumes (\u223c6,200 \u00b5m\u00b3), while SST\u2013ADARB2 interneurons are significantly smaller (\u223c2,300 \u00b5m\u00b3) (p-value = 6.9 x 10-15, Wilcoxon rank-sum test).",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "The claim is supported by quantitative statistical analysis comparing soma volumes between interneuron subtypes.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C44",
+    "claim": "In mouse and monkey basal ganglia circuitry, D1 matrix MSNs project directly to the GPi and substantia nigra pars reticulata, whereas D2 matrix MSNs form the indirect pathway via the GPe.",
+    "claim_type": "EXPLICIT",
+    "source": "Focusing on MSNs, in the mouse and monkey basal ganglia circuitry, D1 matrix MSNs project directly to the GPi and substantia nigra pars reticulata, whereas D2 matrix MSNs form the indirect pathway via the GPe",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "The claim is supported by citations to prior literature (references 3, 54) documenting these projection patterns in animal models.",
+    "evidence_type": [
+      "CITATION"
+    ]
+  },
+  {
+    "claim_id": "C45",
+    "claim": "D1-enriched transcripts (e.g., RELN, EBF1, SLIT1) exhibit higher extra-somatic signal density within the GPi, while D2-enriched transcripts show preferential accumulation in the GPe.",
+    "claim_type": "EXPLICIT",
+    "source": "Consistent with this organization, we found that D1-enriched transcripts (e.g., RELN, EBF1, SLIT1) exhibit higher extra-somatic signal density within the GPi, while D2-enriched transcripts show preferential accumulation in the GPe (Figure 4C\u2013D).",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "The claim is supported by quantitative analysis of subcellular transcript distributions shown in Figures 4C-D.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C46",
+    "claim": "D1-specific genes display significantly higher spatial correlation scores in the GPi than in the GPe, whereas the inverse pattern is observed for D2-specific genes.",
+    "claim_type": "EXPLICIT",
+    "source": "Quantitative correlation analysis across the 673 genes imaged with MERFISH+ confirms this relationship: D1-specific genes display significantly higher spatial correlation scores in the GPi than in the GPe, whereas the inverse pattern is observed for D2-specific genes (Figure 4E).",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "The claim is supported by quantitative correlation analysis shown in Figure 4E.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C47",
+    "claim": "SEMA3E is enriched in GPe.",
+    "claim_type": "EXPLICIT",
+    "source": "We found SEMA3E is enriched in GPe (Figure 4F)",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "The claim is supported by spatial gene expression mapping shown in Figure 4F.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C48",
+    "claim": "SEMA5A is prominently found in GPi.",
+    "claim_type": "EXPLICIT",
+    "source": "while SEMA5A is prominently found in GPi (Figure 4H).",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "The claim is supported by spatial gene expression mapping shown in Figure 4H.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C49",
+    "claim": "Cellular community analysis yields 14 discrete spatial modules that correspond to anatomical regions defined in the Allen Human Brain Atlas.",
+    "claim_type": "EXPLICIT",
+    "source": "This approach yields 14 discrete spatial modules that correspond to anatomical regions defined in the Allen Human Brain Atlas (Figure 5B).",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "The claim is supported by cellular community analysis shown in Figure 5B.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C50",
+    "claim": "STR fast-spiking PTHLH\u2013PVALB GABAergic interneurons are preferentially enriched in the caudate nucleus.",
+    "claim_type": "EXPLICIT",
+    "source": "For instance, STR fast-spiking PTHLH\u2013PVALB GABAergic interneurons are preferentially enriched in the caudate nucleus (Figure 5D, in agreement with previous snRNA-seq analysis).",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "The claim is supported by spatial enrichment analysis shown in Figure 5D and corroborated by citation to prior snRNA-seq analysis (reference 11).",
+    "evidence_type": [
+      "DATA",
+      "CITATION"
+    ]
+  },
+  {
+    "claim_id": "C51",
+    "claim": "STRd ChAT+ GABAergic interneurons are more abundant in the putamen.",
+    "claim_type": "EXPLICIT",
+    "source": "STRd ChAT+ GABAergic interneurons are more abundant in the putamen (Figure 5E).",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "The claim is supported by spatial enrichment analysis shown in Figure 5E.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C52",
+    "claim": "FM GATA3\u2013TCF7L2 neurons are enriched in the GPi nucleus of the basal ganglia and represent a previously unknown neuronal subtype within this region.",
+    "claim_type": "EXPLICIT",
+    "source": "In contrast, FM GATA3\u2013TCF7L2 neurons, a transcriptionally distinct population with unclear lineage affiliation are enriched in the GPi nucleus of the basal ganglia; ; this represents a previously unknown neuronal subtype within this region (Figure 5F).",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "The claim is supported by spatial enrichment analysis shown in Figure 5F and represents a novel finding from this study.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C53",
+    "claim": "The caudate nucleus and putamen share comparable D1/D2 ratios.",
+    "claim_type": "EXPLICIT",
+    "source": "Quantitative analysis of MSN subtype proportions across striatal subregions reveals that the caudate nucleus and putamen share comparable D1/D2 ratios (Figure 5C).",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "The claim is supported by quantitative analysis of MSN subtype proportions shown in Figure 5C.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C54",
+    "claim": "Both D1- and D2-striosomal MSNs are detected in the NAc shell but are largely absent from the NAc core.",
+    "claim_type": "EXPLICIT",
+    "source": "In contrast, both D1- and D2-striosomal MSNs are detected in the NAc shell but are largely absent from the NAc core (Figure 5G\u2013H).",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "The claim is supported by spatial mapping analysis shown in Figures 5G-H.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C55",
+    "claim": "TH, associated with striosome compartments, is enriched in the NAc shell, whereas KIRREL3, a matrix-associated marker, is predominantly expressed in the NAc core.",
+    "claim_type": "EXPLICIT",
+    "source": "This differential organization is corroborated by the expression of established molecular markers: TH associated with striosome compartments, is enriched in the NAc shell, whereas KIRREL3, a matrix-associated marker, is predominantly expressed in the NAc core (Figure 5I).",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "The claim is supported by spatial gene expression mapping shown in Figure 5I and citations to prior literature (references 3, 60) documenting these markers.",
+    "evidence_type": [
+      "DATA",
+      "CITATION"
+    ]
+  },
+  {
+    "claim_id": "C56",
+    "claim": "STR TAC3\u2013PLPP4 interneurons are exclusively localized to the matrix compartment.",
+    "claim_type": "EXPLICIT",
+    "source": "Notably, STR TAC3\u2013PLPP4 interneurons are exclusively localized to the matrix compartment (Figure 6C, 6D top).",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "The claim is supported by spatial mapping and enrichment analysis shown in Figures 6C and 6D.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C57",
+    "claim": "STR TAC3\u2013PLPP4 interneurons are primate-specific.",
+    "claim_type": "EXPLICIT",
+    "source": "These interneurons are primate-specific",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "The claim is supported by citations to prior literature (references 62, 63) documenting the primate-specific nature of these interneurons.",
+    "evidence_type": [
+      "CITATION"
+    ]
+  },
+  {
+    "claim_id": "C58",
+    "claim": "STR TAC3\u2013PLPP4 neurons are among the most abundant population of striatal interneurons in the human dataset.",
+    "claim_type": "EXPLICIT",
+    "source": "In our human dataset, STR TAC3\u2013PLPP4 neurons are among the most abundant population of striatal interneurons (Figure 6E).",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "The claim is supported by quantitative analysis of interneuron proportions shown in Figure 6E.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C59",
+    "claim": "The putative mouse homologs of STR TAC3\u2013PLPP4 interneurons represent only approximately 6% of interneurons.",
+    "claim_type": "EXPLICIT",
+    "source": "whereas their putative mouse homologs represent only \u223c6% of interneurons",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "The claim is supported by citations to prior literature (references 62-64) documenting the proportion of these interneurons in mice.",
+    "evidence_type": [
+      "CITATION"
+    ]
+  },
+  {
+    "claim_id": "C60",
+    "claim": "VIP+ and LAMP5+ interneurons display moderate enrichment within striosomal territories.",
+    "claim_type": "EXPLICIT",
+    "source": "Conversely, VIP+ and LAMP5+ interneurons display moderate enrichment within striosomal territories (Figure 6C, 6D bottom)",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "The claim is supported by enrichment analysis shown in Figures 6C and 6D.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C61",
+    "claim": "Astrocyte and Oligo OPALIN oligodendrocyte enrichment near striosome borders form boundary-aligned microdomains.",
+    "claim_type": "EXPLICIT",
+    "source": "This analysis reveals astrocyte and Oligo OPALIN oligodendrocyte enrichment near striosome borders that form boundary-aligned microdomains (Figure 6G, 6H bottom).",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "The claim is supported by proximity analysis shown in Figures 6G and 6H.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C62",
+    "claim": "Clustering based on distance-dependent astrocyte genes resolves four astrocyte subpopulations that occupy distinct positional zones\u2014core, boundary, and perimatrix.",
+    "claim_type": "EXPLICIT",
+    "source": "Clustering based on these genes resolves four astrocyte subpopulations that occupy distinct positional zones\u2014core, boundary, and perimatrix (Figures 6H, top)",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "The claim is supported by clustering analysis shown in Figure 6H.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C63",
+    "claim": "Mouse supertypes 0268 STR D1 GABA_4 and 0267 STR D1 GABA_3 correspond to human STRd D1 Striosome and STRd D1 Matrix MSNs, respectively.",
+    "claim_type": "EXPLICIT",
+    "source": "Mouse supertypes 0268 STR D1 GABA_4 and 0267 STR D1 GABA_3 correspond to human STRd D1 Striosome and STRd D1 Matrix MSNs, respectively (Figure S8C\u2013D).",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "The claim is supported by cross-species mapping analysis shown in Figure S8C-D.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C64",
+    "claim": "Finer subclustering of the mouse 0277 STR D2 Gaba_4 supertype, designated as A* and B*, map to human STRd D2 Striosome MSN and STRd D2 Matrix MSN, respectively.",
+    "claim_type": "EXPLICIT",
+    "source": "Similarly, finer subclustering of the mouse 0277 STR D2 Gaba_4 supertype, designated as A* and B*, map to human STRd D2 Striosome MSN and STRd D2 Matrix MSN, respectively (Figure S8E\u2013F).",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "The claim is supported by cross-species mapping analysis shown in Figure S8E-F.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C65",
+    "claim": "Specific glial populations, Astro-TE NN_3 astrocytes and MOL NN_4 oligodendrocytes, are enriched at striosome borders in mice.",
+    "claim_type": "EXPLICIT",
+    "source": "The results are highly concordant across species: specific glial populations, Astro-TE NN_3 astrocytes and MOL NN_4 oligodendrocytes, are enriched at striosome borders in mice (Figure 6J-K).",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "The claim is supported by cross-species proximity analysis shown in Figures 6J-K.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C66",
+    "claim": "Unsupervised clustering of spatially weighted whole-transcriptome profiles derived from Stereo-seq data recapitulates the mesoscale modules identified by MERFISH+ cellular community analysis.",
+    "claim_type": "EXPLICIT",
+    "source": "This spatial analysis recapitulates the mesoscale modules identified by MERFISH+ cellular community analysis and aligns closely with established anatomical territories of the human basal ganglia (Figure 7A, Figure S9A).",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "The claim is supported by spatial module analysis shown in Figure 7A and Figure S9A.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C67",
+    "claim": "The putamen exhibits strong enrichment of ZNF385B (a zinc-finger transcription factor) and ROBO2 (an axonal guidance molecule).",
+    "claim_type": "EXPLICIT",
+    "source": "For example, the putamen exhibits strong enrichment of ZNF385B (a zinc-finger transcription factor) and ROBO2 (an axonal guidance molecule)",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "The claim is supported by spatial gene expression analysis identifying region-enriched genes.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C68",
+    "claim": "The caudate nucleus shows elevated expression of TAC1 (a neuropeptide precursor) and EGR1 (an immediate early transcription factor).",
+    "claim_type": "EXPLICIT",
+    "source": "whereas the caudate nucleus shows elevated expression of TAC1(a neuropeptide precursor) and EGR1(an immediate early transcription factor).",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "The claim is supported by spatial gene expression analysis identifying region-enriched genes.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C69",
+    "claim": "The nucleus accumbens shell is marked by vesicle associated molecules SCG2 and CALY.",
+    "claim_type": "EXPLICIT",
+    "source": "The nucleus accumbens shell is marked by vesicle associated molecules SCG2 and CALY",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "The claim is supported by spatial gene expression analysis identifying region-enriched genes.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C70",
+    "claim": "The NAc core is enriched for stress-response genes HSPA6 and DNAJB1.",
+    "claim_type": "EXPLICIT",
+    "source": "while the NAc core is enriched for stress-response genes HSPA6 and DNAJB1 (Figure 7C).",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "The claim is supported by spatial gene expression analysis shown in Figure 7C.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C71",
+    "claim": "Numerous genes in the human striatum display graded expression along the dorsolateral-ventromedial axis.",
+    "claim_type": "EXPLICIT",
+    "source": "We find numerous genes in the human striatum that display graded expression along this axis (Figure 7E).",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "The claim is supported by gradient analysis shown in Figure 7E.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C72",
+    "claim": "PDE10A, NRGN, and SLIT1 are dorsolaterally enriched genes in the human striatum.",
+    "claim_type": "EXPLICIT",
+    "source": "For example, PDE10A, NRGN, and SLIT1 are dorsolaterally enriched",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "The claim is supported by gradient analysis identifying directionally enriched genes.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C73",
+    "claim": "NNAT, CRYM, and RAP1GAP exhibit ventromedial bias in the human striatum.",
+    "claim_type": "EXPLICIT",
+    "source": "whereas NNAT, CRYM, and RAP1GAP exhibit ventromedial bias.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "The claim is supported by gradient analysis identifying directionally enriched genes.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C74",
+    "claim": "The majority of gradient-aligned genes show directionality concordance across species (mouse and human).",
+    "claim_type": "EXPLICIT",
+    "source": "Importantly, the majority of gradient-aligned genes show directionality concordance across species as illustrated by the similarity of the gradient scores (Figure 7F) and spatial expression maps (Figure 7G and Figure S9C) of genes between mouse and human.",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "The claim is supported by cross-species gradient comparison shown in Figures 7F, 7G, and S9C.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C75",
+    "claim": "In both mouse and human, the expression gradient is dominated by the ventromedial direction (Mouse: 73%, Human: 97.2%) as opposed to the dorsolateral direction (Mouse: 26%, Human: 2.73%).",
+    "claim_type": "EXPLICIT",
+    "source": "In addition, we observe in both mouse and human, the expression gradient is dominated by the ventromedial direction (Mouse: 73%, Human: 97.2%) as opposed to the dorsolateral direction (Mouse: 26%, Human: 2.73%) (Figure 7H and Figure S9D).",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "The claim is supported by quantitative gradient analysis shown in Figure 7H and Figure S9D.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C76",
+    "claim": "Most gradient-associated transcripts are enriched in lateral ganglionic eminence (CN/LGE)-derived GABAergic neurons, the principal MSN population.",
+    "claim_type": "EXPLICIT",
+    "source": "Most gradient-associated transcripts are enriched in lateral ganglionic eminence (CN/LGE)-derived GABAergic neurons, the principal MSN population.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "The claim is supported by cell-type-specific analysis of gradient-associated genes.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C77",
+    "claim": "A subset of dorsolateral-enriched genes are expressed within oligodendrocyte lineage (OPC\u2013Oligo) cells, reflecting the dense myelinated fiber tracts that occupy dorsal striatal territories.",
+    "claim_type": "EXPLICIT",
+    "source": "A subset of dorsolateral-enriched genes, however, are expressed within oligodendrocyte lineage (OPC\u2013Oligo) cells, that reflects the dense myelinated fiber tracts that occupy dorsal striatal territories (Figure 7I).",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "The claim is supported by cell-type-specific analysis shown in Figure 7I and represents an inference about the biological significance of the observation.",
+    "evidence_type": [
+      "DATA",
+      "INFERENCE"
+    ]
+  },
+  {
+    "claim_id": "C78",
+    "claim": "Tissue samples were collected from four neurotypical Caucasian male donors, aged 36\u201353 years, with no pathological evidence of neurodegenerative disease or other brain injury.",
+    "claim_type": "EXPLICIT",
+    "source": "Tissue samples were collected from four neurotypical Caucasian male donors, aged 36\u201353 years, with no pathological evidence of neurodegenerative disease or other brain injury.",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "The claim describes the sample characteristics documented in the methods and Table S1.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C79",
+    "claim": "RNA quality was confirmed by RNA Integrity Number (RIN) values ranging from 7.0 to 8.4.",
+    "claim_type": "EXPLICIT",
+    "source": "RNA quality was confirmed by RNA Integrity Number (RIN) values ranging from 7.0 to 8.4, indicating excellent preservation for downstream analyses (Table S1).",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "The claim describes the RNA quality metrics documented in Table S1.",
+    "evidence_type": [
+      "DATA"
+    ]
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "command": "cllm extract papers/2025.12.31.697063/2025.12.31.697063.source.xml -o papers/2025.12.31.697063/claims.json",
+  "model": "claude-sonnet-4-5-20250929",
+  "created_at": 1770424754,
+  "input_tokens": 110662,
+  "cached_tokens": 0,
+  "output_tokens": 18645,
+  "total_tokens": 129307,
+  "input_cost": 0.331986,
+  "cached_cost": 0.0,
+  "output_cost": 0.279675,
+  "total_cost": 0.611661,
+  "processing_time_sec": 276.12947130203247
+}

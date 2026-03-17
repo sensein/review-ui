@@ -1,0 +1,2117 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Conserved visual capacity of rats under red light</title>
+				<funder ref="#_Psram3q">
+					<orgName type="full">unknown</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Regional Laboratory for Advanced Mechatronics, LAMA FVG</orgName>
+				</funder>
+				<funder ref="#_3vGN9S9">
+					<orgName type="full">Human Frontier Science Program (MED)</orgName>
+				</funder>
+				<funder ref="#_uHNBxzr">
+					<orgName type="full">European Research Council</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+				<date type="published" when="2020-11-06">06 November 2020</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Nader</forename><surname>Nikbakht</surname></persName>
+							<email>nikbakht@mit.edu</email>
+							<affiliation key="aff1">
+								<orgName type="department">International School for Advanced Studies (SISSA)</orgName>
+								<orgName type="laboratory">Tactile Perception and Learning Lab</orgName>
+								<address>
+									<settlement>Trieste</settlement>
+									<country key="IT">Italy</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">Department of Brain and Cognitive Sciences</orgName>
+								<orgName type="institution" key="instit1">McGovern Institute for Brain Research</orgName>
+								<orgName type="institution" key="instit2">Massachusetts Institute of Technology</orgName>
+								<address>
+									<settlement>Cambridge</settlement>
+									<country key="US">United States</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Mathew</forename><forename type="middle">E</forename><surname>Diamond</surname></persName>
+							<email>diamond@sissa.it</email>
+							<affiliation key="aff1">
+								<orgName type="department">International School for Advanced Studies (SISSA)</orgName>
+								<orgName type="laboratory">Tactile Perception and Learning Lab</orgName>
+								<address>
+									<settlement>Trieste</settlement>
+									<country key="IT">Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="department">Ernst Stru ¨ngmann Institute (ESI) for Neuroscience in Cooperation with Max Planck Society</orgName>
+								<address>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Conserved visual capacity of rats under red light</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2020-11-06">06 November 2020</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">FA4B2445502B4750ADD4DFE97A9CD569</idno>
+					<idno type="DOI">10.7554/eLife.66429</idno>
+					<note type="submission">Received: 11 January 2021 Accepted: 19 July 2021</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2026-03-17T01:57+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Author contributions Nader Nikbakht</term>
+					<term>Mathew E Diamond</term>
+					<term>Conceptualization</term>
+					<term>Supervision</term>
+					<term>Funding acquisition</term>
+					<term>Resources</term>
+					<term>Data curation</term>
+					<term>Software</term>
+					<term>Formal analysis</term>
+					<term>Validation</term>
+					<term>Investigation</term>
+					<term>Visualization</term>
+					<term>Methodology</term>
+					<term>Writing -original draft</term>
+					<term>Writing -review and editing</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>Recent studies examine the behavioral capacities of rats and mice with and without visual input, and the neuronal mechanisms underlying such capacities.</s><s>These animals are assumed to be functionally blind under red light, an assumption that might originate in the fact that they are dichromats who possess ultraviolet and green cones, but not red cones.</s><s>But the inability to see red as a color does not necessarily rule out form vision based on red light absorption.</s><s>We measured Long-Evans rats' capacity for visual form discrimination under red light of various wavelength bands.</s><s>Upon viewing a black and white grating, they had to distinguish between two categories of orientation: horizontal and vertical.</s><s>Psychometric curves plotting judged orientation versus angle demonstrate the conserved visual capacity of rats under red light.</s><s>Investigations aiming to explore rodent physiological and behavioral functions in the absence of visual input should not assume redlight blindness.</s></p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Introduction</head><p><s>Rats, like many rodents, are largely crepuscular and, even during daylight, are usually to be found in poorly illuminated environments <ref type="bibr" target="#b26">(Macdonald et al., 1994)</ref>.</s><s>Their retina is rod dominated, with cones making up as little as 1% of photoreceptors <ref type="bibr" target="#b20">(Jacobs et al., 2001;</ref><ref type="bibr">La Vail, 1976)</ref>.</s><s>Rods are about 100 times more sensitive <ref type="bibr" target="#b66">(Yau, 1994)</ref> and allow vision under low-light conditions, with a peak spectral absorption of rhodopsin in rods in rats and mice at 498 nm <ref type="bibr" target="#b0">(Bridges, 1959;</ref><ref type="bibr" target="#b15">Govardovskii et al., 2000;</ref><ref type="bibr" target="#b25">Lyubarsky et al., 2004)</ref>.</s><s>Although rats are not color-blind <ref type="bibr" target="#b20">(Jacobs et al., 2001;</ref><ref type="bibr" target="#b24">Lemmon and Anderson, 1979;</ref><ref type="bibr" target="#b33">Muenzinger and Reynolds, 1936;</ref><ref type="bibr" target="#b34">Munn and Collins, 1936;</ref><ref type="bibr" target="#b62">Walton and Bornemeier, 1938)</ref>, they perform poorly in discriminating between nearby wavelengths, compared to humans <ref type="bibr" target="#b61">(Walton, 1933)</ref>.</s><s>Rats' color sensitivity is based on two sets of cones with peak sensitivities in the range of ultraviolet (UV cones; peak absorption at 358-359 nm) and green (M cones; peak absorption at 509-510 nm) <ref type="bibr" target="#b6">(Deegan and Jacobs, 1993;</ref><ref type="bibr" target="#b19">Jacobs et al., 1991;</ref><ref type="bibr" target="#b53">Sze ´l and Ro ¨hlich, 1992)</ref>.</s><s>Recently, electroretinogram (ERG) responses of the photopic spectral sensitivity curves of photoreceptors of rats and mice were measured throughout the UV-visible spectrum (300-700 nm) <ref type="bibr" target="#b47">(Rocha et al., 2016)</ref>.</s><s>These measurements identified two sensitivity peaks in Wistar rats: 362 and 502 nm; no significant response to long wavelength light (above 620 nm) was detected.</s><s>This study reinforced the already existing notion that red light is experienced as a total absence of usable light.</s><s>In contrast, another study <ref type="bibr" target="#b38">(Niklaus et al., 2020)</ref> showed significant scotopic and photopic ERG responses to red light even at low intensities.</s><s>In the present study, we challenge the notion of form vision blindness under red light and find, contrary to expectation, good behavioral performance.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Results</head><p><s>Rats were required to categorize the orientation of a solid disk-like object with a circular boundary and raised parallel bars, alternately colored white and black, thus forming a square-wave grating (Figure <ref type="figure" target="#fig_0">1A</ref>).</s><s>Orientations in the range of 0˚-45˚were rewarded as horizontal and orientations in the range of 45˚-90˚as vertical (Figure <ref type="figure" target="#fig_0">1B</ref>). Figure <ref type="figure" target="#fig_0">1C</ref> illustrates the sequence of events in the behavioral task.</s><s>Each trial started with the rat's head poke, which triggered the opening of an opaque gate, followed by illumination with light sources of various wavelengths.</s><s>A transparent panel in front of the object prevented the rat from generating tactile cues.</s><s>After observing the object, the rat turned its head toward one spout (L or R) and licked.</s><s>The boundary angle, 45˚, was rewarded randomly on left or right.</s><s>Illumination was by a white LED array or else by monochrome LEDs with peak intensities at 626 nm, 652 nm, 729 nm, 854 nm, and 930 nm as measured by spectrometer and verified by the manufacturer's datasheet (Figure <ref type="figure" target="#fig_0">1D</ref>; see Materials and methods).</s><s>Half widths were 12.1-49.1 nm.</s></p><p><s>To quantify rats' performance, we used a cumulative Gaussian function to fit psychometric curves to the data of each rat (see Materials and methods).</s><s>Figure <ref type="figure" target="#fig_0">1E</ref> reveals that all rats (N = 4, pale curves; average curve in dark blue) performed well under white LED illumination.</s></p><p><s>Sessions with white light were interspersed with sessions illuminated by various narrow-band monochrome LEDs in the range of red, far-red, and infrared (Figure <ref type="figure" target="#fig_0">1D</ref>).</s><s>It is important to perform behavioral testing under illumination with narrow-band monochromatic light sources to eliminate the possibility of off-peak illumination through the tail of a wide power spectral distribution.</s><s>Figure <ref type="figure" target="#fig_3">2A</ref>, B shows that dark-adapted rats performed the visual categorization task under 626 nm and 652 nm LEDs (perceived as red by humans) with accuracy equivalent to that under white light, refuting the common belief of functional blindness under red light.</s><s>Rats performed well even under peak 729 nm (Figure <ref type="figure" target="#fig_3">2C</ref>), perceived as far-red by humans, though clearly diminished with respect to white.</s><s>They performed poorly under infrared illumination, comprising 854 nm and 930 nm light (Figure <ref type="figure" target="#fig_3">2D,</ref><ref type="figure">E</ref>).</s></p><p><s>The performance (N=four rats) under different illumination wavelengths is summarized by the cumulative proportion of trials categorized correctly across all orientations (Figure <ref type="figure" target="#fig_3">2F</ref>).</s><s>Average performance was 87 ± 2% correct under white light (confidence interval is SEM across rats).</s><s>Average performance was 84 ± 3% under 626 nm illumination (p=0.158</s><s>compared to white light; bootstrap tests illustrated in Figure <ref type="figure" target="#fig_3">2</ref>-figure supplement 1), 86 ± 2% under 652 nm (p=0.419</s><s>compared to white light), 72 ± 3% under 729 nm (p=0.00 compared to white light), 53 ± 2% under 854 nm (p=0.257</s><s>compared to chance), and 50 ± 1% under 930 nm average performance (p=0.316</s><s>compared to chance).</s></p><p><s>Visual acuity under the red LEDs (626 nm and 652 nm) cannot be explained by unintended 'leakage' toward shorter wavelengths.</s><s>Figure <ref type="figure" target="#fig_0">1D</ref> shows that the infrared LEDs (854 nm and 930 nm) emitted ~2-50 times higher intensity at shorter wavelength than did the red LEDs, yet performance under illumination by IR LEDs was at chance.</s><s>Therefore, performance under red LEDs is better explained by positing that enough red light was absorbed to guide the discrimination.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Discussion</head><p><s>Rodent behavioral experiments done under red light are believed to place the animal in dark conditions while allowing the experimenter to observe the preparation directly or by video recording <ref type="bibr" target="#b1">(Celikel and Sakmann, 2007;</ref><ref type="bibr" target="#b3">Cloke et al., 2015;</ref><ref type="bibr" target="#b7">Diamond et al., 1999;</ref><ref type="bibr" target="#b10">Englund et al., 2020;</ref><ref type="bibr" target="#b57">van Goethem et al., 2012;</ref><ref type="bibr" target="#b17">Harris and Diamond, 2000;</ref><ref type="bibr" target="#b16">Harris et al., 1999;</ref><ref type="bibr" target="#b18">Jacklin et al., 2016;</ref><ref type="bibr" target="#b35">Nikbakht et al., 2012;</ref><ref type="bibr" target="#b41">Pacchiarini et al., 2020;</ref><ref type="bibr" target="#b46">Reid et al., 2014;</ref><ref type="bibr" target="#b48">Salaberry et al., 2017;</ref><ref type="bibr" target="#b50">Sieben et al., 2015;</ref><ref type="bibr" target="#b58">Vasconcelos et al., 2011;</ref><ref type="bibr" target="#b64">Winters and Reid, 2010)</ref>.</s><s>The relevant literature includes place-cell studies of rats navigating under dim red light, taken as the absence of visual input <ref type="bibr" target="#b39">(O'Keefe, 1976;</ref><ref type="bibr" target="#b49">Save et al., 2000;</ref><ref type="bibr" target="#b68">Zhang and Manahan-Vaughan, 2015;</ref><ref type="bibr" target="#b67">Zhang et al., 2014)</ref>.</s><s>In a developmental study of the visual cortex, mice were dark-reared but were allowed very brief daily exposure to red light <ref type="bibr" target="#b22">(Kowalewski et al., 2021)</ref>.</s><s>Furthermore, red illumination is often used in reverse light cycle conditions in animal husbandry settings with the assumption that it will not affect rodent circadian rhythms <ref type="bibr" target="#b9">(Emmer et al., 2018)</ref>.</s><s>In all of these cases, the animals may acquire more visual input than previously believed.</s><s><ref type="bibr">(top)</ref> and exactly from the front (bottom), the latter approximating the perspective of the rat.</s><s>(B) Schematic of the orientations of the stimuli and rule of the categorization task.</s><s>0˚-45˚(red) rewarded as 'horizontal' and 45˚-90˚(solid green) rewarded as 'vertical.'.</s><s>(C) Sequential steps in the behavioral task.</s><s>Each trial started with a head poke that interrupted a light beam and triggered the opening of an opaque gate, followed by visual access to the object.</s><s>After probing the stimulus, the rat turned its head toward one spout, in this illustration left for vertical and right for horizontal.</s><s>See Integrating the power under the curves at wavelengths &lt;580 nm reveals that the infrared LEDs emitted from 2 to 50 times higher intensity as compared to red LEDs, in spite of the infrared LEDs being centered at longer wavelengths (infrared 854 nm and 930 nm LEDs emitted 1.95 and 0.48 mW/cm 2 , respectively, while red 626, 652, and 729 nm LEDs emitted 0.12, 0.28, and 0.04 mW/cm 2 , respectively).</s><s>See Figure supplement 2. Log-scaled irradiance for each LED, measured by a spectrometer at the stimulus delivery area in units of photons:m À2 :s À1 :nm À1 .</s><s>Figure supplement 3. Log-scaled normalized irradiance for each LED along with a template that approximates the photopigment spectral sensitivity of rat's rhodopsin as well as S-opsin, M-opsin <ref type="bibr" target="#b52">(Stockman and Sharpe, 2000)</ref>.</s></p><p><s>Rodents lack red cones <ref type="bibr" target="#b6">(Deegan and Jacobs, 1993;</ref><ref type="bibr" target="#b19">Jacobs et al., 1991;</ref><ref type="bibr" target="#b53">Sze ´l and Ro ¨hlich, 1992)</ref>, but from the inability to see red as a color, it does not necessarily follow that they cannot absorb red light through their rod-dominated retina to support form vision.</s><s>A recent study <ref type="bibr" target="#b38">(Niklaus et al., 2020)</ref> examined the retinal responses mediated by rods and cones of pigmented (Brown Norway) and albino (Wistar) rats in response to monochromatic far-red light of 656 ± 10 nm in both photopic (light-adapted) and scotopic (dark-adapted) settings.</s><s>Both rat strains showed significant scotopic and photopic ERG responses to red light even at low intensities.</s><s>These results hinted that even far-red light may provide effective illumination for rats.</s><s>However, whether the photoreceptor activation by red light can lead to functionally meaningful signals has not yet been established.</s><s>Excitation of retinal receptors by red light does not, by itself, indicate behavioral availability of the signal.</s><s>For instance, red light might act to entrain circadian rhythms, unconscious to the animal.</s><s>The sensitivity of mice is emphasized by the finding that red illumination delivered into the brain in an optogenetic protocol evoked a behavioral artifact in mice performing a visually guided discrimination task <ref type="bibr" target="#b5">(Danskin et al., 2015)</ref>.</s><s>Although our study does not include direct measures of photoreceptor sensitivity, the results indicate that mechanisms must exist for converting miniscule quantities of receptor activation into meaningful signals, perhaps through some cross-retina population code.</s><s>It is interesting to note the possibility that photoreceptors could respond to longer wavelengths through a nonlinear optical process including two-photon activation of photopigments <ref type="bibr" target="#b42">(Palczewska et al., 2014;</ref><ref type="bibr" target="#b59">Vinberg et al., 2019)</ref>, although the emission intensities used in our work are many orders of magnitude lower than those used in two-photon studies <ref type="bibr" target="#b42">(Palczewska et al., 2014)</ref>.</s></p><p><s>In the present work, Long-Evans rats demonstrated substantial visual form capacity under illumination by LEDs emitting long-wavelength red and far-red light -LEDs that are low cost, easy to use, and thus common in the laboratory.</s><s>Object discrimination began to degrade when illumination wavelength increased from 652 to 729 nm and was almost nil at 854 nm.</s><s>The performance curves suggest the optimal conditions for vision-excluded behavioral studies: illumination at 850 nm did not support visual form capacity, yet remains within the sensitivity range of inexpensive silicone detectors (CMOS and CCDs).</s><s>Thus, behaviors may be documented by video while the animal performs without visual cues.</s></p><p><s>Rats and mice are the most frequently used laboratory mammals, ideal for research on spatial navigation <ref type="bibr" target="#b12">(Frank et al., 2000;</ref><ref type="bibr" target="#b27">MacDonald et al., 2011;</ref><ref type="bibr" target="#b32">Moser et al., 2017;</ref><ref type="bibr" target="#b40">O'keefe and Nadel, 1978;</ref><ref type="bibr" target="#b43">Pastalkova et al., 2008;</ref><ref type="bibr" target="#b65">Wood et al., 2000)</ref> and the processing of tactile <ref type="bibr" target="#b8">(Diamond et al., 2008;</ref><ref type="bibr" target="#b11">Fassihi et al., 2017;</ref><ref type="bibr" target="#b70">Zuo and Diamond, 2019)</ref> and olfactory <ref type="bibr" target="#b2">(Chae et al., 2019;</ref><ref type="bibr" target="#b21">Koldaeva et al., 2019;</ref><ref type="bibr" target="#b56">Uchida and Mainen, 2003;</ref><ref type="bibr" target="#b55">Uchida et al., 2006)</ref> information.</s><s>Neuroscientists have not traditionally attributed to rodents the wide range of visual perceptual functions characteristic of primates.</s><s>However, there is growing interest in the use of rodents for the study of vision, alone or combined with other modalities <ref type="bibr" target="#b14">(Gharaei et al., 2018;</ref><ref type="bibr" target="#b36">Nikbakht et al., 2018;</ref><ref type="bibr" target="#b37">Nikbakht Nasrabadi, 2015;</ref><ref type="bibr" target="#b50">Sieben et al., 2015;</ref><ref type="bibr" target="#b69">Zoccolan, 2015)</ref>.</s><s>Rats under broad-wavelength conditions spontaneously recognize an object even when views differ by angle, size, and position Zoccolan, 2015; such generalization is a hallmark of authentic visual perception and was once believed to belong only to primates.</s><s>Importantly, they achieve high-level sensory-perceptual cognition through the workings of neuronal circuits that are accessible <ref type="bibr" target="#b4">(Crochet et al., 2019;</ref><ref type="bibr" target="#b29">Matteucci and Zoccolan, 2020;</ref><ref type="bibr" target="#b28">Matteucci et al., 2019;</ref><ref type="bibr" target="#b51">Steinmetz et al., 2019;</ref><ref type="bibr" target="#b54">Tafazoli et al., 2017)</ref>.</s><s>The present study extends the range of visual perceptual functions for which rats can serve as models, characterizing their performance in judging object orientation and indicating the longest illumination wavelengths at which this capacity remains intact.</s><s>A complete understanding of the visual processing of these animals is important not only in the design and control of the behavioral and physiological experiments but also to ensure optimal environmental lighting conditions for their well-being in laboratory settings.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Materials and methods</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Experimental subject details</head><p><s>Four male Long-Evans rats (Charles River Laboratories, Calco, Italy) were used.</s><s>They were caged in pairs and maintained on a 12/12 hr light/dark cycle; experiments were conducted during the light phase.</s><s>Upon arrival, they were 8 weeks old, weighing approximately 250 g, and typically grew to over 600 g over the course of the study.</s><s>They had free access to food in the cage.</s><s>To promote motivation in the behavioral task, rats were water-deprived on days of training/testing.</s><s>During each session, they received 17-22 mL of pear juice diluted in water (one unit juice: four units water) as reward.</s><s>After the session, they were given access to water ad libitum for 1 hr, though they were rarely thirsty and then they were placed for several hours in a large, multistory-enriched environment to interact with other rats.</s><s>Animals were examined weekly by a veterinarian.</s><s>Protocols conformed to international norms and were approved by the Ethics Committee of SISSA and by the Italian Health Ministry (license numbers 569/2015-PR and 570/2015-PR).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Behavioral method details Apparatus</head><p><s>The main chamber of the apparatus, custom-built in opaque white Plexiglas, measured 25 Â 25 Â 37 (H Â W Â L, cm) (Figure <ref type="figure" target="#fig_0">1</ref>-figure supplement 1).</s><s>The rat started a trial by interrupting an infrared beam detected by a phototransistor (Figure <ref type="figure" target="#fig_0">1C</ref>).</s><s>Beam interruption triggered fast opening of an opaque panel (through a rotational motion of 40˚in 75 ms), actuated by a stepper motor, uncovering a circular hole (diameter 5 cm) in the front wall through which the rat could extend its head to see the object.</s><s>The stimulus was 3 cm behind the opaque panel (further details below), and the reward spouts were 2 cm lateral to the edge of the stimulus.</s><s>A transparent panel prevented direct touch.</s></p><p><s>The apparatus was in a Faraday cage that, with the door closed, provided acoustic, visual, and electromagnetic isolation.</s><s>An array of 12 infrared emitters (l = 930 nm, OSRAM Opto Semiconductors GmbH, Germany) illuminated the stimulus port to permit the investigator to monitor behavior and to execute video recording.</s><s>Such illumination did not provide visual cues for the rat (see Results).</s><s>For visual testing, different light sources were used to illuminate the stimulus: a pair of six white LED arrays or various high-power monochrome LED arrays (Roithner LaserTechnik, GmbH) with peak intensities at 626 nm (LED620-66-60), 652 nm (LED660-66-60), 729 nm (LED735-66-60), 854 nm (LED850-66-60), and 930 nm (LED940-66-60) (see Figure <ref type="figure" target="#fig_0">1D</ref> for Gaussian fits to the measured spectrum in ambient temperature).</s><s>The power spectral distributions were measured with a calibrated spectrometer and the associated software (Model: FLAME-S-XR1-ES, OceanOptics, Rochester, NY) via a visible-NIR fiber (core diameter 200 mm) attached to a cosine corrector.</s><s>The cosine corrector acts as an optical diffuser that couples to the optical fiber and spectrometer to collect signals from 180˚field of view.</s><s>The spectrometer was calibrated using a Deuterium-Halogen calibration light source unit (DH-3 plus OceanOptics, Rochester, NY).</s><s>This light source provides known absolute intensity values at several wavelengths, expressed in mW/cm 2 /nm.</s><s>The spectral intensities emitted by this source are calibrated according to the intensity standard of the National Institute of Standards and Technology (NIST).</s><s>The spectrometer calibration procedure accounts for the different sensitivities of the spectrometer across different wavelengths.</s><s>The spectrometer we used has a software suite that reports the values measured from the calibrated spectrometer as spectral irradiance (the power received by a surface per unit area of the measurement probe per wavelength [in units of mW/cm 2 /nm]).</s></p><p><s>Two infrared-sensitive video systems (Point Grey Flea, Edmund Optics, Barrington, NJ) registered the rat's actions.</s><s>The first camera, equipped with a macro lens (Fujinon TV HF25HA-1B Lens, Fujifilm, Tokyo) mounted 25 cm above the stimulus delivery area (distance with respect to the center of stimulus), monitored the rat's interaction with the object.</s><s>In some sessions, this camera was set to 250 f/ s to monitor head, snout, and whisker position and movement during behavior.</s><s>The second camera provided a wide-angle view (Fujinon HF9HA-1B Lens, Fujifilm, Tokyo) and monitored the entire setup, illuminated with adjustable infrared LEDs, at 30 f/s.</s></p><p><s>Reward spouts included custom-made infrared diode sensors interrupted by the tongue.</s><s>Only the licking signal from the correct spout triggered the pump motor (NE-500 programmable OEM; New Era Pump Systems, mounted on a vibration-cancellation pedestal) to extrude the reward, 0.05 mL per trial of diluted pear juice.</s><s>Licking marked the end of the trial, accompanied by the closure of the opaque front panel.</s><s>Before the next trial began, the motor on which the stimulus was mounted rotated to generate the next orientation.</s></p><p><s>Custom-made software was developed using LabVIEW (National Instruments, Austin, TX).</s><s>An AVR32 board (National Instruments) and multiple Arduino Shields (National Instruments) acquired all sensor signals and controlled the motors, LEDs, and the reward syringe pumps.</s><s>All the sensors, actuators (including motors and pumps), and lights were interfaced with the computer program allowing full control over a wide range of parameters governing the flow of the training and testing.</s><s>Although fully automatic, the software allowed the experimenter to modify all the parameters of the task and control the lights, sensors, and motors online as needed.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Visual stimulus presentation</head><p><s>The stimulus was a black and white square-wave grating within a circular 9.8 cm diameter circumference, built in-house by a 3D printer (3D Touch, BFB Technologies, Figure <ref type="figure" target="#fig_0">1A</ref>).</s><s>It was mounted on a stepper motor and rotated to generate the trial's intended orientation (Figure <ref type="figure" target="#fig_0">1B</ref>).</s><s>The stimulus stepper motor was controlled through a feedback system with a digital step counter to maintain the exact desired orientation.</s><s>In the study that originally explored orientation judgment <ref type="bibr" target="#b36">(Nikbakht et al., 2018)</ref>, tactile exploration of the object was allowed in some trials, but the tactile condition is not considered in the present work; only visual, touch-free data are included.</s><s>Within behavioral testing sessions, each stimulus orientation was sampled from a uniform distribution in 5s teps between À45˚and 135˚and presented in a semi-random fashion (sampling without replacement).</s><s>For analysis, we binned the angles every 10˚.</s><s>Visual acuity is measured in cycles per degree (cpd), an assessment of the number of lines that can be seen as distinct within a degree of the visual field:</s></p><formula xml:id="formula_0">Acuity ¼ 1 2 Â tan À1 h d À Á cpd</formula><p><s>where h is the width of each line in the stimulus and d is the distance from the eye.</s><s>Considering the 3 cm distance behind the opaque panel (Figure <ref type="figure" target="#fig_0">1</ref>-figure supplement 1), at the moment of panel opening, each cycle of the 14 cycles would occupy 2tan À 1 3:5=30 ð Þ ¼ 13:31 of visual angle, for a total stimulus coverage of about 117˚.</s><s>The spatial frequency of the gratings would be</s></p><formula xml:id="formula_1">1= 2tan À 1 3:5=30 ð Þ ð</formula><p><s>Þ ¼ 0:075 cycles per degree of visual angle.</s><s>As the normal visual acuity of Long-Evans rats has been estimated as ~1 cpd <ref type="bibr" target="#b45">(Prusky et al., 2002)</ref>, the bars would be expected to be resolvable.</s><s>Rats also have a large depth of focus, from 7 cm to infinity <ref type="bibr" target="#b44">(Powers and Green, 1978)</ref>.</s><s>The width of the binocular field directly in front of the rat's nose, generally considered the animal's binocular viewing area <ref type="bibr" target="#b31">(Mei et al., 2012)</ref>, ranges from approximately 40˚-110˚, depending on head pitch <ref type="bibr" target="#b60">(Wallace et al., 2013)</ref>.</s><s>The 117˚stimulus should thus completely cover the rat's binocular visual field.</s></p><p><s>When all illumination sources were turned off, the ambient light magnitude was 0 cd/mm 2 (Konica Minolta LS-100 luminance meter, Tokyo).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Quantification of LED emission characteristics</head><p><s>Following the procedure of <ref type="bibr" target="#b13">Franke et al., 2019,</ref> for each LED, we computed the following measurements, which we have included in Supplementary table 2.</s></p><p><s>Using the spectrophotometer measurements (P l ð Þ W:cm À2 :nm À1 ½ ), we can calculate the spectral power density for each LED:</s></p><formula xml:id="formula_2">I LED l ð Þ ¼ 10 À2 Â Z lmax lmin P l ð Þd l ð Þ W:m À2 :nm À1 Â Ã</formula><p><s>The energy of a single photon at wavelength l is</s></p><formula xml:id="formula_3">Q p l ð Þ ¼ h Á c=l m 2 :kg:s À1 ½</formula><p><s>, where c ¼ 299; 792; 458m:s À1 is the speed of light, and h ¼ 6:62607004 Â 10 À34 J:s ½ is Planck's constant.</s><s>Then we computed the spectral photon count for each LED (SPC l ð Þ photons:m À2 :s À1 :nm À1 ½ ):</s></p><formula xml:id="formula_4">SPC l ð Þ ¼ I LED l ð Þ Q p l ð Þ ¼ 10 À12 = h Â c ð Þ Â I LED l ð Þ Â l photons:m À2 :s À1 :nm À1 Â Ã</formula><p><s>Given the d ¼ 50cm distance between the LEDs and the stimulus delivery area, the rat's dilated pupil area of A pupil ¼ 0:0314cm 2 , the rat's retinal surface area of A retina ¼ 0:8cm 2 , and the rat's rod outer segment area of A rod ¼ 4 Â 10 À8 cm 2 (Mayhew and Astle, 1997), we approximated the photon flux density (C) of an isotropic LED radiation pattern at each photoreceptor as:</s></p><formula xml:id="formula_5">C ¼ 2:A pupil :A rod 4pd 2 :A retina Z lmax lmin SPC l ð Þd l ð Þ photons:m À2 :s À1 Â Ã</formula><p><s>Then, the photon flux per photoreceptor is:</s></p><formula xml:id="formula_6">C flux ¼</formula></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Quantification and statistical analysis Analysis of behavioral data</head><p><s>We analyzed the behavioral data in MATLAB (MathWorks, Natick, MA) and LabVIEW.</s><s>To quantify a single rat's performance, we fit psychometric curves to its choice data.</s><s>For a given orientation, we calculated the proportion of trials categorized as vertical.</s><s>Ideally, rats would categorize all trials with angle greater than 45˚as vertical and all trials with angle less than 45˚as horizontal.</s><s>For 45˚trials, choices should be evenly distributed between vertical and horizontal.</s><s>However, task difficulty grows in the vicinity of 45˚, such that real performance is better described by a sigmoid function with an inflection point at the point of subjective equality (PSE), the orientation at which subjects report the stimulus with equal likelihood as horizontal or vertical.</s><s>In unbiased rats, the PSE should be at 45˚.</s><s>We generated psychometric functions using a cumulative Gaussian function with the general form given in the equation below based on <ref type="bibr" target="#b63">(Wichmann and Hill, 2001)</ref>.</s><s>The parameter estimation was then performed in MATLAB using maximum-likelihood estimation:</s></p><formula xml:id="formula_7">x; ; s; g; l ð Þ ¼ g þ 1 À g À l ð ÞF x; ; s ð Þ:</formula><p><s>The two-parameter function, F x; ; s ð Þ, is defined by a cumulative Gaussian distribution, as follows:</s></p><formula xml:id="formula_8">F x; ; s ð Þ ¼ 1 2 1 þ erf x À s ffiffi ffi 2 p !</formula><p><s>where x is the stimulus orientation, g is the lower bound of the function , and l is the lapse rate.</s><s>Often, g and l are considered to arise from stimulus-independent mechanisms of guessing and lapsing. is the mean of the probability distribution that determines the displacement along the abscissa of the psychometric function -a reflection of the subject's bias -and s is the standard deviation of the cumulative Gaussian distribution.</s><s>s determines the slope of the psychometric function, a common measure of acuity.</s></p><p><s>Where fitting with a sigmoid was not appropriate (Figure <ref type="figure" target="#fig_3">2D</ref>,E), data were fit with the line y ¼ ax þ y 0 , where x is the stimulus orientation, a is the slope, and y 0 is the y-intercept.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Test of significance for the fitted psychometric curves</head><p><s>Errors around the performance value for each orientation and modality condition were expressed as a 95% binomial proportion confidence interval computed by approximating the distribution of errors about a binomially distributed observation, p, with a normal distribution:</s></p><formula xml:id="formula_9">p AE 1:96 ffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffi ffi 1 n p 1 À p ð Þ r</formula><p><s>where p is the proportion of correct trials (Bernoulli) and n is the number of trials.</s></p><p><s>For statistical tests of significance, we performed a non-parametric test based on bootstrapping, as follows.</s><s>We computed a distribution of the performance values from the fitted psychometric functions based on 1000 resamples of the behavioral data.</s><s>We then performed pairwise comparisons between all the performance values generated via bootstrapping from fitted psychometric functions of each experimental condition, calculated the overlap between the distributions and computed the p-values.</s></p><p><s>preparation of the manuscript.</s><s>Erik Zorzin assisted in spectral measurements.</s><s>We are grateful to members of the Diamond lab for fruitful comments and discussions.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Additional information</head></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 .</head><label>1</label><figDesc><div><p><s>Figure1.</s><s>Orientation categorization task.</s><s>(A) Discriminandum viewed at an oblique angle (top) and exactly from the front (bottom), the latter approximating the perspective of the rat.</s><s>(B) Schematic of the orientations of the stimuli and rule of the categorization task.</s><s>0˚-45˚(red) rewarded as 'horizontal' and 45˚-90˚(solid green) rewarded as 'vertical.'.</s><s>(C) Sequential steps in the behavioral task.</s><s>Each trial started with a head poke that interrupted a light beam and triggered the opening of an opaque gate, followed by visual access to the object.</s><s>After probing the stimulus, the rat turned its head toward one spout, in this illustration left for vertical and right for horizontal.</s><s>See Figure 1-figure supplement 1 for the experimental setup.</s><s>(D) Irradiance for each LED, measured by a spectrometer at the stimulus delivery area.</s><s>Equivalent photon count values are shown in Figure 1figure supplement 2.Integrating the power under the curves at wavelengths &lt;580 nm reveals that the infrared LEDs emitted from 2 to 50 times higher intensity as compared to red LEDs, in spite of the infrared LEDs being centered at longer wavelengths (infrared 854 nm and 930 nm LEDs emitted 1.95 and 0.48 mW/cm 2 , respectively, while red 626, 652, and 729 nm LEDs emitted 0.12, 0.28, and 0.04 mW/cm 2 , respectively).</s><s>See Figure 1-figure supplement 3 for normalized irradiance for each LED along with rat's photopigment spectral sensitivity.</s><s>(E) Pale curves give the performance of four rats under white light.</s><s>Dark data points and curves show the average over all rats.</s><s>Error bars are 95% binomial confidence intervals.</s><s>See Figure 1figure supplement 1A for the experimental setup.</s><s>Ó 2018, Nikbakht et al. Figure 1A-C has been reproduced from Figure 1 of Nikbakht et al., 2018, under the terms of the Creative Commons Attribution -NonCommercial -NoDerivs (CC BY-NC-ND 4.0) license.</s><s>The online version of this article includes the following figure supplement(s) for figure 1:</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head/><label/><figDesc><div><p><s>Figure1.</s><s>Orientation categorization task.</s><s>(A) Discriminandum viewed at an oblique angle (top) and exactly from the front (bottom), the latter approximating the perspective of the rat.</s><s>(B) Schematic of the orientations of the stimuli and rule of the categorization task.</s><s>0˚-45˚(red) rewarded as 'horizontal' and 45˚-90˚(solid green) rewarded as 'vertical.'.</s><s>(C) Sequential steps in the behavioral task.</s><s>Each trial started with a head poke that interrupted a light beam and triggered the opening of an opaque gate, followed by visual access to the object.</s><s>After probing the stimulus, the rat turned its head toward one spout, in this illustration left for vertical and right for horizontal.</s><s>See Figure 1-figure supplement 1 for the experimental setup.</s><s>(D) Irradiance for each LED, measured by a spectrometer at the stimulus delivery area.</s><s>Equivalent photon count values are shown in Figure 1figure supplement 2.Integrating the power under the curves at wavelengths &lt;580 nm reveals that the infrared LEDs emitted from 2 to 50 times higher intensity as compared to red LEDs, in spite of the infrared LEDs being centered at longer wavelengths (infrared 854 nm and 930 nm LEDs emitted 1.95 and 0.48 mW/cm 2 , respectively, while red 626, 652, and 729 nm LEDs emitted 0.12, 0.28, and 0.04 mW/cm 2 , respectively).</s><s>See Figure 1-figure supplement 3 for normalized irradiance for each LED along with rat's photopigment spectral sensitivity.</s><s>(E) Pale curves give the performance of four rats under white light.</s><s>Dark data points and curves show the average over all rats.</s><s>Error bars are 95% binomial confidence intervals.</s><s>See Figure 1figure supplement 1A for the experimental setup.</s><s>Ó 2018, Nikbakht et al. Figure 1A-C has been reproduced from Figure 1 of Nikbakht et al., 2018, under the terms of the Creative Commons Attribution -NonCommercial -NoDerivs (CC BY-NC-ND 4.0) license.</s><s>The online version of this article includes the following figure supplement(s) for figure 1:</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head/><label/><figDesc><div><p><s>Figure1.</s><s>Orientation categorization task.</s><s>(A) Discriminandum viewed at an oblique angle (top) and exactly from the front (bottom), the latter approximating the perspective of the rat.</s><s>(B) Schematic of the orientations of the stimuli and rule of the categorization task.</s><s>0˚-45˚(red) rewarded as 'horizontal' and 45˚-90˚(solid green) rewarded as 'vertical.'.</s><s>(C) Sequential steps in the behavioral task.</s><s>Each trial started with a head poke that interrupted a light beam and triggered the opening of an opaque gate, followed by visual access to the object.</s><s>After probing the stimulus, the rat turned its head toward one spout, in this illustration left for vertical and right for horizontal.</s><s>See Figure 1-figure supplement 1 for the experimental setup.</s><s>(D) Irradiance for each LED, measured by a spectrometer at the stimulus delivery area.</s><s>Equivalent photon count values are shown in Figure 1figure supplement 2.Integrating the power under the curves at wavelengths &lt;580 nm reveals that the infrared LEDs emitted from 2 to 50 times higher intensity as compared to red LEDs, in spite of the infrared LEDs being centered at longer wavelengths (infrared 854 nm and 930 nm LEDs emitted 1.95 and 0.48 mW/cm 2 , respectively, while red 626, 652, and 729 nm LEDs emitted 0.12, 0.28, and 0.04 mW/cm 2 , respectively).</s><s>See Figure 1-figure supplement 3 for normalized irradiance for each LED along with rat's photopigment spectral sensitivity.</s><s>(E) Pale curves give the performance of four rats under white light.</s><s>Dark data points and curves show the average over all rats.</s><s>Error bars are 95% binomial confidence intervals.</s><s>See Figure 1figure supplement 1A for the experimental setup.</s><s>Ó 2018, Nikbakht et al. Figure 1A-C has been reproduced from Figure 1 of Nikbakht et al., 2018, under the terms of the Creative Commons Attribution -NonCommercial -NoDerivs (CC BY-NC-ND 4.0) license.</s><s>The online version of this article includes the following figure supplement(s) for figure 1: Figure supplement 1.</s><s>Details of the experimental setup.Figure supplement 2. Log-scaled irradiance for each LED, measured by a spectrometer at the stimulus delivery area in units of photons:m À2 :s À1 :nm À1 .Figure supplement 3. Log-scaled normalized irradiance for each LED along with a template that approximates the photopigment spectral sensitivity of rat's rhodopsin as well as S-opsin, M-opsin<ref type="bibr" target="#b52">(Stockman and Sharpe, 2000)</ref>.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 2 .</head><label>2</label><figDesc><div><p><s>Figure 2. Performance under far-red and infrared illumination.</s><s>(A-E) Psychometric curves obtained under illumination with monochrome LEDs in the range of far-red to infrared with peak wavelengths at 626 nm, 652 nm, 729 nm, 854 nm and 930 nm, respectively.</s><s>Pale curves depict the performance of four rats.</s><s>Dark data points and lines or curves show the average over all rats.</s><s>Error bars are 95% binomial confidence intervals.</s><s>(F) Summary cumulative performance (proportion correct) for all four rats (colored) and the average rat (black) in each illumination condition.</s><s>Data from all angles (except 45˚, uninformative about discriminative capacity) are pooled.</s><s>See Figure 2-figure supplement 1 for tests of significance.</s><s>The online version of this article includes the following figure supplement(s) for figure 2: Figure supplement 1.</s><s>Details of the statistical test of significance.Figure supplement 2.</s><s>An example sequence of sessions.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head/><label/><figDesc><div><p><s>Nikbakht et al., 2018.</s><s>Rats were dark-adapted in a light-free environment for 20-30 min prior to each session.</s></p></div></figDesc><table><row><cell>10 8 :C:A rod photons:s À1 Â</cell><cell>Ã</cell></row><row><cell>Behavioral task and training</cell><cell/></row><row><cell cols="2">Duration of training to reach stable performance was typically 4-6 weeks, with one session per day,</cell></row></table><note><p><s>Nikbakht et al., 2018to individual differences in rate of learning.The sequence of sessions for each rat was randomized, with each day's session illuminated by either red, infrared, or white LEDs, with equal likelihood.The standard training was done with stimulus illumination by white LEDs.The training protocol proceeded across a sequence of stages given inNikbakht et al., 2018.</s><s>Exclusion of unintended stimulus cues (olfaction, rotating motor noise) was controlled as given in</s></p></note></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p><s>Nikbakht and Diamond.</s><s>eLife 2021;10:e66429.</s><s>DOI: https://doi.org/10.7554/eLife.66429</s></p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgements</head><p>We acknowledge the financial support of the <rs type="funder">Human Frontier Science Program (MED)</rs> (http://www.hfsp.org;project <rs type="grantNumber">RGP0015/2013</rs>) and the <rs type="funder">European Research Council</rs> advanced grant <rs type="institution">CONCEPT (MED)</rs> (http://erc.europa.eu;project <rs type="grantNumber">294498</rs>).The <rs type="funder">Regional Laboratory for Advanced Mechatronics, LAMA FVG</rs> (http://lamafvg.it),supported the design and construction of custom instrumentation.The funders had no role in study design, data collection and analysis, decision to publish, or</p></div>
+			</div>
+			<div type="funding">
+<div><p><rs type="programName">European Research Council 294498 Mathew E Diamond Human Frontier Science Program RGP0015/2013 Mathew E Diamond</rs></p><p>The funders had no role in study design, data collection and interpretation, or the decision to submit the work for publication.</p></div>
+			</div>
+			<div type="funding">
+<div><head>Funding</head></div>
+<div><head>Funder</head><p>Grant reference number</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_3vGN9S9">
+					<idno type="grant-number">RGP0015/2013</idno>
+				</org>
+				<org type="funding" xml:id="_uHNBxzr">
+					<idno type="grant-number">294498</idno>
+				</org>
+				<org type="funding" xml:id="_Psram3q">
+					<orgName type="program" subtype="full">European Research Council 294498 Mathew E Diamond Human Frontier Science Program RGP0015/2013 Mathew E Diamond</orgName>
+				</org>
+			</listOrg>
+
+			<div type="availability">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Data availability</head><p><s>All data generated or analyzed during this study will be included in the manuscript and supporting files.</s><s>Source code files will be provided for Figures <ref type="figure">1</ref> and<ref type="figure">2</ref> at https://github.com/nadernik/nikbakht_</s><s>diamond_elife (copy archived at https://archive.softwareheritage.org/swh:1:rev:</s><s>4ba735b86cbcb4bb0094d1d8531a36297561752a).</s></p></div>
+			</div>
+
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Ethics</head><p><s>Animal experimentation: The rats were under the care of a consulting veterinarian.</s><s>Study protocols conformed to international norms and were approved by the Ethics Committee of SISSA and by the Italian Health Ministry (license numbers 569/2015-PR and 570/2015-PR).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Decision letter and Author response</head><p><s>Decision letter https://doi.org/10.7554/eLife.66429.sa1</s><s>Author response https://doi.org/10.7554/eLife.66429.sa2</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Additional files</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Supplementary files</head><p><s>. Supplementary file 1. LED emission characteristics.</s><s>Measured intensity of each LED in mW/cm 2 and total irradiated power (in mW), as measured through our spectrometer (Supplementary table <ref type="table">1</ref>) and Additional LED emission characteristics (Supplementary table 2).</s></p><p><s>. Transparent reporting form</s></p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Visual pigments of some common laboratory mammals</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">D</forename><surname>Bridges</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/1841727a0</idno>
+		<idno type="PMID">13804386</idno>
+		<ptr target="https://doi.org/10.1038/1841727a0"/>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">184</biblScope>
+			<biblScope unit="page" from="1727" to="1728"/>
+			<date type="published" when="1959">1959</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Sensory integration across space and in time for decision making in the somatosensory system of rodents</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Celikel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Sakmann</surname></persName>
+		</author>
+		<idno type="DOI">10.1073/pnas.0610267104</idno>
+		<idno type="PMID">17227858</idno>
+		<ptr target="https://doi.org/10.1073/pnas.0610267104"/>
+	</analytic>
+	<monogr>
+		<title level="j">PNAS</title>
+		<imprint>
+			<biblScope unit="volume">104</biblScope>
+			<biblScope unit="page" from="1395" to="1400"/>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Mosaic representations of odors in the input and output layers of the mouse olfactory bulb</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Chae</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">R</forename><surname>Kepple</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">G</forename><surname>Bast</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">N</forename><surname>Murthy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Koulakov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">F</forename><surname>Albeanu</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/s41593-019-0442-z</idno>
+		<idno type="PMID">31332371</idno>
+		<ptr target="https://doi.org/10.1038/s41593-019-0442-z"/>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="page" from="1306" to="1317"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">The neural bases of crossmodal object recognition in non-human primates and rodents: a review</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Cloke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">L</forename><surname>Jacklin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">D</forename><surname>Winters</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.bbr.2014.09.039</idno>
+		<idno type="PMID">25286314</idno>
+		<ptr target="https://doi.org/10.1016/j.bbr.2014.09.039"/>
+	</analytic>
+	<monogr>
+		<title level="j">Behavioural Brain Research</title>
+		<imprint>
+			<biblScope unit="volume">285</biblScope>
+			<biblScope unit="page" from="118" to="130"/>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Neural circuits for Goal-Directed sensorimotor transformations</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Crochet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">H</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Cch</forename><surname>Petersen</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.tins.2018.08.011</idno>
+		<idno type="PMID">30201180</idno>
+		<ptr target="https://doi.org/10.1016/j.tins.2018.08.011"/>
+	</analytic>
+	<monogr>
+		<title level="j">Trends in Neurosciences</title>
+		<imprint>
+			<biblScope unit="volume">42</biblScope>
+			<biblScope unit="page" from="66" to="77"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Optogenetics in mice performing a visual discrimination task: measurement and suppression of retinal activation and the resulting behavioral artifact</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Danskin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Denman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Valley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ollerenshaw</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Williams</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Groblewski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Reid</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Olsen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Blanche</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Waters</surname></persName>
+		</author>
+		<idno type="DOI">10.1371/journal.pone.0144760</idno>
+		<idno type="PMID">26657323</idno>
+		<ptr target="https://doi.org/10.1371/journal.pone.0144760"/>
+	</analytic>
+	<monogr>
+		<title level="j">PLOS ONE</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page">144760</biblScope>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">On the identity of the cone types of the rat retina</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Deegan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">H</forename><surname>Jacobs</surname></persName>
+		</author>
+		<idno type="DOI">10.1006/exer.1993.1049</idno>
+		<ptr target="https://doi.org/10.1006/exer.1993.1049"/>
+	</analytic>
+	<monogr>
+		<title level="j">Experimental Eye Research</title>
+		<imprint>
+			<biblScope unit="volume">56</biblScope>
+			<biblScope unit="page" from="375" to="377"/>
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Learning through maps: Functional significance of topographic organization in primary sensory cortex</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Diamond</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">S</forename><surname>Petersen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Harris</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/(SICI)1097-4695(199910)41:1%3C64::AID-NEU9%3E3.0.CO;2-N</idno>
+		<ptr target="https://doi.org/10.1002/(SICI)1097-4695"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Neurobiology</title>
+		<imprint>
+			<biblScope unit="volume">41</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="64" to="68"/>
+			<date type="published" when="1999">1999. 199910</date>
+		</imprint>
+	</monogr>
+	<note>&lt;64::AID-NEU9&gt;3.0.CO;2-N</note>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Where' and 'what' in the whisker sensorimotor system</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Diamond</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Von</forename><surname>Heimendahl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Knutsen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">M</forename><surname>Kleinfeld</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ahissar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename></persName>
+		</author>
+		<idno type="DOI">10.1038/nrn2411</idno>
+		<ptr target="https://doi.org/10.1038/nrn2411"/>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Reviews Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="page" from="601" to="612"/>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Effects of light at night on laboratory animals and research outcomes</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">M</forename><surname>Emmer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Klg</forename><surname>Russart</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">H</forename><surname>Walker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Nelson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">C</forename><surname>Devries</surname></persName>
+		</author>
+		<idno type="DOI">10.1037/bne0000252</idno>
+		<ptr target="https://doi.org/10.1037/bne0000252"/>
+	</analytic>
+	<monogr>
+		<title level="j">Behavioral Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">132</biblScope>
+			<biblScope unit="page" from="302" to="314"/>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<monogr>
+		<title level="m" type="main">Available Sensory Input Determines Motor Performance and Strategy in Early Blind and Sighted Short-Tailed Opossums</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Englund</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Faridjoo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">S</forename><surname>Iyer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Krubitzer</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.isci.2020.101527</idno>
+		<ptr target="https://doi.org/10.1016/j.isci.2020.101527"/>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="page">101527</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Transformation of Perception from Sensory to Motor Cortex</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Fassihi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Akrami</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Pulecchi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Scho ¨nfelder</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Diamond</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.cub.2017.05.011</idno>
+		<ptr target="https://doi.org/10.1016/j.cub.2017.05.011"/>
+	</analytic>
+	<monogr>
+		<title level="j">Current Biology</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page" from="1585" to="1596"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">M</forename><surname>Frank</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">N</forename><surname>Brown</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Wilson</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S0896-6273(00)00018-0</idno>
+		<ptr target="https://doi.org/10.1016/S0896-6273(00)00018-0"/>
+	</analytic>
+	<monogr>
+		<title level="m">Trajectory Encoding in the Hippocampus and Entorhinal Cortex</title>
+		<imprint>
+			<date type="published" when="2000">2000</date>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page" from="169" to="178"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<monogr>
+		<title level="m" type="main">An arbitrary-spectrum spatial visual stimulator for vision research</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Franke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Maia</forename><surname>Chagas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Zimmermann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Bartel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Qiu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Szatko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">P</forename><surname>Baden</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Euler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename></persName>
+		</author>
+		<idno type="DOI">10.7554/eLife.48779</idno>
+		<idno type="PMID">31545172</idno>
+		<ptr target="https://doi.org/10.7554/eLife.48779"/>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page">48779</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Integration of visual and whisker signals in rat superior colliculus</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Gharaei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Arabzadeh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">G</forename><surname>Solomon</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/s41598-018-34661-8</idno>
+		<ptr target="https://doi.org/10.1038/s41598-018-34661-8"/>
+	</analytic>
+	<monogr>
+		<title level="j">Scientific Reports</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page">16445</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">In search of the visual pigment template</title>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">I</forename><surname>Govardovskii</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Fyhrquist</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Reuter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">G</forename><surname>Kuzmin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Donner</surname></persName>
+		</author>
+		<idno type="DOI">10.1017/S0952523800174036</idno>
+		<ptr target="https://doi.org/10.1017/S0952523800174036"/>
+	</analytic>
+	<monogr>
+		<title level="j">Visual Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="509" to="528"/>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Distribution of tactile learning and its neural basis</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Harris</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">S</forename><surname>Petersen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Diamond</surname></persName>
+		</author>
+		<idno type="DOI">10.1073/pnas.96.13.7587</idno>
+		<ptr target="https://doi.org/10.1073/pnas.96.13.7587"/>
+	</analytic>
+	<monogr>
+		<title level="j">PNAS</title>
+		<imprint>
+			<biblScope unit="volume">96</biblScope>
+			<biblScope unit="page" from="7587" to="7591"/>
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Ipsilateral and contralateral transfer of tactile learning</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Harris</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Diamond</surname></persName>
+		</author>
+		<idno type="DOI">10.1097/00001756-200002070-00008</idno>
+		<ptr target="https://doi.org/10.1097/00001756-200002070-00008"/>
+	</analytic>
+	<monogr>
+		<title level="j">NeuroReport</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="263" to="266"/>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">The Dynamic Multisensory Engram: Neural Circuitry Underlying Crossmodal Object Recognition in Rats Changes with the Nature of Object Experience</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">L</forename><surname>Jacklin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Cloke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Potvin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Garrett</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">D</forename><surname>Winters</surname></persName>
+		</author>
+		<idno type="DOI">10.1523/JNEUROSCI.3043-15.2016</idno>
+		<ptr target="https://doi.org/10.1523/JNEUROSCI.3043-15.2016"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="page" from="1273" to="1289"/>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Retinal receptors in rodents maximally sensitive to ultraviolet light</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">H</forename><surname>Jacobs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Neitz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Deegan</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/353655a0</idno>
+		<ptr target="https://doi.org/10.1038/353655a0"/>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">353</biblScope>
+			<biblScope unit="page" from="655" to="656"/>
+			<date type="published" when="1991">1991</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Cone-based vision of rats for ultraviolet and visible lights</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">H</forename><surname>Jacobs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Fenwick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">A</forename><surname>Williams</surname></persName>
+		</author>
+		<idno type="DOI">10.1242/jeb.204.14.2439</idno>
+		<ptr target="https://doi.org/10.1242/jeb.204.14.2439"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Experimental Biology</title>
+		<imprint>
+			<biblScope unit="volume">204</biblScope>
+			<biblScope unit="page" from="2439" to="2446"/>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<monogr>
+		<title level="m" type="main">Rapid task-dependent tuning of the mouse olfactory bulb</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Koldaeva</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">T</forename><surname>Schaefer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Fukunaga</surname></persName>
+		</author>
+		<idno type="DOI">10.7554/eLife.43558</idno>
+		<idno type="PMID">30724732</idno>
+		<ptr target="https://doi.org/10.7554/eLife.43558"/>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page">43558</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Development of natural scene representation in primary visual cortex requires early postnatal experience</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">N</forename><surname>Kowalewski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Kauttonen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">L</forename><surname>Stan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">B</forename><surname>Jeon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Fuchs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>Chase</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">S</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Kuhlman</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.cub.2020.10.046</idno>
+		<ptr target="https://doi.org/10.1016/j.cub.2020.10.046"/>
+	</analytic>
+	<monogr>
+		<title level="j">Current Biology</title>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="page" from="369" to="380"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Survival of some photoreceptor cells in albino rats following long-term exposure to continuous light</title>
+		<idno type="PMID">1245384</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Investigative Ophthalmology</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page" from="64" to="70"/>
+			<date type="published" when="1976">1976</date>
+			<publisher>La Vail MM</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Behavioral correlates of constant light-induced retinal degeneration</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Lemmon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">V</forename><surname>Anderson</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/0014-4886(79)90184-5</idno>
+		<idno type="PMID">467543</idno>
+		<ptr target="https://doi.org/10.1016/0014-4886(79)90184-5"/>
+	</analytic>
+	<monogr>
+		<title level="j">Experimental Neurology</title>
+		<imprint>
+			<biblScope unit="volume">63</biblScope>
+			<biblScope unit="page" from="35" to="49"/>
+			<date type="published" when="1979">1979</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">From candelas to photoisomerizations in the mouse eye by rhodopsin bleaching in situ and the light-rearing dependence of the major components of the mouse ERG</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">L</forename><surname>Lyubarsky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">L</forename><surname>Daniele</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">N</forename><surname>Pugh</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.visres.2004.09.019</idno>
+		<ptr target="https://doi.org/10.1016/j.visres.2004.09.019"/>
+	</analytic>
+	<monogr>
+		<title level="j">Vision Research</title>
+		<imprint>
+			<biblScope unit="volume">44</biblScope>
+			<biblScope unit="page" from="3235" to="3251"/>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">The natural history of rodents: preadaptations to pestilence</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">W</forename><surname>Macdonald</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mgp</forename><surname>Fenn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Gelling</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Rodent Pests and Their Control</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page">22</biblScope>
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">J</forename><surname>Macdonald</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">Q</forename><surname>Lepage</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><forename type="middle">T</forename><surname>Eden</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Eichenbaum</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.neuron.2011.07.012</idno>
+		<ptr target="https://doi.org/10.1016/j.neuron.2011.07.012"/>
+	</analytic>
+	<monogr>
+		<title level="m">Hippocampal "Time Cells" Bridge the Gap in Memory for Discontiguous Events</title>
+		<imprint>
+			<date type="published" when="2011">2011</date>
+			<biblScope unit="volume">71</biblScope>
+			<biblScope unit="page" from="737" to="749"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Nonlinear processing of shape information in rat lateral extrastriate cortex</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Matteucci</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bellacosa</forename><surname>Marotti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Riggi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Rosselli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">B</forename><surname>Zoccolan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename></persName>
+		</author>
+		<idno type="DOI">10.1523/JNEUROSCI.1938-18.2018</idno>
+		<idno type="PMID">30617210</idno>
+		<ptr target="https://doi.org/10.1523/JNEUROSCI.1938-18.2018"/>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="page" from="1938" to="1956"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Unsupervised experience with temporal continuity of the visual environment is causally involved in the development of V1 complex cells</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Matteucci</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Zoccolan</surname></persName>
+		</author>
+		<idno type="DOI">10.1126/sciadv.aba3742</idno>
+		<ptr target="https://doi.org/10.1126/sciadv.aba3742"/>
+	</analytic>
+	<monogr>
+		<title level="j">Science Advances</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page">3742</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Photoreceptor number and outer segment disk membrane surface area in the retina of the rat: stereological data for whole organ and average photoreceptor cell</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">M</forename><surname>Mayhew</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Astle</surname></persName>
+		</author>
+		<idno type="DOI">10.1023/A:1018563409196</idno>
+		<ptr target="https://doi.org/10.1023/A:1018563409196"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Neurocytology</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="page" from="53" to="61"/>
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<monogr>
+		<author>
+			<persName><forename type="first">N</forename><surname>Mei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">R</forename><surname>Martin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Gallego</surname></persName>
+		</author>
+		<title level="m">Progress in Sensory Physiology</title>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Spatial representation in the hippocampal formation: a history</title>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">I</forename><surname>Moser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M-B</forename><surname>Moser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">L</forename><surname>Mcnaughton</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nn.4653</idno>
+		<ptr target="https://doi.org/10.1038/nn.4653"/>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="page" from="1448" to="1464"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Color vision in white rats: I. sensitivity to red</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">F</forename><surname>Muenzinger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">E</forename><surname>Reynolds</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/08856559.1936.10533711</idno>
+		<ptr target="https://doi.org/10.1080/08856559.1936.10533711"/>
+	</analytic>
+	<monogr>
+		<title level="j">The Pedagogical Seminary and Journal of Genetic Psychology</title>
+		<imprint>
+			<biblScope unit="volume">48</biblScope>
+			<biblScope unit="page" from="58" to="71"/>
+			<date type="published" when="1936">1936</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Discrimination of red by white rats. The Pedagogical Seminary</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">L</forename><surname>Munn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Collins</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/08856559.1936.10533712</idno>
+		<ptr target="https://doi.org/10.1080/08856559.1936.10533712"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Genetic Psychology</title>
+		<imprint>
+			<biblScope unit="volume">48</biblScope>
+			<biblScope unit="page" from="72" to="87"/>
+			<date type="published" when="1936">1936</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Experience-dependent expression of rat hippocampal Arc and Homer 1a after spatial learning on 8-arm and 12-arm radial mazes</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Nikbakht</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Zarei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Shirani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Moshtaghian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Esmaeili</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Habibian</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.neuroscience.2012.05.025</idno>
+		<ptr target="https://doi.org/10.1016/j.neuroscience.2012.05.025"/>
+	</analytic>
+	<monogr>
+		<title level="j">Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">218</biblScope>
+			<biblScope unit="page" from="49" to="55"/>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Supralinear and Supramodal Integration of Visual and Tactile Signals in Rats: Psychophysics and Neuronal Mechanisms</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Nikbakht</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Tafreshiha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Zoccolan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Diamond</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.neuron.2018.01.003</idno>
+		<idno>01.003</idno>
+		<ptr target="https://doi.org/10.1016/j.neuron"/>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">97</biblScope>
+			<biblScope unit="page" from="626" to="639"/>
+			<date type="published" when="2018">2018. 2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Visual tactile integration in rats and underlying neuronal mechanisms</title>
+		<author>
+			<persName><forename type="first">Nikbakht</forename><surname>Nasrabadi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename></persName>
+		</author>
+		<idno type="DOI">10.12751/nncn.bc2016.0138</idno>
+		<ptr target="https://doi.org/10.12751/nncn.bc2016.0138"/>
+	</analytic>
+	<monogr>
+		<title level="m">Bernstein Conference 2016At: Berlin</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Challenging a myth and misconception: red-light vision in rats</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Niklaus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Albertini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">K</forename><surname>Schnitzer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Denk</surname></persName>
+		</author>
+		<idno type="DOI">10.3390/ani10030422</idno>
+		<ptr target="https://doi.org/10.3390/ani10030422"/>
+	</analytic>
+	<monogr>
+		<title level="j">Animals</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page">422</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Place units in the Hippocampus of the freely moving rat</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>O'keefe</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/0014-4886(76)90055-8</idno>
+		<idno type="PMID">1261644</idno>
+		<ptr target="https://doi.org/10.1016/0014-4886(76)90055-8"/>
+	</analytic>
+	<monogr>
+		<title level="j">Experimental Neurology</title>
+		<imprint>
+			<biblScope unit="volume">51</biblScope>
+			<biblScope unit="page" from="78" to="109"/>
+			<date type="published" when="1976">1976</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<monogr>
+		<author>
+			<persName><forename type="first">J</forename><surname>O'keefe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Nadel</surname></persName>
+		</author>
+		<title level="m">The hippocampus as a cognitive map</title>
+		<imprint>
+			<publisher>Clarendon Press</publisher>
+			<date type="published" when="1978">1978</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Whisker-mediated texture discrimination learning in freely moving mice</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Pacchiarini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Berkeley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Fox</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">C</forename><surname>Honey</surname></persName>
+		</author>
+		<idno type="DOI">10.1037/xan0000212</idno>
+		<ptr target="https://doi.org/10.1037/xan0000212"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Experimental Psychology: Animal Learning and Cognition</title>
+		<imprint>
+			<biblScope unit="volume">46</biblScope>
+			<biblScope unit="page" from="40" to="46"/>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Human infrared vision is triggered by two-photon chromophore isomerization</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Palczewska</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Vinberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Stremplewski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">P</forename><surname>Bircher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Salom</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Komar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Cascella</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Wojtkowski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">J</forename><surname>Kefalov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Palczewski</surname></persName>
+		</author>
+		<idno type="DOI">10.1073/pnas.1410162111</idno>
+		<ptr target="https://doi.org/10.1073/pnas.1410162111"/>
+	</analytic>
+	<monogr>
+		<title level="j">PNAS</title>
+		<imprint>
+			<biblScope unit="volume">111</biblScope>
+			<biblScope unit="page" from="5445" to="E5454"/>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Internally Generated Cell Assembly Sequences in the Rat Hippocampus</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Pastalkova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Itskov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Amarasingham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Buzsaki</surname></persName>
+		</author>
+		<idno type="DOI">10.1126/science.1159775</idno>
+		<ptr target="https://doi.org/10.1126/science.1159775"/>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">321</biblScope>
+			<biblScope unit="page" from="1322" to="1327"/>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Single retinal ganglion cell responses in the dark-reared rat: Grating acuity, contrast sensitivity, and defocusing</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">K</forename><surname>Powers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">G</forename><surname>Green</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/0042-6989(78)90008-1</idno>
+		<ptr target="https://doi.org/10.1016/0042-6989"/>
+	</analytic>
+	<monogr>
+		<title level="j">Vision Research</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="90008" to="90009"/>
+			<date type="published" when="1978">1978</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Variation in visual acuity within pigmented, and between pigmented and albino rat strains</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">T</forename><surname>Prusky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">T</forename><surname>Harker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Douglas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">Q</forename><surname>Whishaw</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S0166-4328(02)00126-2</idno>
+		<ptr target="https://doi.org/10.1016/S0166-4328"/>
+	</analytic>
+	<monogr>
+		<title level="j">Behavioural Brain Research</title>
+		<imprint>
+			<biblScope unit="volume">136</biblScope>
+			<biblScope unit="issue">02</biblScope>
+			<biblScope unit="page" from="126" to="128"/>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Delineating Prefrontal Cortex Region Contributions to Crossmodal Object Recognition in Rats</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Reid</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">L</forename><surname>Jacklin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">D</forename><surname>Winters</surname></persName>
+		</author>
+		<idno type="DOI">10.1093/cercor/bht061</idno>
+		<ptr target="https://doi.org/10.1093/cercor/bht061"/>
+	</analytic>
+	<monogr>
+		<title level="j">Cerebral Cortex</title>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="page" from="2108" to="2119"/>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Spectral sensitivity measured with electroretinogram using a constant response method</title>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">A</forename><surname>Rocha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">D</forename><surname>Gomes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Silveira</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">L</forename><surname>Martins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">G</forename><surname>Aguiar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>De Souza</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">F</forename><surname>Ventura</surname></persName>
+		</author>
+		<idno type="DOI">10.1371/journal.pone.0147318</idno>
+		<ptr target="https://doi.org/10.1371/journal.pone.0147318"/>
+	</analytic>
+	<monogr>
+		<title level="j">PLOS ONE</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page">147318</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">The Clock Gene Rev-Erba Regulates Methamphetamine Actions on Circadian Timekeeping in the Mouse Brain</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">L</forename><surname>Salaberry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Mateo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Mendoza</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s12035-016-0076-z</idno>
+		<ptr target="https://doi.org/10.1007/s12035-016-0076-z"/>
+	</analytic>
+	<monogr>
+		<title level="j">Molecular Neurobiology</title>
+		<imprint>
+			<biblScope unit="volume">54</biblScope>
+			<biblScope unit="page" from="5327" to="5334"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Contribution of multiple sensory information to place field stability in hippocampal place cells</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Save</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Nerad</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Poucet</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/(SICI)1098-1063(2000)10:1%3C64::AID-HIPO7%3E3.0.CO;2-Y</idno>
+		<ptr target="https://doi.org/10.1002/(SICI)1098-1063"/>
+	</analytic>
+	<monogr>
+		<title level="j">Hippocampus</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="64" to="76"/>
+			<date type="published" when="2000">2000. 2000</date>
+		</imprint>
+	</monogr>
+	<note>&lt;64:: AID-HIPO7&gt;3.0.CO;2-Y</note>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<author>
+			<persName><forename type="first">K</forename><surname>Sieben</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bieler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Ro ¨der</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hanganu-Opatz</forename><surname>Il</surname></persName>
+		</author>
+		<idno type="DOI">10.1371/journal.pbio.1002304</idno>
+		<ptr target="https://doi.org/10.1371/journal.pbio.1002304"/>
+	</analytic>
+	<monogr>
+		<title level="m">Neonatal Restriction of Tactile Inputs Leads to Long-Lasting Impairments of Cross-Modal Processing</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="page">1002304</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">Distributed coding of choice, action and engagement across the mouse brain</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">A</forename><surname>Steinmetz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Zatka-Haas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Carandini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">D</forename><surname>Harris</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/s41586-019-1787-x</idno>
+		<ptr target="https://doi.org/10.1038/s41586-019-1787-x"/>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">576</biblScope>
+			<biblScope unit="page" from="266" to="273"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">The spectral sensitivities of the middle-and long-wavelength-sensitive cones derived from measurements in observers of known genotype</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Stockman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">T</forename><surname>Sharpe</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S0042-6989(00)00021-3</idno>
+		<ptr target="https://doi.org/"/>
+	</analytic>
+	<monogr>
+		<title level="j">Vision Research</title>
+		<imprint>
+			<biblScope unit="volume">40</biblScope>
+			<biblScope unit="page" from="1711" to="1737"/>
+			<date type="published" when="2000">2000</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">Two cone types of rat retina detected by anti-visual pigment antibodies</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Sze ´l</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ro</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename></persName>
+		</author>
+		<idno type="DOI">10.1016/0014-4835(92)90090-F</idno>
+		<idno type="PMID">1397129</idno>
+		<ptr target="https://doi.org/10.1016/0014-4835(92)90090-F"/>
+	</analytic>
+	<monogr>
+		<title level="j">Experimental Eye Research</title>
+		<imprint>
+			<biblScope unit="volume">55</biblScope>
+			<biblScope unit="page" from="47" to="52"/>
+			<date type="published" when="1992">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<monogr>
+		<title level="m" type="main">Emergence of transformation-tolerant representations of visual objects in rat lateral extrastriate cortex</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Tafazoli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Safaai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">De</forename><surname>Franceschi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Rosselli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">B</forename><surname>Vanzella</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Riggi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Buffolo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Panzeri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Zoccolan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename></persName>
+		</author>
+		<idno type="DOI">10.7554/eLife.22794</idno>
+		<idno type="PMID">28395730</idno>
+		<ptr target="https://doi.org/10.7554/eLife.22794"/>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page">22794</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<analytic>
+		<title level="a" type="main">Seeing at a glance, smelling in a whiff: rapid forms of perceptual decision making</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Uchida</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Kepecs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">F</forename><surname>Mainen</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nrn1933</idno>
+		<ptr target="https://doi.org/10.1038/nrn1933"/>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Reviews Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page" from="485" to="491"/>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title level="a" type="main">Speed and accuracy of olfactory discrimination in the rat</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Uchida</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">F</forename><surname>Mainen</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nn1142</idno>
+		<ptr target="https://doi.org/10.1038/nn1142"/>
+	</analytic>
+	<monogr>
+		<title level="j">Nature Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="1224" to="1229"/>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<analytic>
+		<title level="a" type="main">Object recognition testing: Rodent species, strains, housing conditions, and estrous cycle</title>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">P</forename><surname>Van Goethem</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Rutten</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">J</forename><surname>Van Der Staay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Law</forename><surname>Jans</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Akkerman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hwm</forename><surname>Steinbusch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Blokland</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Van't Klooster</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Prickaerts</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.bbr.2012.03.023</idno>
+		<ptr target="https://doi.org/10.1016/j.bbr.2012.03.023"/>
+	</analytic>
+	<monogr>
+		<title level="j">Behavioural Brain Research</title>
+		<imprint>
+			<biblScope unit="volume">232</biblScope>
+			<biblScope unit="page" from="323" to="334"/>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title level="a" type="main">Cross-modal responses in the primary visual cortex encode complex objects and correlate with tactile discrimination</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Vasconcelos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Pantoja</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Belchior</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">V</forename><surname>Caixeta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Faber</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mam</forename><surname>Freire</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">R</forename><surname>Cota</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Anibal</forename><surname>De Macedo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Laplagne</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Gomes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">M</forename><surname>Ribeiro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename></persName>
+		</author>
+		<idno type="DOI">10.1073/pnas.1102780108</idno>
+		<ptr target="https://doi.org/10.1073/pnas.1102780108"/>
+	</analytic>
+	<monogr>
+		<title level="j">PNAS</title>
+		<imprint>
+			<biblScope unit="volume">108</biblScope>
+			<biblScope unit="page" from="15408" to="15413"/>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<analytic>
+		<title level="a" type="main">Sensitivity of mammalian cone photoreceptors to infrared light</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Vinberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Palczewska</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Komar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Wojtkowski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><forename type="middle">J</forename><surname>Kefalov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Palczewski</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.neuroscience.2019.07.047</idno>
+		<idno type="PMID">31400484</idno>
+		<ptr target="https://doi.org/10.1016/j.neuroscience.2019.07.047"/>
+	</analytic>
+	<monogr>
+		<title level="j">Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">416</biblScope>
+			<biblScope unit="page" from="100" to="108"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<analytic>
+		<title level="a" type="main">Rats maintain an overhead binocular field at the expense of constant fusion</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Wallace</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">S</forename><surname>Greenberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Sawinski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Rulla</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Notaro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jnd</forename><surname>Kerr</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nature12153</idno>
+		<ptr target="https://doi.org/10.1038/nature12153"/>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">498</biblScope>
+			<biblScope unit="page" from="65" to="69"/>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b61">
+	<analytic>
+		<title level="a" type="main">Color vision and color preference in the albino rat. II. the experiments and results</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">E</forename><surname>Walton</surname></persName>
+		</author>
+		<idno type="DOI">10.1037/h0072748</idno>
+		<ptr target="https://doi.org/10.1037/h0072748"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Comparative Psychology</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page" from="373" to="394"/>
+			<date type="published" when="1933">1933</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b62">
+	<analytic>
+		<title level="a" type="main">Further evidence of color discrimination in rodents</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">E</forename><surname>Walton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">W</forename><surname>Bornemeier</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/08856559.1938.10532519</idno>
+		<ptr target="https://doi.org/10.1080/08856559.1938.10532519"/>
+	</analytic>
+	<monogr>
+		<title level="j">The Pedagogical Seminary and Journal of Genetic Psychology</title>
+		<imprint>
+			<biblScope unit="volume">52</biblScope>
+			<biblScope unit="page" from="165" to="181"/>
+			<date type="published" when="1938">1938</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b63">
+	<analytic>
+		<title level="a" type="main">The psychometric function: I. fitting, sampling, and goodness of fit</title>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">A</forename><surname>Wichmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">J</forename><surname>Hill</surname></persName>
+		</author>
+		<idno type="DOI">10.3758/BF03194544</idno>
+		<idno type="PMID">11800458</idno>
+		<ptr target="https://doi.org/10.3758/BF03194544"/>
+	</analytic>
+	<monogr>
+		<title level="j">Perception &amp; Psychophysics</title>
+		<imprint>
+			<biblScope unit="volume">63</biblScope>
+			<biblScope unit="page" from="1293" to="1313"/>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b64">
+	<analytic>
+		<title level="a" type="main">A Distributed Cortical Representation Underlies Crossmodal Object Recognition in Rats</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">D</forename><surname>Winters</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Reid</surname></persName>
+		</author>
+		<idno type="DOI">10.1523/JNEUROSCI.6073-09.2010</idno>
+		<ptr target="https://doi.org/10.1523/JNEUROSCI.6073-09.2010"/>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="page" from="6253" to="6261"/>
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b65">
+	<analytic>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">R</forename><surname>Wood</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">A</forename><surname>Dudchenko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Robitsek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Eichenbaum</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/S0896-6273(00)00071-4</idno>
+		<ptr target="https://doi.org/"/>
+	</analytic>
+	<monogr>
+		<title level="m">Hippocampal Neurons Encode Information about Different Types of Memory Episodes Occurring in the Same Location</title>
+		<imprint>
+			<date type="published" when="2000">2000</date>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="page" from="623" to="633"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b66">
+	<analytic>
+		<title level="a" type="main">Phototransduction mechanism in retinal rods and cones the friedenwald lecture</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">W</forename><surname>Yau</surname></persName>
+		</author>
+		<idno type="PMID">7507907</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Investigative Ophthalmology &amp; Visual Science</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="page" from="9" to="32"/>
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b67">
+	<analytic>
+		<title level="a" type="main">Spatial representations of place cells in darkness are supported by path integration and border information</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Scha ˜ ¶nfeld</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Wiskott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Manahan-Vaughan</surname></persName>
+		</author>
+		<idno type="DOI">10.3389/fnbeh.2014.00222</idno>
+		<ptr target="https://doi.org/10.3389/fnbeh.2014.00222"/>
+	</analytic>
+	<monogr>
+		<title level="j">Frontiers in Behavioral Neuroscience</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page">222</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b68">
+	<analytic>
+		<title level="a" type="main">Spatial Olfactory Learning Contributes to Place Field Formation in the Hippocampus</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Manahan-Vaughan</surname></persName>
+		</author>
+		<idno type="DOI">10.1093/cercor/bht239</idno>
+		<ptr target="https://doi.org/10.1093/cercor/bht239"/>
+	</analytic>
+	<monogr>
+		<title level="j">Cerebral Cortex</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page" from="423" to="432"/>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b69">
+	<analytic>
+		<title level="a" type="main">Invariant visual object recognition and shape processing in rats</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Zoccolan</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.bbr.2014.12.053</idno>
+		<ptr target="https://doi.org/10.1016/j.bbr.2014.12.053"/>
+	</analytic>
+	<monogr>
+		<title level="j">Behavioural Brain Research</title>
+		<imprint>
+			<biblScope unit="volume">285</biblScope>
+			<biblScope unit="page" from="10" to="33"/>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b70">
+	<analytic>
+		<title level="a" type="main">Texture Identification by Bounded Integration of Sensory Cortical Signals</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zuo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Diamond</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.cub.2019.03.017</idno>
+		<ptr target="https://doi.org/10.1016/j.cub.2019.03.017"/>
+	</analytic>
+	<monogr>
+		<title level="j">Current Biology</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page" from="1425" to="1435"/>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

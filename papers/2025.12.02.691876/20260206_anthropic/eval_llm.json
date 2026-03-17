@@ -1,0 +1,312 @@
+[
+  {
+    "result_id": "R1",
+    "claim_ids": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C9",
+      "C40",
+      "C44"
+    ],
+    "result": "The manuscript establishes the known cellular and molecular organization of the basal ganglia based on prior literature, including MSN dominance in striatum (85-95%), D1/D2 MSN molecular markers, striosome-matrix compartmentalization, GPe/GPi divisions, and projection pathways.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C1-C9, C40, and C44 are all supported by citations to established literature (references 2-21, 49-50, 54) documenting these well-characterized features of basal ganglia anatomy and molecular organization across species. These claims provide essential background context rather than novel findings.",
+    "result_type": "MINOR"
+  },
+  {
+    "result_id": "R2",
+    "claim_ids": [
+      "C10",
+      "C11",
+      "C12",
+      "C13",
+      "C14",
+      "C15",
+      "C78",
+      "C79"
+    ],
+    "result": "The study generated a multi-region spatial transcriptomic atlas of human basal ganglia using MERFISH+ and Stereo-seq across four neurotypical donors, profiling ~7 million cells and resolving 60 transcriptionally distinct cell types.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C10-C15, C78-C79 describe the experimental design, sample characteristics, and data collection metrics. The scale (~7M cells, 60 cell types, ~70K genes via Stereo-seq, ~3.9M cells via MERFISH+) is documented in methods and results. Sample quality (RIN 7.0-8.4) and donor characteristics are appropriate for the study.",
+    "result_type": "MAJOR"
+  },
+  {
+    "result_id": "R3",
+    "claim_ids": [
+      "C16",
+      "C17"
+    ],
+    "result": "MERFISH+ and Stereo-seq platforms yielded highly concordant results for spatial cell type distributions (Figure S1A) with strong cross-platform correlation (Pearson r=0.71) for the 673 shared genes.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C16-C17 demonstrate technical validation through cross-platform concordance. The Pearson correlation of 0.71 for 673 genes is reasonable given the different technical approaches (imaging vs sequencing-based). Visual concordance in Figure S1A and reproducibility metrics (Figure S1C-D) support platform reliability.",
+    "result_type": "MINOR"
+  },
+  {
+    "result_id": "R4",
+    "claim_ids": [
+      "C18",
+      "C19",
+      "C20"
+    ],
+    "result": "MERFISH+ resolved ~60 transcriptionally distinct cell types that are UMAP-separable and show strong correspondence with Allen Institute snRNA-seq reference datasets, identifying 12 major cell classes across anterior-posterior sections.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C18-C20 are supported by UMAP clustering (Figure 2A), correlation with Allen Institute reference data (Figure 2B), and marker gene expression (Figure S2). The cell type classification methodology using MapMyCells provides external validation against established reference taxonomy.",
+    "result_type": "MAJOR"
+  },
+  {
+    "result_id": "R5",
+    "claim_ids": [
+      "C21",
+      "C22",
+      "C23",
+      "C24"
+    ],
+    "result": "MSNs segregate into six major subtypes (D1/D2 striosome/matrix, ventral D1/D2) with D2 MSNs comprising ~54% and D1 MSNs ~27% of striatal neurons, together representing ~83% of all striatal neurons.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C21-C24 are supported by spatial mapping (Figures 2D-E, S3B) and quantitative cell type proportions. The D1/D2 ratio (~27%/54%) is consistent with prior literature expectations. The total MSN proportion (~83%) aligns with the established 85-95% range cited in C1, accounting for measurement variability.",
+    "result_type": "MAJOR"
+  },
+  {
+    "result_id": "R6",
+    "claim_ids": [
+      "C25",
+      "C26",
+      "C27"
+    ],
+    "result": "D1-D2 hybrid, striosome-matrix hybrid, and D1 NUDAP MSN subtypes are localized to putamen/caudate/NAc but absent from globus pallidus/internal capsule, with hybrid identity confirmed by co-localization of DRD1, DRD2, and PDYN transcripts within individual neurons.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C25-C27 are supported by spatial mapping (Figure 2G) and subcellular transcript co-localization (Figure 2H). The identification of hybrid MSN populations is consistent with recent literature (references 46-48). Subcellular resolution imaging provides direct evidence for mixed molecular identity.",
+    "result_type": "MAJOR"
+  },
+  {
+    "result_id": "R7",
+    "claim_ids": [
+      "C28",
+      "C29",
+      "C30"
+    ],
+    "result": "Six transcriptionally distinct GP-associated neuronal classes were identified (GPi Shell, GPi Core, GPin-BF Cholinergic, CN LHX6-GBX1, GPe SOX6-CTXND1, GPe MEIS2-SOX6) with characteristic spatial distributions in GPe/GPi regions.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C28-C30 are supported by cell type classification (Figures 2I, S4) and spatial mapping (Figures 2J-K). The identification of six GP neuronal classes with distinct spatial localization patterns extends prior knowledge of GPe/GPi cellular diversity.",
+    "result_type": "MAJOR"
+  },
+  {
+    "result_id": "R8",
+    "claim_ids": [
+      "C31",
+      "C32",
+      "C33",
+      "C34",
+      "C35"
+    ],
+    "result": "OPC-Oligo cells comprise 60-70% of non-neuronal cells and include five subtypes (COP, OPC, Oligo PLEKHG1, ImOligo, Oligo OPALIN) with complementary spatial distributions, including Oligo OPALIN enrichment along striatopallidal fiber tracts.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C31-C35 are supported by quantitative analysis (Figure 3A) and spatial mapping (Figures 3B, S6A). The complementary distributions of Oligo OPALIN and Oligo PLEKHG1 subtypes and their regional specializations are clearly demonstrated with consistent patterns across sections.",
+    "result_type": "MAJOR"
+  },
+  {
+    "result_id": "R9",
+    "claim_ids": [
+      "C36",
+      "C37",
+      "C38",
+      "C39"
+    ],
+    "result": "Six astrocyte subtypes were identified with distinct marker gene combinations (AQP4, AQP1, SLC6A11, CHI3L1, ADGRV1) showing region-specific spatial distributions (WM_Astro in white matter, STR_Astro-2 in striatum, GP-TH_Astro in globus pallidus).",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C36-C39 are supported by subclustering analysis (Figure 3D-E) and spatial mapping (Figures 3G-J, S6B-C). The identification of six astrocyte subtypes with region-specific enrichment patterns demonstrates molecular and spatial heterogeneity of astrocytes in human basal ganglia.",
+    "result_type": "MAJOR"
+  },
+  {
+    "result_id": "R10",
+    "claim_ids": [
+      "C41",
+      "C42",
+      "C43"
+    ],
+    "result": "Soma volume analysis reveals substantial heterogeneity across neuronal types, with cholinergic interneurons and pallidal neurons exhibiting the largest volumes (~9,400 \u00b5m\u00b3) and LAMP5+ interneurons/MSNs the smallest (~1,800-2,500 \u00b5m\u00b3), including significant differences between SST interneuron subtypes (p=6.9\u00d710\u207b\u00b9\u2075).",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C41-C43 are supported by quantitative soma volume measurements from subcellular transcript localization (Figure 4A-B). The statistical comparison between SST-CHODL and SST-ADARB2 interneurons includes appropriate statistical testing (Wilcoxon rank-sum). Volume estimates are consistent with prior histological observations (references 51-53).",
+    "result_type": "MAJOR"
+  },
+  {
+    "result_id": "R11",
+    "claim_ids": [
+      "C45",
+      "C46"
+    ],
+    "result": "D1-enriched transcripts (RELN, EBF1, SLIT1) show higher extra-somatic signal density in GPi while D2-enriched transcripts preferentially accumulate in GPe, with quantitative correlation analysis confirming differential spatial correlation scores consistent with direct/indirect pathway topology.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C45-C46 are supported by subcellular transcript distribution analysis (Figures 4C-E). The differential accumulation patterns are consistent with known D1\u2192GPi (direct) and D2\u2192GPe (indirect) projection pathways documented in C44. This represents a novel application of subcellular transcript localization to infer projection patterns in human tissue.",
+    "result_type": "MAJOR"
+  },
+  {
+    "result_id": "R12",
+    "claim_ids": [
+      "C47",
+      "C48"
+    ],
+    "result": "SEMA3E is enriched in GPe while SEMA5A is prominently found in GPi, suggesting region-specific expression of semaphorin family axonal guidance molecules.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C47-C48 are supported by spatial gene expression mapping (Figures 4F, 4H) and corroborated by snRNA-seq data (Figures 4G, 4I). The differential expression of semaphorin family members is consistent with their known roles in axonal guidance (references 55-57).",
+    "result_type": "MINOR"
+  },
+  {
+    "result_id": "R13",
+    "claim_ids": [
+      "C49"
+    ],
+    "result": "Cellular community analysis yields 14 discrete spatial modules that correspond to anatomical regions defined in the Allen Human Brain Atlas.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claim C49 is supported by cellular community analysis (Figure 5B) showing alignment with established anatomical parcellation. The methodology appropriately uses neighborhood cell type composition to define spatial modules, providing unbiased anatomical delineation.",
+    "result_type": "MAJOR"
+  },
+  {
+    "result_id": "R14",
+    "claim_ids": [
+      "C50",
+      "C51",
+      "C52"
+    ],
+    "result": "Specific interneuron populations show regional biases: STR FS PTHLH-PVALB interneurons are enriched in caudate, STRd ChAT+ interneurons in putamen, and FM GATA3-TCF7L2 neurons represent a previously unknown subtype enriched in GPi.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C50-C52 are supported by spatial enrichment analysis (Figures 5D-F). C50 is corroborated by prior snRNA-seq analysis (reference 11). C52 represents a novel finding of a previously uncharacterized neuronal subtype in GPi, though functional characterization is lacking.",
+    "result_type": "MAJOR"
+  },
+  {
+    "result_id": "R15",
+    "claim_ids": [
+      "C53",
+      "C54",
+      "C55"
+    ],
+    "result": "Caudate and putamen share comparable D1/D2 ratios, while D1/D2-striosomal MSNs are present in NAc shell but largely absent from NAc core, corroborated by differential expression of TH (striosome marker, shell-enriched) and KIRREL3 (matrix marker, core-enriched).",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C53-C55 are supported by quantitative MSN subtype analysis (Figure 5C) and spatial mapping (Figures 5G-I). The differential striosome-matrix organization between NAc shell and core is validated by established molecular markers (references 3, 60).",
+    "result_type": "MAJOR"
+  },
+  {
+    "result_id": "R16",
+    "claim_ids": [
+      "C56",
+      "C57",
+      "C58",
+      "C59",
+      "C60"
+    ],
+    "result": "STR TAC3-PLPP4 interneurons are exclusively matrix-localized, primate-specific, and among the most abundant striatal interneurons in human (~6% in mouse), while VIP+/LAMP5+ interneurons show moderate striosomal enrichment.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C56-C60 are supported by spatial mapping and enrichment analysis (Figures 6C-E). The primate-specific expansion of TAC3-PLPP4 interneurons is corroborated by prior literature (references 62-64). The exclusive matrix localization represents a novel spatial characterization of this primate-expanded population.",
+    "result_type": "MAJOR"
+  },
+  {
+    "result_id": "R17",
+    "claim_ids": [
+      "C61",
+      "C62"
+    ],
+    "result": "Astrocyte and Oligo OPALIN oligodendrocyte populations are enriched near striosome borders forming boundary-aligned microdomains, with clustering resolving four astrocyte subpopulations occupying distinct positional zones (core, boundary, perimatrix).",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C61-C62 are supported by proximity analysis (Figures 6G-H, S7). The identification of boundary-enriched glial populations represents a novel finding revealing specialized glial microenvironments at striosome-matrix interfaces. The clustering methodology appropriately uses distance-dependent gene expression.",
+    "result_type": "MAJOR"
+  },
+  {
+    "result_id": "R18",
+    "claim_ids": [
+      "C63",
+      "C64",
+      "C65"
+    ],
+    "result": "Cross-species mapping identifies orthologous mouse MSN subtypes corresponding to human striosome/matrix populations, with conserved glial enrichment at striosome borders (Astro-TE NN_3 astrocytes, MOL NN_4 oligodendrocytes in mice).",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C63-C65 are supported by cross-species mapping analysis (Figures S8C-F, 6J-K) using Allen Institute mouse MERFISH data. The identification of orthologous cell types and conserved boundary-enriched glial populations demonstrates evolutionary conservation of striosome-matrix organization principles.",
+    "result_type": "MAJOR"
+  },
+  {
+    "result_id": "R19",
+    "claim_ids": [
+      "C66",
+      "C67",
+      "C68",
+      "C69",
+      "C70"
+    ],
+    "result": "Stereo-seq whole-transcriptome spatial clustering recapitulates MERFISH+ cellular community modules and identifies region-enriched genes: ZNF385B/ROBO2 in putamen, TAC1/EGR1 in caudate, SCG2/CALY in NAc shell, and HSPA6/DNAJB1 in NAc core.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C66-C70 are supported by spatial module analysis (Figures 7A, S9A) and differential gene expression (Figure 7C). The concordance between Stereo-seq and MERFISH+ spatial modules validates both approaches. Region-enriched genes provide molecular signatures for anatomical subdivisions.",
+    "result_type": "MAJOR"
+  },
+  {
+    "result_id": "R20",
+    "claim_ids": [
+      "C71",
+      "C72",
+      "C73",
+      "C74",
+      "C75"
+    ],
+    "result": "Numerous genes display graded expression along the dorsolateral-ventromedial axis in human striatum (e.g., PDE10A/NRGN/SLIT1 dorsolateral; NNAT/CRYM/RAP1GAP ventromedial), with majority showing directionality concordance across species and ventromedial bias dominating (Mouse: 73%, Human: 97.2%).",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C71-C75 are supported by gradient analysis (Figures 7E-H, S9C-D) and cross-species comparison. The conserved DL-VM gradient demonstrates evolutionary preservation of transcriptional patterning. The strong ventromedial bias (97.2% in human vs 73% in mouse) suggests species-specific differences in gradient organization.",
+    "result_type": "MAJOR"
+  },
+  {
+    "result_id": "R21",
+    "claim_ids": [
+      "C76",
+      "C77"
+    ],
+    "result": "Most gradient-associated transcripts are enriched in CN/LGE-derived GABAergic neurons (MSNs), while a subset of dorsolateral-enriched genes are expressed in OPC-Oligo cells, reflecting dense myelinated fiber tracts in dorsal striatal territories.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C76-C77 are supported by cell-type-specific analysis (Figure 7I, S9E). C76 is straightforward as MSNs are the dominant cell type. C77 represents an inference linking oligodendrocyte gene expression to myelination patterns, which is reasonable but not directly demonstrated. The claim appropriately acknowledges this as reflecting rather than proving the relationship.",
+    "result_type": "MINOR"
+  }
+]

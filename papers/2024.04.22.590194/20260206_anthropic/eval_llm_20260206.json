@@ -1,0 +1,411 @@
+[
+  {
+    "result_id": "R1",
+    "claim_ids": [
+      "C6",
+      "C7",
+      "C33",
+      "C34",
+      "C52",
+      "C53",
+      "C54",
+      "C55",
+      "C56",
+      "C57",
+      "C58",
+      "C59",
+      "C66"
+    ],
+    "result": "NS-Forest v4.0 introduces a BinaryFirst feature selection step that pre-filters genes based on Binary Expression Score thresholds before random forest classification, reducing input feature complexity and improving marker gene selection for closely related cell types.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C52-C59 and C66 describe the BinaryFirst methodology and its effects. The approach is well-documented with clear threshold definitions (C56, C134-C137), mathematical formulation (C55), and demonstrated effects on gene selection (C58, C68). The strategy is logically sound as dimensionality reduction for random forest classifiers.",
+    "result_type": "MAJOR"
+  },
+  {
+    "result_id": "R2",
+    "claim_ids": [
+      "C12",
+      "C13",
+      "C138",
+      "C139",
+      "C140"
+    ],
+    "result": "The authors introduce the On-Target Fraction metric to quantify marker gene expression specificity, ranging from 0 to 1, where 1 indicates exclusive expression in target cell types.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C12-C13 and C138-C140 provide a clear mathematical definition and rationale for the On-Target Fraction metric. The metric is well-defined with appropriate use of median as summary statistic for non-normal scRNA-seq data distributions (C140).",
+    "result_type": "MAJOR"
+  },
+  {
+    "result_id": "R3",
+    "claim_ids": [
+      "C14",
+      "C67",
+      "C68",
+      "C69",
+      "C70",
+      "C71",
+      "C83"
+    ],
+    "result": "NS-Forest v4.0 demonstrates improved performance on the human MTG brain dataset, with significantly increased On-Target Fraction values as BinaryFirst stringency increases, and improved median PPV and On-Target Fraction compared to v2.0/3.9.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C67-C71 and C83 report quantitative improvements with statistical significance (C67, C84) and are supported by Figure 3A-D. The results show consistent trends across metrics, though the improvement comes with a small decrease in F-beta score (C74), which is acknowledged and explained.",
+    "result_type": "MAJOR"
+  },
+  {
+    "result_id": "R4",
+    "claim_ids": [
+      "C15",
+      "C117",
+      "C118",
+      "C119",
+      "C122",
+      "C123",
+      "C125"
+    ],
+    "result": "NS-Forest v4.0 outperforms other marker gene selection methods (HLCA, CellRef, ASCT+B, Azimuth) on the Human Lung Cell Atlas dataset, achieving significantly higher F-beta scores (0.71-0.80) and recall values with statistical significance (p < 0.05).",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C117-C119 and C122-C123 provide specific quantitative comparisons with statistical testing. The comparison is comprehensive across multiple methods and metrics. However, the comparison may be somewhat unfair as different methods were designed for different purposes (C109, C114), though this limitation is acknowledged.",
+    "result_type": "MAJOR"
+  },
+  {
+    "result_id": "R5",
+    "claim_ids": [
+      "C84",
+      "C85",
+      "C86"
+    ],
+    "result": "For closely related cell type subclades in the MTG dataset, statistical significance of On-Target Fraction improvement was achieved for VIP subclade (p=0.01) but not for L4 (p=0.37) and PVALB (p=0.07) subclades, likely due to small sample sizes.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "UNCERTAIN",
+    "evaluation": "Claims C84-C86 report statistical results with appropriate acknowledgment of limitations. However, the lack of significance for 2 of 3 subclades weakens the claim of improved performance on closely related cell types. The sample size explanation (C86) is reasonable but the PVALB p-value of 0.07 suggests a trend that might reach significance with more power.",
+    "result_type": "MINOR"
+  },
+  {
+    "result_id": "R6",
+    "claim_ids": [
+      "C99",
+      "C100",
+      "C103",
+      "C107"
+    ],
+    "result": "NS-Forest v4.0 achieves substantial runtime reduction compared to v2.0/3.9, with runtime ratios of 0.10-0.26 across three datasets, by dramatically reducing candidate genes through BinaryFirst filtering (1-7% of genes pass high threshold).",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C99-C100 provide quantitative runtime comparisons supported by Table 1. The mechanism for runtime reduction is clearly explained through gene filtering (C103, C107). The improvements are substantial and consistent across datasets.",
+    "result_type": "MAJOR"
+  },
+  {
+    "result_id": "R7",
+    "claim_ids": [
+      "C87",
+      "C88",
+      "C89",
+      "C90",
+      "C91",
+      "C92",
+      "C93",
+      "C94",
+      "C95",
+      "C96",
+      "C97"
+    ],
+    "result": "NS-Forest v4.0 performance on kidney (75 cell types) and lung (61 cell types) datasets shows less obvious improvement over v2.0/3.9 compared to brain, though v4.0 reduces false positives in kidney from 312.5 to 198 cells.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C89-C97 provide detailed quantitative results for kidney and lung datasets. The observation that improvement is less obvious (C90) is honestly reported. The reduction in false positives for kidney (C91) demonstrates improved classification despite similar On-Target Fraction, supporting the claim of optimization for classification.",
+    "result_type": "MAJOR"
+  },
+  {
+    "result_id": "R8",
+    "claim_ids": [
+      "C74",
+      "C75",
+      "C76",
+      "C77"
+    ],
+    "result": "The improvement in PPV and On-Target Fraction in NS-Forest v4.0 is offset by a small decrease in median F-beta score, a tradeoff previously documented in Aevermann et al. 2021, with v4.0 achieving higher average Binary Expression Scores (0.971 vs 0.936).",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C74-C77 acknowledge a performance tradeoff and provide context from prior work (C75-C76). The increase in Binary Expression Score (C77) supports that the tradeoff favors markers more useful for downstream applications. This is an honest assessment of the algorithm's performance characteristics.",
+    "result_type": "MINOR"
+  },
+  {
+    "result_id": "R9",
+    "claim_ids": [
+      "C120",
+      "C121"
+    ],
+    "result": "Median PPV scores are high (0.89-0.99) across all five marker gene selection methods with no significant differences between NS-Forest and other methods.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C120-C121 report statistical comparisons showing no significant difference in PPV. This is an important negative result that contextualizes the F-beta score differences, indicating that NS-Forest's advantage is primarily in recall rather than precision.",
+    "result_type": "MINOR"
+  },
+  {
+    "result_id": "R10",
+    "claim_ids": [
+      "C78",
+      "C79",
+      "C80"
+    ],
+    "result": "NS-Forest v2.0/3.9 and v4.0 identified similar numbers of total markers (168 vs 167) and unique markers (154 vs 147) for the MTG dataset, with 51% overlap in markers identified for the same clusters.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C78-C80 provide specific quantitative comparisons of marker gene sets. The 51% overlap indicates substantial but not complete agreement between versions, which is reasonable given the algorithmic changes. The similar total numbers suggest comparable parsimony.",
+    "result_type": "MINOR"
+  },
+  {
+    "result_id": "R11",
+    "claim_ids": [
+      "C104",
+      "C105",
+      "C106"
+    ],
+    "result": "The majority of genes in the three datasets have low Binary Expression Scores with heavily right-skewed distributions, a pattern claimed to be generally true for all scRNA-seq data.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "UNCERTAIN",
+    "evaluation": "Claims C104-C105 are supported by Supplementary Figure 4 for the three datasets analyzed. However, C106 generalizes to all scRNA-seq data based on only three datasets, which is insufficient evidence for such a broad claim. The generalization may be reasonable based on biological knowledge but requires more extensive validation.",
+    "result_type": "MINOR"
+  },
+  {
+    "result_id": "R12",
+    "claim_ids": [
+      "C36",
+      "C37",
+      "C38",
+      "C39",
+      "C40",
+      "C41",
+      "C42",
+      "C43",
+      "C44",
+      "C45",
+      "C46",
+      "C47",
+      "C48",
+      "C49"
+    ],
+    "result": "The manuscript describes the evolution of NS-Forest through versions 1.3, 2.0, and 3.9, detailing methodological changes including introduction of Binary Expression Score (v2.0), decision tree-based thresholds (v2.0), F-beta scoring (v2.0), and anndata input format (v3.9).",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C36-C49 provide a comprehensive historical account of NS-Forest development with appropriate citations (C36, C40). The methodological descriptions are clear and internally consistent. This background is essential for understanding v4.0 improvements.",
+    "result_type": "MINOR"
+  },
+  {
+    "result_id": "R13",
+    "claim_ids": [
+      "C50",
+      "C51"
+    ],
+    "result": "Previous NS-Forest versions (2.0 and 3.9) showed lower performance in distinguishing closely-related cell types with similar transcriptional profiles, particularly within VIP, PVALB, and L4 neuronal subclasses in the MTG dataset.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C50-C51 identify a specific weakness that motivated v4.0 development. This is supported by citation to the MTG dataset (C51) and is consistent with the observed improvements in v4.0 for these subclades. This establishes clear motivation for the algorithmic improvements.",
+    "result_type": "MINOR"
+  },
+  {
+    "result_id": "R14",
+    "claim_ids": [
+      "C61",
+      "C62",
+      "C63",
+      "C64",
+      "C65"
+    ],
+    "result": "Random forest's bagging technique is time-consuming and can produce sub-optimal decision trees due to random feature selection, a problem exacerbated in previous NS-Forest versions by large numbers of input genes, which BinaryFirst aims to address.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C61-C63 are supported by citations to established literature (C62, C63). Claims C64-C65 provide logical reasoning for the BinaryFirst approach. However, C65 is labeled as speculation/hypothesis, indicating this is the authors' proposed mechanism rather than demonstrated fact.",
+    "result_type": "MINOR"
+  },
+  {
+    "result_id": "R15",
+    "claim_ids": [
+      "C98"
+    ],
+    "result": "Marker gene selection is easier at less granular annotation levels (L4 and L3 subclasses) compared to more granular levels (L5 subclass) in the lung dataset.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claim C98 is supported by results from Supplementary Figure 3 and Tables 4-5. This is a logical inference that coarser cell type definitions are easier to distinguish, consistent with biological understanding. However, specific quantitative metrics supporting this claim are not provided in the extracted claims.",
+    "result_type": "MINOR"
+  },
+  {
+    "result_id": "R16",
+    "claim_ids": [
+      "C8",
+      "C11",
+      "C141",
+      "C142"
+    ],
+    "result": "NS-Forest v4.0 is available as a modularized Python package with four main modules (preprocessing, NSForesting, evaluating, plotting) that accepts anndata objects and enables comparison of user-defined versus NS-Forest-derived marker genes.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C8, C11, C141-C142 describe software implementation details. The GitHub availability (C8) is verifiable. The modular structure (C141) and input format (C142) are clearly described. The ability to evaluate user-defined markers (C11) is a useful feature for comparative analysis.",
+    "result_type": "MINOR"
+  },
+  {
+    "result_id": "R17",
+    "claim_ids": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5"
+    ],
+    "result": "scRNA-seq technologies are revolutionizing cell biology and creating new challenges in characterizing cell types and identifying marker genes, for which machine learning approaches have emerged as effective solutions.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C1-C5 provide general background context supported by established knowledge in the field. These are well-accepted statements about the state of scRNA-seq technology and computational approaches, though they represent general knowledge rather than novel findings.",
+    "result_type": "MINOR"
+  },
+  {
+    "result_id": "R18",
+    "claim_ids": [
+      "C16",
+      "C17",
+      "C18",
+      "C19",
+      "C20",
+      "C21",
+      "C22",
+      "C23",
+      "C24"
+    ],
+    "result": "Major consortium efforts (HCA, HuBMAP, BRAIN Initiative) have generated large-scale scRNA-seq datasets, with the human brain dataset growing from ~16,000 nuclei identifying 75 cell types to >3 million cells identifying 461 clusters, and HuBMAP covering 898 cell types across ~280 million cells.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C16-C24 provide factual background about major consortium efforts, all supported by appropriate citations. These establish the scale and scope of the problem that NS-Forest aims to address. The numbers are specific and verifiable from cited sources.",
+    "result_type": "MINOR"
+  },
+  {
+    "result_id": "R19",
+    "claim_ids": [
+      "C25",
+      "C26",
+      "C27",
+      "C28",
+      "C29",
+      "C30",
+      "C31"
+    ],
+    "result": "Current marker gene selection approaches (manual curation from literature, differential expression analysis) have limitations: manual curation is infeasible for large-scale datasets and leads to incomplete/redundant information, while DE analysis does not directly test classification ability.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C25-C31 identify limitations of existing approaches with appropriate citations (C27, C30). The critiques are reasonable: manual curation doesn't scale (C28) and DE methods optimize for different objectives than classification (C31). This establishes the need for NS-Forest's approach.",
+    "result_type": "MINOR"
+  },
+  {
+    "result_id": "R20",
+    "claim_ids": [
+      "C32"
+    ],
+    "result": "The authors formally define 'cell type classification marker gene combinations' with four criteria: expression in majority of target cells, binary expression pattern, optimization for classification metrics, and reproducibility by generalizable method.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claim C32 provides a clear formal definition that distinguishes classification markers from other marker gene concepts. This definition is internally consistent and provides clear criteria for evaluation. It represents an important conceptual contribution to the field.",
+    "result_type": "MAJOR"
+  },
+  {
+    "result_id": "R21",
+    "claim_ids": [
+      "C108",
+      "C109",
+      "C110",
+      "C111",
+      "C112",
+      "C113",
+      "C114",
+      "C115",
+      "C116"
+    ],
+    "result": "Five marker gene lists were compared on the HLCA dataset: NS-Forest (122 genes, 1-4 per type), HLCA (162 genes, 1-5 per type), CellRef (115 genes, 2-7 per type), ASCT+B (80 genes, 3-5 per type), and Azimuth (535 genes, 8-10 per type).",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C108-C116 provide detailed descriptions of the comparative analysis setup with appropriate citations. The different numbers of markers and cell type coverage reflect the different methodologies and purposes of each approach. This establishes a comprehensive comparison framework.",
+    "result_type": "MINOR"
+  },
+  {
+    "result_id": "R22",
+    "claim_ids": [
+      "C126",
+      "C127",
+      "C128",
+      "C129",
+      "C130",
+      "C131",
+      "C132",
+      "C133"
+    ],
+    "result": "NS-Forest v4.0 was developed to improve marker selection for closely related cell types, with applications in spatial transcriptomics panel design and cell type ontology development, addressing challenges in scaling semantic knowledge representations for rapidly growing scRNA-seq data.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C126-C133 describe motivations and applications with appropriate citations (C127-C130). The applications are logical uses of marker genes. However, C133 is speculative about NS-Forest's potential to address scaling challenges. The claims about prior contributions (C129-C130) are supported by citations.",
+    "result_type": "MINOR"
+  },
+  {
+    "result_id": "R23",
+    "claim_ids": [
+      "C134",
+      "C135",
+      "C136",
+      "C137"
+    ],
+    "result": "BinaryFirst thresholds are defined as: mild = median Binary Expression Score, moderate = mean + 1 SD, high = mean + 2 SD, with 'BinaryFirst_high' as the default in v4.0.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C134-C137 provide clear mathematical definitions for the threshold options. These are standard statistical approaches (median, mean \u00b1 SD) appropriately applied to define stringency levels. The choice of 'high' as default (C137) is justified by the performance results.",
+    "result_type": "MINOR"
+  },
+  {
+    "result_id": "R24",
+    "claim_ids": [
+      "C101",
+      "C102"
+    ],
+    "result": "The 'BinaryFirst_mild' configuration did not filter any genes in all three datasets, indicating that more than half of genes have Binary Expression Score of 0.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claim C101 reports an empirical observation, and C102 provides a logical inference from this observation. Since the mild threshold is the median (C134), no filtering implies median \u2264 0, supporting the inference that >50% of genes have score of 0. This is consistent with biological expectations.",
+    "result_type": "MINOR"
+  },
+  {
+    "result_id": "R25",
+    "claim_ids": [
+      "C124"
+    ],
+    "result": "Low F-beta and recall values for non-NS-Forest methods are driven by excessive false negative predictions.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claim C124 provides a mechanistic interpretation of the performance differences. Given high PPV (C120) but low recall (C122) for other methods, this interpretation is mathematically correct: the issue is missing true positives (false negatives) rather than incorrect positive predictions.",
+    "result_type": "MINOR"
+  }
+]
