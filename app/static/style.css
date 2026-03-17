@@ -221,6 +221,30 @@ td.title-cell {
     margin-bottom: 6px;
 }
 
+.claim-evidence {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+    flex-wrap: wrap;
+    margin-bottom: 6px;
+    font-size: 0.78rem;
+    color: #777;
+}
+
+.claim-evidence-type {
+    font-size: 0.68rem;
+    font-weight: 600;
+    color: #5a7;
+    background: #e8f5e9;
+    padding: 1px 5px;
+    border-radius: 3px;
+    flex-shrink: 0;
+}
+
+.claim-evidence-text {
+    font-style: italic;
+}
+
 .claim-controls {
     display: flex;
     align-items: center;
@@ -338,3 +362,95 @@ td.title-cell {
 
 .result-card.reviewed { border-left: 3px solid #28a745; }
 .result-card.flagged { border-left: 3px solid #ffc107; }
+
+/* Split-pane layout for review + paper panel */
+#review-body {
+    display: flex;
+    height: calc(100vh - 56px);
+    overflow: hidden;
+}
+
+#review-body > .container {
+    flex: 1;
+    overflow-y: auto;
+    min-width: 0;
+}
+
+/* Paper text side panel */
+#paper-panel {
+    width: 460px;
+    flex-shrink: 0;
+    background: #fff;
+    border-left: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 16px;
+    border-bottom: 1px solid #eee;
+    background: #fafafa;
+    font-weight: 600;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+.panel-header button {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #666;
+    padding: 0 4px;
+}
+
+.panel-header button:hover { color: #333; }
+
+#paper-text-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px;
+}
+
+.paper-section {
+    margin-bottom: 20px;
+}
+
+.paper-section-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    margin-bottom: 8px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #eee;
+}
+
+.paper-para {
+    font-size: 0.82rem;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+mark.highlight {
+    background: #fff59d;
+    padding: 1px 0;
+    border-radius: 2px;
+}
+
+.highlight-para {
+    background: #fff9c4;
+    border-left: 3px solid #ffc107;
+    padding-left: 8px;
+}
+
+.btn-view-source {
+    color: #0066cc;
+    border-color: #b3d4fc;
+}

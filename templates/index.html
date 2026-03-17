@@ -41,7 +41,16 @@
                     <button id="mark-complete-btn">Mark Complete</button>
                 </div>
             </header>
-            <main class="container" id="results-container"></main>
+            <div id="review-body">
+                <main class="container" id="results-container"></main>
+                <aside id="paper-panel" class="hidden">
+                    <div class="panel-header">
+                        <span>Paper Text</span>
+                        <button id="panel-close-btn">&times;</button>
+                    </div>
+                    <div id="paper-text-content"></div>
+                </aside>
+            </div>
         </div>
     </div>
     <script src="/static/app.js"></script>

@@ -58,6 +58,14 @@ def get_results(paper_id: str, run_id: str):
     return evals
 
 
+@router.get("/papers/{paper_id}/text")
+def get_paper_text(paper_id: str):
+    sections = paper_svc.extract_paper_text(paper_id)
+    if not sections:
+        raise HTTPException(404, "Paper text not found")
+    return sections
+
+
 @router.get("/papers/{paper_id}/{run_id}/review")
 def get_review(paper_id: str, run_id: str):
     _find_paper(paper_id, run_id)  # validate exists

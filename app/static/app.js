@@ -9,11 +9,15 @@
     const reviewerInput = $("#reviewer-name");
     const backBtn = $("#back-btn");
     const markCompleteBtn = $("#mark-complete-btn");
+    const paperPanel = $("#paper-panel");
+    const paperTextContent = $("#paper-text-content");
+    const panelCloseBtn = $("#panel-close-btn");
 
     let currentPaper = null;
     let currentResults = [];
     let currentReview = {};
     let saveTimer = null;
+    let paperTextCache = {}; // paperId -> sections
 
     // --- Navigation ---
 
@@ -89,9 +93,14 @@
                         <span class="claim-type-badge">${esc(c.claim_type)}</span>
                     </div>
                     <div class="claim-text">${esc(c.claim)}</div>
+                    <div class="claim-evidence">
+                        ${c.evidence_type.map((t) => `<span class="claim-evidence-type">${esc(t)}</span>`).join("")}
+                        <span class="claim-evidence-text">${esc(c.evidence)}</span>
+                    </div>
                     <div class="claim-controls">
                         <button class="btn btn-sm btn-claim-accept ${cr.agreement === "accept" ? "active-agree" : ""}" data-cid="${c.claim_id}" data-action="accept">Accept</button>
                         <button class="btn btn-sm btn-claim-oppose ${cr.agreement === "oppose" ? "active-disagree" : ""}" data-cid="${c.claim_id}" data-action="oppose">Oppose</button>
+                        ${c.source_type.includes("TEXT") ? `<button class="btn btn-sm btn-view-source" data-source="${escAttr(c.source)}">View in paper</button>` : ""}
                         <input class="claim-comment" type="text" placeholder="Comment..." data-cid="${c.claim_id}" value="${esc(cr.comment || "")}">
                     </div>
                 </div>
@@ -151,6 +160,12 @@
             btn.textContent = hidden
                 ? `Show ${list.children.length} claims`
                 : `Hide ${list.children.length} claims`;
+            return;
+        }
+
+        // View in paper
+        if (btn.classList.contains("btn-view-source")) {
+            showSourceInPanel(btn.dataset.source);
             return;
         }
 
@@ -328,6 +343,107 @@
         if (currentPaper) scheduleSave(null);
     });
 
+    // --- Paper Text Panel ---
+
+    panelCloseBtn.addEventListener("click", () => {
+        paperPanel.classList.add("hidden");
+    });
+
+    async function loadPaperText(paperId) {
+        if (paperTextCache[paperId]) return paperTextCache[paperId];
+        const res = await fetch(`/api/papers/${paperId}/text`);
+        if (!res.ok) return null;
+        const sections = await res.json();
+        paperTextCache[paperId] = sections;
+        return sections;
+    }
+
+    function renderPaperText(sections) {
+        paperTextContent.innerHTML = sections.map((s) =>
+            `<div class="paper-section">
+                <h3 class="paper-section-title">${esc(s.section)}</h3>
+                ${s.paragraphs.map((p) => `<p class="paper-para">${esc(p)}</p>`).join("")}
+            </div>`
+        ).join("");
+    }
+
+    function highlightSource(sourceText) {
+        // Clear previous highlights
+        paperTextContent.querySelectorAll(".highlight").forEach((el) => {
+            el.replaceWith(el.textContent);
+        });
+        // Normalize for matching
+        paperTextContent.querySelectorAll("p").forEach((p) => p.normalize());
+
+        if (!sourceText) return;
+
+        // Try to find and highlight the source text in the paper
+        const needle = sourceText.trim();
+        const paras = paperTextContent.querySelectorAll(".paper-para");
+        let found = false;
+
+        for (const p of paras) {
+            const idx = p.textContent.indexOf(needle);
+            if (idx === -1) continue;
+
+            // Walk text nodes to find the range
+            const range = document.createRange();
+            let charCount = 0;
+            let startNode = null, startOffset = 0, endNode = null, endOffset = 0;
+
+            const walker = document.createTreeWalker(p, NodeFilter.SHOW_TEXT);
+            while (walker.nextNode()) {
+                const node = walker.currentNode;
+                const nodeLen = node.length;
+                if (!startNode && charCount + nodeLen > idx) {
+                    startNode = node;
+                    startOffset = idx - charCount;
+                }
+                if (startNode && charCount + nodeLen >= idx + needle.length) {
+                    endNode = node;
+                    endOffset = idx + needle.length - charCount;
+                    break;
+                }
+                charCount += nodeLen;
+            }
+
+            if (startNode && endNode) {
+                range.setStart(startNode, startOffset);
+                range.setEnd(endNode, endOffset);
+                const mark = document.createElement("mark");
+                mark.className = "highlight";
+                range.surroundContents(mark);
+                mark.scrollIntoView({ behavior: "smooth", block: "center" });
+                found = true;
+                break;
+            }
+        }
+
+        // Fallback: fuzzy match on first 60 chars
+        if (!found && needle.length > 60) {
+            const shortNeedle = needle.substring(0, 60);
+            for (const p of paras) {
+                if (p.textContent.includes(shortNeedle)) {
+                    p.classList.add("highlight-para");
+                    p.scrollIntoView({ behavior: "smooth", block: "center" });
+                    break;
+                }
+            }
+        }
+    }
+
+    async function showSourceInPanel(sourceText) {
+        const { paperId } = currentPaper;
+        const sections = await loadPaperText(paperId);
+        if (!sections) return;
+
+        paperPanel.classList.remove("hidden");
+        renderPaperText(sections);
+
+        // Small delay so DOM is ready
+        requestAnimationFrame(() => highlightSource(sourceText));
+    }
+
     // --- Helpers ---
 
     function esc(s) {
@@ -335,6 +451,10 @@
         const d = document.createElement("div");
         d.textContent = s;
         return d.innerHTML;
+    }
+
+    function escAttr(s) {
+        return esc(s).replace(/"/g, "&quot;");
     }
 
     // --- Init ---

@@ -76,6 +76,86 @@ def discover_papers() -> list[dict]:
     return results
 
 
+def extract_paper_text(paper_id: str) -> list[dict]:
+    """Extract readable text sections from paper XML. Returns list of {section, text} dicts."""
+    paper_dir = PAPERS_DIR / paper_id
+    if not paper_dir.exists():
+        return []
+
+    for xml_path in sorted(paper_dir.glob("*.xml")):
+        try:
+            tree = ET.parse(xml_path)
+            root = tree.getroot()
+        except ET.ParseError:
+            continue
+
+        # Detect format
+        if root.tag == f"{{{TEI_NS}}}TEI" or TEI_NS in root.tag:
+            return _extract_tei_text(root)
+        elif root.tag == "article":
+            return _extract_jats_text(root)
+
+    return []
+
+
+def _extract_tei_text(root: ET.Element) -> list[dict]:
+    sections = []
+    body = root.find(f".//{{{TEI_NS}}}body")
+    if body is None:
+        return sections
+    # Also get abstract
+    abstract = root.find(f".//{{{TEI_NS}}}abstract")
+    if abstract is not None:
+        paras = []
+        for p in abstract.iter(f"{{{TEI_NS}}}p"):
+            text = "".join(p.itertext()).strip()
+            if text:
+                paras.append(text)
+        if paras:
+            sections.append({"section": "Abstract", "paragraphs": paras})
+    # Body divs
+    for div in body.findall(f"{{{TEI_NS}}}div"):
+        head = div.find(f"{{{TEI_NS}}}head")
+        section_name = head.text.strip() if head is not None and head.text else "Untitled"
+        paras = []
+        for p in div.findall(f"{{{TEI_NS}}}p"):
+            text = "".join(p.itertext()).strip()
+            if text:
+                paras.append(text)
+        if paras:
+            sections.append({"section": section_name, "paragraphs": paras})
+    return sections
+
+
+def _extract_jats_text(root: ET.Element) -> list[dict]:
+    sections = []
+    # Abstract
+    abstract = root.find(".//abstract")
+    if abstract is not None:
+        paras = []
+        for p in abstract.iter("p"):
+            text = "".join(p.itertext()).strip()
+            if text:
+                paras.append(text)
+        if paras:
+            sections.append({"section": "Abstract", "paragraphs": paras})
+    # Body sections
+    body = root.find(".//body")
+    if body is None:
+        return sections
+    for sec in body.findall(".//sec"):
+        title_el = sec.find("title")
+        section_name = title_el.text.strip() if title_el is not None and title_el.text else "Untitled"
+        paras = []
+        for p in sec.findall("p"):
+            text = "".join(p.itertext()).strip()
+            if text:
+                paras.append(text)
+        if paras:
+            sections.append({"section": section_name, "paragraphs": paras})
+    return sections
+
+
 def load_claims(path: Path) -> list[dict]:
     return json.loads(path.read_text())
 
