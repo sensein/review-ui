@@ -164,19 +164,44 @@ def load_eval(path: Path) -> list[dict]:
     return json.loads(path.read_text())
 
 
-def review_path(paper_id: str, run_id: str) -> Path:
+def _sanitize_reviewer(name: str) -> str:
+    """Sanitize reviewer name for use in filenames."""
+    return "".join(c if c.isalnum() or c in "-_ " else "" for c in name).strip().replace(" ", "_")
+
+
+def _review_dir(paper_id: str, run_id: str) -> Path:
     if run_id == "root":
-        return PAPERS_DIR / paper_id / "review.json"
-    return PAPERS_DIR / paper_id / run_id / "review.json"
+        return PAPERS_DIR / paper_id
+    return PAPERS_DIR / paper_id / run_id
 
 
-def load_review(paper_id: str, run_id: str) -> dict | None:
-    p = review_path(paper_id, run_id)
+def review_path(paper_id: str, run_id: str, reviewer: str) -> Path:
+    safe_name = _sanitize_reviewer(reviewer)
+    return _review_dir(paper_id, run_id) / f"review_{safe_name}.json"
+
+
+def load_review(paper_id: str, run_id: str, reviewer: str) -> dict | None:
+    if not reviewer:
+        return None
+    p = review_path(paper_id, run_id, reviewer)
     if p.exists():
         return json.loads(p.read_text())
     return None
 
 
-def save_review(paper_id: str, run_id: str, data: dict) -> None:
-    p = review_path(paper_id, run_id)
+def save_review(paper_id: str, run_id: str, reviewer: str, data: dict) -> None:
+    p = review_path(paper_id, run_id, reviewer)
     p.write_text(json.dumps(data, indent=2))
+
+
+def list_reviews(paper_id: str, run_id: str) -> list[dict]:
+    """List all review files for a paper/run."""
+    d = _review_dir(paper_id, run_id)
+    reviews = []
+    for p in sorted(d.glob("review_*.json")):
+        try:
+            data = json.loads(p.read_text())
+            reviews.append(data)
+        except (json.JSONDecodeError, OSError):
+            continue
+    return reviews

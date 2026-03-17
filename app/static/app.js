@@ -41,7 +41,9 @@
     // --- Paper List ---
 
     async function loadPapers() {
-        const res = await fetch("/api/papers");
+        const reviewer = reviewerInput.value.trim();
+        const query = reviewer ? `?reviewer=${encodeURIComponent(reviewer)}` : "";
+        const res = await fetch(`/api/papers${query}`);
         const papers = await res.json();
         papersTbody.innerHTML = "";
         papers.forEach((p) => {
@@ -63,14 +65,19 @@
 
     async function loadReview() {
         const { paperId, runId } = currentPaper;
-        const [resultsRes, reviewRes] = await Promise.all([
-            fetch(`/api/papers/${paperId}/${runId}/results`),
-            fetch(`/api/papers/${paperId}/${runId}/review`),
-        ]);
-        currentResults = await resultsRes.json();
-        currentReview = reviewRes.ok ? await reviewRes.json() : { reviewer: "", status: "not_started", results: {}, claims: {} };
+        const reviewer = reviewerInput.value.trim();
 
-        reviewerInput.value = currentReview.reviewer || "";
+        const resultsRes = await fetch(`/api/papers/${paperId}/${runId}/results`);
+        currentResults = await resultsRes.json();
+
+        // Load reviewer-specific review if name is set
+        if (reviewer) {
+            const reviewRes = await fetch(`/api/papers/${paperId}/${runId}/review?reviewer=${encodeURIComponent(reviewer)}`);
+            currentReview = reviewRes.ok ? await reviewRes.json() : { reviewer, status: "not_started", results: {}, claims: {} };
+        } else {
+            currentReview = { reviewer: "", status: "not_started", results: {}, claims: {} };
+        }
+
         renderResults();
         updateProgress();
     }
@@ -275,10 +282,21 @@
         claimSaveTimer = setTimeout(() => doSave(null, cid), 600);
     }
 
+    function requireReviewerName() {
+        if (!reviewerInput.value.trim()) {
+            reviewerInput.focus();
+            reviewerInput.style.outline = "2px solid #dc3545";
+            setTimeout(() => { reviewerInput.style.outline = ""; }, 2000);
+            return false;
+        }
+        return true;
+    }
+
     async function doSave(rid, cid) {
+        if (!requireReviewerName()) return;
         const { paperId, runId } = currentPaper;
         const payload = {
-            reviewer: reviewerInput.value,
+            reviewer: reviewerInput.value.trim(),
             status: currentReview.status || "in_progress",
             results: {},
             claims: {},
@@ -321,13 +339,14 @@
     // --- Mark Complete ---
 
     markCompleteBtn.addEventListener("click", async () => {
+        if (!requireReviewerName()) return;
         currentReview.status = "complete";
         const { paperId, runId } = currentPaper;
         await fetch(`/api/papers/${paperId}/${runId}/review`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
-                reviewer: reviewerInput.value,
+                reviewer: reviewerInput.value.trim(),
                 status: "complete",
                 results: {},
                 claims: {},
@@ -337,10 +356,10 @@
         setTimeout(() => { markCompleteBtn.textContent = "Mark Complete"; }, 2000);
     });
 
-    // --- Reviewer name save ---
+    // --- Reviewer name change: reload their review ---
 
     reviewerInput.addEventListener("change", () => {
-        if (currentPaper) scheduleSave(null);
+        if (currentPaper) loadReview();
     });
 
     // --- Paper Text Panel ---

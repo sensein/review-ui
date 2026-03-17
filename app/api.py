@@ -28,19 +28,31 @@ def _find_paper(paper_id: str, run_id: str) -> dict:
 
 
 @router.get("/papers")
-def list_papers():
+def list_papers(reviewer: str = ""):
     results = []
     for p in _get_papers():
         claims = paper_svc.load_claims(p["claims_path"])
         evals = paper_svc.load_eval(p["eval_path"])
-        review = paper_svc.load_review(p["paper_id"], p["run_id"])
+        # Show status for specific reviewer if provided, otherwise aggregate
+        if reviewer:
+            review = paper_svc.load_review(p["paper_id"], p["run_id"], reviewer)
+            status = review.get("status", "not_started") if review else "not_started"
+        else:
+            reviews = paper_svc.list_reviews(p["paper_id"], p["run_id"])
+            status = "not_started"
+            for rv in reviews:
+                if rv.get("status") == "complete":
+                    status = "complete"
+                    break
+                if rv.get("status") == "in_progress":
+                    status = "in_progress"
         results.append({
             "paper_id": p["paper_id"],
             "run_id": p["run_id"],
             "title": p["title"],
             "claims_count": len(claims),
             "results_count": len(evals),
-            "review_status": review.get("status", "not_started") if review else "not_started",
+            "review_status": status,
         })
     return results
 
@@ -67,9 +79,11 @@ def get_paper_text(paper_id: str):
 
 
 @router.get("/papers/{paper_id}/{run_id}/review")
-def get_review(paper_id: str, run_id: str):
+def get_review(paper_id: str, run_id: str, reviewer: str = ""):
     _find_paper(paper_id, run_id)  # validate exists
-    review = paper_svc.load_review(paper_id, run_id)
+    if not reviewer:
+        raise HTTPException(400, "Reviewer name is required")
+    review = paper_svc.load_review(paper_id, run_id, reviewer)
     if review is None:
         raise HTTPException(404, "No review found")
     return review
@@ -79,8 +93,11 @@ def get_review(paper_id: str, run_id: str):
 def save_review(paper_id: str, run_id: str, review: Review):
     _find_paper(paper_id, run_id)  # validate exists
 
+    if not review.reviewer or not review.reviewer.strip():
+        raise HTTPException(400, "Reviewer name is required")
+
     now = datetime.now(timezone.utc).isoformat()
-    existing = paper_svc.load_review(paper_id, run_id)
+    existing = paper_svc.load_review(paper_id, run_id, review.reviewer)
 
     if existing:
         # Merge: update only provided result/claim reviews
@@ -89,11 +106,10 @@ def save_review(paper_id: str, run_id: str, review: Review):
         for cid, cr in review.claims.items():
             existing.setdefault("claims", {})[cid] = cr.model_dump()
         existing["updated_at"] = now
-        if review.reviewer:
-            existing["reviewer"] = review.reviewer
+        existing["reviewer"] = review.reviewer
         if review.status:
             existing["status"] = review.status
-        paper_svc.save_review(paper_id, run_id, existing)
+        paper_svc.save_review(paper_id, run_id, review.reviewer, existing)
         return existing
     else:
         data = review.model_dump()
@@ -101,7 +117,7 @@ def save_review(paper_id: str, run_id: str, review: Review):
         data["updated_at"] = now
         if not data["status"] or data["status"] == "not_started":
             data["status"] = "in_progress"
-        paper_svc.save_review(paper_id, run_id, data)
+        paper_svc.save_review(paper_id, run_id, review.reviewer, data)
         return data
 
 
