@@ -34,6 +34,39 @@ def _extract_title(paper_dir: Path) -> str:
     return paper_dir.name
 
 
+def _load_metrics(directory: Path, prefix: str) -> dict | None:
+    """Load a metrics JSON file matching prefix from a directory."""
+    path = _find_json(directory, prefix)
+    if path:
+        try:
+            return json.loads(path.read_text())
+        except (json.JSONDecodeError, OSError):
+            pass
+    return None
+
+
+def _summarize_metrics(directory: Path) -> dict | None:
+    """Extract key metrics (model, cost, time) for extract and eval stages."""
+    extract = _load_metrics(directory, "metrics_extract")
+    eval_oe = _load_metrics(directory, "metrics_eval_openeval")
+    if not extract and not eval_oe:
+        return None
+    summary = {}
+    if extract:
+        summary["extract"] = {
+            "model": extract.get("model", ""),
+            "total_cost": extract.get("total_cost", 0),
+            "processing_time_sec": extract.get("processing_time_sec", 0),
+        }
+    if eval_oe:
+        summary["eval"] = {
+            "model": eval_oe.get("model", ""),
+            "total_cost": eval_oe.get("total_cost", 0),
+            "processing_time_sec": eval_oe.get("processing_time_sec", 0),
+        }
+    return summary
+
+
 def discover_papers() -> list[dict]:
     """Walk papers/ and find all paper/run combos with both claims and eval data."""
     results = []
@@ -56,6 +89,7 @@ def discover_papers() -> list[dict]:
                 "title": title,
                 "claims_path": claims_file,
                 "eval_path": eval_file,
+                "metrics": _summarize_metrics(paper_dir),
             })
 
         # Check subdirectories
@@ -71,6 +105,7 @@ def discover_papers() -> list[dict]:
                     "title": title,
                     "claims_path": claims_file,
                     "eval_path": eval_file,
+                    "metrics": _summarize_metrics(sub),
                 })
 
     return results

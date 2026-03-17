@@ -53,6 +53,7 @@ def list_papers(reviewer: str = ""):
             "claims_count": len(claims),
             "results_count": len(evals),
             "review_status": status,
+            "metrics": p.get("metrics"),
         })
     return results
 

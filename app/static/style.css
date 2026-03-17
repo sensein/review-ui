@@ -129,26 +129,29 @@ body {
     margin-bottom: 2px;
 }
 
-.instructions-extra {
-    font-size: 0.82rem;
-    color: #555;
-    border-top: 1px solid #eee;
-    padding-top: 10px;
-}
-
-.instructions-extra summary {
-    cursor: pointer;
+.instructions h3 {
+    font-size: 0.85rem;
     font-weight: 600;
     color: #333;
+    margin-top: 12px;
     margin-bottom: 6px;
 }
 
-.instructions-extra ul {
+.instructions-list {
     padding-left: 18px;
+    font-size: 0.82rem;
+    color: #555;
+    margin-bottom: 8px;
 }
 
-.instructions-extra ul li {
+.instructions-list li {
     margin-bottom: 4px;
+}
+
+.instructions > p:last-child {
+    font-size: 0.82rem;
+    color: #555;
+    margin-bottom: 0;
 }
 
 .papers-heading {
@@ -196,6 +199,33 @@ td.title-cell {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+
+/* Run cell metrics tooltip */
+.run-cell {
+    position: relative;
+}
+
+.metrics-tooltip {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: 200;
+    background: #1a1a1a;
+    color: #eee;
+    font-size: 0.75rem;
+    font-family: monospace;
+    white-space: pre;
+    padding: 8px 12px;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    pointer-events: none;
+    line-height: 1.5;
+}
+
+.run-cell:hover .metrics-tooltip {
+    display: block;
 }
 
 /* Status badges */

@@ -51,7 +51,7 @@
             tr.innerHTML = `
                 <td class="title-cell" title="${esc(p.title)}">${esc(p.title)}</td>
                 <td>${esc(p.paper_id)}</td>
-                <td>${esc(p.run_id)}</td>
+                <td class="run-cell">${esc(p.run_id)}${p.metrics ? `<span class="metrics-tooltip">${formatMetrics(p.metrics)}</span>` : ""}</td>
                 <td>${p.claims_count}</td>
                 <td>${p.results_count}</td>
                 <td><span class="badge badge-${p.review_status}">${p.review_status.replace("_", " ")}</span></td>
@@ -464,6 +464,32 @@
     }
 
     // --- Helpers ---
+
+    function formatMetrics(m) {
+        const lines = [];
+        if (m.extract) {
+            lines.push(
+                `Extract`,
+                `  Model: ${esc(m.extract.model)}`,
+                `  Cost: $${m.extract.total_cost.toFixed(2)}`,
+                `  Time: ${m.extract.processing_time_sec.toFixed(0)}s`,
+            );
+        }
+        if (m.eval) {
+            lines.push(
+                `Eval`,
+                `  Model: ${esc(m.eval.model)}`,
+                `  Cost: $${m.eval.total_cost.toFixed(2)}`,
+                `  Time: ${m.eval.processing_time_sec.toFixed(0)}s`,
+            );
+        }
+        if (m.extract && m.eval) {
+            const totalCost = m.extract.total_cost + m.eval.total_cost;
+            const totalTime = m.extract.processing_time_sec + m.eval.processing_time_sec;
+            lines.push(`Total: $${totalCost.toFixed(2)} / ${totalTime.toFixed(0)}s`);
+        }
+        return lines.join("\n");
+    }
 
     function esc(s) {
         if (!s) return "";
