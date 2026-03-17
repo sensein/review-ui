@@ -171,8 +171,8 @@ def _sanitize_reviewer(name: str) -> str:
 
 def _review_dir(paper_id: str, run_id: str) -> Path:
     if run_id == "root":
-        return PAPERS_DIR / paper_id
-    return PAPERS_DIR / paper_id / run_id
+        return PAPERS_DIR / paper_id / "reviews"
+    return PAPERS_DIR / paper_id / run_id / "reviews"
 
 
 def review_path(paper_id: str, run_id: str, reviewer: str) -> Path:
@@ -191,6 +191,7 @@ def load_review(paper_id: str, run_id: str, reviewer: str) -> dict | None:
 
 def save_review(paper_id: str, run_id: str, reviewer: str, data: dict) -> None:
     p = review_path(paper_id, run_id, reviewer)
+    p.parent.mkdir(exist_ok=True)
     p.write_text(json.dumps(data, indent=2))
 
 

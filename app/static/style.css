@@ -63,6 +63,100 @@ body {
     padding: 0 16px;
 }
 
+/* Instructions */
+.instructions {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.instructions h2 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.instructions > p {
+    font-size: 0.88rem;
+    color: #444;
+    margin-bottom: 16px;
+}
+
+.instructions-columns {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 12px;
+}
+
+.instructions-col {
+    flex: 1;
+    min-width: 0;
+}
+
+.instructions-col h3 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.instructions-col ol {
+    padding-left: 18px;
+    font-size: 0.82rem;
+    color: #555;
+}
+
+.instructions-col ol li {
+    margin-bottom: 4px;
+}
+
+.instructions-col dl {
+    font-size: 0.82rem;
+}
+
+.instructions-col dt {
+    font-weight: 600;
+    color: #333;
+    margin-top: 6px;
+}
+
+.instructions-col dd {
+    color: #555;
+    margin-left: 0;
+    margin-bottom: 2px;
+}
+
+.instructions-extra {
+    font-size: 0.82rem;
+    color: #555;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+
+.instructions-extra summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 6px;
+}
+
+.instructions-extra ul {
+    padding-left: 18px;
+}
+
+.instructions-extra ul li {
+    margin-bottom: 4px;
+}
+
+.papers-heading {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
 /* Paper list table */
 table {
     width: 100%;

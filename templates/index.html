@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OpenEval Review</title>
+    <title>CLLM Review</title>
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
@@ -11,9 +11,52 @@
         <!-- View 1: Paper List -->
         <div id="paper-list-view">
             <header class="top-bar">
-                <h1>OpenEval Review</h1>
+                <h1>CLLM Review</h1>
             </header>
             <main class="container">
+                <section class="instructions">
+                    <h2>Reviewer Instructions</h2>
+                    <p>You are reviewing claims and evaluations that were automatically extracted from research papers by an LLM. Your task is to assess the quality and accuracy of the LLM's output by comparing it against the original paper text.</p>
+
+                    <div class="instructions-columns">
+                        <div class="instructions-col">
+                            <h3>Workflow</h3>
+                            <ol>
+                                <li>Select a paper below to begin reviewing.</li>
+                                <li>Enter your name in the reviewer field when you open a paper.</li>
+                                <li>For each <strong>result</strong>, read the grouped claims and the LLM's evaluation, then indicate whether you agree or disagree.</li>
+                                <li>For each <strong>claim</strong>, expand the claims list and accept or oppose individual claims. Use "View in paper" to see the original source text.</li>
+                                <li>Add comments where needed to explain your reasoning.</li>
+                                <li>Click "Mark Complete" when you have reviewed all results.</li>
+                            </ol>
+                        </div>
+                        <div class="instructions-col">
+                            <h3>Key Definitions</h3>
+                            <dl>
+                                <dt>SUPPORTED</dt>
+                                <dd>The LLM determined the claims are adequately supported by the evidence presented in the paper.</dd>
+                                <dt>UNSUPPORTED</dt>
+                                <dd>The LLM determined the claims lack sufficient evidence or are contradicted by the paper.</dd>
+                                <dt>MAJOR</dt>
+                                <dd>A core finding or result central to the paper's conclusions.</dd>
+                                <dt>MINOR</dt>
+                                <dd>A background claim, secondary observation, or methodological detail.</dd>
+                            </dl>
+                        </div>
+                    </div>
+
+                    <details class="instructions-extra">
+                        <summary>Review actions reference</summary>
+                        <ul>
+                            <li><strong>Agree / Disagree</strong> (result level) &mdash; Whether you concur with the LLM's overall evaluation of a group of claims. Disagreeing reveals override dropdowns to correct the evaluation type and significance.</li>
+                            <li><strong>Accept / Oppose</strong> (claim level) &mdash; Whether you think an individual claim was correctly extracted and is accurately stated.</li>
+                            <li><strong>Flag</strong> &mdash; Mark a result for further discussion or follow-up, independent of agreement.</li>
+                            <li><strong>View in paper</strong> &mdash; Opens a side panel showing the full paper text with the claim's source passage highlighted.</li>
+                        </ul>
+                    </details>
+                </section>
+
+                <h2 class="papers-heading">Papers</h2>
                 <table id="papers-table">
                     <thead>
                         <tr>
