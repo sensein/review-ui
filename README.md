@@ -22,6 +22,30 @@ Requires Python 3.12+ and [uv](https://docs.astral.sh/uv/).
 
 The `papers/` directory should contain paper data (XML source files, `claims.json`, `eval_llm.json`) for the UI to display. See the directory structure below for the expected layout.
 
+## Submitting Your Review
+
+Once you've completed your review, submit it via a pull request:
+
+1. Create a branch for your review:
+   ```bash
+   git checkout -b review/<your-name>
+   ```
+
+2. Add your review file(s):
+   ```bash
+   git add papers/*/reviews/ papers/*/*/reviews/
+   ```
+
+3. Commit and push:
+   ```bash
+   git commit -m "Review: <paper title> by <your name>"
+   git push -u origin review/<your-name>
+   ```
+
+4. Open a pull request on GitHub targeting `main`.
+
+Each reviewer should use their own branch. If you are reviewing multiple papers, you can include all review files in a single PR.
+
 ## How It Works
 
 Papers live under `papers/`, organized by bioRxiv DOI suffix (e.g., `papers/2025.12.02.691876/`). Each paper directory contains GROBID-parsed XML, extracted claims (`claims.json`), and LLM evaluations (`eval_llm.json`). Dated subdirectories (e.g., `20260206/`) hold versioned runs.
@@ -57,30 +81,6 @@ papers/
         ├── eval_llm.json
         └── reviews/
 ```
-
-## Submitting Your Review
-
-Once you've completed your review, submit it via a pull request:
-
-1. Create a branch for your review:
-   ```bash
-   git checkout -b review/<your-name>
-   ```
-
-2. Add your review file(s):
-   ```bash
-   git add papers/*/reviews/ papers/*/*/reviews/
-   ```
-
-3. Commit and push:
-   ```bash
-   git commit -m "Review: <paper title> by <your name>"
-   git push -u origin review/<your-name>
-   ```
-
-4. Open a pull request on GitHub targeting `main`.
-
-Each reviewer should use their own branch. If you are reviewing multiple papers, you can include all review files in a single PR.
 
 ## Tech Stack
 
