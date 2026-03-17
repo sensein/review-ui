@@ -58,6 +58,30 @@ papers/
         └── reviews/
 ```
 
+## Submitting Your Review
+
+Once you've completed your review, submit it via a pull request:
+
+1. Create a branch for your review:
+   ```bash
+   git checkout -b review/<your-name>
+   ```
+
+2. Add your review file(s):
+   ```bash
+   git add papers/*/reviews/ papers/*/*/reviews/
+   ```
+
+3. Commit and push:
+   ```bash
+   git commit -m "Review: <paper title> by <your name>"
+   git push -u origin review/<your-name>
+   ```
+
+4. Open a pull request on GitHub targeting `main`.
+
+Each reviewer should use their own branch. If you are reviewing multiple papers, you can include all review files in a single PR.
+
 ## Tech Stack
 
 - **Backend**: FastAPI + Jinja2 + uvicorn
