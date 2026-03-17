@@ -35,6 +35,11 @@ class PaperSummary(BaseModel):
     review_status: str  # "not_started" | "in_progress" | "complete"
 
 
+class ClaimReview(BaseModel):
+    agreement: str | None = None  # "accept" | "oppose" | null
+    comment: str = ""
+
+
 class ResultReview(BaseModel):
     agreement: str | None = None
     override_evaluation_type: str | None = None
@@ -49,3 +54,4 @@ class Review(BaseModel):
     updated_at: str | None = None
     status: str = "not_started"
     results: dict[str, ResultReview] = {}
+    claims: dict[str, ClaimReview] = {}

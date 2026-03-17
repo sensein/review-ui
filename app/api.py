@@ -75,9 +75,11 @@ def save_review(paper_id: str, run_id: str, review: Review):
     existing = paper_svc.load_review(paper_id, run_id)
 
     if existing:
-        # Merge: update only provided result reviews
+        # Merge: update only provided result/claim reviews
         for rid, rr in review.results.items():
             existing.setdefault("results", {})[rid] = rr.model_dump()
+        for cid, cr in review.claims.items():
+            existing.setdefault("claims", {})[cid] = cr.model_dump()
         existing["updated_at"] = now
         if review.reviewer:
             existing["reviewer"] = review.reviewer

@@ -181,11 +181,22 @@ td.title-cell {
 .claim-item {
     font-size: 0.82rem;
     color: #555;
-    padding: 4px 0 4px 8px;
-    border-bottom: 1px solid #f5f5f5;
+    padding: 8px 8px;
+    border-bottom: 1px solid #f0f0f0;
+    border-radius: 4px;
+    transition: background 0.1s;
 }
 
 .claim-item:last-child { border-bottom: none; }
+
+.claim-item.claim-reviewed { background: #f8fdf8; }
+
+.claim-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 4px;
+}
 
 .claim-id {
     font-weight: 600;
@@ -196,6 +207,39 @@ td.title-cell {
     font-size: 0.72rem;
     color: #999;
     text-transform: uppercase;
+}
+
+.claim-type-badge {
+    font-size: 0.68rem;
+    color: #888;
+    background: #f0f0f0;
+    padding: 1px 5px;
+    border-radius: 3px;
+}
+
+.claim-text {
+    margin-bottom: 6px;
+}
+
+.claim-controls {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-sm {
+    padding: 2px 10px;
+    font-size: 0.75rem;
+}
+
+.claim-comment {
+    flex: 1;
+    padding: 3px 6px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.78rem;
+    font-family: inherit;
+    color: #555;
 }
 
 /* Review controls */

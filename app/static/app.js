@@ -64,7 +64,7 @@
             fetch(`/api/papers/${paperId}/${runId}/review`),
         ]);
         currentResults = await resultsRes.json();
-        currentReview = reviewRes.ok ? await reviewRes.json() : { reviewer: "", status: "not_started", results: {} };
+        currentReview = reviewRes.ok ? await reviewRes.json() : { reviewer: "", status: "not_started", results: {}, claims: {} };
 
         reviewerInput.value = currentReview.reviewer || "";
         renderResults();
@@ -79,13 +79,24 @@
             card.className = "result-card" + (rv.agreement ? " reviewed" : "") + (rv.flagged ? " flagged" : "");
             card.dataset.rid = r.result_id;
 
-            const claimsHtml = r.claims.map((c) => `
-                <div class="claim-item">
-                    <span class="claim-id">${esc(c.claim_id)}</span>
-                    ${c.section ? `<span class="claim-section">${esc(c.section)}</span>` : ""}
-                    <div>${esc(c.claim)}</div>
+            const claimsHtml = r.claims.map((c) => {
+                const cr = currentReview.claims?.[c.claim_id] || {};
+                return `
+                <div class="claim-item ${cr.agreement ? "claim-reviewed" : ""}" data-cid="${c.claim_id}">
+                    <div class="claim-header">
+                        <span class="claim-id">${esc(c.claim_id)}</span>
+                        ${c.section ? `<span class="claim-section">${esc(c.section)}</span>` : ""}
+                        <span class="claim-type-badge">${esc(c.claim_type)}</span>
+                    </div>
+                    <div class="claim-text">${esc(c.claim)}</div>
+                    <div class="claim-controls">
+                        <button class="btn btn-sm btn-claim-accept ${cr.agreement === "accept" ? "active-agree" : ""}" data-cid="${c.claim_id}" data-action="accept">Accept</button>
+                        <button class="btn btn-sm btn-claim-oppose ${cr.agreement === "oppose" ? "active-disagree" : ""}" data-cid="${c.claim_id}" data-action="oppose">Oppose</button>
+                        <input class="claim-comment" type="text" placeholder="Comment..." data-cid="${c.claim_id}" value="${esc(cr.comment || "")}">
+                    </div>
                 </div>
-            `).join("");
+                `;
+            }).join("");
 
             card.innerHTML = `
                 <div class="result-header">
@@ -143,6 +154,22 @@
             return;
         }
 
+        // Claim-level accept/oppose
+        const cid = btn.dataset.cid;
+        if (cid && (btn.dataset.action === "accept" || btn.dataset.action === "oppose")) {
+            const action = btn.dataset.action;
+            const cr = getOrCreateClaimReview(cid);
+            cr.agreement = cr.agreement === action ? null : action;
+
+            const item = btn.closest(".claim-item");
+            item.querySelector(".btn-claim-accept").classList.toggle("active-agree", cr.agreement === "accept");
+            item.querySelector(".btn-claim-oppose").classList.toggle("active-disagree", cr.agreement === "oppose");
+            item.classList.toggle("claim-reviewed", !!cr.agreement);
+
+            scheduleClaimSave(cid);
+            return;
+        }
+
         const rid = btn.dataset.rid;
         const action = btn.dataset.action;
         if (!rid || !action) return;
@@ -151,13 +178,11 @@
 
         if (action === "agree" || action === "disagree") {
             rv.agreement = rv.agreement === action ? null : action;
-            // Update button states
             const card = btn.closest(".result-card");
             card.querySelector(".btn-agree").classList.toggle("active-agree", rv.agreement === "agree");
             card.querySelector(".btn-disagree").classList.toggle("active-disagree", rv.agreement === "disagree");
             card.classList.toggle("reviewed", !!rv.agreement);
 
-            // Show/hide overrides
             const overrides = document.getElementById(`overrides-${rid}`);
             overrides.classList.toggle("hidden", rv.agreement !== "disagree");
             if (rv.agreement !== "disagree") {
@@ -182,11 +207,19 @@
     }
 
     function handleInput(e) {
-        const ta = e.target;
-        if (ta.tagName !== "TEXTAREA" || !ta.dataset.rid) return;
-        const rv = getOrCreateReview(ta.dataset.rid);
-        rv.comment = ta.value;
-        scheduleSave(ta.dataset.rid);
+        const el = e.target;
+        // Claim comment input
+        if (el.classList.contains("claim-comment") && el.dataset.cid) {
+            const cr = getOrCreateClaimReview(el.dataset.cid);
+            cr.comment = el.value;
+            scheduleClaimSave(el.dataset.cid);
+            return;
+        }
+        // Result comment textarea
+        if (el.tagName !== "TEXTAREA" || !el.dataset.rid) return;
+        const rv = getOrCreateReview(el.dataset.rid);
+        rv.comment = el.value;
+        scheduleSave(el.dataset.rid);
     }
 
     function getOrCreateReview(rid) {
@@ -203,25 +236,43 @@
         return currentReview.results[rid];
     }
 
+    function getOrCreateClaimReview(cid) {
+        if (!currentReview.claims) currentReview.claims = {};
+        if (!currentReview.claims[cid]) {
+            currentReview.claims[cid] = { agreement: null, comment: "" };
+        }
+        return currentReview.claims[cid];
+    }
+
     // --- Auto-save with debounce ---
+
+    let claimSaveTimer = null;
 
     function scheduleSave(rid) {
         const ind = document.getElementById(`save-ind-${rid}`);
         if (ind) ind.textContent = "saving...";
         clearTimeout(saveTimer);
-        saveTimer = setTimeout(() => doSave(rid), 600);
+        saveTimer = setTimeout(() => doSave(rid, null), 600);
     }
 
-    async function doSave(rid) {
+    function scheduleClaimSave(cid) {
+        clearTimeout(claimSaveTimer);
+        claimSaveTimer = setTimeout(() => doSave(null, cid), 600);
+    }
+
+    async function doSave(rid, cid) {
         const { paperId, runId } = currentPaper;
         const payload = {
             reviewer: reviewerInput.value,
             status: currentReview.status || "in_progress",
             results: {},
+            claims: {},
         };
-        // Send only the changed result
         if (rid && currentReview.results?.[rid]) {
             payload.results[rid] = currentReview.results[rid];
+        }
+        if (cid && currentReview.claims?.[cid]) {
+            payload.claims[cid] = currentReview.claims[cid];
         }
 
         const res = await fetch(`/api/papers/${paperId}/${runId}/review`, {
@@ -233,10 +284,12 @@
         if (res.ok) {
             const saved = await res.json();
             currentReview = saved;
-            const ind = document.getElementById(`save-ind-${rid}`);
-            if (ind) {
-                ind.textContent = "saved";
-                setTimeout(() => { ind.textContent = ""; }, 1500);
+            if (rid) {
+                const ind = document.getElementById(`save-ind-${rid}`);
+                if (ind) {
+                    ind.textContent = "saved";
+                    setTimeout(() => { ind.textContent = ""; }, 1500);
+                }
             }
         }
         updateProgress();
@@ -262,6 +315,7 @@
                 reviewer: reviewerInput.value,
                 status: "complete",
                 results: {},
+                claims: {},
             }),
         });
         markCompleteBtn.textContent = "Completed!";
