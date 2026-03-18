@@ -68,5 +68,6 @@ POST /api/papers/refresh                            → Clear paper cache
 ### Key Details
 - **Paper discovery**: Walks `papers/` for directories containing both `claims*.json` and `eval_llm*.json`. Uses glob prefix matching to handle varied file naming.
 - **XML title extraction**: Handles both GROBID TEI (`<title level="a" type="main">`) and JATS (`<article-title>`) formats.
-- **Per-reviewer reviews**: Reviews save as `reviews/review_{name}.json`. Reviewer name is required for all save operations. Changing the reviewer name in the UI loads that reviewer's existing review.
+- **Per-reviewer reviews**: Reviews save as `reviews/review_{name}.json`. Reviewer name is collected via a modal when entering a paper, with the option to continue a previous review or start new. Status auto-transitions to "in_progress" on first save.
 - **Paper text panel**: Extracts readable text from TEI/JATS XML for a "View in paper" side panel with source highlighting.
+- **Reference sidebar**: Key definitions and review actions are displayed in a sticky sidebar on the review page.

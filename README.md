@@ -83,12 +83,14 @@ Each reviewer should use their own branch. If you are reviewing multiple papers,
 The review UI provides two views:
 
 1. **Paper list** — Browse all reviewable papers with claim/result counts and review status. Includes instructions for reviewers.
-2. **Paper review** — Scrollable result cards showing the LLM's grouped evaluation with:
+2. **Paper review** — Prompted for your name on entry, with the option to continue a previous review or start fresh. The review page includes:
+   - A sticky reference sidebar with key definitions and review actions
+   - Scrollable result cards showing the LLM's grouped evaluation
    - Agree/Disagree on each result, with override dropdowns on disagree
    - Accept/Oppose on individual claims
    - "View in paper" side panel that highlights the source passage in the original text
    - Per-claim and per-result comments
-   - Auto-save with debounce
+   - Auto-save (progress is saved automatically as you review)
 
 Reviews are saved as `review_{reviewer_name}.json` in the `reviews/` subdirectory (see [Directory Structure](#directory-structure)), so multiple reviewers can work on the same paper independently.
 
