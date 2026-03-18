@@ -23,35 +23,15 @@
                             <h3>Workflow</h3>
                             <ol>
                                 <li>Select a paper below to begin reviewing.</li>
-                                <li>Enter your name in the reviewer field when you open a paper.</li>
+                                <li>Enter your name when prompted &mdash; this is used to save and load your review.</li>
                                 <li>For each <strong>result</strong>, read the grouped claims and the LLM's evaluation, then indicate whether you agree or disagree.</li>
                                 <li>For each <strong>claim</strong>, expand the claims list and accept or oppose individual claims. Use "View in paper" to see the original source text.</li>
                                 <li>Add comments where needed to explain your reasoning.</li>
                                 <li>Click "Mark Complete" when you have reviewed all results.</li>
                             </ol>
-                        </div>
-                        <div class="instructions-col">
-                            <h3>Key Definitions</h3>
-                            <dl>
-                                <dt>SUPPORTED</dt>
-                                <dd>The LLM determined the claims are adequately supported by the evidence presented in the paper.</dd>
-                                <dt>UNSUPPORTED</dt>
-                                <dd>The LLM determined the claims lack sufficient evidence or are contradicted by the paper.</dd>
-                                <dt>MAJOR</dt>
-                                <dd>A core finding or result central to the paper's conclusions.</dd>
-                                <dt>MINOR</dt>
-                                <dd>A background claim, secondary observation, or methodological detail.</dd>
-                            </dl>
+                            <p class="instructions-note">Your progress is <strong>automatically saved</strong> as you review. You can hit "Back" to return to the paper list or close the browser entirely &mdash; just enter the same name to pick up where you left off. If you'd like to start over, choose "Start new review" when prompted.</p>
                         </div>
                     </div>
-
-                    <h3>Review Actions</h3>
-                    <ul class="instructions-list">
-                        <li><strong>Agree / Disagree</strong> (result level) &mdash; Whether you concur with the LLM's overall evaluation of a group of claims. Disagreeing reveals override dropdowns to correct the evaluation type and significance.</li>
-                        <li><strong>Accept / Oppose</strong> (claim level) &mdash; Whether you think an individual claim was correctly extracted and is accurately stated.</li>
-                        <li><strong>Flag</strong> &mdash; Mark a result for further discussion or follow-up, independent of agreement.</li>
-                        <li><strong>View in paper</strong> &mdash; Opens a side panel showing the full paper text with the claim's source passage highlighted.</li>
-                    </ul>
 
                     <h3>Run Metrics</h3>
                     <p>Hover over the <strong>Run</strong> column in the papers table to see the model, cost, and processing time for the extract and eval pipeline stages.</p>
@@ -80,12 +60,40 @@
                 <button id="back-btn">&larr; Back</button>
                 <h1 id="review-title"></h1>
                 <div class="header-controls">
-                    <label>Reviewer: <input type="text" id="reviewer-name" placeholder="Your name"></label>
+                    <span id="reviewer-display" class="reviewer-display"></span>
                     <span id="progress-text"></span>
                     <button id="mark-complete-btn">Mark Complete</button>
                 </div>
             </header>
             <div id="review-body">
+                <aside class="review-sidebar">
+                    <div class="sidebar-section">
+                        <h4>Key Definitions</h4>
+                        <dl>
+                            <dt>SUPPORTED</dt>
+                            <dd>Claims are adequately supported by evidence in the paper.</dd>
+                            <dt>UNSUPPORTED</dt>
+                            <dd>Claims lack sufficient evidence or are contradicted by the paper.</dd>
+                            <dt>MAJOR</dt>
+                            <dd>A core finding central to the paper's conclusions.</dd>
+                            <dt>MINOR</dt>
+                            <dd>A background claim, secondary observation, or methodological detail.</dd>
+                        </dl>
+                    </div>
+                    <div class="sidebar-section">
+                        <h4>Review Actions</h4>
+                        <dl>
+                            <dt>Agree / Disagree</dt>
+                            <dd>Whether you concur with the LLM's evaluation of a result. Disagreeing reveals override dropdowns.</dd>
+                            <dt>Accept / Oppose</dt>
+                            <dd>Whether an individual claim was correctly extracted and accurately stated.</dd>
+                            <dt>Flag</dt>
+                            <dd>Mark a result for further discussion, independent of agreement.</dd>
+                            <dt>View in paper</dt>
+                            <dd>Opens a side panel with the source passage highlighted.</dd>
+                        </dl>
+                    </div>
+                </aside>
                 <main class="container" id="results-container"></main>
                 <aside id="paper-panel" class="hidden">
                     <div class="panel-header">
@@ -94,6 +102,25 @@
                     </div>
                     <div id="paper-text-content"></div>
                 </aside>
+            </div>
+        </div>
+        <!-- Reviewer Name Modal -->
+        <div id="reviewer-modal" class="modal-overlay hidden">
+            <div class="modal-box">
+                <h2>Enter your name</h2>
+                <p>Your name is used to save and load your review.</p>
+                <input type="text" id="modal-reviewer-input" placeholder="Your name" autofocus>
+                <div id="modal-existing" class="hidden">
+                    <p class="modal-existing-msg">A previous review was found under this name.</p>
+                    <div class="modal-actions">
+                        <button id="modal-continue-btn" class="btn modal-btn">Continue previous review</button>
+                        <button id="modal-new-btn" class="btn modal-btn modal-btn-secondary">Start new review</button>
+                    </div>
+                </div>
+                <div id="modal-default-actions" class="modal-actions">
+                    <button id="modal-start-btn" class="btn modal-btn" disabled>Start review</button>
+                </div>
+                <div id="modal-error" class="modal-error hidden"></div>
             </div>
         </div>
     </div>

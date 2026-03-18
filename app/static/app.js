@@ -6,18 +6,30 @@
     const resultsContainer = $("#results-container");
     const reviewTitle = $("#review-title");
     const progressText = $("#progress-text");
-    const reviewerInput = $("#reviewer-name");
+    const reviewerDisplay = $("#reviewer-display");
     const backBtn = $("#back-btn");
     const markCompleteBtn = $("#mark-complete-btn");
     const paperPanel = $("#paper-panel");
     const paperTextContent = $("#paper-text-content");
     const panelCloseBtn = $("#panel-close-btn");
 
+    // Modal elements
+    const modal = $("#reviewer-modal");
+    const modalInput = $("#modal-reviewer-input");
+    const modalExisting = $("#modal-existing");
+    const modalDefaultActions = $("#modal-default-actions");
+    const modalContinueBtn = $("#modal-continue-btn");
+    const modalNewBtn = $("#modal-new-btn");
+    const modalStartBtn = $("#modal-start-btn");
+    const modalError = $("#modal-error");
+
     let currentPaper = null;
     let currentResults = [];
     let currentReview = {};
+    let currentReviewer = "";
     let saveTimer = null;
     let paperTextCache = {}; // paperId -> sections
+    let pendingPaper = null; // paper waiting for modal
 
     // --- Navigation ---
 
@@ -28,12 +40,97 @@
         loadPapers();
     }
 
-    function showReview(paperId, runId, title) {
+    function openReviewerModal(paperId, runId, title) {
+        pendingPaper = { paperId, runId, title };
+        modalInput.value = currentReviewer;
+        modalExisting.classList.add("hidden");
+        modalDefaultActions.classList.remove("hidden");
+        modalStartBtn.disabled = !currentReviewer;
+        modalError.classList.add("hidden");
+        modal.classList.remove("hidden");
+        modalInput.focus();
+        // If name is pre-filled, check for existing review
+        if (currentReviewer) checkExistingReview();
+    }
+
+    async function checkExistingReview() {
+        const name = modalInput.value.trim();
+        if (!name) {
+            modalExisting.classList.add("hidden");
+            modalDefaultActions.classList.remove("hidden");
+            modalStartBtn.disabled = true;
+            return;
+        }
+        modalError.classList.add("hidden");
+
+        const { paperId, runId } = pendingPaper;
+        const res = await fetch(`/api/papers/${paperId}/${runId}/review?reviewer=${encodeURIComponent(name)}`);
+        if (res.ok) {
+            modalExisting.classList.remove("hidden");
+            modalDefaultActions.classList.add("hidden");
+        } else {
+            modalExisting.classList.add("hidden");
+            modalDefaultActions.classList.remove("hidden");
+            modalStartBtn.disabled = false;
+        }
+    }
+
+    // Check for existing review when name changes, enable/disable start button
+    let checkTimer = null;
+    modalInput.addEventListener("input", () => {
+        const name = modalInput.value.trim();
+        modalStartBtn.disabled = !name;
+        // Reset to default state while checking
+        modalExisting.classList.add("hidden");
+        modalDefaultActions.classList.remove("hidden");
+        clearTimeout(checkTimer);
+        if (name) {
+            checkTimer = setTimeout(checkExistingReview, 400);
+        }
+    });
+
+    modalInput.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+            e.preventDefault();
+            const name = modalInput.value.trim();
+            if (name && !modalStartBtn.disabled && !modalDefaultActions.classList.contains("hidden")) {
+                enterReview(false);
+            }
+        }
+    });
+
+    // Continue previous review
+    modalContinueBtn.addEventListener("click", () => {
+        enterReview(true);
+    });
+
+    // Start new review
+    modalNewBtn.addEventListener("click", () => {
+        enterReview(false);
+    });
+
+    // Start review (no existing)
+    modalStartBtn.addEventListener("click", () => {
+        enterReview(false);
+    });
+
+    function enterReview(loadExisting) {
+        const name = modalInput.value.trim();
+        if (!name) {
+            modalError.textContent = "Please enter your name.";
+            modalError.classList.remove("hidden");
+            return;
+        }
+        currentReviewer = name;
+        modal.classList.add("hidden");
+
+        const { paperId, runId, title } = pendingPaper;
         paperListView.classList.add("hidden");
         reviewView.classList.remove("hidden");
         currentPaper = { paperId, runId, title };
         reviewTitle.textContent = title;
-        loadReview();
+        reviewerDisplay.textContent = `Reviewer: ${currentReviewer}`;
+        loadReview(loadExisting);
     }
 
     backBtn.addEventListener("click", showPaperList);
@@ -41,8 +138,7 @@
     // --- Paper List ---
 
     async function loadPapers() {
-        const reviewer = reviewerInput.value.trim();
-        const query = reviewer ? `?reviewer=${encodeURIComponent(reviewer)}` : "";
+        const query = currentReviewer ? `?reviewer=${encodeURIComponent(currentReviewer)}` : "";
         const res = await fetch(`/api/papers${query}`);
         const papers = await res.json();
         papersTbody.innerHTML = "";
@@ -56,26 +152,24 @@
                 <td>${p.results_count}</td>
                 <td><span class="badge badge-${p.review_status}">${p.review_status.replace("_", " ")}</span></td>
             `;
-            tr.addEventListener("click", () => showReview(p.paper_id, p.run_id, p.title));
+            tr.addEventListener("click", () => openReviewerModal(p.paper_id, p.run_id, p.title));
             papersTbody.appendChild(tr);
         });
     }
 
     // --- Review View ---
 
-    async function loadReview() {
+    async function loadReview(loadExisting = true) {
         const { paperId, runId } = currentPaper;
-        const reviewer = reviewerInput.value.trim();
 
         const resultsRes = await fetch(`/api/papers/${paperId}/${runId}/results`);
         currentResults = await resultsRes.json();
 
-        // Load reviewer-specific review if name is set
-        if (reviewer) {
-            const reviewRes = await fetch(`/api/papers/${paperId}/${runId}/review?reviewer=${encodeURIComponent(reviewer)}`);
-            currentReview = reviewRes.ok ? await reviewRes.json() : { reviewer, status: "not_started", results: {}, claims: {} };
+        if (loadExisting && currentReviewer) {
+            const reviewRes = await fetch(`/api/papers/${paperId}/${runId}/review?reviewer=${encodeURIComponent(currentReviewer)}`);
+            currentReview = reviewRes.ok ? await reviewRes.json() : { reviewer: currentReviewer, status: "not_started", results: {}, claims: {} };
         } else {
-            currentReview = { reviewer: "", status: "not_started", results: {}, claims: {} };
+            currentReview = { reviewer: currentReviewer, status: "not_started", results: {}, claims: {} };
         }
 
         renderResults();
@@ -282,22 +376,16 @@
         claimSaveTimer = setTimeout(() => doSave(null, cid), 600);
     }
 
-    function requireReviewerName() {
-        if (!reviewerInput.value.trim()) {
-            reviewerInput.focus();
-            reviewerInput.style.outline = "2px solid #dc3545";
-            setTimeout(() => { reviewerInput.style.outline = ""; }, 2000);
-            return false;
-        }
-        return true;
-    }
-
     async function doSave(rid, cid) {
-        if (!requireReviewerName()) return;
+        if (!currentReviewer) return;
         const { paperId, runId } = currentPaper;
+        // Any save action means the review is at least in progress
+        if (!currentReview.status || currentReview.status === "not_started") {
+            currentReview.status = "in_progress";
+        }
         const payload = {
-            reviewer: reviewerInput.value.trim(),
-            status: currentReview.status || "in_progress",
+            reviewer: currentReviewer,
+            status: currentReview.status,
             results: {},
             claims: {},
         };
@@ -339,14 +427,14 @@
     // --- Mark Complete ---
 
     markCompleteBtn.addEventListener("click", async () => {
-        if (!requireReviewerName()) return;
+        if (!currentReviewer) return;
         currentReview.status = "complete";
         const { paperId, runId } = currentPaper;
         await fetch(`/api/papers/${paperId}/${runId}/review`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
-                reviewer: reviewerInput.value.trim(),
+                reviewer: currentReviewer,
                 status: "complete",
                 results: {},
                 claims: {},
@@ -354,12 +442,6 @@
         });
         markCompleteBtn.textContent = "Completed!";
         setTimeout(() => { markCompleteBtn.textContent = "Mark Complete"; }, 2000);
-    });
-
-    // --- Reviewer name change: reload their review ---
-
-    reviewerInput.addEventListener("change", () => {
-        if (currentPaper) loadReview();
     });
 
     // --- Paper Text Panel ---
