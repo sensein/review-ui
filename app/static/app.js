@@ -116,7 +116,7 @@
 
             card.innerHTML = `
                 <div class="result-header">
-                    <span class="result-id">${esc(r.result_id)}</span>
+                    <span class="result-id">${esc(r.result_id.replace(/^R(\d+)$/, "Result $1"))}</span>
                     <span class="badge badge-${r.evaluation_type.toLowerCase()}">${r.evaluation_type}</span>
                     <span class="badge badge-${r.result_type.toLowerCase()}">${r.result_type}</span>
                 </div>
