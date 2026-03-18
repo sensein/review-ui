@@ -20,7 +20,29 @@ Requires Python 3.12+ and [uv](https://docs.astral.sh/uv/).
 
 4. Open http://127.0.0.1:8000 in your browser.
 
-The `papers/` directory should contain paper data (XML source files, `claims.json`, `eval_llm.json`) for the UI to display. See the directory structure below for the expected layout.
+The `papers/` directory should contain paper data (XML source files, `claims.json`, `eval_llm.json`) for the UI to display.
+
+## Directory Structure
+
+Each paper lives in its own directory under `papers/`, identified by a bioRxiv DOI suffix or custom name. Within each paper directory, dated subdirectories hold versioned pipeline runs. When you save a review in the UI, it is written to a `reviews/` folder inside the corresponding run directory.
+
+```
+papers/
+├── 2025.12.02.691876/              # Paper directory (bioRxiv DOI suffix)
+│   ├── 2025.12.02.691876.source.xml  # GROBID-parsed TEI/JATS XML
+│   └── 20260206/                     # Run directory (dated)
+│       ├── claims.json               # Extracted claims
+│       ├── eval_llm.json             # LLM evaluation results
+│       └── reviews/                  # Created automatically on first save
+│           ├── review_Dr_Smith.json
+│           └── review_Jane_Doe.json
+└── nikbakht_diamond/               # Paper directory (custom name)
+    ├── elife-66429-v2.pdf.tei.xml
+    └── 20260316_anthropic/
+        ├── claims.json
+        ├── eval_llm.json
+        └── reviews/
+```
 
 ## Submitting Your Review
 
@@ -37,9 +59,13 @@ Once you've completed your review, submit it via a pull request:
    git checkout -b review/<your-name>
    ```
 
-3. Complete your review in the UI, then add your review file(s):
+3. Complete your review in the UI, then add your review file(s). The two glob patterns below cover reviews saved at either nesting level (see [Directory Structure](#directory-structure)):
    ```bash
    git add papers/*/reviews/ papers/*/*/reviews/
+   ```
+   To submit a review for a specific paper only:
+   ```bash
+   git add papers/<paper-id>/*/reviews/
    ```
 
 4. Commit and push:
@@ -54,8 +80,6 @@ Each reviewer should use their own branch. If you are reviewing multiple papers,
 
 ## How It Works
 
-Papers live under `papers/`, organized by bioRxiv DOI suffix (e.g., `papers/2025.12.02.691876/`). Each paper directory contains GROBID-parsed XML, extracted claims (`claims.json`), and LLM evaluations (`eval_llm.json`). Dated subdirectories (e.g., `20260206/`) hold versioned runs.
-
 The review UI provides two views:
 
 1. **Paper list** — Browse all reviewable papers with claim/result counts and review status. Includes instructions for reviewers.
@@ -66,27 +90,7 @@ The review UI provides two views:
    - Per-claim and per-result comments
    - Auto-save with debounce
 
-Reviews are saved to a `reviews/` subdirectory within each paper (or run) directory as `review_{reviewer_name}.json`, so multiple reviewers can work on the same paper independently.
-
-```
-papers/
-├── 2025.12.02.691876/              # Paper directory (bioRxiv DOI suffix)
-│   ├── 2025.12.02.691876.source.xml  # GROBID-parsed TEI/JATS XML
-│   └── 20260206/                     # Run directory (dated)
-│       ├── claims.json               # Extracted claims
-│       ├── eval_llm.json             # LLM evaluation results
-│       ├── metrics_extract.json      # Extraction metrics
-│       ├── metrics_eval_openeval.json # Evaluation metrics
-│       └── reviews/                  # Created automatically on first save
-│           ├── review_Dr_Smith.json
-│           └── review_Jane_Doe.json
-└── nikbakht_diamond/               # Paper directory (custom name)
-    ├── elife-66429-v2.pdf.tei.xml
-    └── 20260316_anthropic/
-        ├── claims.json
-        ├── eval_llm.json
-        └── reviews/
-```
+Reviews are saved as `review_{reviewer_name}.json` in the `reviews/` subdirectory (see [Directory Structure](#directory-structure)), so multiple reviewers can work on the same paper independently.
 
 ## Tech Stack
 
