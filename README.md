@@ -26,23 +26,29 @@ The `papers/` directory should contain paper data (XML source files, `claims.jso
 
 Once you've completed your review, submit it via a pull request:
 
-1. Create a branch for your review:
+1. **Fork** this repository on GitHub and clone your fork:
+   ```bash
+   git clone https://github.com/<your-username>/<repo-name>.git
+   cd <repo-name>
+   ```
+
+2. Create a branch for your review:
    ```bash
    git checkout -b review/<your-name>
    ```
 
-2. Add your review file(s):
+3. Complete your review in the UI, then add your review file(s):
    ```bash
    git add papers/*/reviews/ papers/*/*/reviews/
    ```
 
-3. Commit and push:
+4. Commit and push:
    ```bash
    git commit -m "Review: <paper title> by <your name>"
    git push -u origin review/<your-name>
    ```
 
-4. Open a pull request on GitHub targeting `main`.
+5. Open a pull request on GitHub targeting the original repository's `main` branch.
 
 Each reviewer should use their own branch. If you are reviewing multiple papers, you can include all review files in a single PR.
 
