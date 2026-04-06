@@ -469,17 +469,6 @@ td.title-cell {
 .btn.active-disagree { background: #f8d7da; border-color: #dc3545; color: #721c24; }
 .btn.active-flag { background: #fff3cd; border-color: #ffc107; color: #856404; }
 
-#back-btn {
-    padding: 5px 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background: #fff;
-    cursor: pointer;
-    font-size: 0.85rem;
-    flex-shrink: 0;
-}
-
-#back-btn:hover { background: #f0f0f0; }
 
 #mark-complete-btn {
     padding: 5px 14px;

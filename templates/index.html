@@ -22,8 +22,8 @@
                         <div class="instructions-col">
                             <h3>Workflow</h3>
                             <ol>
-                                <li>Select a paper below to begin reviewing.</li>
-                                <li>Enter your name when prompted &mdash; this is used to save and load your review.</li>
+                                <li>Select a paper below to see its available runs.</li>
+                                <li>Click a run to begin reviewing it. Enter your name when prompted &mdash; this is used to save and load your review.</li>
                                 <li>For each <strong>result</strong>, read the grouped claims and the LLM's evaluation, then indicate whether you agree or disagree.</li>
                                 <li>For each <strong>claim</strong>, expand the claims list and accept or oppose individual claims. Use "View in paper" to see the original source text.</li>
                                 <li>Add comments where needed to explain your reasoning.</li>
@@ -34,7 +34,7 @@
                     </div>
 
                     <h3>Run Metrics</h3>
-                    <p>Hover over the <strong>Run</strong> column in the papers table to see the model, cost, and processing time for the extract and eval pipeline stages.</p>
+                    <p>Hover over the <strong>Run</strong> column in the runs table to see the model, cost, and processing time for the extract and eval pipeline stages.</p>
                 </section>
 
                 <h2 class="papers-heading">Papers</h2>
@@ -43,10 +43,7 @@
                         <tr>
                             <th>Title</th>
                             <th>Paper ID</th>
-                            <th>Run</th>
-                            <th>Claims</th>
-                            <th>Results</th>
-                            <th>Status</th>
+                            <th>Runs</th>
                         </tr>
                     </thead>
                     <tbody id="papers-tbody"></tbody>
@@ -54,10 +51,30 @@
             </main>
         </div>
 
+        <!-- View 1.5: Runs List -->
+        <div id="runs-list-view" class="hidden">
+            <header class="top-bar">
+                <h1 id="runs-paper-title"></h1>
+            </header>
+            <main class="container">
+                <h2 class="papers-heading">Runs</h2>
+                <table id="runs-table">
+                    <thead>
+                        <tr>
+                            <th>Run</th>
+                            <th>Claims</th>
+                            <th>Results</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="runs-tbody"></tbody>
+                </table>
+            </main>
+        </div>
+
         <!-- View 2: Paper Review -->
         <div id="review-view" class="hidden">
             <header class="top-bar">
-                <button id="back-btn">&larr; Back</button>
                 <h1 id="review-title"></h1>
                 <div class="header-controls">
                     <span id="reviewer-display" class="reviewer-display"></span>

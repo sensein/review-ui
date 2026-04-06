@@ -1,13 +1,15 @@
 (() => {
     const $ = (sel) => document.querySelector(sel);
     const paperListView = $("#paper-list-view");
+    const runsListView = $("#runs-list-view");
     const reviewView = $("#review-view");
     const papersTbody = $("#papers-tbody");
+    const runsTbody = $("#runs-tbody");
+    const runsPaperTitle = $("#runs-paper-title");
     const resultsContainer = $("#results-container");
     const reviewTitle = $("#review-title");
     const progressText = $("#progress-text");
     const reviewerDisplay = $("#reviewer-display");
-    const backBtn = $("#back-btn");
     const markCompleteBtn = $("#mark-complete-btn");
     const paperPanel = $("#paper-panel");
     const paperTextContent = $("#paper-text-content");
@@ -30,15 +32,44 @@
     let saveTimer = null;
     let paperTextCache = {}; // paperId -> sections
     let pendingPaper = null; // paper waiting for modal
+    let allPapersFlat = []; // flat list from API
+    let currentPaperForRuns = null; // { paper_id, title, runs[] }
 
     // --- Navigation ---
 
     function showPaperList() {
         reviewView.classList.add("hidden");
+        runsListView.classList.add("hidden");
         paperListView.classList.remove("hidden");
         currentPaper = null;
         loadPapers();
     }
+
+    function showRunsList(paperData, pushHistory = true) {
+        currentPaperForRuns = paperData;
+        if (pushHistory) {
+            history.pushState({ view: "runs", paperData }, "", location.pathname);
+        }
+        runsPaperTitle.textContent = paperData.title;
+        runsTbody.innerHTML = "";
+        paperData.runs.forEach((p) => {
+            const tr = document.createElement("tr");
+            tr.innerHTML = `
+                <td class="run-cell">${esc(p.run_id)}${p.metrics ? `<span class="metrics-tooltip">${formatMetrics(p.metrics)}</span>` : ""}</td>
+                <td>${p.claims_count}</td>
+                <td>${p.results_count}</td>
+                <td><span class="badge badge-${p.review_status}">${p.review_status.replace("_", " ")}</span></td>
+            `;
+            tr.addEventListener("click", () => openReviewerModal(p.paper_id, p.run_id, p.title));
+            runsTbody.appendChild(tr);
+        });
+        paperListView.classList.add("hidden");
+        reviewView.classList.add("hidden");
+        runsListView.classList.remove("hidden");
+    }
+
+
+
 
     function openReviewerModal(paperId, runId, title) {
         pendingPaper = { paperId, runId, title };
@@ -125,7 +156,9 @@
         modal.classList.add("hidden");
 
         const { paperId, runId, title } = pendingPaper;
+        history.pushState({ view: "review", paperId, runId, title }, "", location.pathname);
         paperListView.classList.add("hidden");
+        runsListView.classList.add("hidden");
         reviewView.classList.remove("hidden");
         currentPaper = { paperId, runId, title };
         reviewTitle.textContent = title;
@@ -133,26 +166,64 @@
         loadReview(loadExisting);
     }
 
-    backBtn.addEventListener("click", showPaperList);
+    window.addEventListener("popstate", (e) => {
+        const state = e.state;
+        if (!state || state.view === "papers") {
+            reviewView.classList.add("hidden");
+            runsListView.classList.add("hidden");
+            paperListView.classList.remove("hidden");
+            currentPaper = null;
+            if (allPapersFlat.length === 0) loadPapers();
+        } else if (state.view === "runs") {
+            showRunsList(state.paperData, false);
+        } else if (state.view === "review") {
+            // Only restore if we still have the same session state
+            if (currentReviewer && currentPaper &&
+                currentPaper.paperId === state.paperId &&
+                currentPaper.runId === state.runId) {
+                paperListView.classList.add("hidden");
+                runsListView.classList.add("hidden");
+                reviewView.classList.remove("hidden");
+            } else {
+                // Session lost (e.g. page reload) — fall back to runs list
+                const runs = allPapersFlat.filter((p) => p.paper_id === state.paperId);
+                if (runs.length > 0 && currentPaperForRuns) {
+                    showRunsList(currentPaperForRuns, false);
+                } else {
+                    reviewView.classList.add("hidden");
+                    runsListView.classList.add("hidden");
+                    paperListView.classList.remove("hidden");
+                    if (allPapersFlat.length === 0) loadPapers();
+                }
+            }
+        }
+    });
 
     // --- Paper List ---
 
     async function loadPapers() {
         const query = currentReviewer ? `?reviewer=${encodeURIComponent(currentReviewer)}` : "";
         const res = await fetch(`/api/papers${query}`);
-        const papers = await res.json();
+        allPapersFlat = await res.json();
+
+        // Group runs by paper_id
+        const papersMap = new Map();
+        allPapersFlat.forEach((p) => {
+            if (!papersMap.has(p.paper_id)) {
+                papersMap.set(p.paper_id, { paper_id: p.paper_id, title: p.title, runs: [] });
+            }
+            papersMap.get(p.paper_id).runs.push(p);
+        });
+
         papersTbody.innerHTML = "";
-        papers.forEach((p) => {
+        papersMap.forEach((paper) => {
             const tr = document.createElement("tr");
             tr.innerHTML = `
-                <td class="title-cell" title="${esc(p.title)}">${esc(p.title)}</td>
-                <td>${esc(p.paper_id)}</td>
-                <td class="run-cell">${esc(p.run_id)}${p.metrics ? `<span class="metrics-tooltip">${formatMetrics(p.metrics)}</span>` : ""}</td>
-                <td>${p.claims_count}</td>
-                <td>${p.results_count}</td>
-                <td><span class="badge badge-${p.review_status}">${p.review_status.replace("_", " ")}</span></td>
+                <td class="title-cell" title="${esc(paper.title)}">${esc(paper.title)}</td>
+                <td>${esc(paper.paper_id)}</td>
+                <td>${paper.runs.length}</td>
             `;
-            tr.addEventListener("click", () => openReviewerModal(p.paper_id, p.run_id, p.title));
+            tr.addEventListener("click", () => showRunsList(paper));
             papersTbody.appendChild(tr);
         });
     }
@@ -586,5 +657,6 @@
 
     // --- Init ---
 
+    history.replaceState({ view: "papers" }, "", location.pathname);
     loadPapers();
 })();
