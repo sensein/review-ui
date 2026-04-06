@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CLLM Review</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/style.css?v={{ static_hash('style.css') }}">
 </head>
 <body>
     <div id="app">
@@ -69,6 +69,23 @@
                     </thead>
                     <tbody id="runs-tbody"></tbody>
                 </table>
+
+                <section class="comparison-section">
+                    <div class="comparison-header">
+                        <h2>Compare Runs</h2>
+                        <span id="comparison-save-status" class="comparison-save-status"></span>
+                    </div>
+                    <div class="comparison-body">
+                        <div class="comparison-field">
+                            <label class="field-label">Ranking <span class="field-hint">— drag to reorder, best first</span></label>
+                            <div id="ranking-list" class="ranking-list"></div>
+                        </div>
+                        <div class="comparison-field">
+                            <label class="field-label">Comments</label>
+                            <textarea id="comparison-comment" placeholder="Which run performed better and why?"></textarea>
+                        </div>
+                    </div>
+                </section>
             </main>
         </div>
 
@@ -121,12 +138,26 @@
                 </aside>
             </div>
         </div>
-        <!-- Reviewer Name Modal -->
+        <!-- Name Modal (shown on load) -->
+        <div id="name-modal" class="modal-overlay">
+            <div class="modal-box">
+                <h2>Welcome to CLLM Review</h2>
+                <p>Enter your name to get started. It's used to save and load your reviews.</p>
+                <input type="text" id="name-modal-input" placeholder="Your name" autofocus>
+                <div class="modal-actions">
+                    <button id="name-modal-btn" class="btn modal-btn" disabled>Continue</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reviewer Modal (continue/restart existing review) -->
         <div id="reviewer-modal" class="modal-overlay hidden">
             <div class="modal-box">
-                <h2>Enter your name</h2>
-                <p>Your name is used to save and load your review.</p>
-                <input type="text" id="modal-reviewer-input" placeholder="Your name" autofocus>
+                <h2 id="modal-title">Resume review?</h2>
+                <div id="modal-name-section">
+                    <p>Your name is used to save and load your review.</p>
+                    <input type="text" id="modal-reviewer-input" placeholder="Your name">
+                </div>
                 <div id="modal-existing" class="hidden">
                     <p class="modal-existing-msg">A previous review was found under this name.</p>
                     <div class="modal-actions">
@@ -141,6 +172,6 @@
             </div>
         </div>
     </div>
-    <script src="/static/app.js"></script>
+    <script src="/static/app.js?v={{ static_hash('app.js') }}"></script>
 </body>
 </html>

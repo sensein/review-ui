@@ -230,6 +230,26 @@ def save_review(paper_id: str, run_id: str, reviewer: str, data: dict) -> None:
     p.write_text(json.dumps(data, indent=2))
 
 
+def comparison_path(paper_id: str, reviewer: str) -> Path:
+    safe_name = _sanitize_reviewer(reviewer)
+    return PAPERS_DIR / paper_id / "comparisons" / f"comparison_{safe_name}.json"
+
+
+def load_comparison(paper_id: str, reviewer: str) -> dict | None:
+    if not reviewer:
+        return None
+    p = comparison_path(paper_id, reviewer)
+    if p.exists():
+        return json.loads(p.read_text())
+    return None
+
+
+def save_comparison(paper_id: str, reviewer: str, data: dict) -> None:
+    p = comparison_path(paper_id, reviewer)
+    p.parent.mkdir(exist_ok=True)
+    p.write_text(json.dumps(data, indent=2))
+
+
 def list_reviews(paper_id: str, run_id: str) -> list[dict]:
     """List all review files for a paper/run."""
     d = _review_dir(paper_id, run_id)

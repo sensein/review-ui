@@ -5,7 +5,7 @@ from datetime import datetime, timezone
 from fastapi import APIRouter, HTTPException
 
 from . import papers as paper_svc
-from .models import Review
+from .models import PaperComparison, Review
 
 router = APIRouter(prefix="/api")
 
@@ -120,6 +120,31 @@ def save_review(paper_id: str, run_id: str, review: Review):
             data["status"] = "in_progress"
         paper_svc.save_review(paper_id, run_id, review.reviewer, data)
         return data
+
+
+@router.get("/papers/{paper_id}/comparison")
+def get_comparison(paper_id: str, reviewer: str = ""):
+    if not reviewer:
+        raise HTTPException(400, "Reviewer name is required")
+    data = paper_svc.load_comparison(paper_id, reviewer)
+    if data is None:
+        raise HTTPException(404, "No comparison found")
+    return data
+
+
+@router.post("/papers/{paper_id}/comparison")
+def save_comparison(paper_id: str, comparison: PaperComparison):
+    if not comparison.reviewer or not comparison.reviewer.strip():
+        raise HTTPException(400, "Reviewer name is required")
+    now = datetime.now(timezone.utc).isoformat()
+    existing = paper_svc.load_comparison(paper_id, comparison.reviewer)
+    data = existing or {}
+    data["reviewer"] = comparison.reviewer
+    data["updated_at"] = now
+    data["ranking"] = comparison.ranking
+    data["comment"] = comparison.comment
+    paper_svc.save_comparison(paper_id, comparison.reviewer, data)
+    return data
 
 
 @router.post("/papers/refresh")
