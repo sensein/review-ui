@@ -164,6 +164,20 @@ body {
     margin-bottom: 0;
 }
 
+.refresh-btn {
+    padding: 5px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 0.82rem;
+    color: #555;
+    transition: all 0.15s;
+}
+
+.refresh-btn:hover { background: #f0f0f0; color: #333; }
+.refresh-btn.spinning { opacity: 0.5; pointer-events: none; }
+
 .papers-heading {
     font-size: 1rem;
     font-weight: 700;

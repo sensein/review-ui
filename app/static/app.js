@@ -703,6 +703,16 @@
         return esc(s).replace(/"/g, "&quot;");
     }
 
+    // --- Refresh ---
+
+    const refreshBtn = $("#refresh-btn");
+    refreshBtn.addEventListener("click", async () => {
+        refreshBtn.classList.add("spinning");
+        await fetch("/api/papers/refresh", { method: "POST" });
+        await loadPapers();
+        refreshBtn.classList.remove("spinning");
+    });
+
     // --- Name Modal ---
 
     nameModalInput.addEventListener("input", () => {
