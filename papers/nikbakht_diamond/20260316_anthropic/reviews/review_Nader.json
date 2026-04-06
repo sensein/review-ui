@@ -1,0 +1,140 @@
+{
+  "reviewer": "Nader",
+  "started_at": "2026-03-30T17:00:42.668010+00:00",
+  "updated_at": "2026-03-30T17:07:55.104530+00:00",
+  "status": "complete",
+  "results": {
+    "R1": {
+      "agreement": "agree",
+      "override_evaluation_type": null,
+      "override_result_type": null,
+      "comment": "",
+      "flagged": false
+    },
+    "R2": {
+      "agreement": "agree",
+      "override_evaluation_type": null,
+      "override_result_type": null,
+      "comment": "",
+      "flagged": false
+    },
+    "R3": {
+      "agreement": "agree",
+      "override_evaluation_type": null,
+      "override_result_type": null,
+      "comment": "",
+      "flagged": false
+    },
+    "R4": {
+      "agreement": "agree",
+      "override_evaluation_type": null,
+      "override_result_type": null,
+      "comment": "",
+      "flagged": false
+    },
+    "R5": {
+      "agreement": "agree",
+      "override_evaluation_type": null,
+      "override_result_type": null,
+      "comment": "",
+      "flagged": false
+    },
+    "R6": {
+      "agreement": "agree",
+      "override_evaluation_type": null,
+      "override_result_type": null,
+      "comment": "",
+      "flagged": false
+    },
+    "R7": {
+      "agreement": "agree",
+      "override_evaluation_type": null,
+      "override_result_type": null,
+      "comment": "",
+      "flagged": false
+    },
+    "R8": {
+      "agreement": "agree",
+      "override_evaluation_type": null,
+      "override_result_type": null,
+      "comment": "",
+      "flagged": false
+    },
+    "R9": {
+      "agreement": "agree",
+      "override_evaluation_type": null,
+      "override_result_type": null,
+      "comment": "",
+      "flagged": false
+    },
+    "R10": {
+      "agreement": "agree",
+      "override_evaluation_type": null,
+      "override_result_type": null,
+      "comment": "",
+      "flagged": false
+    }
+  },
+  "claims": {
+    "C1": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C2": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C13": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C14": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C15": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C28": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C30": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C31": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C4": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C17": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C21": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C22": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C19": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C24": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C25": {
+      "agreement": "accept",
+      "comment": ""
+    }
+  }
+}

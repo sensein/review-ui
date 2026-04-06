@@ -1,0 +1,304 @@
+{
+  "reviewer": "Nader",
+  "started_at": "2026-03-23T20:50:59.665944+00:00",
+  "updated_at": "2026-03-30T17:22:24.371638+00:00",
+  "status": "complete",
+  "results": {
+    "R1": {
+      "agreement": "agree",
+      "override_evaluation_type": null,
+      "override_result_type": null,
+      "comment": "Claim 34: Limited inference here: This inference should be drawn from claim C32, which is about an infrared LED having two to fifty times higher intensity than red LEDs. This is a combination of behavior and LED illumination intensity\nHowever the general conclusion of the result one summary is perfectly correct.",
+      "flagged": true
+    },
+    "R3": {
+      "agreement": "agree",
+      "override_evaluation_type": null,
+      "override_result_type": null,
+      "comment": "",
+      "flagged": false
+    },
+    "R4": {
+      "agreement": "agree",
+      "override_evaluation_type": null,
+      "override_result_type": null,
+      "comment": "",
+      "flagged": false
+    },
+    "R5": {
+      "agreement": "agree",
+      "override_evaluation_type": null,
+      "override_result_type": null,
+      "comment": "",
+      "flagged": false
+    },
+    "R6": {
+      "agreement": "agree",
+      "override_evaluation_type": null,
+      "override_result_type": null,
+      "comment": "",
+      "flagged": false
+    },
+    "R7": {
+      "agreement": "agree",
+      "override_evaluation_type": null,
+      "override_result_type": null,
+      "comment": "",
+      "flagged": false
+    }
+  },
+  "claims": {
+    "C1": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C2": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C3": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C4": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C5": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C6": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C7": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C19": {
+      "agreement": "accept",
+      "comment": "somewhat redundant as previously mentioned in C5"
+    },
+    "C20": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C21": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C22": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C23": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C24": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C25": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C26": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C27": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C28": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C29": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C30": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C31": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C32": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C33": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C34": {
+      "agreement": "accept",
+      "comment": "Limited inference here: This inference should be drawn from claim C32, which is about an infrared LED having two to fifty times higher intensity than red LEDs. This is a combination of behavior and LED illumination intensity"
+    },
+    "C50": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C51": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C8": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C9": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C10": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C11": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C12": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C13": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C14": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C15": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C16": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C17": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C18": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C39": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C40": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C41": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C42": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C43": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C44": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C45": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C46": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C38": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C35": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C47": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C48": {
+      "agreement": "accept",
+      "comment": "It would be helpful to link the speculation to the relevant claim that comes later, C49"
+    },
+    "C49": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C52": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C53": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C54": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C55": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C56": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C57": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C58": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C59": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C60": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C61": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C62": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C63": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C64": {
+      "agreement": "accept",
+      "comment": ""
+    },
+    "C65": {
+      "agreement": "accept",
+      "comment": ""
+    }
+  }
+}
