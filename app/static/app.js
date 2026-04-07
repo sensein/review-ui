@@ -1,20 +1,59 @@
 (() => {
     const $ = (sel) => document.querySelector(sel);
     const paperListView = $("#paper-list-view");
+    const runsListView = $("#runs-list-view");
     const reviewView = $("#review-view");
     const papersTbody = $("#papers-tbody");
+    const runsTbody = $("#runs-tbody");
+    const runsPaperTitle = $("#runs-paper-title");
     const resultsContainer = $("#results-container");
     const reviewTitle = $("#review-title");
     const progressText = $("#progress-text");
     const reviewerDisplay = $("#reviewer-display");
-    const backBtn = $("#back-btn");
     const markCompleteBtn = $("#mark-complete-btn");
     const paperPanel = $("#paper-panel");
     const paperTextContent = $("#paper-text-content");
     const panelCloseBtn = $("#panel-close-btn");
 
-    // Modal elements
+    // Metrics popup (fixed-position, shared across all run cells)
+    const metricsPopup = document.createElement("div");
+    metricsPopup.className = "metrics-popup hidden";
+    document.body.appendChild(metricsPopup);
+
+    let currentMetricsCell = null;
+
+    document.addEventListener("mouseover", (e) => {
+        const cell = e.target.closest("td[data-metrics]");
+        if (!cell || cell === currentMetricsCell) return;
+        currentMetricsCell = cell;
+        metricsPopup.textContent = cell.dataset.metrics;
+        metricsPopup.classList.remove("hidden");
+        const rect = cell.closest("tr").getBoundingClientRect();
+        let top = rect.bottom + 6;
+        let left = rect.left;
+        const pw = metricsPopup.offsetWidth;
+        if (left + pw > window.innerWidth - 8) left = window.innerWidth - pw - 8;
+        metricsPopup.style.top = top + "px";
+        metricsPopup.style.left = left + "px";
+    });
+
+    document.addEventListener("mouseout", (e) => {
+        const cell = e.target.closest("td[data-metrics]");
+        if (cell && !cell.contains(e.relatedTarget)) {
+            currentMetricsCell = null;
+            metricsPopup.classList.add("hidden");
+        }
+    });
+
+    // Name modal (on load)
+    const nameModal = $("#name-modal");
+    const nameModalInput = $("#name-modal-input");
+    const nameModalBtn = $("#name-modal-btn");
+
+    // Reviewer modal (continue/restart)
     const modal = $("#reviewer-modal");
+    const modalTitle = $("#modal-title");
+    const modalNameSection = $("#modal-name-section");
     const modalInput = $("#modal-reviewer-input");
     const modalExisting = $("#modal-existing");
     const modalDefaultActions = $("#modal-default-actions");
@@ -23,6 +62,10 @@
     const modalStartBtn = $("#modal-start-btn");
     const modalError = $("#modal-error");
 
+    // Comparison elements
+    const comparisonComment = $("#comparison-comment");
+    const comparisonSaveStatus = $("#comparison-save-status");
+
     let currentPaper = null;
     let currentResults = [];
     let currentReview = {};
@@ -30,102 +73,75 @@
     let saveTimer = null;
     let paperTextCache = {}; // paperId -> sections
     let pendingPaper = null; // paper waiting for modal
+    let allPapersFlat = []; // flat list from API
+    let currentPaperForRuns = null; // { paper_id, title, runs[] }
+    let comparisonSaveTimer = null;
 
     // --- Navigation ---
 
     function showPaperList() {
         reviewView.classList.add("hidden");
+        runsListView.classList.add("hidden");
         paperListView.classList.remove("hidden");
         currentPaper = null;
         loadPapers();
     }
 
-    function openReviewerModal(paperId, runId, title) {
-        pendingPaper = { paperId, runId, title };
-        modalInput.value = currentReviewer;
-        modalExisting.classList.add("hidden");
-        modalDefaultActions.classList.remove("hidden");
-        modalStartBtn.disabled = !currentReviewer;
-        modalError.classList.add("hidden");
-        modal.classList.remove("hidden");
-        modalInput.focus();
-        // If name is pre-filled, check for existing review
-        if (currentReviewer) checkExistingReview();
+    function showRunsList(paperData, pushHistory = true) {
+        currentPaperForRuns = paperData;
+        if (pushHistory) {
+            history.pushState({ view: "runs", paperData }, "", location.pathname);
+        }
+        runsPaperTitle.textContent = paperData.title;
+        runsTbody.innerHTML = "";
+        paperData.runs.forEach((p) => {
+            const tr = document.createElement("tr");
+            const m = p.metrics ? `data-metrics="${escAttr(formatMetrics(p.metrics))}"` : "";
+            tr.innerHTML = `
+                <td class="run-cell" ${m}><span class="run-link">${esc(p.run_id)}</span></td>
+                <td ${m}>${p.claims_count}</td>
+                <td ${m}>${p.results_count}</td>
+                <td><span class="badge badge-${p.review_status}">${p.review_status.replace("_", " ")}</span></td>
+            `;
+            tr.addEventListener("click", () => openReviewerModal(p.paper_id, p.run_id, p.title));
+            runsTbody.appendChild(tr);
+        });
+        paperListView.classList.add("hidden");
+        reviewView.classList.add("hidden");
+        runsListView.classList.remove("hidden");
+        initComparison(paperData);
     }
 
-    async function checkExistingReview() {
-        const name = modalInput.value.trim();
-        if (!name) {
-            modalExisting.classList.add("hidden");
-            modalDefaultActions.classList.remove("hidden");
-            modalStartBtn.disabled = true;
-            return;
-        }
-        modalError.classList.add("hidden");
 
-        const { paperId, runId } = pendingPaper;
-        const res = await fetch(`/api/papers/${paperId}/${runId}/review?reviewer=${encodeURIComponent(name)}`);
+
+
+    async function openReviewerModal(paperId, runId, title) {
+        pendingPaper = { paperId, runId, title };
+        const res = await fetch(`/api/papers/${paperId}/${runId}/review?reviewer=${encodeURIComponent(currentReviewer)}`);
         if (res.ok) {
+            // Existing review found — ask continue or restart
+            modalTitle.textContent = "Resume review?";
+            modalNameSection.classList.add("hidden");
             modalExisting.classList.remove("hidden");
             modalDefaultActions.classList.add("hidden");
+            modalError.classList.add("hidden");
+            modal.classList.remove("hidden");
         } else {
-            modalExisting.classList.add("hidden");
-            modalDefaultActions.classList.remove("hidden");
-            modalStartBtn.disabled = false;
+            // No existing review — go straight in
+            enterReview(false);
         }
     }
 
-    // Check for existing review when name changes, enable/disable start button
-    let checkTimer = null;
-    modalInput.addEventListener("input", () => {
-        const name = modalInput.value.trim();
-        modalStartBtn.disabled = !name;
-        // Reset to default state while checking
-        modalExisting.classList.add("hidden");
-        modalDefaultActions.classList.remove("hidden");
-        clearTimeout(checkTimer);
-        if (name) {
-            checkTimer = setTimeout(checkExistingReview, 400);
-        }
-    });
-
-    modalInput.addEventListener("keydown", (e) => {
-        if (e.key === "Enter") {
-            e.preventDefault();
-            const name = modalInput.value.trim();
-            if (name && !modalStartBtn.disabled && !modalDefaultActions.classList.contains("hidden")) {
-                enterReview(false);
-            }
-        }
-    });
-
-    // Continue previous review
-    modalContinueBtn.addEventListener("click", () => {
-        enterReview(true);
-    });
-
-    // Start new review
-    modalNewBtn.addEventListener("click", () => {
-        enterReview(false);
-    });
-
-    // Start review (no existing)
-    modalStartBtn.addEventListener("click", () => {
-        enterReview(false);
-    });
+    modalContinueBtn.addEventListener("click", () => enterReview(true));
+    modalNewBtn.addEventListener("click", () => enterReview(false));
 
     function enterReview(loadExisting) {
-        const name = modalInput.value.trim();
-        if (!name) {
-            modalError.textContent = "Please enter your name.";
-            modalError.classList.remove("hidden");
-            return;
-        }
-        currentReviewer = name;
         modal.classList.add("hidden");
 
         const { paperId, runId, title } = pendingPaper;
+        history.pushState({ view: "review", paperId, runId, title }, "", location.pathname);
         paperListView.classList.add("hidden");
+        runsListView.classList.add("hidden");
         reviewView.classList.remove("hidden");
         currentPaper = { paperId, runId, title };
         reviewTitle.textContent = title;
@@ -133,29 +149,170 @@
         loadReview(loadExisting);
     }
 
-    backBtn.addEventListener("click", showPaperList);
+    window.addEventListener("popstate", (e) => {
+        const state = e.state;
+        if (!state || state.view === "papers") {
+            reviewView.classList.add("hidden");
+            runsListView.classList.add("hidden");
+            paperListView.classList.remove("hidden");
+            currentPaper = null;
+            if (allPapersFlat.length === 0) loadPapers();
+        } else if (state.view === "runs") {
+            showRunsList(state.paperData, false);
+        } else if (state.view === "review") {
+            // Only restore if we still have the same session state
+            if (currentReviewer && currentPaper &&
+                currentPaper.paperId === state.paperId &&
+                currentPaper.runId === state.runId) {
+                paperListView.classList.add("hidden");
+                runsListView.classList.add("hidden");
+                reviewView.classList.remove("hidden");
+            } else {
+                // Session lost (e.g. page reload) — fall back to runs list
+                const runs = allPapersFlat.filter((p) => p.paper_id === state.paperId);
+                if (runs.length > 0) {
+                    const paperData = currentPaperForRuns || {
+                        paper_id: state.paperId,
+                        title: runs[0].title,
+                        runs: runs,
+                    };
+                    showRunsList(paperData, false);
+                } else {
+                    reviewView.classList.add("hidden");
+                    runsListView.classList.add("hidden");
+                    paperListView.classList.remove("hidden");
+                    if (allPapersFlat.length === 0) loadPapers();
+                }
+            }
+        }
+    });
 
     // --- Paper List ---
 
     async function loadPapers() {
         const query = currentReviewer ? `?reviewer=${encodeURIComponent(currentReviewer)}` : "";
         const res = await fetch(`/api/papers${query}`);
-        const papers = await res.json();
+        allPapersFlat = await res.json();
+
+        // Group runs by paper_id
+        const papersMap = new Map();
+        allPapersFlat.forEach((p) => {
+            if (!papersMap.has(p.paper_id)) {
+                papersMap.set(p.paper_id, { paper_id: p.paper_id, title: p.title, runs: [] });
+            }
+            papersMap.get(p.paper_id).runs.push(p);
+        });
+
         papersTbody.innerHTML = "";
-        papers.forEach((p) => {
+        papersMap.forEach((paper) => {
             const tr = document.createElement("tr");
             tr.innerHTML = `
-                <td class="title-cell" title="${esc(p.title)}">${esc(p.title)}</td>
-                <td>${esc(p.paper_id)}</td>
-                <td class="run-cell">${esc(p.run_id)}${p.metrics ? `<span class="metrics-tooltip">${formatMetrics(p.metrics)}</span>` : ""}</td>
-                <td>${p.claims_count}</td>
-                <td>${p.results_count}</td>
-                <td><span class="badge badge-${p.review_status}">${p.review_status.replace("_", " ")}</span></td>
+                <td class="title-cell" title="${esc(paper.title)}">${esc(paper.title)}</td>
+                <td>${esc(paper.paper_id)}</td>
+                <td>${paper.runs.length}</td>
             `;
-            tr.addEventListener("click", () => openReviewerModal(p.paper_id, p.run_id, p.title));
+            tr.addEventListener("click", () => showRunsList(paper));
             papersTbody.appendChild(tr);
         });
     }
+
+    // --- Comparison ---
+
+    function initComparison(paperData) {
+        comparisonComment.value = "";
+        comparisonSaveStatus.textContent = "";
+        renderRankingList(paperData.runs.map((r) => r.run_id));
+        fetchAndApplyComparison(paperData.paper_id, currentReviewer);
+    }
+
+    async function fetchAndApplyComparison(paperId, reviewer) {
+        const res = await fetch(`/api/papers/${paperId}/comparison?reviewer=${encodeURIComponent(reviewer)}`);
+        if (!res.ok) return;
+        const data = await res.json();
+        // Reorder ranking list to match saved order, appending any new runs at the end
+        const savedOrder = data.ranking || [];
+        const allRunIds = currentPaperForRuns.runs.map((r) => r.run_id);
+        const ordered = [
+            ...savedOrder.filter((id) => allRunIds.includes(id)),
+            ...allRunIds.filter((id) => !savedOrder.includes(id)),
+        ];
+        renderRankingList(ordered);
+        comparisonComment.value = data.comment || "";
+    }
+
+    function renderRankingList(runIds) {
+        const list = $("#ranking-list");
+        list.innerHTML = "";
+        runIds.forEach((runId, i) => {
+            const item = document.createElement("div");
+            item.className = "rank-item";
+            item.draggable = true;
+            item.dataset.runId = runId;
+            item.innerHTML = `<span class="drag-handle">⠿</span><span class="rank-num">#${i + 1}</span><span class="rank-run-label">${esc(runId)}</span>`;
+            list.appendChild(item);
+        });
+        setupDragAndDrop(list);
+    }
+
+    function setupDragAndDrop(list) {
+        let dragging = null;
+
+        list.addEventListener("dragstart", (e) => {
+            dragging = e.target.closest(".rank-item");
+            if (dragging) dragging.classList.add("dragging");
+        });
+
+        list.addEventListener("dragend", () => {
+            if (dragging) dragging.classList.remove("dragging");
+            dragging = null;
+            updateRankNumbers();
+            scheduleComparisonSave();
+        });
+
+        list.addEventListener("dragover", (e) => {
+            e.preventDefault();
+            if (!dragging) return;
+            const target = e.target.closest(".rank-item");
+            if (!target || target === dragging) return;
+            const rect = target.getBoundingClientRect();
+            if (e.clientY < rect.top + rect.height / 2) {
+                list.insertBefore(dragging, target);
+            } else {
+                list.insertBefore(dragging, target.nextSibling);
+            }
+        });
+    }
+
+    function updateRankNumbers() {
+        $("#ranking-list").querySelectorAll(".rank-item").forEach((item, i) => {
+            item.querySelector(".rank-num").textContent = `#${i + 1}`;
+        });
+    }
+
+    function scheduleComparisonSave() {
+        comparisonSaveStatus.textContent = "saving...";
+        clearTimeout(comparisonSaveTimer);
+        comparisonSaveTimer = setTimeout(doSaveComparison, 600);
+    }
+
+    async function doSaveComparison() {
+        if (!currentReviewer || !currentPaperForRuns) return;
+
+        const ranking = [...$("#ranking-list").querySelectorAll(".rank-item")].map((el) => el.dataset.runId);
+        const res = await fetch(`/api/papers/${currentPaperForRuns.paper_id}/comparison`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ reviewer: currentReviewer, ranking, comment: comparisonComment.value }),
+        });
+        if (res.ok) {
+            comparisonSaveStatus.textContent = "saved";
+            setTimeout(() => { comparisonSaveStatus.textContent = ""; }, 1500);
+        } else {
+            comparisonSaveStatus.textContent = "error saving";
+        }
+    }
+
+    comparisonComment.addEventListener("input", scheduleComparisonSave);
 
     // --- Review View ---
 
@@ -241,6 +398,22 @@
                 </div>
             `;
             resultsContainer.appendChild(card);
+        });
+
+        // Overall comment card
+        const overallCard = document.createElement("div");
+        overallCard.className = "overall-comment-card";
+        overallCard.innerHTML = `
+            <h3 class="overall-comment-heading">Overall Review</h3>
+            <p class="overall-comment-hint">Write your overall assessment of this run — quality, completeness, any general observations.</p>
+            <textarea id="overall-comment-textarea" placeholder="Add your overall review here...">${esc(currentReview.overall_comment || "")}</textarea>
+            <span class="save-indicator" id="overall-comment-save-ind"></span>
+        `;
+        resultsContainer.appendChild(overallCard);
+
+        document.getElementById("overall-comment-textarea").addEventListener("input", (e) => {
+            currentReview.overall_comment = e.target.value;
+            scheduleOverallCommentSave();
         });
 
         // Event delegation
@@ -363,6 +536,21 @@
     // --- Auto-save with debounce ---
 
     let claimSaveTimer = null;
+    let overallCommentSaveTimer = null;
+
+    function scheduleOverallCommentSave() {
+        const ind = document.getElementById("overall-comment-save-ind");
+        if (ind) ind.textContent = "saving...";
+        clearTimeout(overallCommentSaveTimer);
+        overallCommentSaveTimer = setTimeout(async () => {
+            await doSave(null, null);
+            const ind2 = document.getElementById("overall-comment-save-ind");
+            if (ind2) {
+                ind2.textContent = "saved";
+                setTimeout(() => { ind2.textContent = ""; }, 1500);
+            }
+        }, 600);
+    }
 
     function scheduleSave(rid) {
         const ind = document.getElementById(`save-ind-${rid}`);
@@ -386,6 +574,7 @@
         const payload = {
             reviewer: currentReviewer,
             status: currentReview.status,
+            overall_comment: currentReview.overall_comment || "",
             results: {},
             claims: {},
         };
@@ -584,7 +773,38 @@
         return esc(s).replace(/"/g, "&quot;");
     }
 
+    // --- Refresh ---
+
+    const refreshBtn = $("#refresh-btn");
+    refreshBtn.addEventListener("click", async () => {
+        refreshBtn.classList.add("spinning");
+        await fetch("/api/papers/refresh", { method: "POST" });
+        await loadPapers();
+        refreshBtn.classList.remove("spinning");
+    });
+
+    // --- Name Modal ---
+
+    nameModalInput.addEventListener("input", () => {
+        nameModalBtn.disabled = !nameModalInput.value.trim();
+    });
+
+    nameModalInput.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" && nameModalInput.value.trim()) submitName();
+    });
+
+    nameModalBtn.addEventListener("click", submitName);
+
+    function submitName() {
+        const name = nameModalInput.value.trim();
+        if (!name) return;
+        currentReviewer = name;
+        nameModal.classList.add("hidden");
+        loadPapers();
+    }
+
     // --- Init ---
 
-    loadPapers();
+    history.replaceState({ view: "papers" }, "", location.pathname);
+    nameModalInput.focus();
 })();

@@ -1,5 +1,5 @@
 from pathlib import Path
-
+import hashlib
 import os
 import uvicorn
 
@@ -15,8 +15,21 @@ app = FastAPI(title="OpenEval Review UI")
 app.include_router(api_router)
 
 BASE_DIR = Path(__file__).resolve().parent
-app.mount("/static", StaticFiles(directory=BASE_DIR / "app" / "static"), name="static")
+STATIC_DIR = BASE_DIR / "app" / "static"
+app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
 templates = Jinja2Templates(directory=BASE_DIR / "templates")
+
+
+def _static_hash(filename: str) -> str:
+    """Return the first 8 chars of the MD5 hash of a static file's contents."""
+    try:
+        content = (STATIC_DIR / filename).read_bytes()
+        return hashlib.md5(content).hexdigest()[:8]
+    except OSError:
+        return "0"
+
+
+templates.env.globals["static_hash"] = _static_hash
 
 
 @app.get("/", response_class=HTMLResponse)

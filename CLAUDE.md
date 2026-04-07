@@ -24,6 +24,7 @@ The pipeline has three stages, each producing a JSON artifact per paper:
 
 Papers live under `papers/`, organized by bioRxiv DOI suffix or custom name. Each paper directory contains:
 - `*.source.xml` — TEI or JATS XML from GROBID parsing of the PDF
+- `comparisons/` — Per-reviewer run comparison files (`comparison_{name}.json`), created automatically
 - Dated subdirectories (e.g., `20260206/`) for versioned runs, each containing:
   - `claims*.json` — Extracted claims (naming varies: `claims.json`, `claims_20260206.json`, `claim_updates.json`)
   - `eval_llm*.json` — LLM evaluation results
@@ -44,30 +45,37 @@ The CLI tool used is `cllm` (e.g., `cllm extract <xml> -o claims.json`). Models 
 app/
 ├── __init__.py
 ├── api.py          # API router — all REST endpoints
-├── models.py       # Pydantic models (Claim, Result, Review, ClaimReview, etc.)
+├── models.py       # Pydantic models (Claim, Result, Review, ClaimReview, PaperComparison, etc.)
 ├── papers.py       # Paper discovery, XML title extraction, text extraction, data I/O
 └── static/
     ├── style.css
-    └── app.js      # All frontend logic (SPA, two views)
+    └── app.js      # All frontend logic (SPA, three views)
 templates/
 └── index.html      # Single-page HTML shell with instructions
-main.py             # FastAPI app entry point + uvicorn
+main.py             # FastAPI app entry point + uvicorn; injects static file hash for cache-busting
 ```
 
 ### API Endpoints
 ```
-GET  /                                              → Serve index.html
-GET  /api/papers?reviewer=                          → List all reviewable paper/run combos
-GET  /api/papers/{paper_id}/{run_id}/results        → eval_llm.json with claims inlined
-GET  /api/papers/{paper_id}/text                    → Paper text extracted from XML
+GET  /                                                → Serve index.html
+GET  /api/papers?reviewer=                            → List all reviewable paper/run combos
+GET  /api/papers/{paper_id}/{run_id}/results          → eval_llm.json with claims inlined
+GET  /api/papers/{paper_id}/text                      → Paper text extracted from XML
 GET  /api/papers/{paper_id}/{run_id}/review?reviewer= → Load reviewer's review (404 if none)
-POST /api/papers/{paper_id}/{run_id}/review         → Save/merge review (reviewer name required)
-POST /api/papers/refresh                            → Clear paper cache
+POST /api/papers/{paper_id}/{run_id}/review           → Save/merge review (reviewer name required)
+GET  /api/papers/{paper_id}/comparison?reviewer=      → Load reviewer's run comparison (404 if none)
+POST /api/papers/{paper_id}/comparison                → Save run comparison
+POST /api/papers/refresh                              → Clear paper cache
 ```
 
 ### Key Details
-- **Paper discovery**: Walks `papers/` for directories containing both `claims*.json` and `eval_llm*.json`. Uses glob prefix matching to handle varied file naming.
+- **Three-view navigation**: Paper list → Runs list → Review. Browser back/forward works via the History API (`pushState`/`popstate`).
+- **Reviewer name**: Collected once via a modal on page load; reused for all reviews and comparisons in the session.
+- **Paper discovery**: Walks `papers/` for directories containing both `claims*.json` and `eval_llm*.json`. Uses glob prefix matching to handle varied file naming. A Refresh button on the home page clears the server-side cache without requiring a restart.
 - **XML title extraction**: Handles both GROBID TEI (`<title level="a" type="main">`) and JATS (`<article-title>`) formats.
-- **Per-reviewer reviews**: Reviews save as `reviews/review_{name}.json`. Reviewer name is collected via a modal when entering a paper, with the option to continue a previous review or start new. Status auto-transitions to "in_progress" on first save.
+- **Per-reviewer reviews**: Reviews save as `reviews/review_{name}.json` inside the run directory. If a prior review exists the user is asked to continue or start fresh; otherwise they go straight to the review. `Review` model includes `overall_comment` for a free-form text box at the bottom of the review page. Status auto-transitions to "in_progress" on first save.
+- **Run comparison**: Each runs list page has a Compare Runs section with a drag-to-rank list and comments textarea. Saved as `comparisons/comparison_{name}.json` at the paper level (not per-run).
+- **Metrics tooltip**: Hovering any cell in a run row (Run, Claims, Results) shows a fixed-position popup with model, cost, and processing time. Anchored to the row so it stays in one place.
 - **Paper text panel**: Extracts readable text from TEI/JATS XML for a "View in paper" side panel with source highlighting.
 - **Reference sidebar**: Key definitions and review actions are displayed in a sticky sidebar on the review page.
+- **Static file cache-busting**: `main.py` registers a `static_hash` Jinja2 global that computes an MD5 hash of each static file, appended as a query param (e.g. `style.css?v=a3f9c2d1`). Updates automatically on file change.

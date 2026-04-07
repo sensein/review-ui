@@ -53,5 +53,13 @@ class Review(BaseModel):
     started_at: str | None = None
     updated_at: str | None = None
     status: str = "not_started"
+    overall_comment: str = ""
     results: dict[str, ResultReview] = {}
     claims: dict[str, ClaimReview] = {}
+
+
+class PaperComparison(BaseModel):
+    reviewer: str = ""
+    updated_at: str | None = None
+    ranking: list[str] = []   # run_ids ordered best → worst
+    comment: str = ""
