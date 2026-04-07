@@ -1,6 +1,6 @@
 # CLLM Review
 
-A web app for scientists to review LLM-extracted claims and evaluations from research papers. The `cllm` tool produces `claims.json` and `eval_llm.json` per paper — this UI lets a reviewer browse results, agree/disagree, override judgments, add comments, and save reviews as per-reviewer JSON files alongside existing paper data.
+A web app for scientists to review LLM-extracted claims and evaluations from research papers. The `cllm` tool produces `claims.json` and `eval_llm.json` per paper — this UI lets a reviewer browse results, agree/disagree, override judgments, add comments, compare runs, and save reviews as per-reviewer JSON files alongside existing paper data.
 
 ## Setup
 
@@ -30,6 +30,8 @@ Each paper lives in its own directory under `papers/`, identified by a bioRxiv D
 papers/
 ├── 2025.12.02.691876/              # Paper directory (bioRxiv DOI suffix)
 │   ├── 2025.12.02.691876.source.xml  # GROBID-parsed TEI/JATS XML
+│   ├── comparisons/                  # Per-reviewer run comparison files
+│   │   └── comparison_Dr_Smith.json
 │   └── 20260206/                     # Run directory (dated)
 │       ├── claims.json               # Extracted claims
 │       ├── eval_llm.json             # LLM evaluation results
@@ -38,6 +40,7 @@ papers/
 │           └── review_Jane_Doe.json
 └── nikbakht_diamond/               # Paper directory (custom name)
     ├── elife-66429-v2.pdf.tei.xml
+    ├── comparisons/
     └── 20260316_anthropic/
         ├── claims.json
         ├── eval_llm.json
@@ -59,13 +62,13 @@ Once you've completed your review, submit it via a pull request:
    git checkout -b review/<your-name>
    ```
 
-3. Complete your review in the UI, then add your review file(s). The two glob patterns below cover reviews saved at either nesting level (see [Directory Structure](#directory-structure)):
+3. Complete your review in the UI, then add your review and comparison file(s). The patterns below cover all nesting levels (see [Directory Structure](#directory-structure)):
    ```bash
-   git add papers/*/reviews/ papers/*/*/reviews/
+   git add papers/*/reviews/ papers/*/*/reviews/ papers/*/comparisons/
    ```
    To submit a review for a specific paper only:
    ```bash
-   git add papers/<paper-id>/*/reviews/
+   git add papers/<paper-id>/*/reviews/ papers/<paper-id>/comparisons/
    ```
 
 4. Commit and push:
@@ -80,17 +83,23 @@ Each reviewer should use their own branch. If you are reviewing multiple papers,
 
 ## How It Works
 
-The review UI provides two views:
+On first load, a name prompt collects your reviewer name once. It is reused for all reviews and comparisons in that session.
 
-1. **Paper list** — Browse all reviewable papers with claim/result counts and review status. Includes instructions for reviewers.
-2. **Paper review** — Prompted for your name on entry, with the option to continue a previous review or start fresh. The review page includes:
+The UI has three views, navigable with the browser's back/forward buttons:
+
+1. **Paper list** — Browse all papers. Includes reviewer instructions and a Refresh button to pick up newly added runs without restarting the server.
+
+2. **Runs list** — Click a paper to see all its pipeline runs. Hover over any row to see a tooltip with model, cost, and processing time. Below the table, a **Compare Runs** section lets you drag runs into a ranked order and add free-form notes about which run performed better and why. This is saved per-reviewer as `comparisons/comparison_{name}.json` at the paper level.
+
+3. **Paper review** — Click a run to open it. If you have an existing review, you are asked whether to continue or start fresh; otherwise you go straight in. The review page includes:
    - A sticky reference sidebar with key definitions and review actions
    - Scrollable result cards showing the LLM's grouped evaluation
    - Agree/Disagree on each result, with override dropdowns on disagree
    - Accept/Oppose on individual claims
    - "View in paper" side panel that highlights the source passage in the original text
    - Per-claim and per-result comments
-   - Auto-save (progress is saved automatically as you review)
+   - An **Overall Review** text box at the bottom for free-form observations
+   - Auto-save throughout (progress is saved automatically as you review)
 
 Reviews are saved as `review_{reviewer_name}.json` in the `reviews/` subdirectory (see [Directory Structure](#directory-structure)), so multiple reviewers can work on the same paper independently.
 
@@ -110,4 +119,6 @@ Reviews are saved as `review_{reviewer_name}.json` in the `reviews/` subdirector
 | `GET` | `/api/papers/{paper_id}/text` | Paper text extracted from XML |
 | `GET` | `/api/papers/{paper_id}/{run_id}/review?reviewer=` | Load a reviewer's review |
 | `POST` | `/api/papers/{paper_id}/{run_id}/review` | Save/merge a review |
+| `GET` | `/api/papers/{paper_id}/comparison?reviewer=` | Load a reviewer's run comparison |
+| `POST` | `/api/papers/{paper_id}/comparison` | Save a run comparison |
 | `POST` | `/api/papers/refresh` | Clear paper discovery cache |
