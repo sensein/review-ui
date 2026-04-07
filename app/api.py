@@ -108,6 +108,7 @@ def save_review(paper_id: str, run_id: str, review: Review):
             existing.setdefault("claims", {})[cid] = cr.model_dump()
         existing["updated_at"] = now
         existing["reviewer"] = review.reviewer
+        existing["overall_comment"] = review.overall_comment
         if review.status:
             existing["status"] = review.status
         paper_svc.save_review(paper_id, run_id, review.reviewer, existing)

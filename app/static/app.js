@@ -362,6 +362,22 @@
             resultsContainer.appendChild(card);
         });
 
+        // Overall comment card
+        const overallCard = document.createElement("div");
+        overallCard.className = "overall-comment-card";
+        overallCard.innerHTML = `
+            <h3 class="overall-comment-heading">Overall Review</h3>
+            <p class="overall-comment-hint">Write your overall assessment of this run — quality, completeness, any general observations.</p>
+            <textarea id="overall-comment-textarea" placeholder="Add your overall review here...">${esc(currentReview.overall_comment || "")}</textarea>
+            <span class="save-indicator" id="overall-comment-save-ind"></span>
+        `;
+        resultsContainer.appendChild(overallCard);
+
+        document.getElementById("overall-comment-textarea").addEventListener("input", (e) => {
+            currentReview.overall_comment = e.target.value;
+            scheduleOverallCommentSave();
+        });
+
         // Event delegation
         resultsContainer.addEventListener("click", handleClick);
         resultsContainer.addEventListener("change", handleChange);
@@ -482,6 +498,21 @@
     // --- Auto-save with debounce ---
 
     let claimSaveTimer = null;
+    let overallCommentSaveTimer = null;
+
+    function scheduleOverallCommentSave() {
+        const ind = document.getElementById("overall-comment-save-ind");
+        if (ind) ind.textContent = "saving...";
+        clearTimeout(overallCommentSaveTimer);
+        overallCommentSaveTimer = setTimeout(async () => {
+            await doSave(null, null);
+            const ind2 = document.getElementById("overall-comment-save-ind");
+            if (ind2) {
+                ind2.textContent = "saved";
+                setTimeout(() => { ind2.textContent = ""; }, 1500);
+            }
+        }, 600);
+    }
 
     function scheduleSave(rid) {
         const ind = document.getElementById(`save-ind-${rid}`);
@@ -505,6 +536,7 @@
         const payload = {
             reviewer: currentReviewer,
             status: currentReview.status,
+            overall_comment: currentReview.overall_comment || "",
             results: {},
             claims: {},
         };
