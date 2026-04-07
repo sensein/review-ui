@@ -170,8 +170,13 @@
             } else {
                 // Session lost (e.g. page reload) — fall back to runs list
                 const runs = allPapersFlat.filter((p) => p.paper_id === state.paperId);
-                if (runs.length > 0 && currentPaperForRuns) {
-                    showRunsList(currentPaperForRuns, false);
+                if (runs.length > 0) {
+                    const paperData = currentPaperForRuns || {
+                        paper_id: state.paperId,
+                        title: runs[0].title,
+                        runs: runs,
+                    };
+                    showRunsList(paperData, false);
                 } else {
                     reviewView.classList.add("hidden");
                     runsListView.classList.add("hidden");
@@ -302,6 +307,8 @@
         if (res.ok) {
             comparisonSaveStatus.textContent = "saved";
             setTimeout(() => { comparisonSaveStatus.textContent = ""; }, 1500);
+        } else {
+            comparisonSaveStatus.textContent = "error saving";
         }
     }
 
