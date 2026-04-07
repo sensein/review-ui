@@ -15,6 +15,36 @@
     const paperTextContent = $("#paper-text-content");
     const panelCloseBtn = $("#panel-close-btn");
 
+    // Metrics popup (fixed-position, shared across all run cells)
+    const metricsPopup = document.createElement("div");
+    metricsPopup.className = "metrics-popup hidden";
+    document.body.appendChild(metricsPopup);
+
+    let currentMetricsCell = null;
+
+    document.addEventListener("mouseover", (e) => {
+        const cell = e.target.closest("td[data-metrics]");
+        if (!cell || cell === currentMetricsCell) return;
+        currentMetricsCell = cell;
+        metricsPopup.textContent = cell.dataset.metrics;
+        metricsPopup.classList.remove("hidden");
+        const rect = cell.closest("tr").getBoundingClientRect();
+        let top = rect.bottom + 6;
+        let left = rect.left;
+        const pw = metricsPopup.offsetWidth;
+        if (left + pw > window.innerWidth - 8) left = window.innerWidth - pw - 8;
+        metricsPopup.style.top = top + "px";
+        metricsPopup.style.left = left + "px";
+    });
+
+    document.addEventListener("mouseout", (e) => {
+        const cell = e.target.closest("td[data-metrics]");
+        if (cell && !cell.contains(e.relatedTarget)) {
+            currentMetricsCell = null;
+            metricsPopup.classList.add("hidden");
+        }
+    });
+
     // Name modal (on load)
     const nameModal = $("#name-modal");
     const nameModalInput = $("#name-modal-input");
@@ -66,10 +96,11 @@
         runsTbody.innerHTML = "";
         paperData.runs.forEach((p) => {
             const tr = document.createElement("tr");
+            const m = p.metrics ? `data-metrics="${escAttr(formatMetrics(p.metrics))}"` : "";
             tr.innerHTML = `
-                <td class="run-cell">${esc(p.run_id)}${p.metrics ? `<span class="metrics-tooltip">${formatMetrics(p.metrics)}</span>` : ""}</td>
-                <td>${p.claims_count}</td>
-                <td>${p.results_count}</td>
+                <td class="run-cell" ${m}><span class="run-link">${esc(p.run_id)}</span></td>
+                <td ${m}>${p.claims_count}</td>
+                <td ${m}>${p.results_count}</td>
                 <td><span class="badge badge-${p.review_status}">${p.review_status.replace("_", " ")}</span></td>
             `;
             tr.addEventListener("click", () => openReviewerModal(p.paper_id, p.run_id, p.title));

@@ -226,16 +226,26 @@ td.title-cell {
 }
 
 /* Run cell metrics tooltip */
-.run-cell {
-    position: relative;
+td[data-metrics] {
+    cursor: default;
 }
 
-.metrics-tooltip {
-    display: none;
-    position: absolute;
-    left: 0;
-    top: 100%;
-    z-index: 200;
+td[data-metrics]:hover {
+    background: inherit;
+}
+
+.run-link {
+    color: #0066cc;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 0.85rem;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    cursor: pointer;
+}
+
+.metrics-popup {
+    position: fixed;
+    z-index: 1000;
     background: #1a1a1a;
     color: #eee;
     font-size: 0.75rem;
@@ -246,10 +256,6 @@ td.title-cell {
     box-shadow: 0 4px 12px rgba(0,0,0,0.25);
     pointer-events: none;
     line-height: 1.5;
-}
-
-.run-cell:hover .metrics-tooltip {
-    display: block;
 }
 
 /* Status badges */
