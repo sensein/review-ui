@@ -250,6 +250,17 @@ def save_comparison(paper_id: str, reviewer: str, data: dict) -> None:
     p.write_text(json.dumps(data, indent=2))
 
 
+def load_results_comparison(paper_id: str) -> dict | None:
+    """Load compare_results_report.json from the paper directory, if it exists."""
+    p = PAPERS_DIR / paper_id / "compare_results_report.json"
+    if p.exists():
+        try:
+            return json.loads(p.read_text())
+        except (json.JSONDecodeError, OSError):
+            pass
+    return None
+
+
 def list_reviews(paper_id: str, run_id: str) -> list[dict]:
     """List all review files for a paper/run."""
     d = _review_dir(paper_id, run_id)

@@ -63,6 +63,7 @@
     const modalError = $("#modal-error");
 
     // Comparison elements
+    const resultsComparisonSection = $("#results-comparison-section");
     const comparisonComment = $("#comparison-comment");
     const comparisonSaveStatus = $("#comparison-save-status");
 
@@ -110,6 +111,7 @@
         reviewView.classList.add("hidden");
         runsListView.classList.remove("hidden");
         initComparison(paperData);
+        loadResultsComparison(paperData.paper_id);
     }
 
 
@@ -213,6 +215,212 @@
             `;
             tr.addEventListener("click", () => showRunsList(paper));
             papersTbody.appendChild(tr);
+        });
+    }
+
+    // --- Results Comparison ---
+
+    async function loadResultsComparison(paperId) {
+        resultsComparisonSection.classList.add("hidden");
+        resultsComparisonSection.innerHTML = "";
+        const res = await fetch(`/api/papers/${paperId}/results-comparison`);
+        if (!res.ok) return;
+        const data = await res.json();
+        renderResultsComparison(data);
+        resultsComparisonSection.classList.remove("hidden");
+    }
+
+    function renderResultsComparison(data) {
+        const { overall_summary, pairwise } = data;
+
+        // ── Overall summary table ────────────────────────────────────────────
+        const summaryRows = overall_summary.map((row) => `
+            <tr>
+                <td class="rc-pair-label">${esc(row.pair)}</td>
+                <td class="rc-metric">${esc(row.avg_result_similarity)}</td>
+                <td class="rc-metric">${esc(row.result_match_rate)}</td>
+                <td class="rc-metric">${esc(row.evaluation_type_agreement)}</td>
+                <td class="rc-metric">${esc(row.result_type_agreement)}</td>
+                <td class="rc-metric">${esc(row.avg_claim_set_jaccard)}</td>
+                <td class="rc-metric">${esc(row.avg_claim_similarity)}</td>
+            </tr>
+        `).join("");
+
+        // ── Per-pair accordion ───────────────────────────────────────────────
+        const pairSections = pairwise.map((pair, pairIdx) => {
+            const s = pair.summary;
+            const m = s.metrics;
+
+            // Distribution rows
+            const evalTypes = Object.keys(s.evaluation_type_distribution);
+            const evalDistRows = evalTypes.map((t) => {
+                const counts = s.evaluation_type_distribution[t];
+                const [aLabel, bLabel] = [pair.label_a, pair.label_b];
+                return `<tr>
+                    <td class="rc-dist-label">${esc(t)}</td>
+                    <td class="rc-dist-val">${counts[aLabel] ?? 0}</td>
+                    <td class="rc-dist-val">${counts[bLabel] ?? 0}</td>
+                </tr>`;
+            }).join("");
+
+            const resTypes = Object.keys(s.result_type_distribution);
+            const resDistRows = resTypes.map((t) => {
+                const counts = s.result_type_distribution[t];
+                const [aLabel, bLabel] = [pair.label_a, pair.label_b];
+                return `<tr>
+                    <td class="rc-dist-label">${esc(t)}</td>
+                    <td class="rc-dist-val">${counts[aLabel] ?? 0}</td>
+                    <td class="rc-dist-val">${counts[bLabel] ?? 0}</td>
+                </tr>`;
+            }).join("");
+
+            // Matched pairs
+            const matchedRows = s.matched_pairs.map((mp, mpIdx) => {
+                const evalIcon = mp.evaluation_type_match ? "✓" : "✗";
+                const typeIcon = mp.result_type_match ? "✓" : "✗";
+                const evalCls = mp.evaluation_type_match ? "rc-check-pass" : "rc-check-fail";
+                const typeCls = mp.result_type_match ? "rc-check-pass" : "rc-check-fail";
+                const claimPairsId = `rc-claims-${pairIdx}-${mpIdx}`;
+
+                const claimPairRows = mp.matched_claim_pairs.map((cp) => `
+                    <div class="rc-claim-pair">
+                        <div class="rc-claim-sim">${esc(cp.similarity)}</div>
+                        <div class="rc-claim-texts">
+                            <div class="rc-claim-text">${esc(cp.claim_a)}</div>
+                            <div class="rc-claim-text rc-claim-b">${esc(cp.claim_b)}</div>
+                        </div>
+                    </div>
+                `).join("");
+
+                const claimsToggle = mp.matched_claim_pairs.length > 0 ? `
+                    <button class="rc-claims-toggle" data-target="${claimPairsId}">
+                        ${mp.n_matched_claims} matched claim${mp.n_matched_claims !== 1 ? "s" : ""}
+                    </button>
+                    <div id="${claimPairsId}" class="rc-claim-pairs hidden">${claimPairRows}</div>
+                ` : `<span class="rc-no-claims">0 matched claims</span>`;
+
+                return `
+                    <div class="rc-matched-pair">
+                        <div class="rc-matched-pair-header">
+                            <span class="rc-pair-ids">${esc(mp.ids)}</span>
+                            <span class="rc-sim-badge">${esc(mp.result_similarity)}</span>
+                            <span class="${evalCls}" title="Evaluation type match">${evalIcon} Eval</span>
+                            <span class="${typeCls}" title="Result type match">${typeIcon} Type</span>
+                            <span class="rc-claim-counts">${esc(mp.claims)}</span>
+                            <span class="rc-jaccard">Jaccard ${esc(mp.claim_set_jaccard)}</span>
+                        </div>
+                        <div class="rc-result-texts">
+                            <div class="rc-result-text rc-result-a">
+                                <span class="rc-run-tag">${esc(pair.label_a)}</span>
+                                ${esc(mp.result_a)}
+                            </div>
+                            <div class="rc-result-text rc-result-b">
+                                <span class="rc-run-tag">${esc(pair.label_b)}</span>
+                                ${esc(mp.result_b)}
+                            </div>
+                        </div>
+                        ${claimsToggle}
+                    </div>
+                `;
+            }).join("");
+
+            // Unmatched
+            const unmatchedA = s.unmatched_a.length > 0 ? `
+                <div class="rc-unmatched">
+                    <span class="rc-unmatched-label">Only in ${esc(pair.label_a)} (${s.unmatched_a.length})</span>
+                    ${s.unmatched_a.map((r) => `<div class="rc-unmatched-item">${esc(r)}</div>`).join("")}
+                </div>` : "";
+            const unmatchedB = s.unmatched_b.length > 0 ? `
+                <div class="rc-unmatched">
+                    <span class="rc-unmatched-label">Only in ${esc(pair.label_b)} (${s.unmatched_b.length})</span>
+                    ${s.unmatched_b.map((r) => `<div class="rc-unmatched-item">${esc(r)}</div>`).join("")}
+                </div>` : "";
+
+            const bodyId = `rc-pair-body-${pairIdx}`;
+            return `
+                <div class="rc-pair-section">
+                    <button class="rc-pair-toggle" data-body="${bodyId}">
+                        <span class="rc-pair-toggle-label">${esc(s.pair)}</span>
+                        <span class="rc-stat-pill">${esc(m.result_level.avg_result_similarity)} sim</span>
+                        <span class="rc-stat-pill">${esc(m.result_level.result_match_rate)} matched</span>
+                        <span class="rc-stat-pill">${esc(m.result_level.evaluation_type_agreement)} eval agr</span>
+                        <span class="rc-toggle-arrow">▾</span>
+                    </button>
+                    <div id="${bodyId}" class="rc-pair-body hidden">
+                        <div class="rc-distributions">
+                            <table class="rc-dist-table">
+                                <thead><tr>
+                                    <th>Eval Type</th>
+                                    <th>${esc(pair.label_a)}</th>
+                                    <th>${esc(pair.label_b)}</th>
+                                </tr></thead>
+                                <tbody>${evalDistRows}</tbody>
+                            </table>
+                            <table class="rc-dist-table">
+                                <thead><tr>
+                                    <th>Result Type</th>
+                                    <th>${esc(pair.label_a)}</th>
+                                    <th>${esc(pair.label_b)}</th>
+                                </tr></thead>
+                                <tbody>${resDistRows}</tbody>
+                            </table>
+                        </div>
+                        <div class="rc-matched-pairs">
+                            <div class="rc-sub-heading">Matched Results (${m.matched_pairs})</div>
+                            ${matchedRows || '<p class="rc-empty">No matched result pairs above threshold.</p>'}
+                        </div>
+                        ${unmatchedA}${unmatchedB}
+                    </div>
+                </div>
+            `;
+        }).join("");
+
+        resultsComparisonSection.innerHTML = `
+            <div class="comparison-section rc-section">
+                <div class="comparison-header">
+                    <h2>Run Similarity Analysis</h2>
+                    <span class="field-hint">— automated comparison of results and claims across runs</span>
+                </div>
+                <div class="rc-body">
+                    <table class="rc-summary-table">
+                        <thead>
+                            <tr>
+                                <th>Pair</th>
+                                <th class="rc-tip" data-tooltip="Average cosine similarity between matched result descriptions across the two runs. Higher means the runs produced more semantically similar result summaries.">Result Sim</th>
+                                <th class="rc-tip" data-tooltip="Fraction of results (from the larger run) that were matched to a result in the other run above the similarity threshold. Lower means more results were unique to one run.">Match Rate</th>
+                                <th class="rc-tip" data-tooltip="Among matched result pairs, the fraction where both runs assigned the same evaluation (SUPPORTED vs UNSUPPORTED). High agreement means the LLM reached consistent conclusions.">Eval Agr</th>
+                                <th class="rc-tip" data-tooltip="Among matched result pairs, the fraction where both runs assigned the same significance (MAJOR vs MINOR). Disagreement here suggests the runs differ in how important they rated findings.">Type Agr</th>
+                                <th class="rc-tip" data-tooltip="Average Jaccard index of claim sets within matched result pairs: matched claims ÷ union of claims. Measures how much the supporting evidence overlaps between runs.">Claim Jac</th>
+                                <th class="rc-tip" data-tooltip="Average cosine similarity of matched claim pairs within each matched result. Captures how similarly the two runs worded the same underlying claim.">Claim Sim</th>
+                            </tr>
+                        </thead>
+                        <tbody>${summaryRows}</tbody>
+                    </table>
+                    <div class="rc-accordion">${pairSections}</div>
+                </div>
+            </div>
+        `;
+
+        // Wire up pair toggles
+        resultsComparisonSection.querySelectorAll(".rc-pair-toggle").forEach((btn) => {
+            btn.addEventListener("click", () => {
+                const body = document.getElementById(btn.dataset.body);
+                const arrow = btn.querySelector(".rc-toggle-arrow");
+                body.classList.toggle("hidden");
+                arrow.textContent = body.classList.contains("hidden") ? "▾" : "▴";
+            });
+        });
+
+        // Wire up claims-within-result toggles
+        resultsComparisonSection.querySelectorAll(".rc-claims-toggle").forEach((btn) => {
+            btn.addEventListener("click", () => {
+                const target = document.getElementById(btn.dataset.target);
+                target.classList.toggle("hidden");
+                const count = btn.textContent.trim().split(" ")[0];
+                btn.textContent = target.classList.contains("hidden")
+                    ? `${count} matched claim${count !== "1" ? "s" : ""}`
+                    : `Hide claim pairs`;
+            });
         });
     }
 

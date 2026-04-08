@@ -148,6 +148,14 @@ def save_comparison(paper_id: str, comparison: PaperComparison):
     return data
 
 
+@router.get("/papers/{paper_id}/results-comparison")
+def get_results_comparison(paper_id: str):
+    data = paper_svc.load_results_comparison(paper_id)
+    if data is None:
+        raise HTTPException(404, "No results comparison found")
+    return data
+
+
 @router.post("/papers/refresh")
 def refresh_papers():
     global _papers_cache
