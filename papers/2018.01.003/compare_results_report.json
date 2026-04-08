@@ -1,0 +1,1492 @@
+{
+  "config": {
+    "runs": {
+      "pymupdf4llm": "papers/2018.01.003/20260407_pymupdf4llm_anthropic",
+      "segmented": "papers/2018.01.003/20260407_segmented_anthropic",
+      "unsegmented": "papers/2018.01.003/20260407_unsegmented_anthropic"
+    },
+    "result_threshold": 0.5,
+    "claim_threshold": 0.4,
+    "similarity_backend": "sentence-transformers"
+  },
+  "overall_summary": [
+    {
+      "pair": "pymupdf4llm \u2194 segmented",
+      "avg_result_similarity": "75.6%",
+      "result_match_rate": "66.7%",
+      "evaluation_type_agreement": "93.8%",
+      "result_type_agreement": "56.2%",
+      "avg_claim_set_jaccard": "46.3%",
+      "avg_claim_similarity": "82.3%"
+    },
+    {
+      "pair": "pymupdf4llm \u2194 unsegmented",
+      "avg_result_similarity": "79.8%",
+      "result_match_rate": "45.8%",
+      "evaluation_type_agreement": "100.0%",
+      "result_type_agreement": "81.8%",
+      "avg_claim_set_jaccard": "59.8%",
+      "avg_claim_similarity": "86.8%"
+    },
+    {
+      "pair": "segmented \u2194 unsegmented",
+      "avg_result_similarity": "79.9%",
+      "result_match_rate": "64.7%",
+      "evaluation_type_agreement": "100.0%",
+      "result_type_agreement": "72.7%",
+      "avg_claim_set_jaccard": "41.9%",
+      "avg_claim_similarity": "88.8%"
+    }
+  ],
+  "pairwise": [
+    {
+      "label_a": "pymupdf4llm",
+      "label_b": "segmented",
+      "n_results_a": 24,
+      "n_results_b": 17,
+      "avg_result_similarity": 0.7562,
+      "result_match_rate": 0.6667,
+      "evaluation_type_agreement": 0.9375,
+      "result_type_agreement": 0.5625,
+      "avg_claim_set_jaccard": 0.4632,
+      "avg_claim_similarity": 0.8228,
+      "distribution_a": {
+        "evaluation_type": {
+          "SUPPORTED": 21,
+          "UNCERTAIN": 3
+        },
+        "result_type": {
+          "MINOR": 12,
+          "MAJOR": 12
+        }
+      },
+      "distribution_b": {
+        "evaluation_type": {
+          "SUPPORTED": 14,
+          "UNCERTAIN": 3
+        },
+        "result_type": {
+          "MAJOR": 9,
+          "MINOR": 8
+        }
+      },
+      "summary": {
+        "pair": "pymupdf4llm \u2194 segmented",
+        "metrics": {
+          "results": "24 vs 17",
+          "matched_pairs": 16,
+          "unmatched_a": 8,
+          "unmatched_b": 1,
+          "result_level": {
+            "avg_result_similarity": "75.6%",
+            "result_match_rate": "66.7%",
+            "evaluation_type_agreement": "93.8%",
+            "result_type_agreement": "56.2%"
+          },
+          "claim_set_level": {
+            "avg_claim_set_jaccard": "46.3%",
+            "avg_claim_similarity": "82.3%"
+          }
+        },
+        "evaluation_type_distribution": {
+          "SUPPORTED": {
+            "pymupdf4llm": 21,
+            "segmented": 14
+          },
+          "UNCERTAIN": {
+            "pymupdf4llm": 3,
+            "segmented": 3
+          }
+        },
+        "result_type_distribution": {
+          "MAJOR": {
+            "pymupdf4llm": 12,
+            "segmented": 9
+          },
+          "MINOR": {
+            "pymupdf4llm": 12,
+            "segmented": 8
+          }
+        },
+        "matched_pairs": [
+          {
+            "ids": "R16 \u2194 R14",
+            "result_similarity": "0.92",
+            "evaluation_type_match": true,
+            "result_type_match": false,
+            "claims": "3 (A) / 2 (B)",
+            "n_matched_claims": 2,
+            "claim_set_jaccard": "0.67",
+            "avg_claim_similarity": "1.00",
+            "result_a": "Tactile orientation tuning has not been reported in barrel cortex and may be generated in PPC to meet task demands. The arbitrary 45\u00b0 category boundary must also be learned. These observations suggest PPC functional properties are not hardwired but emerge through learning to solve task requirements.",
+            "result_b": "Tactile orientation tuning may be generated in PPC rather than inherited from barrel cortex, and the arbitrary 45\u00b0 category boundary must be learned, suggesting task-dependent plasticity.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "The reward rule boundary of 45\u00b0 was set arbitrarily, and its neuronal correlate must also be generated to meet behavioral demands.",
+                "claim_b": "The reward rule boundary of 45\u00b0 was set arbitrarily, and its neuronal correlate must also be generated to meet behavioral demands.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "While PPC could receive orientation-tuned signals from earlier stages of visual cortical processing, tactile orientation tuning has not been reported in barrel cortex and may be generated in PPC to meet specific behavioral demands.",
+                "claim_b": "While PPC could receive orientation-tuned signals from earlier stages of visual cortical processing, tactile orientation tuning has not been reported in barrel cortex and may be generated in PPC to meet specific behavioral demands.",
+                "similarity": "1.00"
+              }
+            ]
+          },
+          {
+            "ids": "R4 \u2194 R3",
+            "result_similarity": "0.88",
+            "evaluation_type_match": true,
+            "result_type_match": false,
+            "claims": "4 (A) / 3 (B)",
+            "n_matched_claims": 3,
+            "claim_set_jaccard": "0.75",
+            "avg_claim_similarity": "0.97",
+            "result_a": "Rats immediately generalized the categorization rule to novel orientations (90\u00b0-135\u00b0 and -45\u00b0 to 0\u00b0) in the first test session, performing equally well on new versus familiar stimuli (p>0.29 for all rats). This suggests rats solved the task by measuring angular distance from cardinal orientations rather than memorizing specific stimulus-reward associations.",
+            "result_b": "Rats generalized the orientation categorization rule to novel stimuli immediately upon first presentation, suggesting they solved the task by measuring angular distance from cardinal orientations.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "Rats were able to generalize this categorization rule to new stimuli upon the first instance.",
+                "claim_b": "Rats were able to generalize this categorization rule to new stimuli upon the first instance.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Rats seemed to solve the task by measuring the difference between the encountered orientation and the cardinal orientations of ''horizontal'' and ''vertical.''",
+                "claim_b": "Rats seemed to solve the task by measuring the difference between the encountered orientation and the cardinal orientations of 'horizontal' and 'vertical.'",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "In the first session with novel orientations, each rat performed equally well on the new versus the familiar stimuli (bootstrap test, all rats p > 0.29).",
+                "claim_b": "In the first session with novel orientations, each rat performed equally well on the new versus the familiar stimuli.",
+                "similarity": "0.91"
+              }
+            ]
+          },
+          {
+            "ids": "R1 \u2194 R17",
+            "result_similarity": "0.86",
+            "evaluation_type_match": true,
+            "result_type_match": true,
+            "claims": "6 (A) / 2 (B)",
+            "n_matched_claims": 2,
+            "claim_set_jaccard": "0.33",
+            "avg_claim_similarity": "0.96",
+            "result_a": "Rats were trained to categorize grating orientations into two categories (0\u00b0\u00b145\u00b0 as horizontal and 90\u00b0\u00b145\u00b0 as vertical) using a visual-tactile discrimination task with randomly interleaved V, T, and VT trials (32% each) plus 4% control trials. The stimulus was a circular grating (98 mm diameter) with raised parallel bars (3.5 mm width and depth) alternately colored white and black.",
+            "result_b": "The experimental stimulus was a 98mm diameter circular grating with 3.5mm raised bars, and rats were trained to categorize orientations 0-45\u00b0 as horizontal and 45-90\u00b0 as vertical.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "Rats were trained to categorize orientations in the range of 0\u00b0\u201345\u00b0 as horizontal, and orientations in the range of 45\u00b0\u201390\u00b0 as vertical.",
+                "claim_b": "Rats were trained to categorize orientations in the range of 0-45\u00b0 as horizontal, and orientations in the range of 45-90\u00b0 as vertical.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "The discriminandum had a circular boundary (98 mm diameter) and raised parallel bars.",
+                "claim_b": "The discriminandum had a circular boundary (98 mm diameter) and raised parallel bars (width and depth of 3.5 mm), alternately colored white and black.",
+                "similarity": "0.92"
+              }
+            ]
+          },
+          {
+            "ids": "R8 \u2194 R6",
+            "result_similarity": "0.85",
+            "evaluation_type_match": true,
+            "result_type_match": true,
+            "claims": "8 (A) / 7 (B)",
+            "n_matched_claims": 7,
+            "claim_set_jaccard": "0.88",
+            "avg_claim_similarity": "0.99",
+            "result_a": "PPC neurons showed task-related activity with two main response profiles: some neurons showed graded orientation tuning (firing rate modulated progressively from 0\u00b0 to 90\u00b0), while others showed categorical tuning (large firing rate changes at the 45\u00b0 boundary with poor modulation within categories). Neuronal responses were similar across V, T, and VT modality conditions.",
+            "result_b": "Individual PPC neurons showed task-related firing patterns that encoded either stimulus orientation in a graded manner or stimulus category with sharp transitions at the boundary, with similar temporal profiles across modalities.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "Similar temporal profiles characterized V, T, and VT trials for the example neuron.",
+                "claim_b": "Similar temporal profiles characterized V, T, and VT trials for the example neuron.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "The neuron had a stable firing rate of about 2 spikes/s as the rat awaited the trial onset.",
+                "claim_b": "The neuron had a stable firing rate of about 2 spikes/s as the rat awaited the trial onset.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "The category-selective neurons were poorly modulated by stimulus orientation within a choice category.",
+                "claim_b": "The category-selective neurons were poorly modulated by stimulus orientation within a choice category.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "About 200 ms after trial onset, the neuron's firing rate ramped upward and remained at about 8 spikes/s until 1 s after trial onset.",
+                "claim_b": "About 200 ms after trial onset, the neuron's firing rate ramped upward and remained at about 8 spikes/s until 1 s after trial onset.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "The second example neuron's firing rate was modulated by stimulus orientation, firing at a progressively lower rate from 0\u00b0 to 90\u00b0.",
+                "claim_b": "The second example neuron's firing rates were modulated by stimulus orientation, firing at a progressively lower rate from 0\u00b0 to 90\u00b0.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "The first example neuron's firing rate was modulated by stimulus orientation, firing at a progressively higher rate as angle increased from 0\u00b0 to 90\u00b0.",
+                "claim_b": "The first example neuron's firing rates were modulated by stimulus orientation, firing at a progressively higher rate as angle increased from 0\u00b0 to 90\u00b0.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Two neurons carried a large signal about stimulus category, with firing rates deviating according to the upcoming action (left or right).",
+                "claim_b": "Two example neurons carried a large signal about stimulus category, with firing rates deviating according to the upcoming action (left or right).",
+                "similarity": "0.95"
+              }
+            ]
+          },
+          {
+            "ids": "R11 \u2194 R9",
+            "result_similarity": "0.85",
+            "evaluation_type_match": true,
+            "result_type_match": true,
+            "claims": "5 (A) / 6 (B)",
+            "n_matched_claims": 5,
+            "claim_set_jaccard": "0.83",
+            "avg_claim_similarity": "0.95",
+            "result_a": "Conditional mutual information analysis revealed that ~50% of neurons (315/622) carried information about category conditional on angle, ~45% (284/622) carried information about angle conditional on category, and ~38% (239/622) carried both. 78% of dual-coding neurons clustered within \u00b10.05 bits of equal information, suggesting PPC is involved in supramodal stimulus-to-category transformation.",
+            "result_b": "PPC neurons jointly encoded stimulus orientation and category through conditional information analysis, with 78% of informative neurons showing both types of coding distributed along a continuum, suggesting PPC participates in stimulus-to-category transformation.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "About 50% of neurons (315 out 622, p < 0.01) carried significant information about category conditional on angle.",
+                "claim_b": "About 50% of neurons (315 out 622, p < 0.01) carried significant information about category conditional on angle.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "The simultaneous representation of both task properties suggests that PPC is involved in a supramodal stimulus-to-category transformation.",
+                "claim_b": "The simultaneous representation of both task properties suggests that PPC is involved in a supramodal stimulus-to-category transformation.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "About 45% of neurons (284 out of 622, p < 0.01) carried significant information about stimulus angle conditional upon perceived category.",
+                "claim_b": "About 45% of neurons (284 out of 622, p < 0.01) carried significant information about stimulus angle conditional upon perceived category.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "About 38% of neurons (239 out of 622, p < 0.01, bootstrap test) carried significant conditional information about both orientation and choice.",
+                "claim_b": "About 38% of neurons (239 out of 622, p < 0.01) carried significant conditional information about both orientation and choice.",
+                "similarity": "0.93"
+              },
+              {
+                "claim_a": "78% of neurons that carried information about both angle and category were clustered between the bands (R\u00b10.05 bits of information).",
+                "claim_b": "78% of neurons that carried information about both angle and category were clustered between the bands around the diagonal, indicating that PPC neurons tended to express both stimulus coding and category coding.",
+                "similarity": "0.80"
+              }
+            ]
+          },
+          {
+            "ids": "R13 \u2194 R12",
+            "result_similarity": "0.83",
+            "evaluation_type_match": true,
+            "result_type_match": true,
+            "claims": "3 (A) / 2 (B)",
+            "n_matched_claims": 2,
+            "claim_set_jaccard": "0.67",
+            "avg_claim_similarity": "0.78",
+            "result_a": "PPC is involved in supramodal processing of shape, contributing to the formation of a supramodal object representation and participating in percept-to-action transformation. However, this interpretation is based on correlational evidence; causal evidence would require perturbation experiments.",
+            "result_b": "PPC contributes to forming supramodal object representations and participates in percept-to-action transformation, with functional properties emerging through learning rather than being hardwired.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "PPC contributes to the formation of a supramodal representation of the object and participates in the percept-to-action transformation carried out by a network of cortical regions.",
+                "claim_b": "PPC contributes to the formation of a supramodal representation of the object and participates in the percept-to-action transformation carried out by a network of cortical regions.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "This interpretation is based on correlations between trial-by-trial neuronal firing and whole-animal behavior; evidence for a direct causal role of PPC might emerge from external manipulations of this region during execution of the behavior.",
+                "claim_b": "The functional properties of PPC neurons are not hardwired but rather emerge through a learning process in order to solve the requirements of ongoing tasks.",
+                "similarity": "0.55"
+              }
+            ]
+          },
+          {
+            "ids": "R10 \u2194 R8",
+            "result_similarity": "0.82",
+            "evaluation_type_match": true,
+            "result_type_match": true,
+            "claims": "4 (A) / 2 (B)",
+            "n_matched_claims": 2,
+            "claim_set_jaccard": "0.50",
+            "avg_claim_similarity": "0.96",
+            "result_a": "Only 5% (30/622) of PPC neurons showed significant modality selectivity (p<0.01), while over 50% (318/622) showed significant category selectivity (p<0.01). Among category-selective neurons, more preferred rightward choices (219/318), suggesting contralateral preference in left PPC. The population encoded stimulus properties (orientation and category) irrespective of modality.",
+            "result_b": "Over 50% of PPC neurons showed significant selectivity for the rat's upcoming choice, with a bias toward contralateral (right) choices in left PPC.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "A greater number of neurons (219 out of 318 neurons) was selective for turns to the right (index < 0) than to the left (index > 0), suggesting overall opposite-side preference in left PPC.",
+                "claim_b": "A greater number of neurons (219 out of 318 neurons) was selective for turns to the right than to the left, suggesting overall opposite-side preference in left PPC.",
+                "similarity": "0.98"
+              },
+              {
+                "claim_a": "Over 50% of neurons (318 out of 622) were significantly selective (p < 0.01; permutation test) for the upcoming choice of the rat.",
+                "claim_b": "Over 50% of neurons (318 out of 622) were significantly selective (p < 0.01) for the upcoming choice of the rat.",
+                "similarity": "0.93"
+              }
+            ]
+          },
+          {
+            "ids": "R12 \u2194 R10",
+            "result_similarity": "0.79",
+            "evaluation_type_match": true,
+            "result_type_match": true,
+            "claims": "10 (A) / 7 (B)",
+            "n_matched_claims": 7,
+            "claim_set_jaccard": "0.70",
+            "avg_claim_similarity": "0.99",
+            "result_a": "A linear discriminant classifier trained on PPC population activity (300 ms before response) achieved >90% accuracy in predicting rat choices (91-99% in 9/10 sessions, 70% in 1 session, p<0.001). Decoder performance was ~50% before trial onset (indicating no pre-stimulus bias) and increased to >90% by 250 ms before response. Almost all neurons contributed non-zero weights. The classifier replicated behavioral psychometric curves across modalities using cross-modality training, demonstrating supramodal population coding.",
+            "result_b": "A linear classifier trained on PPC population activity could predict rats' choices with >90% accuracy, with performance increasing from chance before stimulus onset to >90% by 250ms before response, and nearly all neurons contributing to classification.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "When tested, the classifier replicated the rat's behavior on over 90% of trials.",
+                "claim_b": "When tested, the classifier replicated the rat's behavior on over 90% of trials.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "This suggests that the PPC population did not manifest a choice bias before encountering the stimulus.",
+                "claim_b": "This suggests that the PPC population did not manifest a choice bias before encountering the stimulus.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Performance gradually increased to >90% on average by around 250 ms before the response lick.",
+                "claim_b": "Performance gradually increased to >90% on average by around 250 ms before the response lick.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Almost all neuronal weights were non-zero in each session, indicating that every neuron in the population contributed to the classifier's performance.",
+                "claim_b": "Almost all neuronal weights were non-zero in each session, indicating that every neuron in the population contributed to the classifier's performance.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "The classifier was able to determine a boundary that could separate the population's activity into two states associated with the rat's two choices.",
+                "claim_b": "The classifier was able to determine a boundary that could separate the population's activity into two states associated with the rat's two choices.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Peak decoder performance measured in 5 rats ranged from 91% to 99% (9 sessions), with 1 session at 70% (p < 0.001, permutation test).",
+                "claim_b": "Peak decoder performance measured in 5 rats ranged from 91% to 99% (9 sessions), with 1 session at 70% (p < 0.001).",
+                "similarity": "0.99"
+              },
+              {
+                "claim_a": "About 1 s before the response (i.e., before trial onset), the decoder's performance was around 50%.",
+                "claim_b": "About 1 s before the response, the decoder's performance was around 50%.",
+                "similarity": "0.93"
+              }
+            ]
+          },
+          {
+            "ids": "R19 \u2194 R7",
+            "result_similarity": "0.75",
+            "evaluation_type_match": false,
+            "result_type_match": false,
+            "claims": "4 (A) / 6 (B)",
+            "n_matched_claims": 3,
+            "claim_set_jaccard": "0.43",
+            "avg_claim_similarity": "0.51",
+            "result_a": "A previous study (Raposo et al. 2014) found that PPC neurons showed modality selectivity when rats judged quantities of auditory/visual pulses, contrasting with the modality-free coding observed here. The authors hypothesize that supramodal coding arises from simultaneous arrival of congruous signals about a real object, which may better reflect natural statistics.",
+            "result_b": "PPC neuronal responses were largely invariant to stimulus modality, with only 5% of neurons showing modality selectivity, while firing rates remained consistent across visual, tactile, and bimodal conditions.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "In a recent study in which rats judged the quantities of auditory and/or visual pulses in a train, many neurons in PPC responded differentially on trials of the two modalities; indeed, modality itself could be decoded from neuronal firing.",
+                "claim_b": "This population of neurons did not appear to be informative about the modality of the stimulus but instead generated a robust signal about stimulus properties-orientation and the choice category associated with that orientation-irrespective of modality.",
+                "similarity": "0.62"
+              },
+              {
+                "claim_a": "This contrasts with the modality-free coding of the object in our study.",
+                "claim_b": "The independence of firing rate on modality held across the six stimulus orientations.",
+                "similarity": "0.51"
+              },
+              {
+                "claim_a": "We hypothesize that supramodal coding is a consequence of the nearly simultaneous arrival in PPC of congruous signals, through two sensory channels, about a real object.",
+                "claim_b": "Just 5% (30 out of 622) of neurons were selective (p < 0.01) for stimulus modality.",
+                "similarity": "0.41"
+              }
+            ]
+          },
+          {
+            "ids": "R17 \u2194 R13",
+            "result_similarity": "0.75",
+            "evaluation_type_match": true,
+            "result_type_match": true,
+            "claims": "9 (A) / 4 (B)",
+            "n_matched_claims": 4,
+            "claim_set_jaccard": "0.44",
+            "avg_claim_similarity": "1.00",
+            "result_a": "Supralinear multisensory integration has been reported previously and could arise from partial exploitation of unimodal information due to reduced motivation, or from violation of channel independence assumptions. Possible mechanisms include cross-modal sensorimotor interactions (e.g., vision guiding whisker palpation) or cortical synergy (e.g., cross-modal inhibition reducing noise in sensory representations).",
+            "result_b": "Supralinear combination may result from violation of the independence assumption, potentially through behavioral strategies (visual guidance of tactile exploration) or neural mechanisms (cross-modal inhibition of noise).",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "Supralinear combination could occur if the information available on unimodal trials were only partially exploited, while the information available on bimodal trials were completely exploited.",
+                "claim_b": "Supralinear combination could occur if the information available on unimodal trials were only partially exploited, while the information available on bimodal trials were completely exploited.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Inhibition between cortical regions could allow activity evoked through one modality to suppress the non-specific noise in the other modality's stimulus representation.",
+                "claim_b": "Inhibition between cortical regions could allow activity evoked through one modality to suppress the non-specific noise in the other modality's stimulus representation.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "The visual cue might help the rat palpate the surface with its whiskers more efficiently, boosting the tactile signal.",
+                "claim_b": "The visual cue might help the rat palpate the surface with its whiskers more efficiently, boosting the tactile signal.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "The observed supralinearity could result from a violation of the independence assumption\u2014visual and tactile signals might not be processed independently in bimodal trials.",
+                "claim_b": "The observed supralinearity could result from a violation of the independence assumption - visual and tactile signals might not be processed independently in bimodal trials.",
+                "similarity": "1.00"
+              }
+            ]
+          },
+          {
+            "ids": "R14 \u2194 R1",
+            "result_similarity": "0.71",
+            "evaluation_type_match": true,
+            "result_type_match": false,
+            "claims": "3 (A) / 10 (B)",
+            "n_matched_claims": 3,
+            "claim_set_jaccard": "0.30",
+            "avg_claim_similarity": "1.00",
+            "result_a": "Rats demonstrated fine orientation discrimination in both visual and tactile modalities, with sensitivity to 5\u00b0 angle differences in both modalities. This confirms that visual capacities of Long-Evans rats may be underestimated and demonstrates comparable tactile acuity using whiskers and snout.",
+            "result_b": "Rats can perform fine orientation discrimination using vision alone, touch alone, or both modalities together, with individual rats showing different modality-specific acuities but all performing better when both modalities are available.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "In both modalities rats were sensitive to 5\u00b0 angle differences.",
+                "claim_b": "In both modalities rats were sensitive to 5\u00b0 angle differences.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Rats were able to perform fine orientation discriminations in the purely visual (V) condition, confirming that the visual capacities of Long-Evans rats might be widely underestimated.",
+                "claim_b": "Rats were able to perform fine orientation discriminations in the purely visual (V) condition, confirming that the visual capacities of Long-Evans rats might be widely underestimated.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "In the purely tactile (T) condition, rats were also able to perform fine orientation discriminations using their snout and whiskers.",
+                "claim_b": "In the purely tactile (T) condition, rats were also able to perform fine orientation discriminations using their snout and whiskers.",
+                "similarity": "1.00"
+              }
+            ]
+          },
+          {
+            "ids": "R23 \u2194 R16",
+            "result_similarity": "0.70",
+            "evaluation_type_match": true,
+            "result_type_match": true,
+            "claims": "4 (A) / 13 (B)",
+            "n_matched_claims": 4,
+            "claim_set_jaccard": "0.31",
+            "avg_claim_similarity": "0.55",
+            "result_a": "Previous multisensory studies have used arbitrary cross-modal associations. Vision and touch likely evolved together to explore spatial properties of the environment, and rodents may need to navigate oriented structures whether seen or felt. The brain's capacity for modality-independent object knowledge requires processing stages where information is encoded by multiple channels, and PPC contributes to this abstraction.",
+            "result_b": "The study builds on established knowledge about multisensory integration, PPC anatomy and function, and cross-modal cortical interactions from prior literature.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "The brain's capacity to call up knowledge about things independently of sensory input channel requires a stage of processing in which the same information is encoded by both channels, and PPC seems to contribute to this abstraction of stimuli from sensory domains.",
+                "claim_b": "The brain's capacity to call up knowledge about things independently of sensory input channel requires a stage of processing in which the same information is encoded by both channels.",
+                "similarity": "0.81"
+              },
+              {
+                "claim_a": "Numerous studies have trained subjects to associate the sensory data originating in two modalities by some arbitrary rule.",
+                "claim_b": "Primate PPC receives input from cortical areas representing multiple sensory modalities and communicates back to these territories.",
+                "similarity": "0.53"
+              },
+              {
+                "claim_a": "A rodent might need to maneuver through oriented bars, whether those bars are seen or felt.",
+                "claim_b": "Humans, non-human primates, and rodents demonstrate heightened accuracy of perceptual judgements when multiple cues are combined.",
+                "similarity": "0.43"
+              },
+              {
+                "claim_a": "Vision and touch have likely evolved together to explore the shape, form, and spatial properties of the environment.",
+                "claim_b": "PPC is a good candidate for visual-tactile convergence.",
+                "similarity": "0.41"
+              }
+            ]
+          },
+          {
+            "ids": "R6 \u2194 R5",
+            "result_similarity": "0.67",
+            "evaluation_type_match": true,
+            "result_type_match": false,
+            "claims": "6 (A) / 1 (B)",
+            "n_matched_claims": 1,
+            "claim_set_jaccard": "0.17",
+            "avg_claim_similarity": "0.91",
+            "result_a": "Supralinear VT performance persisted in block design sessions (where modalities were not interleaved), with measured \u03c3VT values remaining close to or better than Bayesian optimal estimates. Response times were similar across modalities and longer for difficult trials (near 45\u00b0 boundary), arguing against motivational confounds or premature evidence truncation on unimodal trials.",
+            "result_b": "Supralinear combination persisted in block design experiments where modality conditions were not interleaved.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "Comparing across sessions, rats still combined V and T signals in a supralinear fashion in block design sessions.",
+                "claim_b": "Comparing across sessions, rats still combined V and T signals in a supralinear fashion to guide VT performance in block design experiments.",
+                "similarity": "0.91"
+              }
+            ]
+          },
+          {
+            "ids": "R20 \u2194 R2",
+            "result_similarity": "0.65",
+            "evaluation_type_match": true,
+            "result_type_match": false,
+            "claims": "4 (A) / 11 (B)",
+            "n_matched_claims": 2,
+            "claim_set_jaccard": "0.15",
+            "avg_claim_similarity": "0.48",
+            "result_a": "Prior psychophysical studies show that humans, non-human primates, and rodents demonstrate heightened accuracy when combining multiple cues, sometimes approaching optimal observer performance. PPC is anatomically positioned between primary sensory cortices and is a candidate for visual-tactile convergence, though the degree of multisensory convergence in rodent PPC is debated.",
+            "result_b": "Rats combined visual and tactile signals in a supralinear manner, exceeding predictions from a Bayesian ideal-observer model, with the greatest benefit at intermediate orientations.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "Humans, non-human primates, and rodents demonstrate heightened accuracy of perceptual judgements when multiple cues are combined.",
+                "claim_b": "In the majority of rats the signals carried by the two sensory channels were not merged independently but were combined in a synergistic manner.",
+                "similarity": "0.51"
+              },
+              {
+                "claim_a": "The degree of multisensory convergence within PPC in rodents is debated.",
+                "claim_b": "9 out of 12 rats combined V and T signals in a supralinear manner.",
+                "similarity": "0.45"
+              }
+            ]
+          },
+          {
+            "ids": "R9 \u2194 R11",
+            "result_similarity": "0.55",
+            "evaluation_type_match": true,
+            "result_type_match": true,
+            "claims": "5 (A) / 3 (B)",
+            "n_matched_claims": 1,
+            "claim_set_jaccard": "0.14",
+            "avg_claim_similarity": "0.59",
+            "result_a": "Single neurons in PPC exhibited nearly identical responses under V, T, and VT conditions. Across 622 neurons, firing rates were highly correlated between modalities (Pearson R=0.96-0.99 across orientations), with points clustering near the diagonal in V vs T plots, demonstrating supramodal coding.",
+            "result_b": "The PPC population code was supramodal, as demonstrated by successful cross-modality decoding where classifiers trained on one modality could predict behavior on different modalities, with signals paralleling behavioral performance across conditions.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "Single neurons in PPC exhibited identical responses under the three modality conditions (V, T, and VT).",
+                "claim_b": "The orientation and category signal carried by neurons in the three modality conditions could not be distinguished except by its greater robustness in VT trials.",
+                "similarity": "0.59"
+              }
+            ]
+          },
+          {
+            "ids": "R2 \u2194 R4",
+            "result_similarity": "0.52",
+            "evaluation_type_match": true,
+            "result_type_match": false,
+            "claims": "10 (A) / 6 (B)",
+            "n_matched_claims": 2,
+            "claim_set_jaccard": "0.14",
+            "avg_claim_similarity": "0.55",
+            "result_a": "Rats showed individual differences in modality-specific acuity (some better at V, others at T), but all rats performed significantly better in the VT condition than in either unimodal condition. VT performance showed reduced \u03c3 (p<0.001), reduced lapse rates (p=0.000), and more accurate boundary detection (PSE closer to 45\u00b0, p<0.02) compared to V and T conditions.",
+            "result_b": "Response times were longer for difficult trials near the category boundary and similar across modality conditions, indicating rats did not differentially truncate evidence accumulation based on trial difficulty or modality.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "Rats showed a more accurate detection of the horizontal and vertical boundary in VT condition, assessed by the point of subjective equality (PSE closer to 45\u00b0, p < 0.02 for V and T in average curve compared to VT).",
+                "claim_b": "In all modality conditions, rats' response time was nearly 150 ms longer on trials with orientation near the 45\u00b0 category boundary.",
+                "similarity": "0.60"
+              },
+              {
+                "claim_a": "Rats 12 and 1 performed better in the V condition.",
+                "claim_b": "The rats seemed to try to acquire additional evidence on difficult trials rather than undersampling them.",
+                "similarity": "0.49"
+              }
+            ]
+          }
+        ],
+        "unmatched_a": [
+          "Multisensory benefit varied with stimulus orientation: no benefit at 45\u00b0 (category boundary where performance is at chance), limited benefit at cardinal orientations (0\u00b0 and 90\u00b0 where unimodal performance was already high), and greatest benefit at intermediate orientations (20\u00b0-35\u00b0 and 55\u00b0-70\u00b0).",
+          "The majority of rats (9/12 by Bayesian analysis, 8/12 by mutual information analysis) combined V and T signals in a supralinear manner, exceeding predictions from optimal linear combination of independent sensory channels. The two analytical approaches were correlated (R=0.6), providing converging evidence for synergistic multisensory integration.",
+          "Response times ranged from 435-734 ms (interquartile range) and were nearly 150 ms longer for orientations near the 45\u00b0 category boundary compared to cardinal orientations.",
+          "The orientation and category signals in PPC neurons were indistinguishable across modalities except for greater robustness in VT trials (mirroring behavioral performance). Individual neurons showed a continuum from orientation tuning to category tuning, with graded firing within categories or large steps at the 45\u00b0 boundary.",
+          "Evidence from mouse studies shows that auditory cortex activation can drive GABAergic inhibition in primary visual cortex and sharpen orientation selectivity of V1 neurons, supporting the possibility of cross-modal cortical interactions.",
+          "Primate PPC receives input from multiple sensory modalities and projects back to these areas. Rat PPC is considered homologous to primate PPC based on shared reciprocal connectivity with sensory, frontal, temporal, and limbic regions, positioning it to receive unimodal signals and transmit processed information downstream.",
+          "A previous study (Polley et al. 2005) showed that rats could learn whisker-dependent orientation discrimination in a single trial with resolution on the order of 45\u00b0.",
+          "Twelve male Long-Evans rats (8 weeks old, ~250g at arrival, growing to >600g) were used. They were maintained on 12/12 hr light/dark cycle with experiments during light phase, received 17-22 mL diluted pear juice as reward per session, and all protocols were approved by SISSA Ethics Committee and Italian Health Ministry."
+        ],
+        "unmatched_b": [
+          "Supramodal coding may arise from simultaneous arrival of congruent signals about real objects, reflecting ecological statistics and evolutionary co-development of vision and touch."
+        ]
+      }
+    },
+    {
+      "label_a": "pymupdf4llm",
+      "label_b": "unsegmented",
+      "n_results_a": 24,
+      "n_results_b": 11,
+      "avg_result_similarity": 0.7981,
+      "result_match_rate": 0.4583,
+      "evaluation_type_agreement": 1.0,
+      "result_type_agreement": 0.8182,
+      "avg_claim_set_jaccard": 0.5978,
+      "avg_claim_similarity": 0.868,
+      "distribution_a": {
+        "evaluation_type": {
+          "SUPPORTED": 21,
+          "UNCERTAIN": 3
+        },
+        "result_type": {
+          "MINOR": 12,
+          "MAJOR": 12
+        }
+      },
+      "distribution_b": {
+        "evaluation_type": {
+          "SUPPORTED": 8,
+          "UNCERTAIN": 3
+        },
+        "result_type": {
+          "MAJOR": 6,
+          "MINOR": 5
+        }
+      },
+      "summary": {
+        "pair": "pymupdf4llm \u2194 unsegmented",
+        "metrics": {
+          "results": "24 vs 11",
+          "matched_pairs": 11,
+          "unmatched_a": 13,
+          "unmatched_b": 0,
+          "result_level": {
+            "avg_result_similarity": "79.8%",
+            "result_match_rate": "45.8%",
+            "evaluation_type_agreement": "100.0%",
+            "result_type_agreement": "81.8%"
+          },
+          "claim_set_level": {
+            "avg_claim_set_jaccard": "59.8%",
+            "avg_claim_similarity": "86.8%"
+          }
+        },
+        "evaluation_type_distribution": {
+          "SUPPORTED": {
+            "pymupdf4llm": 21,
+            "unsegmented": 8
+          },
+          "UNCERTAIN": {
+            "pymupdf4llm": 3,
+            "unsegmented": 3
+          }
+        },
+        "result_type_distribution": {
+          "MAJOR": {
+            "pymupdf4llm": 12,
+            "unsegmented": 6
+          },
+          "MINOR": {
+            "pymupdf4llm": 12,
+            "unsegmented": 5
+          }
+        },
+        "matched_pairs": [
+          {
+            "ids": "R21 \u2194 R9",
+            "result_similarity": "0.91",
+            "evaluation_type_match": true,
+            "result_type_match": true,
+            "claims": "3 (A) / 3 (B)",
+            "n_matched_claims": 3,
+            "claim_set_jaccard": "1.00",
+            "avg_claim_similarity": "0.96",
+            "result_a": "Primate PPC receives input from multiple sensory modalities and projects back to these areas. Rat PPC is considered homologous to primate PPC based on shared reciprocal connectivity with sensory, frontal, temporal, and limbic regions, positioning it to receive unimodal signals and transmit processed information downstream.",
+            "result_b": "Rat PPC is anatomically positioned to integrate multisensory information, receiving input from multiple sensory cortices and sharing reciprocal connectivity patterns with primate PPC.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "Primate PPC receives input from cortical areas representing multiple sensory modalities and communicates back to these territories.",
+                "claim_b": "Primate PPC receives input from cortical areas representing multiple sensory modalities and communicates back to these territories.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "PPC in rats is held to be homologous to primate PPC, as it shares the characteristic reciprocal connectivity with sensory, frontal, temporal, and limbic cortical regions.",
+                "claim_b": "PPC in rats is held to be homologous to primate PPC, as it shares the characteristic reciprocal connectivity with sensory, frontal, temporal, and limbic cortical regions.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "PPC is well positioned to receive unimodal sensory signals and transmit a processed form of those signals to downstream cortical regions.",
+                "claim_b": "PPC is well positioned to receive unimodal sensory signals.",
+                "similarity": "0.89"
+              }
+            ]
+          },
+          {
+            "ids": "R12 \u2194 R6",
+            "result_similarity": "0.90",
+            "evaluation_type_match": true,
+            "result_type_match": true,
+            "claims": "10 (A) / 5 (B)",
+            "n_matched_claims": 5,
+            "claim_set_jaccard": "0.50",
+            "avg_claim_similarity": "0.95",
+            "result_a": "A linear discriminant classifier trained on PPC population activity (300 ms before response) achieved >90% accuracy in predicting rat choices (91-99% in 9/10 sessions, 70% in 1 session, p<0.001). Decoder performance was ~50% before trial onset (indicating no pre-stimulus bias) and increased to >90% by 250 ms before response. Almost all neurons contributed non-zero weights. The classifier replicated behavioral psychometric curves across modalities using cross-modality training, demonstrating supramodal population coding.",
+            "result_b": "A linear classifier trained on PPC population activity decoded the rat's choices with 91-99% accuracy (9/10 sessions), with nearly all neurons contributing non-zero weights. Cross-modality decoding demonstrated the population code was supramodal and could account for behavior.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "When tested, the classifier replicated the rat's behavior on over 90% of trials.",
+                "claim_b": "When tested, the classifier replicated the rat's behavior on over 90% of trials.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Almost all neuronal weights were non-zero in each session, indicating that every neuron in the population contributed to the classifier's performance.",
+                "claim_b": "Almost all neuronal weights were non-zero in each session, indicating that every neuron in the population contributed to the classifier's performance.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Across different modalities, the signal carried by the PPC population closely paralleled behavior.",
+                "claim_b": "The signal carried by the PPC population closely paralleled behavior across different modalities.",
+                "similarity": "0.99"
+              },
+              {
+                "claim_a": "Peak decoder performance measured in 5 rats ranged from 91% to 99% (9 sessions), with 1 session at 70% (p < 0.001, permutation test).",
+                "claim_b": "Peak decoder performance measured in 5 rats ranged from 91% to 99% (9 sessions), with 1 session at 70% (p < 0.001).",
+                "similarity": "0.99"
+              },
+              {
+                "claim_a": "Since for each trial the classifier was trained using only trials with modality different from the test trial, we can conclude that the population code was supramodal and could account for the rats' behavior.",
+                "claim_b": "The population code was supramodal and could account for the rats' behavior.",
+                "similarity": "0.76"
+              }
+            ]
+          },
+          {
+            "ids": "R1 \u2194 R1",
+            "result_similarity": "0.90",
+            "evaluation_type_match": true,
+            "result_type_match": false,
+            "claims": "6 (A) / 10 (B)",
+            "n_matched_claims": 4,
+            "claim_set_jaccard": "0.33",
+            "avg_claim_similarity": "0.81",
+            "result_a": "Rats were trained to categorize grating orientations into two categories (0\u00b0\u00b145\u00b0 as horizontal and 90\u00b0\u00b145\u00b0 as vertical) using a visual-tactile discrimination task with randomly interleaved V, T, and VT trials (32% each) plus 4% control trials. The stimulus was a circular grating (98 mm diameter) with raised parallel bars (3.5 mm width and depth) alternately colored white and black.",
+            "result_b": "Rats successfully learned to categorize grating orientations (0-45\u00b0 as horizontal, 45-90\u00b0 as vertical) using visual, tactile, or combined visual-tactile cues. They immediately generalized this rule to novel orientations, suggesting they categorized based on deviation from cardinal orientations rather than memorizing specific angles.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "Rats were trained to categorize orientations in the range of 0\u00b0\u201345\u00b0 as horizontal, and orientations in the range of 45\u00b0\u201390\u00b0 as vertical.",
+                "claim_b": "Rats were trained to categorize orientations from 0 to 45\u00b0 as horizontal and orientations from 45 to 90\u00b0 as vertical.",
+                "similarity": "0.98"
+              },
+              {
+                "claim_a": "The discriminandum had a circular boundary (98 mm diameter) and raised parallel bars.",
+                "claim_b": "The discriminandum had a circular boundary (98 mm diameter) and raised parallel bars (width and depth of 3.5 mm), alternately colored white and black.",
+                "similarity": "0.92"
+              },
+              {
+                "claim_a": "Rats learned to recognize two categories of orientation: 0\u00b0 \u00b1 45\u00b0 (''horizontal'') and 90\u00b0 \u00b1 45\u00b0 (''vertical'').",
+                "claim_b": "Rats solved the task by measuring the difference between the encountered orientation and the cardinal orientations of 'horizontal' and 'vertical'.",
+                "similarity": "0.85"
+              },
+              {
+                "claim_a": "The three stimulus conditions (V, T, and VT) were randomly interleaved with 32% likelihood per trial.",
+                "claim_b": "All three example rats performed better in the VT condition than in V or T alone.",
+                "similarity": "0.51"
+              }
+            ]
+          },
+          {
+            "ids": "R14 \u2194 R7",
+            "result_similarity": "0.85",
+            "evaluation_type_match": true,
+            "result_type_match": true,
+            "claims": "3 (A) / 3 (B)",
+            "n_matched_claims": 3,
+            "claim_set_jaccard": "1.00",
+            "avg_claim_similarity": "0.98",
+            "result_a": "Rats demonstrated fine orientation discrimination in both visual and tactile modalities, with sensitivity to 5\u00b0 angle differences in both modalities. This confirms that visual capacities of Long-Evans rats may be underestimated and demonstrates comparable tactile acuity using whiskers and snout.",
+            "result_b": "Rats demonstrated fine orientation discrimination in both visual-only and tactile-only conditions, with sensitivity to 5\u00b0 angle differences in both modalities.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "In both modalities rats were sensitive to 5\u00b0 angle differences.",
+                "claim_b": "In both modalities rats were sensitive to 5\u00b0 angle differences.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "In the purely tactile (T) condition, rats were also able to perform fine orientation discriminations using their snout and whiskers.",
+                "claim_b": "In the purely tactile (T) condition, rats were able to perform fine orientation discriminations using their snout and whiskers.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Rats were able to perform fine orientation discriminations in the purely visual (V) condition, confirming that the visual capacities of Long-Evans rats might be widely underestimated.",
+                "claim_b": "Rats were able to perform fine orientation discriminations in the purely visual (V) condition.",
+                "similarity": "0.95"
+              }
+            ]
+          },
+          {
+            "ids": "R19 \u2194 R11",
+            "result_similarity": "0.79",
+            "evaluation_type_match": true,
+            "result_type_match": true,
+            "claims": "4 (A) / 5 (B)",
+            "n_matched_claims": 3,
+            "claim_set_jaccard": "0.50",
+            "avg_claim_similarity": "0.96",
+            "result_a": "A previous study (Raposo et al. 2014) found that PPC neurons showed modality selectivity when rats judged quantities of auditory/visual pulses, contrasting with the modality-free coding observed here. The authors hypothesize that supramodal coding arises from simultaneous arrival of congruous signals about a real object, which may better reflect natural statistics.",
+            "result_b": "Supramodal coding in PPC may arise from simultaneous arrival of congruent signals about real objects through multiple sensory channels, reflecting ecological statistics and enabling modality-independent object knowledge.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "We hypothesize that supramodal coding is a consequence of the nearly simultaneous arrival in PPC of congruous signals, through two sensory channels, about a real object.",
+                "claim_b": "Supramodal coding is a consequence of the nearly simultaneous arrival in PPC of congruous signals, through two sensory channels, about a real object.",
+                "similarity": "0.97"
+              },
+              {
+                "claim_a": "Coherence between modalities, as in our study, might better reflect the statistics of the real world.",
+                "claim_b": "Coherence between modalities might better reflect the statistics of the real world.",
+                "similarity": "0.96"
+              },
+              {
+                "claim_a": "In a recent study in which rats judged the quantities of auditory and/or visual pulses in a train, many neurons in PPC responded differentially on trials of the two modalities; indeed, modality itself could be decoded from neuronal firing.",
+                "claim_b": "In a recent study in which rats judged the quantities of auditory and/or visual pulses in a train, many neurons in PPC responded differentially on trials of the two modalities.",
+                "similarity": "0.95"
+              }
+            ]
+          },
+          {
+            "ids": "R17 \u2194 R8",
+            "result_similarity": "0.76",
+            "evaluation_type_match": true,
+            "result_type_match": true,
+            "claims": "9 (A) / 6 (B)",
+            "n_matched_claims": 5,
+            "claim_set_jaccard": "0.50",
+            "avg_claim_similarity": "0.82",
+            "result_a": "Supralinear multisensory integration has been reported previously and could arise from partial exploitation of unimodal information due to reduced motivation, or from violation of channel independence assumptions. Possible mechanisms include cross-modal sensorimotor interactions (e.g., vision guiding whisker palpation) or cortical synergy (e.g., cross-modal inhibition reducing noise in sensory representations).",
+            "result_b": "The observed supralinear integration may result from violation of the independence assumption in Bayesian models, potentially through sensorimotor interactions (visual guidance of whisking) or cross-modal cortical inhibition that suppresses noise.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "Inhibition between cortical regions could allow activity evoked through one modality to suppress the non-specific noise in the other modality's stimulus representation.",
+                "claim_b": "Inhibition between cortical regions could allow activity evoked through one modality to suppress the non-specific noise in the other modality's stimulus representation.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "The visual cue might help the rat palpate the surface with its whiskers more efficiently, boosting the tactile signal.",
+                "claim_b": "The visual cue might help the rat palpate the surface with its whiskers more efficiently, boosting the tactile signal.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Supralinear behavioral combination of sensory channels has been found in previous studies.",
+                "claim_b": "Supralinear behavioral combination of sensory channels has been found in previous studies.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Both cue-combination models employed in our study (Bayesian decision theory and MI) assume independence of the sensory channels.",
+                "claim_b": "The observed supralinearity could result from a violation of the assumption of independence of sensory channels.",
+                "similarity": "0.71"
+              },
+              {
+                "claim_a": "A second possible form of interaction is synergy between the two processing pathways within cortex.",
+                "claim_b": "In the mouse, activation of auditory cortex by a noise burst drives local GABAergic inhibition in the primary visual cortex, via cortico-cortical connections.",
+                "similarity": "0.41"
+              }
+            ]
+          },
+          {
+            "ids": "R8 \u2194 R4",
+            "result_similarity": "0.76",
+            "evaluation_type_match": true,
+            "result_type_match": true,
+            "claims": "8 (A) / 14 (B)",
+            "n_matched_claims": 8,
+            "claim_set_jaccard": "0.57",
+            "avg_claim_similarity": "0.88",
+            "result_a": "PPC neurons showed task-related activity with two main response profiles: some neurons showed graded orientation tuning (firing rate modulated progressively from 0\u00b0 to 90\u00b0), while others showed categorical tuning (large firing rate changes at the 45\u00b0 boundary with poor modulation within categories). Neuronal responses were similar across V, T, and VT modality conditions.",
+            "result_b": "PPC neurons showed modality-invariant responses across visual, tactile, and visual-tactile conditions. Only 5% (30/622) of neurons were selective for stimulus modality, while firing rates were highly correlated (R=0.96-0.99) across modalities for different stimulus orientations.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "Similar temporal profiles characterized V, T, and VT trials for the example neuron.",
+                "claim_b": "Similar temporal profiles characterized V, T, and VT trials for the example neuron.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "The neuron had a stable firing rate of about 2 spikes/s as the rat awaited the trial onset.",
+                "claim_b": "The neuron had a stable firing rate of about 2 spikes/s as the rat awaited the trial onset.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "The category-selective neurons were poorly modulated by stimulus orientation within a choice category.",
+                "claim_b": "The category-selective neurons were poorly modulated by stimulus orientation within a choice category.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "About 200 ms after trial onset, the neuron's firing rate ramped upward and remained at about 8 spikes/s until 1 s after trial onset.",
+                "claim_b": "About 200 ms after trial onset, the neuron's firing rate ramped upward and remained at about 8 spikes/s until 1 s after trial onset.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Two neurons carried a large signal about stimulus category, with firing rates deviating according to the upcoming action (left or right).",
+                "claim_b": "Two example neurons carried a large signal about stimulus category, with firing rates deviating according to the upcoming action (left or right).",
+                "similarity": "0.95"
+              },
+              {
+                "claim_a": "The first example neuron's firing rate was modulated by stimulus orientation, firing at a progressively higher rate as angle increased from 0\u00b0 to 90\u00b0.",
+                "claim_b": "The first example neuron fired at a progressively higher rate as angle increased from 0 to 90\u00b0.",
+                "similarity": "0.90"
+              },
+              {
+                "claim_a": "The second example neuron's firing rate was modulated by stimulus orientation, firing at a progressively lower rate from 0\u00b0 to 90\u00b0.",
+                "claim_b": "Neuronal firing was largely invariant to differences in modality for orientation-coding and category-coding neurons.",
+                "similarity": "0.67"
+              },
+              {
+                "claim_a": "PPC carried both graded information about object orientation and categorical information about the rat's upcoming choice.",
+                "claim_b": "The population of neurons did not appear to be informative about the modality of the stimulus but instead generated a robust signal about stimulus properties\u2014orientation and the choice category associated with that orientation\u2014irrespective of modality.",
+                "similarity": "0.49"
+              }
+            ]
+          },
+          {
+            "ids": "R10 \u2194 R5",
+            "result_similarity": "0.75",
+            "evaluation_type_match": true,
+            "result_type_match": true,
+            "claims": "4 (A) / 7 (B)",
+            "n_matched_claims": 4,
+            "claim_set_jaccard": "0.57",
+            "avg_claim_similarity": "0.82",
+            "result_a": "Only 5% (30/622) of PPC neurons showed significant modality selectivity (p<0.01), while over 50% (318/622) showed significant category selectivity (p<0.01). Among category-selective neurons, more preferred rightward choices (219/318), suggesting contralateral preference in left PPC. The population encoded stimulus properties (orientation and category) irrespective of modality.",
+            "result_b": "Over 50% of PPC neurons (318/622) encoded the rat's upcoming choice, with 38% (239/622) carrying significant information about both stimulus orientation and choice category. The joint encoding suggests PPC participates in stimulus-to-category transformation.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "A greater number of neurons (219 out of 318 neurons) was selective for turns to the right (index < 0) than to the left (index > 0), suggesting overall opposite-side preference in left PPC.",
+                "claim_b": "A greater number of neurons (219 out of 318 neurons) was selective for turns to the right (index < 0) than to the left (index > 0), suggesting overall opposite-side preference in left PPC.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Over 50% of neurons (318 out of 622) were significantly selective (p < 0.01; permutation test) for the upcoming choice of the rat.",
+                "claim_b": "Over 50% of neurons (318 out of 622) were significantly selective (p < 0.01) for the upcoming choice of the rat.",
+                "similarity": "0.93"
+              },
+              {
+                "claim_a": "This population of neurons did not appear to be informative about the modality of the stimulus but instead generated a robust signal about stimulus properties\u2014orientation and the choice category associated with that orientation\u2014irrespective of modality.",
+                "claim_b": "About 38% of neurons (239 out of 622, p < 0.01) carried significant conditional information about both orientation and choice.",
+                "similarity": "0.74"
+              },
+              {
+                "claim_a": "Just 5% (30 out of 622) of PPC neurons were selective (p < 0.01; permutation test) for stimulus modality.",
+                "claim_b": "About 45% of neurons (284 out of 622, p < 0.01) carried significant information about stimulus angle conditional upon perceived category.",
+                "similarity": "0.61"
+              }
+            ]
+          },
+          {
+            "ids": "R4 \u2194 R3",
+            "result_similarity": "0.74",
+            "evaluation_type_match": true,
+            "result_type_match": false,
+            "claims": "4 (A) / 5 (B)",
+            "n_matched_claims": 2,
+            "claim_set_jaccard": "0.29",
+            "avg_claim_similarity": "0.60",
+            "result_a": "Rats immediately generalized the categorization rule to novel orientations (90\u00b0-135\u00b0 and -45\u00b0 to 0\u00b0) in the first test session, performing equally well on new versus familiar stimuli (p>0.29 for all rats). This suggests rats solved the task by measuring angular distance from cardinal orientations rather than memorizing specific stimulus-reward associations.",
+            "result_b": "Response times increased by ~150 ms for orientations near the 45\u00b0 category boundary compared to cardinal orientations, and were similar across modality conditions, suggesting rats accumulated additional evidence on difficult trials rather than truncating processing.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "In ten rats who were well trained with stimuli in the range of 0\u00b0\u201390\u00b0, trials with stimulus orientations ranging from 90\u00b0\u2013135\u00b0 and \u221245\u00b0 to 0\u00b0 were introduced.",
+                "claim_b": "In all modality conditions, rats' response time was nearly 150 ms longer on trials with orientation near the 45\u00b0 category boundary.",
+                "similarity": "0.69"
+              },
+              {
+                "claim_a": "In the first session with novel orientations, each rat performed equally well on the new versus the familiar stimuli (bootstrap test, all rats p > 0.29).",
+                "claim_b": "Rats seemed to try to acquire additional evidence on difficult trials rather than undersampling them.",
+                "similarity": "0.51"
+              }
+            ]
+          },
+          {
+            "ids": "R5 \u2194 R2",
+            "result_similarity": "0.72",
+            "evaluation_type_match": true,
+            "result_type_match": true,
+            "claims": "7 (A) / 5 (B)",
+            "n_matched_claims": 5,
+            "claim_set_jaccard": "0.71",
+            "avg_claim_similarity": "0.76",
+            "result_a": "The majority of rats (9/12 by Bayesian analysis, 8/12 by mutual information analysis) combined V and T signals in a supralinear manner, exceeding predictions from optimal linear combination of independent sensory channels. The two analytical approaches were correlated (R=0.6), providing converging evidence for synergistic multisensory integration.",
+            "result_b": "Rats exhibited supralinear integration of visual and tactile signals, with 9/12 rats showing bimodal performance exceeding Bayesian optimal predictions based on unimodal thresholds, and 8/12 rats showing strongly supralinear integration by mutual information analysis.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "8 out of 12 rats combined V and T signals in a strongly supralinear manner based on mutual information analysis.",
+                "claim_b": "Eight out of 12 rats combined V and T signals in a strongly supralinear manner based on mutual information analysis.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "9 out of 12 rats combined V and T signals in a supralinear manner.",
+                "claim_b": "Nine out of 12 rats combined V and T signals in a supralinear manner.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "2 rats combined V and T signals in a linear manner.",
+                "claim_b": "Comparing across sessions, rats still combined V and T signals in a supralinear fashion in block design experiments.",
+                "similarity": "0.74"
+              },
+              {
+                "claim_a": "VT performance was better than that predicted by optimal linear combination of V and T signals, indicating synergy between sensory channels.",
+                "claim_b": "Performance with vision and touch together reveals synergy between the two channels.",
+                "similarity": "0.63"
+              },
+              {
+                "claim_a": "Two analyses\u2014Bayesian prediction of underlying threshold and MI\u2014both suggest that in the majority of rats the signals carried by the two sensory channels were not merged independently but were combined in a synergistic manner.",
+                "claim_b": "The majority of rats exhibited actual VT performance significantly better than that predicted by the standard Bayesian ideal-observer model.",
+                "similarity": "0.45"
+              }
+            ]
+          },
+          {
+            "ids": "R16 \u2194 R10",
+            "result_similarity": "0.71",
+            "evaluation_type_match": true,
+            "result_type_match": true,
+            "claims": "3 (A) / 5 (B)",
+            "n_matched_claims": 3,
+            "claim_set_jaccard": "0.60",
+            "avg_claim_similarity": "1.00",
+            "result_a": "Tactile orientation tuning has not been reported in barrel cortex and may be generated in PPC to meet task demands. The arbitrary 45\u00b0 category boundary must also be learned. These observations suggest PPC functional properties are not hardwired but emerge through learning to solve task requirements.",
+            "result_b": "PPC neurons show task-dependent plasticity, with orientation tuning and category boundary representations emerging through learning to meet behavioral demands rather than being hardwired.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "While PPC could receive orientation-tuned signals from earlier stages of visual cortical processing, tactile orientation tuning has not been reported in barrel cortex and may be generated in PPC to meet specific behavioral demands.",
+                "claim_b": "While PPC could receive orientation-tuned signals from earlier stages of visual cortical processing, tactile orientation tuning has not been reported in barrel cortex and may be generated in PPC to meet specific behavioral demands.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "The reward rule boundary of 45\u00b0 was set arbitrarily, and its neuronal correlate must also be generated to meet behavioral demands.",
+                "claim_b": "The reward rule boundary of 45\u00b0 was set arbitrarily, and its neuronal correlate must be generated to meet behavioral demands.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "These observations lead to the conclusion that the functional properties of PPC neurons are not hardwired but rather emerge through a learning process in order to solve the requirements of ongoing tasks.",
+                "claim_b": "The functional properties of PPC neurons are not hardwired but rather emerge through a learning process in order to solve the requirements of ongoing tasks.",
+                "similarity": "0.99"
+              }
+            ]
+          }
+        ],
+        "unmatched_a": [
+          "Rats showed individual differences in modality-specific acuity (some better at V, others at T), but all rats performed significantly better in the VT condition than in either unimodal condition. VT performance showed reduced \u03c3 (p<0.001), reduced lapse rates (p=0.000), and more accurate boundary detection (PSE closer to 45\u00b0, p<0.02) compared to V and T conditions.",
+          "Multisensory benefit varied with stimulus orientation: no benefit at 45\u00b0 (category boundary where performance is at chance), limited benefit at cardinal orientations (0\u00b0 and 90\u00b0 where unimodal performance was already high), and greatest benefit at intermediate orientations (20\u00b0-35\u00b0 and 55\u00b0-70\u00b0).",
+          "Supralinear VT performance persisted in block design sessions (where modalities were not interleaved), with measured \u03c3VT values remaining close to or better than Bayesian optimal estimates. Response times were similar across modalities and longer for difficult trials (near 45\u00b0 boundary), arguing against motivational confounds or premature evidence truncation on unimodal trials.",
+          "Response times ranged from 435-734 ms (interquartile range) and were nearly 150 ms longer for orientations near the 45\u00b0 category boundary compared to cardinal orientations.",
+          "Single neurons in PPC exhibited nearly identical responses under V, T, and VT conditions. Across 622 neurons, firing rates were highly correlated between modalities (Pearson R=0.96-0.99 across orientations), with points clustering near the diagonal in V vs T plots, demonstrating supramodal coding.",
+          "Conditional mutual information analysis revealed that ~50% of neurons (315/622) carried information about category conditional on angle, ~45% (284/622) carried information about angle conditional on category, and ~38% (239/622) carried both. 78% of dual-coding neurons clustered within \u00b10.05 bits of equal information, suggesting PPC is involved in supramodal stimulus-to-category transformation.",
+          "PPC is involved in supramodal processing of shape, contributing to the formation of a supramodal object representation and participating in percept-to-action transformation. However, this interpretation is based on correlational evidence; causal evidence would require perturbation experiments.",
+          "The orientation and category signals in PPC neurons were indistinguishable across modalities except for greater robustness in VT trials (mirroring behavioral performance). Individual neurons showed a continuum from orientation tuning to category tuning, with graded firing within categories or large steps at the 45\u00b0 boundary.",
+          "Evidence from mouse studies shows that auditory cortex activation can drive GABAergic inhibition in primary visual cortex and sharpen orientation selectivity of V1 neurons, supporting the possibility of cross-modal cortical interactions.",
+          "Prior psychophysical studies show that humans, non-human primates, and rodents demonstrate heightened accuracy when combining multiple cues, sometimes approaching optimal observer performance. PPC is anatomically positioned between primary sensory cortices and is a candidate for visual-tactile convergence, though the degree of multisensory convergence in rodent PPC is debated.",
+          "A previous study (Polley et al. 2005) showed that rats could learn whisker-dependent orientation discrimination in a single trial with resolution on the order of 45\u00b0.",
+          "Previous multisensory studies have used arbitrary cross-modal associations. Vision and touch likely evolved together to explore spatial properties of the environment, and rodents may need to navigate oriented structures whether seen or felt. The brain's capacity for modality-independent object knowledge requires processing stages where information is encoded by multiple channels, and PPC contributes to this abstraction.",
+          "Twelve male Long-Evans rats (8 weeks old, ~250g at arrival, growing to >600g) were used. They were maintained on 12/12 hr light/dark cycle with experiments during light phase, received 17-22 mL diluted pear juice as reward per session, and all protocols were approved by SISSA Ethics Committee and Italian Health Ministry."
+        ],
+        "unmatched_b": []
+      }
+    },
+    {
+      "label_a": "segmented",
+      "label_b": "unsegmented",
+      "n_results_a": 17,
+      "n_results_b": 11,
+      "avg_result_similarity": 0.7987,
+      "result_match_rate": 0.6471,
+      "evaluation_type_agreement": 1.0,
+      "result_type_agreement": 0.7273,
+      "avg_claim_set_jaccard": 0.4194,
+      "avg_claim_similarity": 0.8884,
+      "distribution_a": {
+        "evaluation_type": {
+          "SUPPORTED": 14,
+          "UNCERTAIN": 3
+        },
+        "result_type": {
+          "MAJOR": 9,
+          "MINOR": 8
+        }
+      },
+      "distribution_b": {
+        "evaluation_type": {
+          "SUPPORTED": 8,
+          "UNCERTAIN": 3
+        },
+        "result_type": {
+          "MAJOR": 6,
+          "MINOR": 5
+        }
+      },
+      "summary": {
+        "pair": "segmented \u2194 unsegmented",
+        "metrics": {
+          "results": "17 vs 11",
+          "matched_pairs": 11,
+          "unmatched_a": 6,
+          "unmatched_b": 0,
+          "result_level": {
+            "avg_result_similarity": "79.9%",
+            "result_match_rate": "64.7%",
+            "evaluation_type_agreement": "100.0%",
+            "result_type_agreement": "72.7%"
+          },
+          "claim_set_level": {
+            "avg_claim_set_jaccard": "41.9%",
+            "avg_claim_similarity": "88.8%"
+          }
+        },
+        "evaluation_type_distribution": {
+          "SUPPORTED": {
+            "segmented": 14,
+            "unsegmented": 8
+          },
+          "UNCERTAIN": {
+            "segmented": 3,
+            "unsegmented": 3
+          }
+        },
+        "result_type_distribution": {
+          "MAJOR": {
+            "segmented": 9,
+            "unsegmented": 6
+          },
+          "MINOR": {
+            "segmented": 8,
+            "unsegmented": 5
+          }
+        },
+        "matched_pairs": [
+          {
+            "ids": "R7 \u2194 R4",
+            "result_similarity": "0.93",
+            "evaluation_type_match": true,
+            "result_type_match": true,
+            "claims": "6 (A) / 14 (B)",
+            "n_matched_claims": 6,
+            "claim_set_jaccard": "0.43",
+            "avg_claim_similarity": "0.85",
+            "result_a": "PPC neuronal responses were largely invariant to stimulus modality, with only 5% of neurons showing modality selectivity, while firing rates remained consistent across visual, tactile, and bimodal conditions.",
+            "result_b": "PPC neurons showed modality-invariant responses across visual, tactile, and visual-tactile conditions. Only 5% (30/622) of neurons were selective for stimulus modality, while firing rates were highly correlated (R=0.96-0.99) across modalities for different stimulus orientations.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "Just 5% (30 out of 622) of neurons were selective (p < 0.01) for stimulus modality.",
+                "claim_b": "Just 5% (30 out of 622) of neurons were selective (p < 0.01) for stimulus modality.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Each neuron's firing rates were the same under the V, T, and VT conditions.",
+                "claim_b": "Each neuron's firing rates were the same under the V, T, and VT conditions.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "This population of neurons did not appear to be informative about the modality of the stimulus but instead generated a robust signal about stimulus properties-orientation and the choice category associated with that orientation-irrespective of modality.",
+                "claim_b": "The population of neurons did not appear to be informative about the modality of the stimulus but instead generated a robust signal about stimulus properties\u2014orientation and the choice category associated with that orientation\u2014irrespective of modality.",
+                "similarity": "0.99"
+              },
+              {
+                "claim_a": "While neuronal firing could vary according to orientation or category, it was largely invariant to differences in modality.",
+                "claim_b": "Neuronal firing was largely invariant to differences in modality for orientation-coding and category-coding neurons.",
+                "similarity": "0.89"
+              },
+              {
+                "claim_a": "The independence of firing rate on modality held across the six stimulus orientations.",
+                "claim_b": "The Pearson linear correlation coefficient, R, between firing rate on V and T trials ranged from 0.96 to 0.99 across six stimulus orientations.",
+                "similarity": "0.69"
+              },
+              {
+                "claim_a": "A given neuron's overall engagement in the task was nearly equal under the three modality conditions.",
+                "claim_b": "Two example neurons carried a large signal about stimulus category, with firing rates deviating according to the upcoming action (left or right).",
+                "similarity": "0.56"
+              }
+            ]
+          },
+          {
+            "ids": "R17 \u2194 R1",
+            "result_similarity": "0.85",
+            "evaluation_type_match": true,
+            "result_type_match": false,
+            "claims": "2 (A) / 10 (B)",
+            "n_matched_claims": 2,
+            "claim_set_jaccard": "0.20",
+            "avg_claim_similarity": "0.99",
+            "result_a": "The experimental stimulus was a 98mm diameter circular grating with 3.5mm raised bars, and rats were trained to categorize orientations 0-45\u00b0 as horizontal and 45-90\u00b0 as vertical.",
+            "result_b": "Rats successfully learned to categorize grating orientations (0-45\u00b0 as horizontal, 45-90\u00b0 as vertical) using visual, tactile, or combined visual-tactile cues. They immediately generalized this rule to novel orientations, suggesting they categorized based on deviation from cardinal orientations rather than memorizing specific angles.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "The discriminandum had a circular boundary (98 mm diameter) and raised parallel bars (width and depth of 3.5 mm), alternately colored white and black.",
+                "claim_b": "The discriminandum had a circular boundary (98 mm diameter) and raised parallel bars (width and depth of 3.5 mm), alternately colored white and black.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Rats were trained to categorize orientations in the range of 0-45\u00b0 as horizontal, and orientations in the range of 45-90\u00b0 as vertical.",
+                "claim_b": "Rats were trained to categorize orientations from 0 to 45\u00b0 as horizontal and orientations from 45 to 90\u00b0 as vertical.",
+                "similarity": "0.99"
+              }
+            ]
+          },
+          {
+            "ids": "R15 \u2194 R11",
+            "result_similarity": "0.84",
+            "evaluation_type_match": true,
+            "result_type_match": true,
+            "claims": "3 (A) / 5 (B)",
+            "n_matched_claims": 3,
+            "claim_set_jaccard": "0.60",
+            "avg_claim_similarity": "1.00",
+            "result_a": "Supramodal coding may arise from simultaneous arrival of congruent signals about real objects, reflecting ecological statistics and evolutionary co-development of vision and touch.",
+            "result_b": "Supramodal coding in PPC may arise from simultaneous arrival of congruent signals about real objects through multiple sensory channels, reflecting ecological statistics and enabling modality-independent object knowledge.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "Coherence between modalities might better reflect the statistics of the real world.",
+                "claim_b": "Coherence between modalities might better reflect the statistics of the real world.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Vision and touch have likely evolved together to explore the shape, form, and spatial properties of the environment.",
+                "claim_b": "Vision and touch have likely evolved together to explore the shape, form, and spatial properties of the environment.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Supramodal coding is a consequence of the nearly simultaneous arrival in PPC of congruous signals, through two sensory channels, about a real object.",
+                "claim_b": "Supramodal coding is a consequence of the nearly simultaneous arrival in PPC of congruous signals, through two sensory channels, about a real object.",
+                "similarity": "1.00"
+              }
+            ]
+          },
+          {
+            "ids": "R10 \u2194 R6",
+            "result_similarity": "0.82",
+            "evaluation_type_match": true,
+            "result_type_match": true,
+            "claims": "7 (A) / 5 (B)",
+            "n_matched_claims": 5,
+            "claim_set_jaccard": "0.71",
+            "avg_claim_similarity": "0.81",
+            "result_a": "A linear classifier trained on PPC population activity could predict rats' choices with >90% accuracy, with performance increasing from chance before stimulus onset to >90% by 250ms before response, and nearly all neurons contributing to classification.",
+            "result_b": "A linear classifier trained on PPC population activity decoded the rat's choices with 91-99% accuracy (9/10 sessions), with nearly all neurons contributing non-zero weights. Cross-modality decoding demonstrated the population code was supramodal and could account for behavior.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "When tested, the classifier replicated the rat's behavior on over 90% of trials.",
+                "claim_b": "When tested, the classifier replicated the rat's behavior on over 90% of trials.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Peak decoder performance measured in 5 rats ranged from 91% to 99% (9 sessions), with 1 session at 70% (p < 0.001).",
+                "claim_b": "Peak decoder performance measured in 5 rats ranged from 91% to 99% (9 sessions), with 1 session at 70% (p < 0.001).",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Almost all neuronal weights were non-zero in each session, indicating that every neuron in the population contributed to the classifier's performance.",
+                "claim_b": "Almost all neuronal weights were non-zero in each session, indicating that every neuron in the population contributed to the classifier's performance.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "The classifier was able to determine a boundary that could separate the population's activity into two states associated with the rat's two choices.",
+                "claim_b": "The population code was supramodal and could account for the rats' behavior.",
+                "similarity": "0.57"
+              },
+              {
+                "claim_a": "This suggests that the PPC population did not manifest a choice bias before encountering the stimulus.",
+                "claim_b": "The signal carried by the PPC population closely paralleled behavior across different modalities.",
+                "similarity": "0.46"
+              }
+            ]
+          },
+          {
+            "ids": "R1 \u2194 R7",
+            "result_similarity": "0.80",
+            "evaluation_type_match": true,
+            "result_type_match": false,
+            "claims": "10 (A) / 3 (B)",
+            "n_matched_claims": 3,
+            "claim_set_jaccard": "0.30",
+            "avg_claim_similarity": "0.98",
+            "result_a": "Rats can perform fine orientation discrimination using vision alone, touch alone, or both modalities together, with individual rats showing different modality-specific acuities but all performing better when both modalities are available.",
+            "result_b": "Rats demonstrated fine orientation discrimination in both visual-only and tactile-only conditions, with sensitivity to 5\u00b0 angle differences in both modalities.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "In both modalities rats were sensitive to 5\u00b0 angle differences.",
+                "claim_b": "In both modalities rats were sensitive to 5\u00b0 angle differences.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "In the purely tactile (T) condition, rats were also able to perform fine orientation discriminations using their snout and whiskers.",
+                "claim_b": "In the purely tactile (T) condition, rats were able to perform fine orientation discriminations using their snout and whiskers.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Rats were able to perform fine orientation discriminations in the purely visual (V) condition, confirming that the visual capacities of Long-Evans rats might be widely underestimated.",
+                "claim_b": "Rats were able to perform fine orientation discriminations in the purely visual (V) condition.",
+                "similarity": "0.95"
+              }
+            ]
+          },
+          {
+            "ids": "R8 \u2194 R5",
+            "result_similarity": "0.80",
+            "evaluation_type_match": true,
+            "result_type_match": true,
+            "claims": "2 (A) / 7 (B)",
+            "n_matched_claims": 2,
+            "claim_set_jaccard": "0.29",
+            "avg_claim_similarity": "0.99",
+            "result_a": "Over 50% of PPC neurons showed significant selectivity for the rat's upcoming choice, with a bias toward contralateral (right) choices in left PPC.",
+            "result_b": "Over 50% of PPC neurons (318/622) encoded the rat's upcoming choice, with 38% (239/622) carrying significant information about both stimulus orientation and choice category. The joint encoding suggests PPC participates in stimulus-to-category transformation.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "Over 50% of neurons (318 out of 622) were significantly selective (p < 0.01) for the upcoming choice of the rat.",
+                "claim_b": "Over 50% of neurons (318 out of 622) were significantly selective (p < 0.01) for the upcoming choice of the rat.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "A greater number of neurons (219 out of 318 neurons) was selective for turns to the right than to the left, suggesting overall opposite-side preference in left PPC.",
+                "claim_b": "A greater number of neurons (219 out of 318 neurons) was selective for turns to the right (index < 0) than to the left (index > 0), suggesting overall opposite-side preference in left PPC.",
+                "similarity": "0.98"
+              }
+            ]
+          },
+          {
+            "ids": "R14 \u2194 R10",
+            "result_similarity": "0.79",
+            "evaluation_type_match": true,
+            "result_type_match": false,
+            "claims": "2 (A) / 5 (B)",
+            "n_matched_claims": 2,
+            "claim_set_jaccard": "0.40",
+            "avg_claim_similarity": "1.00",
+            "result_a": "Tactile orientation tuning may be generated in PPC rather than inherited from barrel cortex, and the arbitrary 45\u00b0 category boundary must be learned, suggesting task-dependent plasticity.",
+            "result_b": "PPC neurons show task-dependent plasticity, with orientation tuning and category boundary representations emerging through learning to meet behavioral demands rather than being hardwired.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "While PPC could receive orientation-tuned signals from earlier stages of visual cortical processing, tactile orientation tuning has not been reported in barrel cortex and may be generated in PPC to meet specific behavioral demands.",
+                "claim_b": "While PPC could receive orientation-tuned signals from earlier stages of visual cortical processing, tactile orientation tuning has not been reported in barrel cortex and may be generated in PPC to meet specific behavioral demands.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "The reward rule boundary of 45\u00b0 was set arbitrarily, and its neuronal correlate must also be generated to meet behavioral demands.",
+                "claim_b": "The reward rule boundary of 45\u00b0 was set arbitrarily, and its neuronal correlate must be generated to meet behavioral demands.",
+                "similarity": "1.00"
+              }
+            ]
+          },
+          {
+            "ids": "R2 \u2194 R2",
+            "result_similarity": "0.78",
+            "evaluation_type_match": true,
+            "result_type_match": true,
+            "claims": "11 (A) / 5 (B)",
+            "n_matched_claims": 5,
+            "claim_set_jaccard": "0.45",
+            "avg_claim_similarity": "0.83",
+            "result_a": "Rats combined visual and tactile signals in a supralinear manner, exceeding predictions from a Bayesian ideal-observer model, with the greatest benefit at intermediate orientations.",
+            "result_b": "Rats exhibited supralinear integration of visual and tactile signals, with 9/12 rats showing bimodal performance exceeding Bayesian optimal predictions based on unimodal thresholds, and 8/12 rats showing strongly supralinear integration by mutual information analysis.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "The majority of rats exhibited actual VT performance significantly better than that predicted by the standard Bayesian ideal-observer model.",
+                "claim_b": "The majority of rats exhibited actual VT performance significantly better than that predicted by the standard Bayesian ideal-observer model.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "8 out of 12 rats combined V and T signals in a strongly supralinear manner based on mutual information analysis.",
+                "claim_b": "Eight out of 12 rats combined V and T signals in a strongly supralinear manner based on mutual information analysis.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "9 out of 12 rats combined V and T signals in a supralinear manner.",
+                "claim_b": "Nine out of 12 rats combined V and T signals in a supralinear manner.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "In the VT condition, rats showed reduced lapse rates compared to V and T.",
+                "claim_b": "Comparing across sessions, rats still combined V and T signals in a supralinear fashion in block design experiments.",
+                "similarity": "0.60"
+              },
+              {
+                "claim_a": "In the majority of rats the signals carried by the two sensory channels were not merged independently but were combined in a synergistic manner.",
+                "claim_b": "Performance with vision and touch together reveals synergy between the two channels.",
+                "similarity": "0.57"
+              }
+            ]
+          },
+          {
+            "ids": "R13 \u2194 R8",
+            "result_similarity": "0.76",
+            "evaluation_type_match": true,
+            "result_type_match": true,
+            "claims": "4 (A) / 6 (B)",
+            "n_matched_claims": 4,
+            "claim_set_jaccard": "0.67",
+            "avg_claim_similarity": "0.78",
+            "result_a": "Supralinear combination may result from violation of the independence assumption, potentially through behavioral strategies (visual guidance of tactile exploration) or neural mechanisms (cross-modal inhibition of noise).",
+            "result_b": "The observed supralinear integration may result from violation of the independence assumption in Bayesian models, potentially through sensorimotor interactions (visual guidance of whisking) or cross-modal cortical inhibition that suppresses noise.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "The visual cue might help the rat palpate the surface with its whiskers more efficiently, boosting the tactile signal.",
+                "claim_b": "The visual cue might help the rat palpate the surface with its whiskers more efficiently, boosting the tactile signal.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Inhibition between cortical regions could allow activity evoked through one modality to suppress the non-specific noise in the other modality's stimulus representation.",
+                "claim_b": "Inhibition between cortical regions could allow activity evoked through one modality to suppress the non-specific noise in the other modality's stimulus representation.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "The observed supralinearity could result from a violation of the independence assumption - visual and tactile signals might not be processed independently in bimodal trials.",
+                "claim_b": "The observed supralinearity could result from a violation of the assumption of independence of sensory channels.",
+                "similarity": "0.70"
+              },
+              {
+                "claim_a": "Supralinear combination could occur if the information available on unimodal trials were only partially exploited, while the information available on bimodal trials were completely exploited.",
+                "claim_b": "Supralinear behavioral combination of sensory channels has been found in previous studies.",
+                "similarity": "0.43"
+              }
+            ]
+          },
+          {
+            "ids": "R3 \u2194 R3",
+            "result_similarity": "0.73",
+            "evaluation_type_match": true,
+            "result_type_match": true,
+            "claims": "3 (A) / 5 (B)",
+            "n_matched_claims": 2,
+            "claim_set_jaccard": "0.33",
+            "avg_claim_similarity": "0.57",
+            "result_a": "Rats generalized the orientation categorization rule to novel stimuli immediately upon first presentation, suggesting they solved the task by measuring angular distance from cardinal orientations.",
+            "result_b": "Response times increased by ~150 ms for orientations near the 45\u00b0 category boundary compared to cardinal orientations, and were similar across modality conditions, suggesting rats accumulated additional evidence on difficult trials rather than truncating processing.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "Rats seemed to solve the task by measuring the difference between the encountered orientation and the cardinal orientations of 'horizontal' and 'vertical.'",
+                "claim_b": "In all modality conditions, rats' response time was nearly 150 ms longer on trials with orientation near the 45\u00b0 category boundary.",
+                "similarity": "0.65"
+              },
+              {
+                "claim_a": "In the first session with novel orientations, each rat performed equally well on the new versus the familiar stimuli.",
+                "claim_b": "Rats seemed to try to acquire additional evidence on difficult trials rather than undersampling them.",
+                "similarity": "0.48"
+              }
+            ]
+          },
+          {
+            "ids": "R16 \u2194 R9",
+            "result_similarity": "0.68",
+            "evaluation_type_match": true,
+            "result_type_match": true,
+            "claims": "13 (A) / 3 (B)",
+            "n_matched_claims": 3,
+            "claim_set_jaccard": "0.23",
+            "avg_claim_similarity": "0.96",
+            "result_a": "The study builds on established knowledge about multisensory integration, PPC anatomy and function, and cross-modal cortical interactions from prior literature.",
+            "result_b": "Rat PPC is anatomically positioned to integrate multisensory information, receiving input from multiple sensory cortices and sharing reciprocal connectivity patterns with primate PPC.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "Primate PPC receives input from cortical areas representing multiple sensory modalities and communicates back to these territories.",
+                "claim_b": "Primate PPC receives input from cortical areas representing multiple sensory modalities and communicates back to these territories.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "PPC in rats is held to be homologous to primate PPC, as it shares the characteristic reciprocal connectivity with sensory, frontal, temporal, and limbic cortical regions.",
+                "claim_b": "PPC in rats is held to be homologous to primate PPC, as it shares the characteristic reciprocal connectivity with sensory, frontal, temporal, and limbic cortical regions.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "PPC is well positioned to receive unimodal sensory signals and transmit a processed form of those signals to downstream cortical regions.",
+                "claim_b": "PPC is well positioned to receive unimodal sensory signals.",
+                "similarity": "0.89"
+              }
+            ]
+          }
+        ],
+        "unmatched_a": [
+          "Response times were longer for difficult trials near the category boundary and similar across modality conditions, indicating rats did not differentially truncate evidence accumulation based on trial difficulty or modality.",
+          "Supralinear combination persisted in block design experiments where modality conditions were not interleaved.",
+          "Individual PPC neurons showed task-related firing patterns that encoded either stimulus orientation in a graded manner or stimulus category with sharp transitions at the boundary, with similar temporal profiles across modalities.",
+          "PPC neurons jointly encoded stimulus orientation and category through conditional information analysis, with 78% of informative neurons showing both types of coding distributed along a continuum, suggesting PPC participates in stimulus-to-category transformation.",
+          "The PPC population code was supramodal, as demonstrated by successful cross-modality decoding where classifiers trained on one modality could predict behavior on different modalities, with signals paralleling behavioral performance across conditions.",
+          "PPC contributes to forming supramodal object representations and participates in percept-to-action transformation, with functional properties emerging through learning rather than being hardwired."
+        ],
+        "unmatched_b": []
+      }
+    }
+  ]
+}

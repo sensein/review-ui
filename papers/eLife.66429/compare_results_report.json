@@ -1,0 +1,1048 @@
+{
+  "config": {
+    "runs": {
+      "unsegmented": "papers/eLife.66429/20260316_anthropic",
+      "segmented": "papers/eLife.66429/20260316_segmented_anthropic",
+      "pypdf4llm": "papers/eLife.66429/20260406_pypdf4llm_anthropic"
+    },
+    "result_threshold": 0.5,
+    "claim_threshold": 0.4,
+    "similarity_backend": "sentence-transformers"
+  },
+  "overall_summary": [
+    {
+      "pair": "unsegmented \u2194 segmented",
+      "avg_result_similarity": "73.3%",
+      "result_match_rate": "60.0%",
+      "evaluation_type_agreement": "83.3%",
+      "result_type_agreement": "83.3%",
+      "avg_claim_set_jaccard": "52.6%",
+      "avg_claim_similarity": "78.8%"
+    },
+    {
+      "pair": "unsegmented \u2194 pypdf4llm",
+      "avg_result_similarity": "78.0%",
+      "result_match_rate": "72.7%",
+      "evaluation_type_agreement": "87.5%",
+      "result_type_agreement": "87.5%",
+      "avg_claim_set_jaccard": "55.7%",
+      "avg_claim_similarity": "88.1%"
+    },
+    {
+      "pair": "segmented \u2194 pypdf4llm",
+      "avg_result_similarity": "82.7%",
+      "result_match_rate": "54.5%",
+      "evaluation_type_agreement": "83.3%",
+      "result_type_agreement": "100.0%",
+      "avg_claim_set_jaccard": "54.4%",
+      "avg_claim_similarity": "89.9%"
+    }
+  ],
+  "pairwise": [
+    {
+      "label_a": "unsegmented",
+      "label_b": "segmented",
+      "n_results_a": 10,
+      "n_results_b": 7,
+      "avg_result_similarity": 0.7331,
+      "result_match_rate": 0.6,
+      "evaluation_type_agreement": 0.8333,
+      "result_type_agreement": 0.8333,
+      "avg_claim_set_jaccard": 0.5264,
+      "avg_claim_similarity": 0.7877,
+      "distribution_a": {
+        "evaluation_type": {
+          "SUPPORTED": 9,
+          "UNCERTAIN": 1
+        },
+        "result_type": {
+          "MINOR": 5,
+          "MAJOR": 5
+        }
+      },
+      "distribution_b": {
+        "evaluation_type": {
+          "SUPPORTED": 7
+        },
+        "result_type": {
+          "MAJOR": 2,
+          "MINOR": 5
+        }
+      },
+      "summary": {
+        "pair": "unsegmented \u2194 segmented",
+        "metrics": {
+          "results": "10 vs 7",
+          "matched_pairs": 6,
+          "unmatched_a": 4,
+          "unmatched_b": 1,
+          "result_level": {
+            "avg_result_similarity": "73.3%",
+            "result_match_rate": "60.0%",
+            "evaluation_type_agreement": "83.3%",
+            "result_type_agreement": "83.3%"
+          },
+          "claim_set_level": {
+            "avg_claim_set_jaccard": "52.6%",
+            "avg_claim_similarity": "78.8%"
+          }
+        },
+        "evaluation_type_distribution": {
+          "SUPPORTED": {
+            "unsegmented": 9,
+            "segmented": 7
+          },
+          "UNCERTAIN": {
+            "unsegmented": 1,
+            "segmented": 0
+          }
+        },
+        "result_type_distribution": {
+          "MAJOR": {
+            "unsegmented": 5,
+            "segmented": 2
+          },
+          "MINOR": {
+            "unsegmented": 5,
+            "segmented": 5
+          }
+        },
+        "matched_pairs": [
+          {
+            "ids": "R1 \u2194 R2",
+            "result_similarity": "0.85",
+            "evaluation_type_match": true,
+            "result_type_match": true,
+            "claims": "9 (A) / 15 (B)",
+            "n_matched_claims": 9,
+            "claim_set_jaccard": "0.60",
+            "avg_claim_similarity": "0.74",
+            "result_a": "The manuscript challenges the widespread assumption that rats are functionally blind under red light. This assumption is based on rats being dichromats lacking red cones, and prior ERG studies showing no significant response above 620 nm. However, conflicting evidence exists, with another study showing ERG responses to red light. Red light has been commonly used in behavioral experiments under the assumption it provides darkness for the animal.",
+            "result_b": "Prior literature establishes that rats are dichromatic with UV and green cones but lack red cones, have rod-dominated retinas, and show poor wavelength discrimination. Recent ERG studies show conflicting results regarding red light sensitivity, with one study finding no response above 620 nm and another finding significant responses to far-red light.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "No significant ERG response to long wavelength light (above 620 nm) was detected in Wistar rats.",
+                "claim_b": "No significant ERG response to long wavelength light (above 620 nm) was detected in Wistar rats.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Another study showed significant scotopic and photopic ERG responses to red light even at low intensities.",
+                "claim_b": "A study showed significant scotopic and photopic ERG responses to red light even at low intensities.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "ERG responses of photopic spectral sensitivity curves of photoreceptors of rats and mice identified two sensitivity peaks in Wistar rats: 362 and 502 nm.",
+                "claim_b": "ERG responses of photopic spectral sensitivity curves of photoreceptors of rats and mice were measured throughout the UV-visible spectrum (300-700 nm).",
+                "similarity": "0.95"
+              },
+              {
+                "claim_a": "Rats and mice are assumed to be functionally blind under red light.",
+                "claim_b": "From the inability to see red as a color, it does not necessarily follow that rodents cannot absorb red light through their rod-dominated retina to support form vision.",
+                "similarity": "0.77"
+              },
+              {
+                "claim_a": "Rats are dichromats who possess ultraviolet and green cones, but not red cones.",
+                "claim_b": "Rodents lack red cones.",
+                "similarity": "0.67"
+              },
+              {
+                "claim_a": "In a developmental study of the visual cortex, mice were dark-reared but were allowed very brief daily exposure to red light.",
+                "claim_b": "Both rat strains showed significant scotopic and photopic ERG responses to red light even at low intensities.",
+                "similarity": "0.66"
+              },
+              {
+                "claim_a": "Place-cell studies of rats navigating under dim red light have taken red light as the absence of visual input.",
+                "claim_b": "A recent study examined the retinal responses mediated by rods and cones of pigmented (Brown Norway) and albino (Wistar) rats in response to monochromatic far-red light of 656 \u00b1 10 nm in both photopic and scotopic settings.",
+                "similarity": "0.62"
+              },
+              {
+                "claim_a": "Rodent behavioral experiments done under red light are believed to place the animal in dark conditions while allowing the experimenter to observe the preparation directly or by video recording.",
+                "claim_b": "Rats are largely crepuscular and usually found in poorly illuminated environments during daylight.",
+                "similarity": "0.57"
+              },
+              {
+                "claim_a": "Red illumination is often used in reverse light cycle conditions in animal husbandry settings with the assumption that it will not affect rodent circadian rhythms.",
+                "claim_b": "Rats perform poorly in discriminating between nearby wavelengths, compared to humans.",
+                "similarity": "0.45"
+              }
+            ]
+          },
+          {
+            "ids": "R2 \u2194 R1",
+            "result_similarity": "0.83",
+            "evaluation_type_match": true,
+            "result_type_match": true,
+            "claims": "7 (A) / 25 (B)",
+            "n_matched_claims": 7,
+            "claim_set_jaccard": "0.28",
+            "avg_claim_similarity": "0.99",
+            "result_a": "Long-Evans rats successfully performed visual orientation discrimination under red light (626 nm and 652 nm) with accuracy equivalent to white light (84-86% vs 87% correct). All four rats performed well under white LED illumination, and dark-adapted rats maintained this performance under red LEDs, demonstrating conserved visual capacity.",
+            "result_b": "Long-Evans rats retain substantial visual form discrimination capacity under red light (626 nm and 652 nm), with performance equivalent to white light, challenging the assumption of functional blindness. Performance degrades at 729 nm and approaches chance at infrared wavelengths (854 nm, 930 nm). The visual capacity under red light is attributed to absorption of red light by photoreceptors rather than spectral leakage from LEDs.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "Average performance was 87 \u00b1 2% correct under white light.",
+                "claim_b": "Average performance was 87 \u00b1 2% correct under white light.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "All rats (N = 4) performed well under white LED illumination.",
+                "claim_b": "All rats (N = 4) performed well under white LED illumination.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Long-Evans rats can discriminate visual form under red light of various wavelength bands.",
+                "claim_b": "Long-Evans rats can discriminate visual form under red light of various wavelength bands.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Average performance was 86 \u00b1 2% under 652 nm (p=0.419 compared to white light).",
+                "claim_b": "Average performance was 86 \u00b1 2% under 652 nm (p=0.419 compared to white light).",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Average performance was 84 \u00b1 3% under 626 nm illumination (p=0.158 compared to white light).",
+                "claim_b": "Average performance was 84 \u00b1 3% under 626 nm illumination (p=0.158 compared to white light).",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Dark-adapted rats performed the visual categorization task under 626 nm and 652 nm LEDs with accuracy equivalent to that under white light.",
+                "claim_b": "Dark-adapted rats performed the visual categorization task under 626 nm and 652 nm LEDs with accuracy equivalent to that under white light.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Rats can distinguish between horizontal and vertical orientations of a black and white grating under red light.",
+                "claim_b": "Rats had to distinguish between horizontal and vertical orientations of a black and white grating.",
+                "similarity": "0.92"
+              }
+            ]
+          },
+          {
+            "ids": "R9 \u2194 R4",
+            "result_similarity": "0.74",
+            "evaluation_type_match": false,
+            "result_type_match": true,
+            "claims": "4 (A) / 7 (B)",
+            "n_matched_claims": 4,
+            "claim_set_jaccard": "0.57",
+            "avg_claim_similarity": "0.99",
+            "result_a": "The mechanisms underlying red light detection remain speculative. Possibilities include unconscious circadian entrainment, cross-retina population coding to amplify weak signals, or nonlinear processes like two-photon activation, though the latter is unlikely given the low light intensities used.",
+            "result_b": "The gap between physiological photoreceptor activation and behaviorally meaningful visual signals under red light had not been established. The study does not directly measure photoreceptor sensitivity but infers that mechanisms must exist to convert minimal receptor activation into functional signals. Two-photon activation is considered unlikely given the low light intensities used.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "Photoreceptors could respond to longer wavelengths through a nonlinear optical process including two-photon activation of photopigments.",
+                "claim_b": "Photoreceptors could respond to longer wavelengths through a nonlinear optical process including two-photon activation of photopigments.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Red light might act to entrain circadian rhythms, unconscious to the animal.",
+                "claim_b": "Red light might act to entrain circadian rhythms, unconscious to the animal.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "The sensitivity of mice is emphasized by the finding that red illumination delivered into the brain in an optogenetic protocol evoked a behavioral artifact in mice performing a visually guided discrimination task.",
+                "claim_b": "Red illumination delivered into the brain in an optogenetic protocol evoked a behavioral artifact in mice performing a visually guided discrimination task.",
+                "similarity": "0.98"
+              },
+              {
+                "claim_a": "The results indicate that mechanisms must exist for converting miniscule quantities of receptor activation into meaningful signals, perhaps through some cross-retina population code.",
+                "claim_b": "Mechanisms must exist for converting miniscule quantities of receptor activation into meaningful signals, perhaps through some cross-retina population code.",
+                "similarity": "0.98"
+              }
+            ]
+          },
+          {
+            "ids": "R7 \u2194 R3",
+            "result_similarity": "0.73",
+            "evaluation_type_match": true,
+            "result_type_match": false,
+            "claims": "4 (A) / 4 (B)",
+            "n_matched_claims": 3,
+            "claim_set_jaccard": "0.60",
+            "avg_claim_similarity": "0.56",
+            "result_a": "The findings have important implications for experimental design: researchers should not assume red-light blindness in rodents, and illumination at 850 nm provides optimal conditions for vision-excluded studies while remaining detectable by standard cameras.",
+            "result_b": "Red light illumination is widely used in rodent behavioral research under the assumption that it creates functionally dark conditions while allowing experimenter observation, including in place-cell studies, developmental studies, and animal husbandry settings.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "Investigations aiming to explore rodent physiological and behavioral functions in the absence of visual input should not assume red-light blindness.",
+                "claim_b": "Rodent behavioral experiments done under red light are believed to place the animal in dark conditions while allowing the experimenter to observe the preparation directly or by video recording.",
+                "similarity": "0.72"
+              },
+              {
+                "claim_a": "Behaviors may be documented by video while the animal performs without visual cues at 850 nm illumination.",
+                "claim_b": "Place-cell studies of rats navigating under dim red light have been conducted, taken as the absence of visual input.",
+                "similarity": "0.51"
+              },
+              {
+                "claim_a": "In all of these cases, the animals may acquire more visual input than previously believed.",
+                "claim_b": "In a developmental study of the visual cortex, mice were dark-reared but were allowed very brief daily exposure to red light.",
+                "similarity": "0.45"
+              }
+            ]
+          },
+          {
+            "ids": "R10 \u2194 R6",
+            "result_similarity": "0.68",
+            "evaluation_type_match": true,
+            "result_type_match": true,
+            "claims": "6 (A) / 7 (B)",
+            "n_matched_claims": 6,
+            "claim_set_jaccard": "0.86",
+            "avg_claim_similarity": "0.92",
+            "result_a": "The study extends the range of visual perceptual functions for which rats serve as models, characterizing orientation discrimination across wavelengths. This has implications for experimental design and animal welfare in laboratory settings.",
+            "result_b": "Rats are increasingly used as models for visual perception research, demonstrating sophisticated visual capacities including view-invariant object recognition through accessible neural circuits. The present study extends understanding of rat visual capabilities and has implications for experimental design and animal welfare.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "Rats achieve high-level sensory-perceptual cognition through the workings of neuronal circuits that are accessible.",
+                "claim_b": "Rats achieve high-level sensory-perceptual cognition through the workings of neuronal circuits that are accessible.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "A complete understanding of the visual processing of these animals is important not only in the design and control of the behavioral and physiological experiments but also to ensure optimal environmental lighting conditions for their well-being in laboratory settings.",
+                "claim_b": "A complete understanding of the visual processing of these animals is important not only in the design and control of the behavioral and physiological experiments but also to ensure optimal environmental lighting conditions for their well-being in laboratory settings.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "There is growing interest in the use of rodents for the study of vision, alone or combined with other modalities.",
+                "claim_b": "There is growing interest in the use of rodents for the study of vision, alone or combined with other modalities.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Rats under broad-wavelength conditions spontaneously recognize an object even when views differ by angle, size, and position.",
+                "claim_b": "Rats under broad-wavelength conditions spontaneously recognize an object even when views differ by angle, size, and position.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "The present study extends the range of visual perceptual functions for which rats can serve as models, characterizing their performance in judging object orientation and indicating the longest illumination wavelengths at which this capacity remains intact.",
+                "claim_b": "The present study extends the range of visual perceptual functions for which rats can serve as models.",
+                "similarity": "0.79"
+              },
+              {
+                "claim_a": "Rats and mice are the most frequently used laboratory mammals, ideal for research on spatial navigation.",
+                "claim_b": "Rats and mice are the most frequently used laboratory mammals.",
+                "similarity": "0.75"
+              }
+            ]
+          },
+          {
+            "ids": "R4 \u2194 R5",
+            "result_similarity": "0.58",
+            "evaluation_type_match": true,
+            "result_type_match": true,
+            "claims": "3 (A) / 2 (B)",
+            "n_matched_claims": 1,
+            "claim_set_jaccard": "0.25",
+            "avg_claim_similarity": "0.52",
+            "result_a": "Rats performed at chance level under infrared illumination at 854 nm (53\u00b12%, p=0.257 vs chance) and 930 nm (50\u00b11%, p=0.316 vs chance), indicating functional blindness at these wavelengths.",
+            "result_b": "Illumination at 850 nm provides optimal conditions for vision-excluded behavioral studies, as it does not support visual form capacity but remains detectable by standard video cameras, allowing behavioral documentation without providing visual cues to the animal.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "Rats performed poorly under infrared illumination, comprising 854 nm and 930 nm light.",
+                "claim_b": "Behaviors may be documented by video while the animal performs without visual cues at 850 nm illumination.",
+                "similarity": "0.52"
+              }
+            ]
+          }
+        ],
+        "unmatched_a": [
+          "Visual discrimination performance degraded at longer wavelengths, with diminished but still above-chance performance at 729 nm (72\u00b13%, p=0.00 vs white light) and near-chance performance at 854 nm and above. This establishes a wavelength-dependent decline in visual capacity.",
+          "The visual performance under red LEDs cannot be explained by spectral leakage to shorter wavelengths. Infrared LEDs emitted 2-50 times higher intensity at shorter wavelengths than red LEDs, yet produced chance-level performance, indicating that red light itself supports discrimination.",
+          "Despite lacking red cones, rats can absorb red light through their rod-dominated retina to support form vision. Prior ERG studies showed retinal responses to red light, but whether this translates to behaviorally meaningful signals was previously unknown. The current study addresses this gap.",
+          "Background on rat visual system: rats are crepuscular with rod-dominated retinas (1% cones), rods are 100x more sensitive than cones with peak absorption at 498 nm, and rats have dichromatic color vision based on UV (358-359 nm) and green (509-510 nm) cones but poor wavelength discrimination."
+        ],
+        "unmatched_b": [
+          "The study used four male Long-Evans rats, 8 weeks old at arrival, water-deprived during testing sessions, rewarded with diluted pear juice, under protocols approved by institutional ethics committees."
+        ]
+      }
+    },
+    {
+      "label_a": "unsegmented",
+      "label_b": "pypdf4llm",
+      "n_results_a": 10,
+      "n_results_b": 11,
+      "avg_result_similarity": 0.7796,
+      "result_match_rate": 0.7273,
+      "evaluation_type_agreement": 0.875,
+      "result_type_agreement": 0.875,
+      "avg_claim_set_jaccard": 0.5569,
+      "avg_claim_similarity": 0.8809,
+      "distribution_a": {
+        "evaluation_type": {
+          "SUPPORTED": 9,
+          "UNCERTAIN": 1
+        },
+        "result_type": {
+          "MINOR": 5,
+          "MAJOR": 5
+        }
+      },
+      "distribution_b": {
+        "evaluation_type": {
+          "SUPPORTED": 10,
+          "UNCERTAIN": 1
+        },
+        "result_type": {
+          "MAJOR": 4,
+          "MINOR": 7
+        }
+      },
+      "summary": {
+        "pair": "unsegmented \u2194 pypdf4llm",
+        "metrics": {
+          "results": "10 vs 11",
+          "matched_pairs": 8,
+          "unmatched_a": 2,
+          "unmatched_b": 3,
+          "result_level": {
+            "avg_result_similarity": "78.0%",
+            "result_match_rate": "72.7%",
+            "evaluation_type_agreement": "87.5%",
+            "result_type_agreement": "87.5%"
+          },
+          "claim_set_level": {
+            "avg_claim_set_jaccard": "55.7%",
+            "avg_claim_similarity": "88.1%"
+          }
+        },
+        "evaluation_type_distribution": {
+          "SUPPORTED": {
+            "unsegmented": 9,
+            "pypdf4llm": 10
+          },
+          "UNCERTAIN": {
+            "unsegmented": 1,
+            "pypdf4llm": 1
+          }
+        },
+        "result_type_distribution": {
+          "MAJOR": {
+            "unsegmented": 5,
+            "pypdf4llm": 4
+          },
+          "MINOR": {
+            "unsegmented": 5,
+            "pypdf4llm": 7
+          }
+        },
+        "matched_pairs": [
+          {
+            "ids": "R5 \u2194 R2",
+            "result_similarity": "0.89",
+            "evaluation_type_match": true,
+            "result_type_match": true,
+            "claims": "2 (A) / 2 (B)",
+            "n_matched_claims": 2,
+            "claim_set_jaccard": "1.00",
+            "avg_claim_similarity": "1.00",
+            "result_a": "The visual performance under red LEDs cannot be explained by spectral leakage to shorter wavelengths. Infrared LEDs emitted 2-50 times higher intensity at shorter wavelengths than red LEDs, yet produced chance-level performance, indicating that red light itself supports discrimination.",
+            "result_b": "Visual performance under red LEDs (626 nm and 652 nm) is attributable to red light absorption rather than spectral leakage to shorter wavelengths. Infrared LEDs (854 nm and 930 nm) emitted 2-50 times higher intensity at shorter wavelengths than red LEDs, yet produced only chance-level performance.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "Performance under red LEDs is better explained by positing that enough red light was absorbed to guide the discrimination.",
+                "claim_b": "Performance under red LEDs is better explained by positing that enough red light was absorbed to guide the discrimination.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Visual acuity under the red LEDs (626 nm and 652 nm) cannot be explained by unintended 'leakage' toward shorter wavelengths.",
+                "claim_b": "Visual acuity under red LEDs (626 nm and 652 nm) cannot be explained by unintended 'leakage' toward shorter wavelengths.",
+                "similarity": "1.00"
+              }
+            ]
+          },
+          {
+            "ids": "R8 \u2194 R5",
+            "result_similarity": "0.88",
+            "evaluation_type_match": true,
+            "result_type_match": true,
+            "claims": "7 (A) / 9 (B)",
+            "n_matched_claims": 7,
+            "claim_set_jaccard": "0.78",
+            "avg_claim_similarity": "0.99",
+            "result_a": "Background on rat visual system: rats are crepuscular with rod-dominated retinas (1% cones), rods are 100x more sensitive than cones with peak absorption at 498 nm, and rats have dichromatic color vision based on UV (358-359 nm) and green (509-510 nm) cones but poor wavelength discrimination.",
+            "result_b": "Rats are dichromatic rodents with UV (358-359 nm) and green (509-510 nm) cone types but lacking red cones, possess rod-dominated retinas (cones <1% of photoreceptors), with rods ~100x more sensitive than cones and peak rhodopsin absorption at 498 nm. Despite lacking red cones, rats are not color-blind but perform poorly at discriminating nearby wavelengths compared to humans.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "Rods are about 100 times more sensitive than cones.",
+                "claim_b": "Rods are about 100 times more sensitive than cones.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Rat retina is rod dominated, with cones making up as little as 1% of photoreceptors.",
+                "claim_b": "Rat retina is rod dominated, with cones making up as little as 1% of photoreceptors.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Peak spectral absorption of rhodopsin in rods in rats and mice is at 498 nm.",
+                "claim_b": "Peak spectral absorption of rhodopsin in rods in rats and mice is at 498 nm.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Rats are not color-blind.",
+                "claim_b": "Rats are not color-blind.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Rats perform poorly in discriminating between nearby wavelengths, compared to humans.",
+                "claim_b": "Rats perform poorly in discriminating between nearby wavelengths compared to humans.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Rats are largely crepuscular and are usually found in poorly illuminated environments during daylight.",
+                "claim_b": "Rats are largely crepuscular and usually found in poorly illuminated environments during daylight.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Rats' color sensitivity is based on two sets of cones with peak sensitivities in the range of ultraviolet (UV cones; peak absorption at 358-359 nm) and green (M cones; peak absorption at 509-510 nm).",
+                "claim_b": "Rats' color sensitivity is based on two sets of cones with peak sensitivities in the range of ultraviolet (358\u2013359 nm) and green (509\u2013510 nm).",
+                "similarity": "0.97"
+              }
+            ]
+          },
+          {
+            "ids": "R2 \u2194 R1",
+            "result_similarity": "0.85",
+            "evaluation_type_match": true,
+            "result_type_match": true,
+            "claims": "7 (A) / 13 (B)",
+            "n_matched_claims": 7,
+            "claim_set_jaccard": "0.54",
+            "avg_claim_similarity": "0.91",
+            "result_a": "Long-Evans rats successfully performed visual orientation discrimination under red light (626 nm and 652 nm) with accuracy equivalent to white light (84-86% vs 87% correct). All four rats performed well under white LED illumination, and dark-adapted rats maintained this performance under red LEDs, demonstrating conserved visual capacity.",
+            "result_b": "Long-Evans rats (N=4) demonstrated substantial visual form discrimination capacity under red and far-red illumination. Performance under 626 nm and 652 nm red light (84\u00b13% and 86\u00b12% correct, respectively) was statistically equivalent to white light (87\u00b12%, p>0.15), while performance degraded at 729 nm (72\u00b13%, p=0.00) and reached chance levels at infrared wavelengths 854 nm and 930 nm (53\u00b12% and 50\u00b11%, both p>0.25 vs. chance).",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "Average performance was 87 \u00b1 2% correct under white light.",
+                "claim_b": "Average performance was 87 \u00b1 2% correct under white light.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Dark-adapted rats performed the visual categorization task under 626 nm and 652 nm LEDs with accuracy equivalent to that under white light.",
+                "claim_b": "Dark-adapted rats performed the visual categorization task under 626 nm and 652 nm LEDs with accuracy equivalent to that under white light.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Average performance was 84 \u00b1 3% under 626 nm illumination (p=0.158 compared to white light).",
+                "claim_b": "Average performance was 84 \u00b1 3% under 626 nm illumination with p=0.158 compared to white light.",
+                "similarity": "0.99"
+              },
+              {
+                "claim_a": "Average performance was 86 \u00b1 2% under 652 nm (p=0.419 compared to white light).",
+                "claim_b": "Average performance was 86 \u00b1 2% under 652 nm illumination with p=0.419 compared to white light.",
+                "similarity": "0.95"
+              },
+              {
+                "claim_a": "All rats (N = 4) performed well under white LED illumination.",
+                "claim_b": "All four rats performed well under white LED illumination.",
+                "similarity": "0.95"
+              },
+              {
+                "claim_a": "Long-Evans rats can discriminate visual form under red light of various wavelength bands.",
+                "claim_b": "Long-Evans rats can perform visual form discrimination under red light.",
+                "similarity": "0.89"
+              },
+              {
+                "claim_a": "Rats can distinguish between horizontal and vertical orientations of a black and white grating under red light.",
+                "claim_b": "Rats performed poorly under infrared illumination comprising 854 nm and 930 nm light.",
+                "similarity": "0.57"
+              }
+            ]
+          },
+          {
+            "ids": "R6 \u2194 R6",
+            "result_similarity": "0.81",
+            "evaluation_type_match": true,
+            "result_type_match": true,
+            "claims": "6 (A) / 3 (B)",
+            "n_matched_claims": 3,
+            "claim_set_jaccard": "0.50",
+            "avg_claim_similarity": "0.72",
+            "result_a": "Despite lacking red cones, rats can absorb red light through their rod-dominated retina to support form vision. Prior ERG studies showed retinal responses to red light, but whether this translates to behaviorally meaningful signals was previously unknown. The current study addresses this gap.",
+            "result_b": "Prior electroretinogram studies show conflicting results regarding rodent retinal responses to red light. Rocha et al. (2016) found no significant response above 620 nm in Wistar rats, while Niklaus et al. (2020) demonstrated significant scotopic and photopic ERG responses to 656\u00b110 nm red light at low intensities in both Brown Norway and Wistar rats.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "Both rat strains showed significant scotopic and photopic ERG responses to red light even at low intensities.",
+                "claim_b": "Both Brown Norway and Wistar rat strains showed significant scotopic and photopic ERG responses to red light (656 \u00b1 10 nm) even at low intensities.",
+                "similarity": "0.93"
+              },
+              {
+                "claim_a": "Whether the photoreceptor activation by red light can lead to functionally meaningful signals has not yet been established.",
+                "claim_b": "A study by Niklaus et al., 2020 showed significant scotopic and photopic ERG responses to red light even at low intensities.",
+                "similarity": "0.69"
+              },
+              {
+                "claim_a": "A recent study examined the retinal responses mediated by rods and cones of pigmented (Brown Norway) and albino (Wistar) rats in response to monochromatic far-red light of 656 \u00b1 10 nm in both photopic and scotopic settings.",
+                "claim_b": "Electroretinogram measurements of Wistar rats identified two sensitivity peaks at 362 and 502 nm with no significant response to long wavelength light above 620 nm.",
+                "similarity": "0.55"
+              }
+            ]
+          },
+          {
+            "ids": "R1 \u2194 R3",
+            "result_similarity": "0.79",
+            "evaluation_type_match": true,
+            "result_type_match": false,
+            "claims": "9 (A) / 5 (B)",
+            "n_matched_claims": 5,
+            "claim_set_jaccard": "0.56",
+            "avg_claim_similarity": "0.90",
+            "result_a": "The manuscript challenges the widespread assumption that rats are functionally blind under red light. This assumption is based on rats being dichromats lacking red cones, and prior ERG studies showing no significant response above 620 nm. However, conflicting evidence exists, with another study showing ERG responses to red light. Red light has been commonly used in behavioral experiments under the assumption it provides darkness for the animal.",
+            "result_b": "The common assumption that rodents are functionally blind under red light in behavioral and physiological experiments is challenged. Multiple research domains including place-cell studies, circadian rhythm research, and general behavioral neuroscience have operated under this assumption, but animals may acquire more visual input than previously believed.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "Red illumination is often used in reverse light cycle conditions in animal husbandry settings with the assumption that it will not affect rodent circadian rhythms.",
+                "claim_b": "Red illumination is often used in reverse light cycle conditions in animal husbandry settings with the assumption that it will not affect rodent circadian rhythms.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Place-cell studies of rats navigating under dim red light have taken red light as the absence of visual input.",
+                "claim_b": "Place-cell studies of rats navigating under dim red light have been conducted with the assumption of absence of visual input.",
+                "similarity": "0.98"
+              },
+              {
+                "claim_a": "Rodent behavioral experiments done under red light are believed to place the animal in dark conditions while allowing the experimenter to observe the preparation directly or by video recording.",
+                "claim_b": "Rodent behavioral experiments done under red light are believed to place the animal in dark conditions while allowing the experimenter to observe the preparation.",
+                "similarity": "0.97"
+              },
+              {
+                "claim_a": "Rats and mice are assumed to be functionally blind under red light.",
+                "claim_b": "Rats should not be assumed to be blind under red light in investigations exploring rodent physiological and behavioral functions.",
+                "similarity": "0.89"
+              },
+              {
+                "claim_a": "In a developmental study of the visual cortex, mice were dark-reared but were allowed very brief daily exposure to red light.",
+                "claim_b": "Animals in studies using red light may acquire more visual input than previously believed.",
+                "similarity": "0.66"
+              }
+            ]
+          },
+          {
+            "ids": "R9 \u2194 R9",
+            "result_similarity": "0.70",
+            "evaluation_type_match": false,
+            "result_type_match": true,
+            "claims": "4 (A) / 2 (B)",
+            "n_matched_claims": 2,
+            "claim_set_jaccard": "0.50",
+            "avg_claim_similarity": "0.99",
+            "result_a": "The mechanisms underlying red light detection remain speculative. Possibilities include unconscious circadian entrainment, cross-retina population coding to amplify weak signals, or nonlinear processes like two-photon activation, though the latter is unlikely given the low light intensities used.",
+            "result_b": "Red light may have non-conscious effects on rodents, such as entraining circadian rhythms, and can produce behavioral artifacts in optogenetic experiments as demonstrated in mice performing visual discrimination tasks.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "Red light might act to entrain circadian rhythms, unconscious to the animal.",
+                "claim_b": "Red light might act to entrain circadian rhythms, unconscious to the animal.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "The sensitivity of mice is emphasized by the finding that red illumination delivered into the brain in an optogenetic protocol evoked a behavioral artifact in mice performing a visually guided discrimination task.",
+                "claim_b": "Red illumination delivered into the brain in an optogenetic protocol evoked a behavioral artifact in mice performing a visually guided discrimination task.",
+                "similarity": "0.98"
+              }
+            ]
+          },
+          {
+            "ids": "R10 \u2194 R11",
+            "result_similarity": "0.69",
+            "evaluation_type_match": true,
+            "result_type_match": true,
+            "claims": "6 (A) / 18 (B)",
+            "n_matched_claims": 6,
+            "claim_set_jaccard": "0.33",
+            "avg_claim_similarity": "0.54",
+            "result_a": "The study extends the range of visual perceptual functions for which rats serve as models, characterizing orientation discrimination across wavelengths. This has implications for experimental design and animal welfare in laboratory settings.",
+            "result_b": "The study used four male Long-Evans rats (8 weeks old, ~250g initially, growing to >600g) maintained on 12/12hr light/dark cycles with experiments during light phase. Rats were dark-adapted 20-30 minutes before sessions and tested on orientation discrimination of a 9.8cm diameter grating stimulus (0.075 cpd spatial frequency, expected to be resolvable given ~1 cpd rat acuity) covering the 117\u00b0 binocular field. Training required 4-6 weeks with randomized illumination conditions.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "A complete understanding of the visual processing of these animals is important not only in the design and control of the behavioral and physiological experiments but also to ensure optimal environmental lighting conditions for their well-being in laboratory settings.",
+                "claim_b": "Rats were dark-adapted in a light-free environment for 20\u201330 min prior to each session.",
+                "similarity": "0.61"
+              },
+              {
+                "claim_a": "There is growing interest in the use of rodents for the study of vision, alone or combined with other modalities.",
+                "claim_b": "Rats have a large depth of focus, from 7 cm to infinity.",
+                "similarity": "0.59"
+              },
+              {
+                "claim_a": "The present study extends the range of visual perceptual functions for which rats can serve as models, characterizing their performance in judging object orientation and indicating the longest illumination wavelengths at which this capacity remains intact.",
+                "claim_b": "The normal visual acuity of Long-Evans rats has been estimated as ~1 cpd.",
+                "similarity": "0.57"
+              },
+              {
+                "claim_a": "Rats under broad-wavelength conditions spontaneously recognize an object even when views differ by angle, size, and position.",
+                "claim_b": "The 117\u00b0 stimulus should completely cover the rat's binocular visual field.",
+                "similarity": "0.55"
+              },
+              {
+                "claim_a": "Rats and mice are the most frequently used laboratory mammals, ideal for research on spatial navigation.",
+                "claim_b": "Four male Long-Evans rats from Charles River Laboratories were used in the study.",
+                "similarity": "0.48"
+              },
+              {
+                "claim_a": "Rats achieve high-level sensory-perceptual cognition through the workings of neuronal circuits that are accessible.",
+                "claim_b": "The sequence of sessions for each rat was randomized, with each day's session illuminated by either red, infrared, or white LEDs, with equal likelihood.",
+                "similarity": "0.41"
+              }
+            ]
+          },
+          {
+            "ids": "R7 \u2194 R4",
+            "result_similarity": "0.62",
+            "evaluation_type_match": true,
+            "result_type_match": true,
+            "claims": "4 (A) / 1 (B)",
+            "n_matched_claims": 1,
+            "claim_set_jaccard": "0.25",
+            "avg_claim_similarity": "1.00",
+            "result_a": "The findings have important implications for experimental design: researchers should not assume red-light blindness in rodents, and illumination at 850 nm provides optimal conditions for vision-excluded studies while remaining detectable by standard cameras.",
+            "result_b": "Illumination at 850 nm provides optimal conditions for vision-excluded behavioral studies, as it does not support visual form capacity while remaining within the sensitivity range of standard CMOS and CCD detectors for video recording.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "Illumination at 850 nm did not support visual form capacity, yet remains within the sensitivity range of inexpensive silicone detectors (CMOS and CCDs).",
+                "claim_b": "Illumination at 850 nm did not support visual form capacity, yet remains within the sensitivity range of inexpensive silicone detectors (CMOS and CCDs).",
+                "similarity": "1.00"
+              }
+            ]
+          }
+        ],
+        "unmatched_a": [
+          "Visual discrimination performance degraded at longer wavelengths, with diminished but still above-chance performance at 729 nm (72\u00b13%, p=0.00 vs white light) and near-chance performance at 854 nm and above. This establishes a wavelength-dependent decline in visual capacity.",
+          "Rats performed at chance level under infrared illumination at 854 nm (53\u00b12%, p=0.257 vs chance) and 930 nm (50\u00b11%, p=0.316 vs chance), indicating functional blindness at these wavelengths."
+        ],
+        "unmatched_b": [
+          "The inability to see red as a color does not preclude red light absorption through rod-dominated retina for form vision. Retinal receptor excitation does not automatically indicate behavioral signal availability, and mechanisms must exist for converting minimal receptor activation into meaningful signals, possibly through cross-retina population coding.",
+          "Two-photon activation of photopigments could theoretically enable photoreceptor responses to longer wavelengths, though the emission intensities used in this study are many orders of magnitude lower than those required for two-photon processes.",
+          "Rats and mice are the most frequently used laboratory mammals with growing interest in vision research. Rats demonstrate high-level visual perception including view-invariant object recognition (previously thought exclusive to primates) through accessible neuronal circuits."
+        ]
+      }
+    },
+    {
+      "label_a": "segmented",
+      "label_b": "pypdf4llm",
+      "n_results_a": 7,
+      "n_results_b": 11,
+      "avg_result_similarity": 0.8269,
+      "result_match_rate": 0.5455,
+      "evaluation_type_agreement": 0.8333,
+      "result_type_agreement": 1.0,
+      "avg_claim_set_jaccard": 0.5438,
+      "avg_claim_similarity": 0.8993,
+      "distribution_a": {
+        "evaluation_type": {
+          "SUPPORTED": 7
+        },
+        "result_type": {
+          "MAJOR": 2,
+          "MINOR": 5
+        }
+      },
+      "distribution_b": {
+        "evaluation_type": {
+          "SUPPORTED": 10,
+          "UNCERTAIN": 1
+        },
+        "result_type": {
+          "MAJOR": 4,
+          "MINOR": 7
+        }
+      },
+      "summary": {
+        "pair": "segmented \u2194 pypdf4llm",
+        "metrics": {
+          "results": "7 vs 11",
+          "matched_pairs": 6,
+          "unmatched_a": 1,
+          "unmatched_b": 5,
+          "result_level": {
+            "avg_result_similarity": "82.7%",
+            "result_match_rate": "54.5%",
+            "evaluation_type_agreement": "83.3%",
+            "result_type_agreement": "100.0%"
+          },
+          "claim_set_level": {
+            "avg_claim_set_jaccard": "54.4%",
+            "avg_claim_similarity": "89.9%"
+          }
+        },
+        "evaluation_type_distribution": {
+          "SUPPORTED": {
+            "segmented": 7,
+            "pypdf4llm": 10
+          },
+          "UNCERTAIN": {
+            "segmented": 0,
+            "pypdf4llm": 1
+          }
+        },
+        "result_type_distribution": {
+          "MAJOR": {
+            "segmented": 2,
+            "pypdf4llm": 4
+          },
+          "MINOR": {
+            "segmented": 5,
+            "pypdf4llm": 7
+          }
+        },
+        "matched_pairs": [
+          {
+            "ids": "R1 \u2194 R1",
+            "result_similarity": "0.91",
+            "evaluation_type_match": true,
+            "result_type_match": true,
+            "claims": "25 (A) / 13 (B)",
+            "n_matched_claims": 13,
+            "claim_set_jaccard": "0.52",
+            "avg_claim_similarity": "0.91",
+            "result_a": "Long-Evans rats retain substantial visual form discrimination capacity under red light (626 nm and 652 nm), with performance equivalent to white light, challenging the assumption of functional blindness. Performance degrades at 729 nm and approaches chance at infrared wavelengths (854 nm, 930 nm). The visual capacity under red light is attributed to absorption of red light by photoreceptors rather than spectral leakage from LEDs.",
+            "result_b": "Long-Evans rats (N=4) demonstrated substantial visual form discrimination capacity under red and far-red illumination. Performance under 626 nm and 652 nm red light (84\u00b13% and 86\u00b12% correct, respectively) was statistically equivalent to white light (87\u00b12%, p>0.15), while performance degraded at 729 nm (72\u00b13%, p=0.00) and reached chance levels at infrared wavelengths 854 nm and 930 nm (53\u00b12% and 50\u00b11%, both p>0.25 vs. chance).",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "Average performance was 87 \u00b1 2% correct under white light.",
+                "claim_b": "Average performance was 87 \u00b1 2% correct under white light.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Object discrimination began to degrade when illumination wavelength increased from 652 to 729 nm and was almost nil at 854 nm.",
+                "claim_b": "Object discrimination began to degrade when illumination wavelength increased from 652 to 729 nm and was almost nil at 854 nm.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Dark-adapted rats performed the visual categorization task under 626 nm and 652 nm LEDs with accuracy equivalent to that under white light.",
+                "claim_b": "Dark-adapted rats performed the visual categorization task under 626 nm and 652 nm LEDs with accuracy equivalent to that under white light.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Rats performed poorly under infrared illumination, comprising 854 nm and 930 nm light.",
+                "claim_b": "Rats performed poorly under infrared illumination comprising 854 nm and 930 nm light.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Average performance was 84 \u00b1 3% under 626 nm illumination (p=0.158 compared to white light).",
+                "claim_b": "Average performance was 84 \u00b1 3% under 626 nm illumination with p=0.158 compared to white light.",
+                "similarity": "0.99"
+              },
+              {
+                "claim_a": "Rats performed well under peak 729 nm, though clearly diminished with respect to white light.",
+                "claim_b": "Rats performed well under peak 729 nm illumination, though clearly diminished with respect to white light.",
+                "similarity": "0.96"
+              },
+              {
+                "claim_a": "Average performance was 72 \u00b1 3% under 729 nm (p=0.00 compared to white light).",
+                "claim_b": "Average performance was 72 \u00b1 3% under 729 nm illumination with p=0.00 compared to white light.",
+                "similarity": "0.95"
+              },
+              {
+                "claim_a": "Average performance was 86 \u00b1 2% under 652 nm (p=0.419 compared to white light).",
+                "claim_b": "Average performance was 86 \u00b1 2% under 652 nm illumination with p=0.419 compared to white light.",
+                "similarity": "0.95"
+              },
+              {
+                "claim_a": "All rats (N = 4) performed well under white LED illumination.",
+                "claim_b": "All four rats performed well under white LED illumination.",
+                "similarity": "0.95"
+              },
+              {
+                "claim_a": "Long-Evans rats can discriminate visual form under red light of various wavelength bands.",
+                "claim_b": "Long-Evans rats can perform visual form discrimination under red light.",
+                "similarity": "0.89"
+              },
+              {
+                "claim_a": "Average performance was 50 \u00b1 1% under 930 nm (p=0.316 compared to chance).",
+                "claim_b": "Average performance was 50 \u00b1 1% under 930 nm illumination with p=0.316 compared to chance.",
+                "similarity": "0.84"
+              },
+              {
+                "claim_a": "Average performance was 53 \u00b1 2% under 854 nm (p=0.257 compared to chance).",
+                "claim_b": "Average performance was 53 \u00b1 2% under 854 nm illumination with p=0.257 compared to chance.",
+                "similarity": "0.81"
+              },
+              {
+                "claim_a": "Rats had to distinguish between horizontal and vertical orientations of a black and white grating.",
+                "claim_b": "Four Long-Evans rats were used in the study.",
+                "similarity": "0.46"
+              }
+            ]
+          },
+          {
+            "ids": "R6 \u2194 R10",
+            "result_similarity": "0.88",
+            "evaluation_type_match": true,
+            "result_type_match": true,
+            "claims": "7 (A) / 5 (B)",
+            "n_matched_claims": 5,
+            "claim_set_jaccard": "0.71",
+            "avg_claim_similarity": "0.98",
+            "result_a": "Rats are increasingly used as models for visual perception research, demonstrating sophisticated visual capacities including view-invariant object recognition through accessible neural circuits. The present study extends understanding of rat visual capabilities and has implications for experimental design and animal welfare.",
+            "result_b": "Rats and mice are the most frequently used laboratory mammals with growing interest in vision research. Rats demonstrate high-level visual perception including view-invariant object recognition (previously thought exclusive to primates) through accessible neuronal circuits.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "Rats and mice are the most frequently used laboratory mammals.",
+                "claim_b": "Rats and mice are the most frequently used laboratory mammals.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Rats achieve high-level sensory-perceptual cognition through the workings of neuronal circuits that are accessible.",
+                "claim_b": "Rats achieve high-level sensory-perceptual cognition through the workings of neuronal circuits that are accessible.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "There is growing interest in the use of rodents for the study of vision, alone or combined with other modalities.",
+                "claim_b": "There is growing interest in the use of rodents for the study of vision, alone or combined with other modalities.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Rats under broad-wavelength conditions spontaneously recognize an object even when views differ by angle, size, and position.",
+                "claim_b": "Rats under broad-wavelength conditions spontaneously recognize an object even when views differ by angle, size, and position.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Such generalization is a hallmark of authentic visual perception and was once believed to belong only to primates.",
+                "claim_b": "Object generalization across different views is a hallmark of authentic visual perception and was once believed to belong only to primates.",
+                "similarity": "0.92"
+              }
+            ]
+          },
+          {
+            "ids": "R2 \u2194 R5",
+            "result_similarity": "0.86",
+            "evaluation_type_match": true,
+            "result_type_match": true,
+            "claims": "15 (A) / 9 (B)",
+            "n_matched_claims": 9,
+            "claim_set_jaccard": "0.60",
+            "avg_claim_similarity": "0.96",
+            "result_a": "Prior literature establishes that rats are dichromatic with UV and green cones but lack red cones, have rod-dominated retinas, and show poor wavelength discrimination. Recent ERG studies show conflicting results regarding red light sensitivity, with one study finding no response above 620 nm and another finding significant responses to far-red light.",
+            "result_b": "Rats are dichromatic rodents with UV (358-359 nm) and green (509-510 nm) cone types but lacking red cones, possess rod-dominated retinas (cones <1% of photoreceptors), with rods ~100x more sensitive than cones and peak rhodopsin absorption at 498 nm. Despite lacking red cones, rats are not color-blind but perform poorly at discriminating nearby wavelengths compared to humans.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "Rods are about 100 times more sensitive than cones.",
+                "claim_b": "Rods are about 100 times more sensitive than cones.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Rat retina is rod dominated, with cones making up as little as 1% of photoreceptors.",
+                "claim_b": "Rat retina is rod dominated, with cones making up as little as 1% of photoreceptors.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Rats are largely crepuscular and usually found in poorly illuminated environments during daylight.",
+                "claim_b": "Rats are largely crepuscular and usually found in poorly illuminated environments during daylight.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Rodents lack red cones.",
+                "claim_b": "Rodents lack red cones.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Peak spectral absorption of rhodopsin in rods in rats and mice is at 498 nm.",
+                "claim_b": "Peak spectral absorption of rhodopsin in rods in rats and mice is at 498 nm.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Rats are not color-blind.",
+                "claim_b": "Rats are not color-blind.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Rats perform poorly in discriminating between nearby wavelengths, compared to humans.",
+                "claim_b": "Rats perform poorly in discriminating between nearby wavelengths compared to humans.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Rats' color sensitivity is based on two sets of cones with peak sensitivities in the range of ultraviolet (UV cones; peak absorption at 358-359 nm) and green (M cones; peak absorption at 509-510 nm).",
+                "claim_b": "Rats' color sensitivity is based on two sets of cones with peak sensitivities in the range of ultraviolet (358\u2013359 nm) and green (509\u2013510 nm).",
+                "similarity": "0.97"
+              },
+              {
+                "claim_a": "From the inability to see red as a color, it does not necessarily follow that rodents cannot absorb red light through their rod-dominated retina to support form vision.",
+                "claim_b": "Rats and mice are dichromats who possess ultraviolet and green cones, but not red cones.",
+                "similarity": "0.65"
+              }
+            ]
+          },
+          {
+            "ids": "R5 \u2194 R4",
+            "result_similarity": "0.83",
+            "evaluation_type_match": true,
+            "result_type_match": true,
+            "claims": "2 (A) / 1 (B)",
+            "n_matched_claims": 1,
+            "claim_set_jaccard": "0.50",
+            "avg_claim_similarity": "1.00",
+            "result_a": "Illumination at 850 nm provides optimal conditions for vision-excluded behavioral studies, as it does not support visual form capacity but remains detectable by standard video cameras, allowing behavioral documentation without providing visual cues to the animal.",
+            "result_b": "Illumination at 850 nm provides optimal conditions for vision-excluded behavioral studies, as it does not support visual form capacity while remaining within the sensitivity range of standard CMOS and CCD detectors for video recording.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "Illumination at 850 nm did not support visual form capacity, yet remains within the sensitivity range of inexpensive silicone detectors (CMOS and CCDs).",
+                "claim_b": "Illumination at 850 nm did not support visual form capacity, yet remains within the sensitivity range of inexpensive silicone detectors (CMOS and CCDs).",
+                "similarity": "1.00"
+              }
+            ]
+          },
+          {
+            "ids": "R3 \u2194 R9",
+            "result_similarity": "0.76",
+            "evaluation_type_match": true,
+            "result_type_match": true,
+            "claims": "4 (A) / 2 (B)",
+            "n_matched_claims": 2,
+            "claim_set_jaccard": "0.50",
+            "avg_claim_similarity": "0.69",
+            "result_a": "Red light illumination is widely used in rodent behavioral research under the assumption that it creates functionally dark conditions while allowing experimenter observation, including in place-cell studies, developmental studies, and animal husbandry settings.",
+            "result_b": "Red light may have non-conscious effects on rodents, such as entraining circadian rhythms, and can produce behavioral artifacts in optogenetic experiments as demonstrated in mice performing visual discrimination tasks.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "Red illumination is often used in reverse light cycle conditions in animal husbandry settings with the assumption that it will not affect rodent circadian rhythms.",
+                "claim_b": "Red light might act to entrain circadian rhythms, unconscious to the animal.",
+                "similarity": "0.75"
+              },
+              {
+                "claim_a": "In a developmental study of the visual cortex, mice were dark-reared but were allowed very brief daily exposure to red light.",
+                "claim_b": "Red illumination delivered into the brain in an optogenetic protocol evoked a behavioral artifact in mice performing a visually guided discrimination task.",
+                "similarity": "0.63"
+              }
+            ]
+          },
+          {
+            "ids": "R4 \u2194 R7",
+            "result_similarity": "0.72",
+            "evaluation_type_match": false,
+            "result_type_match": true,
+            "claims": "7 (A) / 3 (B)",
+            "n_matched_claims": 3,
+            "claim_set_jaccard": "0.43",
+            "avg_claim_similarity": "0.86",
+            "result_a": "The gap between physiological photoreceptor activation and behaviorally meaningful visual signals under red light had not been established. The study does not directly measure photoreceptor sensitivity but infers that mechanisms must exist to convert minimal receptor activation into functional signals. Two-photon activation is considered unlikely given the low light intensities used.",
+            "result_b": "The inability to see red as a color does not preclude red light absorption through rod-dominated retina for form vision. Retinal receptor excitation does not automatically indicate behavioral signal availability, and mechanisms must exist for converting minimal receptor activation into meaningful signals, possibly through cross-retina population coding.",
+            "matched_claim_pairs": [
+              {
+                "claim_a": "Mechanisms must exist for converting miniscule quantities of receptor activation into meaningful signals, perhaps through some cross-retina population code.",
+                "claim_b": "Mechanisms must exist for converting miniscule quantities of receptor activation into meaningful signals, perhaps through some cross-retina population code.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Excitation of retinal receptors by red light does not, by itself, indicate behavioral availability of the signal.",
+                "claim_b": "Excitation of retinal receptors by red light does not, by itself, indicate behavioral availability of the signal.",
+                "similarity": "1.00"
+              },
+              {
+                "claim_a": "Red light might act to entrain circadian rhythms, unconscious to the animal.",
+                "claim_b": "The inability to see red as a color does not necessarily mean rodents cannot absorb red light through their rod-dominated retina to support form vision.",
+                "similarity": "0.57"
+              }
+            ]
+          }
+        ],
+        "unmatched_a": [
+          "The study used four male Long-Evans rats, 8 weeks old at arrival, water-deprived during testing sessions, rewarded with diluted pear juice, under protocols approved by institutional ethics committees."
+        ],
+        "unmatched_b": [
+          "Visual performance under red LEDs (626 nm and 652 nm) is attributable to red light absorption rather than spectral leakage to shorter wavelengths. Infrared LEDs (854 nm and 930 nm) emitted 2-50 times higher intensity at shorter wavelengths than red LEDs, yet produced only chance-level performance.",
+          "The common assumption that rodents are functionally blind under red light in behavioral and physiological experiments is challenged. Multiple research domains including place-cell studies, circadian rhythm research, and general behavioral neuroscience have operated under this assumption, but animals may acquire more visual input than previously believed.",
+          "Prior electroretinogram studies show conflicting results regarding rodent retinal responses to red light. Rocha et al. (2016) found no significant response above 620 nm in Wistar rats, while Niklaus et al. (2020) demonstrated significant scotopic and photopic ERG responses to 656\u00b110 nm red light at low intensities in both Brown Norway and Wistar rats.",
+          "Two-photon activation of photopigments could theoretically enable photoreceptor responses to longer wavelengths, though the emission intensities used in this study are many orders of magnitude lower than those required for two-photon processes.",
+          "The study used four male Long-Evans rats (8 weeks old, ~250g initially, growing to >600g) maintained on 12/12hr light/dark cycles with experiments during light phase. Rats were dark-adapted 20-30 minutes before sessions and tested on orientation discrimination of a 9.8cm diameter grating stimulus (0.075 cpd spatial frequency, expected to be resolvable given ~1 cpd rat acuity) covering the 117\u00b0 binocular field. Training required 4-6 weeks with randomized illumination conditions."
+        ]
+      }
+    }
+  ]
+}
