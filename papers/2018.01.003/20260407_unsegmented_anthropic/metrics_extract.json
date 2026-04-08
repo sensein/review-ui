@@ -1,0 +1,14 @@
+{
+  "command": "cllm extract ../2018.01.003.pdf.tei.xml -o claims.json",
+  "model": "claude-sonnet-4-5-20250929",
+  "created_at": 1775598692,
+  "input_tokens": 50599,
+  "cached_tokens": 0,
+  "output_tokens": 9640,
+  "total_tokens": 60239,
+  "input_cost": 0.15179700000000002,
+  "cached_cost": 0.0,
+  "output_cost": 0.1446,
+  "total_cost": 0.296397,
+  "processing_time_sec": 153.82769298553467
+}

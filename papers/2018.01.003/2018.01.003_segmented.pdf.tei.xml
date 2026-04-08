@@ -1,0 +1,1737 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Supralinear and Supramodal Integration of Visual and Tactile Signals in Rats: Psychophysics and Neuronal Mechanisms</title>
+				<funder ref="#_C5gc3BM">
+					<orgName type="full">Human Frontier Science Program</orgName>
+				</funder>
+				<funder ref="#_eJ4WM47">
+					<orgName type="full">European Research Council consolidator</orgName>
+				</funder>
+				<funder ref="#_M7m76Qx">
+					<orgName type="full">Italian MIUR</orgName>
+				</funder>
+				<funder ref="#_pnmDkak">
+					<orgName type="full">European Research Council</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+				<date type="published" when="2018-01-25">January 25, 2018</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Nader</forename><surname>Nikbakht</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">Tactile Perception and Learning Lab</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Azadeh</forename><surname>Tafreshiha</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="laboratory">Tactile Perception and Learning Lab</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Davide</forename><surname>Zoccolan</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="laboratory">Visual Neuroscience Lab International School for Advanced Studies (SISSA)</orgName>
+								<address>
+									<addrLine>Via Bonomea 265</addrLine>
+									<postCode>34136</postCode>
+									<settlement>Trieste</settlement>
+									<region>TS</region>
+									<country key="IT">Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Mathew</forename><forename type="middle">E</forename><surname>Diamond</surname></persName>
+							<email>diamond@sissa.it</email>
+							<affiliation key="aff0">
+								<orgName type="laboratory">Tactile Perception and Learning Lab</orgName>
+							</affiliation>
+							<affiliation key="aff4">
+								<orgName type="department">Lead Contact</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="department">Department of Brain and Cognitive Sciences</orgName>
+								<orgName type="institution" key="instit1">McGovern Institute for Brain Research</orgName>
+								<orgName type="institution" key="instit2">Massachusetts Institute of Technology</orgName>
+								<address>
+									<postCode>02139</postCode>
+									<settlement>Cambridge</settlement>
+									<region>MA</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<orgName type="institution">Netherlands Institute for Neuroscience</orgName>
+								<address>
+									<addrLine>Meibergdreef 47</addrLine>
+									<postCode>1105 BA</postCode>
+									<settlement>Amsterdam</settlement>
+									<country key="NL">the Netherlands</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Supralinear and Supramodal Integration of Visual and Tactile Signals in Rats: Psychophysics and Neuronal Mechanisms</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2018-01-25">January 25, 2018</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">2F9104FC8B5CCCCD1119D2D531B30A2B</idno>
+					<idno type="DOI">10.1016/j.neuron.2018.01.003</idno>
+					<note type="submission">Received: August 8, 2017 Revised: November 24, 2017 Accepted: December 31, 2017</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2026-04-07T21:38+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p><s>Highlights d Rats combine vision and touch to distinguish two grating orientation categories d Performance with vision and touch together reveals synergy between the two channels d Posterior parietal cortex (PPC) neuronal responses are invariant to modality</s></p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>INTRODUCTION</head><p><s>Our experience of the world depends on integrating signals through multiple senses.</s><s>In many instances we can recognize an object independently of the modality by which we acquire the sensory signal, implying that our knowledge about things can be accessed and triggered through a number of sensory pathways <ref type="bibr" target="#b51">(Quiroga et al., 2005)</ref>.</s><s>In psychophysical studies, humans, non-human primates, and rodents demonstrate heightened accuracy of perceptual judgements when multiple cues are combined, and in some studies the increase in accuracy approximates that of a statistically optimal observer <ref type="bibr" target="#b2">(Alais and Burr, 2004;</ref><ref type="bibr" target="#b4">Battaglia et al., 2003;</ref><ref type="bibr" target="#b14">Ernst and Banks, 2002;</ref><ref type="bibr" target="#b16">Fetsch et al., 2009;</ref><ref type="bibr" target="#b22">Guo et al., 2014;</ref><ref type="bibr" target="#b27">Jacobs, 1999;</ref><ref type="bibr" target="#b52">Raposo et al., 2012)</ref>.</s><s>Neuroscientists, to date, do not have a full understanding of how the processes of convergence, fusion, and generalization across sensory modalities are realized, though much attention has been focused on the problem <ref type="bibr" target="#b4">(Battaglia et al., 2003;</ref><ref type="bibr" target="#b11">Drugowitsch et al., 2015;</ref><ref type="bibr" target="#b14">Ernst and Banks, 2002;</ref><ref type="bibr" target="#b18">Fetsch et al., 2013)</ref>.</s></p><p><s>Where in the brain are distinct sensory channels combined?</s><s>Since object recognition is usually attributed to neocortical processing, here we examine the posterior parietal cortex (PPC), situated between primary somatosensory and visual cortices and a target of both <ref type="bibr" target="#b1">(Akers and Killackey, 1978;</ref><ref type="bibr" target="#b34">Krubitzer, 1995;</ref><ref type="bibr" target="#b54">Reep et al., 1994;</ref><ref type="bibr" target="#b62">Whitlock et al., 2008;</ref><ref type="bibr" target="#b64">Wilber et al., 2014)</ref>.</s><s>PPC is a good candidate for visual-tactile convergence <ref type="bibr" target="#b43">(Olcese et al., 2013)</ref>, although in rodents the degree of multisensory convergence within it is debated <ref type="bibr" target="#b13">(Erlich et al., 2015;</ref><ref type="bibr" target="#b23">Harvey et al., 2012;</ref><ref type="bibr" target="#b37">Licata et al., 2017;</ref><ref type="bibr" target="#b38">Lippert et al., 2013;</ref><ref type="bibr" target="#b53">Raposo et al., 2014)</ref>.</s></p><p><s>In the present study, we linked the psychophysical and neurophysiological approaches by measuring the efficiency of multisensory integration through a behavioral test, while simultaneously examining neuronal processing in the PPC.</s><s>As a psychophysical gauge of integration, we measured the capacity of rats to judge the orientation of an object by the visual sensory channel, by the tactile sensory channel, and by both channels together.</s><s>The results show that the same functional knowledge of object orientation could be evoked under varying sensory conditions, yet the most reliable judgment arose from the two channels operating together.</s><s>Next, as a neurophysiological gauge of multisensory integration, we measured the degree to which the activity of PPC neurons recorded during the behavioral task could account for the rats' supramodal recognition of object orientation.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>RESULTS</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Visual-Tactile Orientation Categorization Task</head><p><s>We designed a visual-tactile categorization task that involves a solid object.</s><s>The discriminandum, pictured in Figure <ref type="figure" target="#fig_13">1A</ref>, had a circular boundary (98 mm diameter) and raised parallel bars (width and depth of 3.5 mm), alternately colored white and black.</s><s>It was thus accessible as both a visual and a tactile square wave grating.</s><s>Rats were trained to encounter the object to judge its orientation on each trial, categorizing orientations in the range of 0 -45 as horizontal, and orientations in the range of 45 -90 as vertical (Figure <ref type="figure">1B</ref>; also see STAR Methods and Figure <ref type="figure" target="#fig_8">S1</ref>). Figure <ref type="figure">1C</ref> illustrates in a schematic manner the sequence of events in the behavioral task.</s><s>Each trial started with a head poke that triggered the opening of an opaque gate, followed by either a tactile (T) trial (in complete darkness, with the animal allowed to touch the object with its snout and whiskers), a visual (V) trial (under illumination but with a transparent panel in front of the object to prevent contact), or a visual-tactile (VT) trial (with the object illuminated and accessible by touch).</s><s>After sampling the stimulus, the rat turned its head toward one spout (L or R) and licked.</s><s>The boundary angle, 45 , was rewarded randomly on left or right.</s><s>The three stimulus conditions (V, T, and VT) were randomly interleaved with 32% likelihood per trial.</s><s>The remaining 4% were control trials (neither visual nor tactile access to the stimulus).</s></p><p><s>As a first step, we characterized the rats' performance on V and T (unimodal) trials and compared the performance to that on VT trials.</s><s>Next, we analyzed their accuracy in these three conditions to determine whether they merged or else kept separate the visual and tactile sensory information on visual-tactile trials.</s><s>Finally, we explored the neuronal correlates of the convergence of sensory channels.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Improved Performance through Merging of Touch and Vision</head><p><s>To quantify rats' performance, we used a cumulative Gaussian function to fit psychometric curves to the choice data of each rat in each modality (see STAR Methods).</s><s>Figure <ref type="figure" target="#fig_13">2A</ref> reveals that rats differed in their modality-specific acuity: rat 3 performed better in the T condition (left), while rats 12 and 1 performed better in the V condition (middle and right).</s><s>All three example rats performed better in the VT condition than in V or T alone (in this figure, and throughout the report, green traces correspond to the T condition, blue to V, and red to VT).</s><s>The boost in performance in the VT condition indicates that, when both modalities were available, rats did not select and rely upon the single, preferred channel; instead, they benefited from the access to both channels of sensory input (Figure <ref type="figure" target="#fig_9">S2B</ref>).</s></p><p><s>Figure <ref type="figure" target="#fig_1">2B</ref> shows the psychometric fits for 12 rats (pale curves, colored according to modality).</s><s>The average performance across rats is illustrated by the thick curves.</s><s>Rats showed, on average, good orientation acuity using their whiskers and snout (T) and slightly better performance using vision (V).</s><s>Performance was markedly superior in the VT condition, indicating multisensory enhancement, consistent with Figure <ref type="figure" target="#fig_13">2A</ref>.</s><s>The standard (A) Photographs of the object examined by the rat.</s><s>Shown are front-side view (left) and exactly front view (right), the latter approximating the perspective of the rat.</s><s>(B) Schematic of the orientations of the stimuli and rule of the categorization task.</s><s>Rats were trained to categorize orientations from 0 to 45 (solid red) in one category and orientations from 45 to 90 (solid green) in another.</s><s>When tested with À45 to 0 and 90 -135 (red and green stippling, respectively), they immediately generalized the rule, suggesting that the categories corresponded to horizontal (H) and vertical (V); see Figure <ref type="figure" target="#fig_9">S2C</ref>.</s></p><p><s>(C) Sequential steps in the behavioral task.</s><s>Each trial started with a head poke that interrupted a light beam and triggered the opening of an opaque gate, followed by either visual, tactile, or visual-tactile access to the object.</s><s>After probing the stimulus, the rat turned its head toward one spout, in this illustration left for vertical and right for horizontal.</s><s>On the right side of the figure, the sequence of actuators and sensors is shown schematically.</s><s>See Figure <ref type="figure" target="#fig_13">S1A</ref> for the experimental setup.</s></p><p><s>Neuron 97, 626-639, February 7, 2018 627 (A) Three example rats that, notwithstanding differences in modality-specific acuity, each showed better performance on VT trials as compared to V and T trials.</s></p><p><s>In this and all figures, green traces correspond to the T condition, blue to V, and red to VT. Black curves are predicted psychometric curves from the Bayesian cue-combination model.</s><s>Error bars show 95% binomial confidence intervals.</s><s>See Figure <ref type="figure" target="#fig_13">S2A</ref> for tests of significance.</s></p><p><s>(legend continued on next page) deviation, s, of the cumulative Gaussian function underlying the psychometric curve is a robust measure of acuity, with a small s implying a steep psychometric curve slope and high acuity.</s><s>Individual rats performed best on bimodal trials, independently of the individual's preferred modality: the decrease in s in the VT versus V and T conditions was significant for all rats (Figures S2A and S2B, bootstrap test, p &lt; 0.001).</s></p><p><s>In the VT condition, rats also showed reduced lapse rates compared to V and T (i.e., fewer errors on ''easy'' trials, those near the 0 and 90 orientations, p = 0.000 for all conditions in average curve; Figure <ref type="figure" target="#fig_13">S2A</ref>, bootstrap test) and a more accurate detection of the horizontal and vertical boundary, assessed by the point of subjective equality (PSE closer to 45 , p &lt; 0.02 for V and T in average curve compared to VT; Figure <ref type="figure" target="#fig_13">S2A</ref>, bootstrap test).</s><s>The inset in Figure <ref type="figure" target="#fig_1">2B</ref> highlights the improved performance in the bimodal condition versus each of the unimodal conditions, averaged across rats.</s><s>Overall, VT benefit was greater versus T than versus V, an outcome of the better V versus T unimodal performance.</s><s>Benefit varied with stimulus orientation.</s><s>At 45 , performance can be no better than chance; thus, multisensory integration provided no benefit.</s><s>At the cardinal orientations, 0 and 90 , performance in V and T conditions was high, so that multisensory integration could offer limited benefit.</s><s>At the intermediate orientations, 20 -35 and 55 -70 , the benefit obtained by combining information from the two modalities was greatest.</s></p><p><s>Did rats learn reward contingencies specific to the stimulus orientations upon which they were trained, or did they execute the task by spontaneously sorting any encountered stimulus, whether familiar or novel, into the categories of horizontal and vertical?</s><s>To distinguish between the possibilities, in ten rats who were well trained with stimuli in the range of 0 -90 , we introduced trials with stimulus orientations ranging from 90 -135 and À45 to 0 (Figure <ref type="figure">1B</ref>, stippled sectors) interleaved with the familiar 0 -90 trials in the same session.</s><s>In the first such session, each rat performed equally well on the new versus the familiar stimuli (bootstrap test, all rats p &gt; 0.29; Figure <ref type="figure" target="#fig_9">S2C</ref>).</s><s>Thus, rats seemed to solve the task by measuring the difference between the encountered orientation and the cardinal orientations of ''horizontal'' and ''vertical.''</s><s>They were able to generalize this categorization rule to new stimuli upon the first instance, consistent with the ability of rats to generalize visual object recognition to novel views <ref type="bibr" target="#b58">(Tafazoli et al., 2012)</ref>.</s><s>In further behavioral sessions, we included the full range of stimulus orientations.</s><s>For the purpose of analysis, stimuli in the ranges of 90 -135 and À45 to 0 were reflected about the vertical and horizontal axes, respectively, allowing all orientations to be treated as 0 -90 .</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Merging of Modalities Is Supralinear</head><p><s>We next compared the performance observed in bimodal trials to that predicted by the optimal combination of two unimodal channels.</s><s>Optimal performance was defined as the linear combination of the two independent signals, based on a framework of Bayesian decision theory <ref type="bibr" target="#b14">(Ernst and Banks, 2002;</ref><ref type="bibr" target="#b18">Fetsch et al., 2013;</ref><ref type="bibr" target="#b35">Landy et al., 2011)</ref>.</s><s>Specifically, we fit the psychometric data with a cumulative Gaussian function yielding two parameters: the point of subjective equality (the orientation aligned to the mean of the best-fitting cumulative Gaussian function) and the threshold (the Gaussian function standard deviation, s).</s><s>In the Bayesian framework, the standard deviation in the VT condition is related to the standard deviations of the unimodal conditions as follows:</s></p><formula xml:id="formula_0">1 s 2 vt = 1 s 2 v + 1 s 2 t :</formula><p><s>Solving the equation for s VT gives the optimal combined threshold from single-modality estimates.</s><s>Lower s corresponds to better accuracy.</s><s>Single-rat psychometric curves based on this model of optimality are represented by the black traces in Figure 2A.</s><s>To illustrate all rats together, Figure <ref type="figure" target="#fig_1">2C</ref> plots the measured threshold on VT trials versus the threshold predicted by linear combination of V and T signals: 9 out of 12 rats combined V and T signals in a supralinear manner (similar to rat 1 in Figure <ref type="figure" target="#fig_13">2A</ref>), 2 in a linear manner (similar to rat 3 in Figure <ref type="figure" target="#fig_13">2A</ref>), and 1 sublinearly (rat 12 in Figure <ref type="figure" target="#fig_13">2A</ref>).</s></p><p><s>As an additional approach to comparing observed performance with that predicted by a linear model, we treated V and T as two channels that provide the rat with streams of information.</s><s>We then compared the total amount of information possessed by the rat on VT trials with the sum of the information possessed, separately, on V and T trials.</s><s>This approach assumes (B) Pale curves give the performance of 12 rats in each modality.</s><s>Dark data points and curves show the average over all rats in each modality.</s><s>Error bars show 95% binomial confidence interval.</s><s>Inset shows the improved performance in the VT condition versus V alone (blue) and T alone (green), as a function of orientation, averaged across rats.</s><s>(E) Synthesis of psychometric curve parameters under the three modality conditions.</s><s>Each point corresponds to one rat.</s><s>Abscissa denotes the rat's point of subjective equivalence.</s><s>The histograms are the summed distributions across individual rats, with bin size 2 .</s><s>Ordinate denotes the maximum slope of the rat's psychometric curve (slope is the change in proportion of trials in which orientation was judged as vertical per degree of angle change).</s><s>The histograms are the summed distributions across individual rats.</s><s>Circled points are the average values.</s><s>(F) Same analysis as in (C) for six subjects (rats 2-7) tested in a block design where seven sessions with only V and T trials were followed by seven sessions with only VT trials.</s><s>Most rats showed supralinear combination of V and T signals, indicating that sensory channel integration did not depend on the modality sequence of trials.</s><s>Error bars show 95% confidence interval.</s><s>(G) Response times averaged across all test sessions for all rats.</s><s>Data from V, T, and VT trials are pooled.</s><s>Data show mean ± SEM.</s><s>See Figures <ref type="figure" target="#fig_13">S2E</ref> and<ref type="figure" target="#fig_9">S2F</ref> for interquartile ranges.</s></p><p><s>that the information present within the sensory channels is converted directly into a choice <ref type="bibr" target="#b0">(Adibi et al., 2012)</ref> and allows us to quantify this information according to the rat's behavior (e.g., 1.0 bits of information supports 100% accuracy, 0 bits supports 50% accuracy).</s><s>In practice, we computed the mutual information (MI; see STAR Methods) between stimulus category (horizontal or vertical) and the rat's behavioral choice (left or right reward spout) in each modality separately as well as in the combined condition.</s><s>Then we computed the quantities predicted by the linear combination of V and T signals.</s><s>In theory, the observed merging of V and T information could be exactly linear, reflecting the optimal combination of two independent signals: sublinear, reflecting redundancy between the two signals, or supralinear, reflecting synergy.</s><s>If the summated quantities of V plus T information were to exceed 1.0 bits, then the rat would possess more information than it could express by its choices and the model would break down; this case never occurred.</s></p><p><s>Figure <ref type="figure" target="#fig_1">2D</ref> shows that 8 out of 12 rats combined V and T signals in a strongly supralinear manner, 2 rats close to supralinear (one error bar overlies the diagonal), 1 in a linear manner (both error bars overlie the diagonal), and 1 in a sublinear manner.</s><s>In summary, two analyses-Bayesian prediction of underlying threshold and MI-both suggest that in the majority of rats the signals carried by the two sensory channels were not merged independently but were combined in a synergistic manner (the two measures are correlated, linear regression R = 0.6; Figure <ref type="figure" target="#fig_9">S2D</ref>).</s></p><p><s>The availability of two channels not only improved the performance but also allowed rats to more reliably detect the horizontal and vertical boundary.</s><s>Figure <ref type="figure" target="#fig_1">2E</ref> plots their boundary detection (PSE, the stimulus orientation at which left and right choices were equally likely) along with performance (estimated by maximum psychometric curve slope).</s><s>In the VT condition, the distribution of PSE was closer to the 45 line and curve slope was greater; average values are in the black circles.</s></p><p><s>In standard testing, V, T, and VT trials were randomly interleaved.</s><s>It could be argued that supralinear performance on VT trials occurred because rats' motivation was higher: inasmuch as unimodal trials were more difficult, rats might have spent fewer attentional resources on them, with the knowledge that an easier bimodal trial would soon follow.</s><s>However, in a different set of experiments, we tested a group of trained rats (rats 2-7) on a block design where seven unimodal-only sessions were followed by seven bimodal-only sessions.</s><s>This configuration would be expected to minimize any loss in motivation on unimodal trials, since the rat could not choose to attend preferentially to bimodal trials.</s><s>For this block design, measured s VT values remained close to or better than Bayesian optimal estimates (Figure <ref type="figure" target="#fig_1">2F</ref>), indicating that supralinear summation in the interleaved sessions was not well explained by enhanced motivation on VT trials.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Response Time Is Correlated with Trial Difficulty</head><p><s>Response times were measured as the time from first possible sensory access to the object (opening of the opaque panel) until the first lick.</s><s>Considering all sensory conditions and stimulus orientations, response times were 435-734 ms (interquartile range; Figure <ref type="figure" target="#fig_9">S2E</ref>).</s><s>With trials sorted according to stimulus orientation, it becomes apparent that response times were longer for orientations close to the category boundary, 45 (Figure <ref type="figure" target="#fig_1">2G</ref>).</s><s>Thus, rather than undersampling the difficult orientation due to reduced reward likelihood, the rats in fact seemed to try to acquire additional evidence.</s><s>The distributions differed little according to trial modality condition (Figures <ref type="figure" target="#fig_13">S2F</ref> and<ref type="figure" target="#fig_9">S2G</ref>).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Stimulus Orientation and Stimulus Category Are Encoded by Neurons in Posterior Parietal Cortex</head><p><s>We recorded neuronal activity in the left PPC of trained rats (Figure <ref type="figure" target="#fig_13">3A</ref>) after they reached a stable level of performance in the behavioral task.</s><s>For most recording sessions, the set of stimulus orientations was reduced to angles between 0 and 90 in 15 steps (hence seven orientations) to allow a greater number of trials (and therefore neuronal samples) at each orientation.</s><s>Rats usually completed 300-500 trials per recording session.</s><s>In Figure <ref type="figure" target="#fig_3">3B</ref>, the action potential waveform and interspike interval histogram (ISI) of a single unit is illustrated (upper plots; ISIs for a large set of sampled neurons are given in Figure <ref type="figure" target="#fig_10">S3C</ref>).</s><s>The raster plot shows the unit's firing on 250 (randomly selected out of a session of 524) trials, with trial sequence conserved.</s><s>Modality conditions (V, T, and VT) are labeled by color and were randomly interleaved.</s><s>Firing rate, computed in a window of 1 ms and smoothed with a Gaussian (s = 50 ms), is plotted with the same color code.</s><s>The neuron had a stable firing rate of about 2 spikes/s as the rat awaited the trial onset.</s><s>About 200 ms after trial onset, the neuron's firing rate ramped upward and remained at about 8 spikes/s until 1 s after trial onset.</s><s>Similar temporal profiles characterized V, T, and VT trials.</s></p><p><s>We examined the encoding of stimulus orientation and stimulus category (the horizontal category versus the vertical one) by grouping trials with the same orientation together.</s><s>Figure <ref type="figure" target="#fig_3">3C</ref> shows raster plots (left plots) and peri-event time histograms (PETHs, middle plots) of two example PPC neurons, with responses in all modality conditions combined.</s><s>Neuronal data are aligned to the trial onset (defined as the onset of the opening of opaque panel).</s><s>Error trials and trials with 45 orientation are excluded in these plots.</s><s>The angular tuning curves (right plots, separated by modality, based on neuronal data in a 300 ms window preceding the reward spout lick) highlight that the two neurons' firing rates were modulated by stimulus orientation, the first firing at a progressively higher rate as angle increased from 0 to 90 , and the second firing at a progressively lower rate from 0 to 90 .</s><s>By contrast, Figure <ref type="figure" target="#fig_3">3D</ref> shows two neurons that carried a large signal about stimulus category: firing rates deviated according to the upcoming action (left or right).</s><s>The angular tuning curves indicate that they were poorly modulated by stimulus orientation within a choice category.</s><s>The orientation and category information carried by these neurons is shown in Figure <ref type="figure" target="#fig_5">5</ref>.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Responses in Posterior Parietal Cortex Are Supramodal</head><p><s>The tuning curves of Figure <ref type="figure" target="#fig_3">3C</ref> and 3D suggest that, while neuronal firing could vary according to orientation (first pair of neurons) or category (second pair of neurons), it was largely invariant to differences in modality (in right plots, compare green, blue, and red curves).</s><s>For the first quantitative test of modality invariance, we merged the data across all stimulus orientations.</s><s>In Figure <ref type="figure" target="#fig_13">4A</ref>, each point represents the average firing rates of one neuron (total, 622 neurons) in a 300 ms window preceding the reward spout lick in V, T, and VT trials, separately.</s><s>The proximity of nearly all points to the diagonal line attests to the supramodal character of these neurons: a given neuron's overall engagement in the task was nearly equal under the three modality conditions.</s></p><p><s>Next, we separated the data according to orientation to find out whether invariance to modality persisted across all orientations.</s><s>Figure <ref type="figure" target="#fig_4">4B</ref> illustrates the firing rate of all neurons, again in the 300 ms window preceding the reward spout lick, in T (abscissa) versus V (ordinate) trials.</s><s>The independence of (C) Upper plots: mean firing rates on T (abscissa) versus V (ordinate) trials for each of the six tested orientations for two neurons.</s><s>Linear regression coefficient and slope are reported on the plot.</s><s>The neuron in the left panel was also illustrated in the lower plot of Figure <ref type="figure" target="#fig_3">3C</ref> and the neuron in the right panel from the upper plot of Figure <ref type="figure" target="#fig_3">3D</ref>.</s><s>Data points show the average firing rate per angle ±SEM.</s><s>Lower plots: histograms are the distributions of the linear regression coefficients for all neurons (left) and slopes for neurons with statistically significant regression coefficient (right).</s><s>(D) Upper histogram: modality selectivity for a population of 622 PPC neurons.</s><s>Positive index values correspond to higher firing rate for V trials and negative values to higher firing for T trials.</s><s>Lower histogram: category selectivity for the same population of neurons.</s><s>Positive index values correspond to higher firing rate for leftward choices and negative values to higher firing for rightward choices.</s><s>See Figure <ref type="figure" target="#fig_11">S4</ref> for time course of selectivity index measured for each neuron.</s></p><p><s>firing rate on modality held across the six stimulus orientations; the Pearson linear correlation coefficient, R, between firing rate on V and T trials ranged from 0.96 to 0.99.</s></p><p><s>To obtain a population summary, for each neuron we considered the firing rates on V and T trials as two coordinates and plotted the resulting response values (again, in the 300 ms window preceding the reward spout lick) for each of the six tested orientations, as illustrated for two neurons in the upper plots of Figure <ref type="figure" target="#fig_4">4C</ref>.</s><s>The left plot shows a neuron whose response is modulated by stimulus orientation and the right plot shows a neuron whose response is modulated by the choice category associated with stimulus orientation.</s><s>For all neurons, we computed the strength and slope of the V versus T linear regression through the six points.</s><s>A neuron can yield linear regression with coefficient R = 1 and regression slope also 1 only if it satisfies two conditions: variation in firing rate according to stimulus orientation and/or category, and equivalent firing rate for the two modalities.</s><s>The histograms in Figure <ref type="figure" target="#fig_4">4C</ref> (lower plots) are the distributions of the regression coefficients (left) and slopes of the statistically significant coefficients (right); both distributions show a peak near 1, highlighting the similarity in response in the two sensory modalities.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Neurons Show Greater Selectivity for Stimulus Category Than for Stimulus Modality</head><p><s>The nearly equal responses of neurons on V, T, and VT trials imply that the studied population did not inform the brain about the modality in which the object was presented, though modality selectivity of many PPC neurons has been reported in recent work <ref type="bibr" target="#b53">(Raposo et al., 2014)</ref>.</s><s>We further examined the problem by comparing stimulus modality selectivity to stimulus category selectivity in the same population.</s><s>To carry out the comparison, we employed a selectivity measure <ref type="bibr" target="#b15">(Feierstein et al., 2006)</ref> based on receiver operator characteristic (ROC) analysis.</s><s>The measure defines how well the firing rate of a given neuron can be used to classify the modality of the stimulus (visual versus tactile) as well as the rat's categorization of the stimulus (measured by its choice, right versus left).</s><s>The metric is proportional to the area under the ROC curve, which is scaled from À1 to 1. Figure <ref type="figure" target="#fig_4">4D</ref>, upper histogram, shows the distribution of modality selectivity for the population of 622 PPC neurons.</s><s>Just 5% (30 out of 622) were selective (p &lt; 0.01; permutation test) for stimulus modality, and the analysis does not point to an overall preference for either modality among these 30 neurons.</s><s>To test whether modality preference was modulated by the rat's upcoming choice, we did the same analysis with right-choice and left-choice trials separated, doubling the number of tests (2 per neuron).</s><s>In the 1,244 tests, the same 5% proportion was selective.</s></p><p><s>Figure <ref type="figure" target="#fig_4">4D</ref>, lower histogram, shows the distribution of category selectivity for the same population of neurons; over 50% of neurons (318 out of 622) were significantly selective (p &lt; 0.01; permutation test) for the upcoming choice of the rat.</s><s>A greater number of neurons (219 out of 318 neurons) was selective for turns to the right (index &lt; 0) than to the left (index &gt; 0), suggesting overall opposite-side preference in left PPC.</s><s>In sum, this population of neurons did not appear to be informative about the modality of the stimulus but instead generated a robust signal about stimulus properties-orientation and the choice category associated with that orientation-irrespective of modality (also see Figure <ref type="figure" target="#fig_11">S4</ref>).</s></p><p><s>While Figures 4C and 4D considered the category and modality signal separately in single neurons, it was of interest to know how the properties of stimulus orientation and category were carried jointly.</s><s>Two alternative coding schemes might hold: (1) the properties of stimulus orientation and category were carried jointly, such that no neuron could be cleanly classified as an ''orientation-coding'' or a ''category-coding'' neuron, or (2) the population of neurons separated into two distinct functional classes, ''orientation'' and ''category.''</s><s>Selecting between the models is non-trivial because there are inherent correlations between task parameters: since stimulus orientation predicts its perceived category, a neuron that encodes purely angle will also have responses that vary according to category; likewise, a neuron that encodes purely category will also have responses that vary according to angle.</s></p><p><s>To disentangle the two correlated coding properties, we developed a conditional information theoretic measure.</s><s>This measure extracts the information that a neuron carried about stimulus category (assessed by choice) conditional on a specific stimulus angle.</s><s>For instance, suppose that a rat judged 80% of 30 trials as horizontal (giving 80% accuracy); the analysis would estimate how much information neuronal responses carried about the perceived category of the stimulus, conditional on the 30 orientation.</s><s>The same measure can be applied to extract the information that a neuron carried about angle conditional on the perceived category (again, assessed by choice) in that set of trials.</s><s>In this way we could estimate the information a given neuron conveyed about both signals, while removing the effect of task correlation.</s></p><p><s>The mutual information was computed in a 200 ms window, shifted in 50 ms steps, from the start of the trial until the response lick, and the maximum value was taken.</s><s>The scatterplot in Figure <ref type="figure" target="#fig_5">5</ref> illustrates the joint conditional information values for 622 neurons.</s><s>The plot can be interpreted as showing how much additional information a neuron carried about category (abscissa) or angle (ordinate) conditional on a fixed value of the other feature.</s><s>The marginal distributions (the quantities of one type of conditional information, pooled across all neurons) are made evident by projecting the scatterplot upward and rightward to form histograms.</s><s>About 50% of neurons (315 out 622, p &lt; 0.01) carried significant information about category conditional on angle (blue triangles and blue histogram projection); a small set of neurons carried a very strong category signal (green dashed ellipses).</s><s>About 45% of neurons (284 out of 622, p &lt; 0.01) carried significant information about stimulus angle conditional upon perceived category (brick-colored triangles and histogram projection).</s><s>About 38% of neurons (239 out of 622, p &lt; 0.01, bootstrap test) carried significant conditional information about both orientation and choice (stars and ochre-colored histograms and squares).</s><s>This seemingly counter-intuitive form of coding signifies that a neuron fired at a significantly different rate according to the rat's choices, while also firing in a graded manner for angle steps within a category; the firing rate difference across the category boundary was larger than the firing rate differences within category.</s><s>The circled neurons, labeled 1-4, correspond to the four neurons illustrated in Figures <ref type="figure" target="#fig_13">3C</ref> and<ref type="figure" target="#fig_3">3D</ref> in order from top to bottom.</s><s>Around 42% (262 out of 622) of neurons carried neither conditional angle nor conditional category information (gray squares and histograms).</s></p><p><s>The bands around the diagonal are a boundary of R0.05 bits of information (corresponding to 1 standard deviation of the whole dataset); the fact that 78% of neurons that carried information about both angle and category were clustered between the bands indicates that PPC neurons tended to express both stimulus coding and category coding.</s><s>The simultaneous representation of both task properties suggests that PPC is involved in a supramodal stimulus-to-category transformation.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Choices Are Encoded by Neuronal Population Activity</head><p><s>To this point, we evaluated each neuron as an independent unit.</s><s>However, it is likely that the rat executes the behavior using signals carried in a collective manner by a large set of neurons <ref type="bibr" target="#b55">(Safaai et al., 2013)</ref>.</s><s>Thus, we sought to characterize the extent to which the rats' performance could be supported by the message contained within populations of PPC neurons.</s><s>We used a linear discriminant classifier <ref type="bibr" target="#b12">(Duda et al., 2012;</ref><ref type="bibr" target="#b59">Vencatasawmy and Krzanowski, 2002</ref>; see STAR Methods) to obtain an estimate of the population signal.</s><s>The training data for the classifier consisted of the single-trial responses, in a 300 ms Data points illustrate for 622 neurons the values of conditional mutual information computed from the start of the trial until the response lick.</s><s>Information was measured between firing rate and stimulus angle conditional on stimulus category as well as the information between firing rate and category conditional on stimulus angle.</s><s>Neurons numbered as 1-4 correspond to the same neurons of Figures <ref type="figure" target="#fig_13">3C</ref> and<ref type="figure" target="#fig_3">3D</ref>, top to bottom.</s><s>Dashed ellipse in main plot highlights a small set of neurons that carried particularly high conditional category information; dashed ellipse in marginal histogram indicates the same set of neurons.</s></p><p><s>epoch before the response lick, of a population of simultaneously recorded neurons across a set of trials that did not include the test trial; after training, the classifier predicted the rat's choices on the test trial on the basis of the population's response.</s><s>The train and test cycle was repeated to yield a predicted choice on every trial.</s><s>To challenge the robustness and generality of the classifier across modalities and stimulus angles, trials with the specific orientation and sensory modality of the test trial were omitted from the training set.</s><s>A classifier trained without trials of the angle and modality of the tested trial could successfully decode population activity only if that population carried a robust sensory code (i.e., that generalized from the training trials' angles to the test trial angle) and a supramodal signal (i.e., that generalized from the training modality conditions to the test trial modality condition).</s></p><p><s>As schematically illustrated for one typical session (Figure <ref type="figure" target="#fig_13">6A</ref>), the classifier was able to determine a boundary that could separate the population's activity into two states associated with the rat's two choices.</s><s>In this example, PPC population activity was decoded as a left (circle) or right (triangle) choice on test trials with stimuli at 0 in T condition after training with trials with orientations from 15 to 90 in V and VT conditions.</s><s>The decoded trials (dark red points) correspond to 0 stimulus.</s></p><p><s>Figure <ref type="figure" target="#fig_6">6B</ref> evaluates the classifier's real performance on a trialby-trial basis for each session separately (ten sessions from five rats).</s><s>We assessed classifier performance as the rats approached and examined the object, considering neuronal activity in a 100 ms window shifted in 50 ms steps (activity aligned to the time of first response lick).</s><s>About 1 s before the response (i.e., before trial onset), the decoder's performance was around 50%.</s><s>This suggests that the PPC population did not manifest a choice bias before encountering the stimulus.</s><s>Performance gradually increased to &gt;90% on average by around 250 ms before the response lick.</s><s>Peak decoder performance measured in 5 rats ranged from 91% to 99% (9 sessions), with 1 session at 70% (p &lt; 0.001, permutation test).</s><s>To make sure the decoder's performance did not result from the activity of only a few neurons with strong choice-related signals, we examined the classifier weight associated with each neuron.</s><s>Almost all neuronal weights were non-zero in each session, indicating that every neuron in the population contributed to the classifier's performance (Figure <ref type="figure" target="#fig_13">S5A</ref>).</s></p><p><s>By separating the classifier's performance according to stimulus orientation, we obtained in Figure <ref type="figure" target="#fig_6">6C</ref> psychometric curves based on decoding neuronal responses (solid lines), and we compared them to the rats' observed psychometric curves (dashed lines).</s><s>Across different modalities, the signal carried by the PPC population closely paralleled behavior.</s><s>Notably, since for each trial the classifier was trained using only trials with modality different from the test trial, we can conclude that the population code was supramodal and could account for the rats' behavior (Figure <ref type="figure" target="#fig_5">S5B</ref>).</s><s>The signal carried by the PPC population also closely paralleled behavior when the classifier training set included the modality of the test trial (Figure <ref type="figure" target="#fig_5">S5C</ref>).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>DISCUSSION</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Unimodal Perceptual Capacities and Their Supralinear Combination</head><p><s>This study presents a new behavioral paradigm to investigate whether and how rats combine information from multiple sensory modalities.</s><s>Results obtained in the two single-modality conditions offer novel insights.</s><s>Rats were able to perform fine orientation discriminations in the purely visual (V) condition, confirming that the visual capacities of Long-Evans rats might be widely underestimated <ref type="bibr" target="#b65">(Zoccolan, 2015)</ref>.</s><s>In the purely tactile (T) condition, rats were also able to perform fine orientation discriminations using their snout and whiskers.</s><s>In an earlier report <ref type="bibr" target="#b46">(Polley et al., 2005)</ref>, rats learned in a single trial to avoid shock by escaping the arm of a maze containing protruding vertical bars on the wall; horizontal bars marked the safe arms.</s><s>Orientation detection was whisker dependent, and resolution was on the order of 45 .</s><s>In our study, in both modalities rats were sensitive to 5 angle differences (e.g., non-overlapping error bars for neighboring angles in Figures <ref type="figure" target="#fig_13">2A</ref> and<ref type="figure" target="#fig_1">2B</ref>).</s><s>Within our set of rats, some performed better in the V condition and others in the T condition.</s></p><p><s>Because of such individual variability, generalizations about rats' comparative acuity in vision and touch cannot be made.</s></p><p><s>We used each rat's psychometric curves in the V and T conditions to compute the psychometric curve expected in the VT condition by optimal Bayesian combination of the two unimodal channels.</s><s>The majority of rats exhibited actual VT performance significantly better than that predicted by the standard Bayesian ideal-observer model.</s><s>We refer to this deviation from the model as ''supralinearity.''</s><s>Additional analyses found that the orientation information that rats demonstrated in the VT condition was greater than the sum of the quantities of information they demonstrated in the V and T conditions, a second confirmation of supralinear combination of the two channels.</s></p><p><s>Supralinear behavioral combination of sensory channels has been found in previous studies <ref type="bibr" target="#b16">(Fetsch et al., 2009</ref><ref type="bibr" target="#b17">(Fetsch et al., , 2011;;</ref><ref type="bibr" target="#b31">Kiani et al., 2013;</ref><ref type="bibr" target="#b52">Raposo et al., 2012)</ref>.</s><s>It could occur if the information available on unimodal trials were only partially exploited, while the information available on bimodal trials were completely exploited.</s><s>The unimodal signal would then be underestimated by the experimenter, and the accuracy on bimodal trials would appear to surpass that predicted by the linear sum of (underestimated) unimodal signals <ref type="bibr" target="#b52">(Raposo et al., 2012)</ref>.</s><s>Partial exploitation of information on unimodal trials might stem from reduced motivation: rats are sensitive to overall reward rate, and unimodal trials yield lower average reward rates than do bimodal trials.</s><s>Therefore they might attend less to unimodal trials, preferring to invest their attentional resources in bimodal trials, where the investment would be more frequently rewarded.</s><s>With lower expected net reward on unimodal trials, rats may give priority to speed over accuracy <ref type="bibr" target="#b10">(Drugowitsch et al., 2014</ref><ref type="bibr" target="#b11">(Drugowitsch et al., , 2015))</ref>.</s><s>In a bounded evidence accumulation framework, the greater speed could be realized by lowering the decision threshold, thus prematurely truncating the processing of unimodal stimuli <ref type="bibr" target="#b30">(Kiani et al., 2008</ref><ref type="bibr" target="#b31">(Kiani et al., , 2013))</ref>.</s></p><p><s>However, our results do not support the notion of non-optimal use of information on unimodal trials.</s><s>In all modality conditions, rats' response time was nearly 150 ms longer on trials with orientation near the 45 category boundary (Figure <ref type="figure" target="#fig_1">2G</ref>), indicating that they did not truncate the collection of evidence on more difficult trials.</s><s>Similarly, response time distributions were similar across the three modality conditions (Figure <ref type="figure" target="#fig_9">S2F</ref>), suggesting an attempt to accumulate sensory evidence on unimodal trials just as on bimodal trials.</s><s>Finally, we tested rats with sessions comprised of a single modality condition.</s><s>In V-only or T-only sessions, rats could not choose to attend preferentially to VT trials, so unimodal performance should come close to its maximal possible value.</s><s>Yet, comparing across sessions, rats still combined V and T signals in a supralinear fashion to guide VT performance (Figure <ref type="figure" target="#fig_1">2F</ref>).</s></p><p><s>If supralinear combination is not well explained by enhanced motivation on VT trials, what account might better explain the results?</s><s>Both cue-combination models employed in our study (Bayesian decision theory and MI) assume independence of the sensory channels.</s><s>The observed supralinearity could result from a violation of that assumption-visual and tactile signals might not be processed independently in bimodal trials.</s><s>The presence of one signal might affect how the other is acquired by the sensorimotor system.</s><s>For instance, the visual cue might help the rat palpate the surface with its whiskers more efficiently, boosting the tactile signal <ref type="bibr" target="#b48">(Prescott et al., 2011)</ref>.</s><s>Further studies analyzing head and whisker kinematics will be required to assess this hypothesis.</s><s>A second possible form of interaction is synergy between the two processing pathways within cortex.</s><s>Inhibition between cortical regions could allow activity evoked through one modality to suppress the non-specific noise in the other modality's stimulus representation.</s><s>Evidence of direct functional connections between sensory cortical processing regions is emerging.</s><s>In the mouse, activation of auditory cortex by a noise burst drives local GABAergic inhibition in the primary visual cortex, via cortico-cortical connections <ref type="bibr" target="#b26">(Iurilli et al., 2012)</ref>.</s><s>Similarly, brief pulses of auditory noise sharpen orientation selectivity of L2/L3 pyramidal neurons in primary visual cortex <ref type="bibr" target="#b25">(Ibrahim et al., 2016)</ref>.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Posterior Parietal Cortex Participates in the Generation of a Supramodal Representation</head><p><s>In search of a cortical processing region that might be involved in the construction of the supramodal object representation revealed by behavioral testing, we focused on PPC.</s><s>Primate PPC receives input from cortical areas representing multiple sensory modalities and communicates back to these territories <ref type="bibr" target="#b7">(Cavada and Goldman-Rakic, 1989;</ref><ref type="bibr" target="#b36">Leichnetz, 2001)</ref>.</s><s>PPC in rats is held to be homologous to primate PPC, as it shares the characteristic reciprocal connectivity with sensory, frontal, temporal, and limbic cortical regions <ref type="bibr" target="#b1">(Akers and Killackey, 1978;</ref><ref type="bibr" target="#b42">Miller and Vogt, 1984;</ref><ref type="bibr" target="#b54">Reep et al., 1994;</ref><ref type="bibr" target="#b62">Whitlock et al., 2008;</ref><ref type="bibr" target="#b64">Wilber et al., 2014)</ref>.</s><s>It is thus well positioned to receive unimodal sensory signals <ref type="bibr" target="#b32">(Kolb and Walkey, 1987;</ref><ref type="bibr" target="#b43">Olcese et al., 2013;</ref><ref type="bibr" target="#b54">Reep et al., 1994)</ref> and transmit a processed form of those signals to downstream cortical regions.</s></p><p><s>In our behavioral task, the signals present in PPC-and thus distributed to its targets-appear to incorporate two key properties.</s><s>The first is a fully supramodal representation of the episode.</s><s>Each neuron's firing rates were the same under the V, T, and VT conditions.</s><s>Indeed, the orientation and category signal carried by neurons in the three modality conditions could not be distinguished except by its greater robustness in VT trials-mirroring the greater behavioral robustness in VT trials (Figure <ref type="figure" target="#fig_6">6C</ref>).</s><s>The second is a representation of the episode that, neuron by neuron, ranged from orientation tuning to category tuning.</s><s>Since orientation and perceived category were correlated, the two forms of coding were distributed along a single dimension, such that an individual neuron could show graded steps in firing rate within an orientation category (thus, stronger angle tuning) or else a large step in firing rate around 45 (thus, stronger category tuning).</s><s>In order to quantify the message carried by populations of PPC neurons, we trained a linear classifier to distinguish the rat's choice based on the population's firing.</s><s>When tested, the classifier replicated the rat's behavior on over 90% of trials (Figure <ref type="figure" target="#fig_6">6B</ref>).</s><s>Considering together the two key properties, we suggest that PPC contributes to the formation of a supramodal representation of the object and participates in the perceptto-action transformation carried out by a network of cortical regions.</s><s>This interpretation is based on correlations between trial-by-trial neuronal firing and whole-animal behavior; evidence for a direct causal role of PPC might emerge from external manipulations of this region during execution of the behavior.</s></p><p><s>Our experiment accentuates the high degree of task-dependent plasticity inherent in the function of PPC.</s><s>While PPC could receive orientation-tuned signals from earlier stages of visual cortical processing <ref type="bibr" target="#b61">(Wang et al., 2012)</ref>, tactile orientation tuning has not been reported in barrel cortex and may be generated in PPC to meet specific behavioral demands.</s><s>Furthermore, the reward rule boundary of 45 was set arbitrarily, and its neuronal correlate must also be generated to meet behavioral demands.</s><s>These observations lead to the conclusion that the functional properties of PPC neurons are not hardwired but rather emerge through a learning process in order to solve the requirements of ongoing tasks.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Formation of Neuronal ''Knowledge'' about Real Objects</head><p><s>Numerous studies have trained subjects to associate the sensory data originating in two modalities by some arbitrary rule <ref type="bibr" target="#b56">(Sarko et al., 2013)</ref>.</s><s>In a recent study in which rats judged the quantities of auditory and/or visual pulses in a train, many neurons in PPC responded differentially on trials of the two modalities; indeed, modality itself could be decoded from neuronal firing <ref type="bibr" target="#b53">(Raposo et al., 2014)</ref>.</s><s>This contrasts with the modality-free coding of the object in our study.</s></p><p><s>We hypothesize that supramodal coding is a consequence of the nearly simultaneous arrival in PPC of congruous signals, through two sensory channels, about a real object.</s><s>Coherence between modalities, as in our study, might better reflect the statistics of the real world.</s><s>Vision and touch have likely evolved together to explore the shape, form, and spatial properties of the environment.</s><s>A rodent might need to maneuver through oriented bars, whether those bars are seen or felt.</s><s>In general, the brain's capacity to call up knowledge about things independently of sensory input channel <ref type="bibr" target="#b51">(Quiroga et al., 2005)</ref> requires a stage of processing in which the same information is encoded by both channels, and PPC seems to contribute to this abstraction of stimuli from sensory domains.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>STAR+METHODS</head><p><s>Detailed methods are provided in the online version of this paper and include the following:</s></p><formula xml:id="formula_1">d KEY RESOURCES</formula></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Apparatus</head><p><s>The main chamber of the apparatus, custom-built in opaque white Plexiglas, measured 25 3 25 3 37 (H 3 W 3 L, cm) (Figure <ref type="figure" target="#fig_13">S1A</ref>).</s><s>The rat started a trial by interrupting an infrared beam detected by a phototransistor (Figure <ref type="figure">1C</ref>).</s><s>Beam interruption triggered fast opening of an opaque panel (through a rotational motion of 40 in 75 ms), actuated by a stepper-motor, uncovering a circular hole (diameter 5 cm) in the front wall through which the rat could extend its head to see and touch the object.</s><s>The stimulus was 3 cm behind the opaque panel (further details below) and the reward spouts were 2 cm lateral to the edge of the stimulus.</s></p><p><s>The apparatus was in a Faraday cage which, with door closed, provided acoustic, visual, and electromagnetic isolation.</s><s>An array of 12 infrared emitters (l = 850 nm, OSRAM Opto Semiconductors GmbH, Germany) illuminated the stimulus port to permit the investigator to monitor behavior and to execute video recording without providing visible illumination for the rat.</s><s>On V and VT trials, a pair of 6 white LED arrays illuminated the stimulus.</s><s>Two infrared-sensitive video systems (Point Grey Flea, Edmund Optics, Barrington, NJ) registered the rat's actions.</s><s>The first camera, equipped with a macro lens (Fujinon TV HF25HA-1B Lens, Fujifilm, Tokyo) mounted 25 cm above the stimulus delivery area (distance with respect to the center of stimulus), monitored the rat's interaction with the object.</s><s>In some sessions, this camera was set to 250 f/s to monitor head, snout and whisker position and movement during behavior.</s><s>The second camera provided a wide-angle view (Fujinon HF9HA-1B Lens, Fujifilm, Tokyo) and monitored the entire setup, illuminated with adjustable infrared LEDs, at 30 f/s.</s></p><p><s>Reward spouts included custom-made infrared diode sensors interrupted by the tongue.</s><s>Only the licking signal from the correct spout triggered the pump motor (NE-500 programmable OEM; New Era Pump Systems, mounted on a vibration-cancellation pedestal) to extrude the reward, 0.05 mL per trial of diluted pear juice.</s><s>Licking marked the end of the trial, accompanied by the closure of the opaque front panel.</s><s>The default setting of the 'window of opportunity' from opaque panel opening to initiate reward collection was 2 s, but could be varied by the experimenter to influence the cadence of the rats (e.g., in a slow rat, the window could be reduced to promote urgency).</s><s>Before the next trial began, the motor on which the stimulus was mounted rotated to generate the next orientation.</s></p><p><s>Rats are sensitive to reward volume and will quickly develop a strong side preference if the two pumps deliver unequal quantities.</s><s>Reward volume is a function of the number of steps executed by the pump motor.</s><s>To make sure that equal volumes of reward were delivered at both ports, we regularly calibrated the pumps according to the following procedure.</s><s>A computer program ran the stepper motor for 5,000 steps and we measured the volume of the displaced water both from the measurement marks on the syringes and a graduated cylinder.</s><s>We repeated this step 3 times for each pump separately.</s></p><p><s>Custom made software was developed using LabVIEW (National Instruments, Austin, TX).</s><s>An AVR32 board (National Instruments) and multiple Arduino Shields (National Instruments) acquired all sensor signals and controlled the motors, LEDs, and the reward syringe pumps.</s><s>All the sensors, actuators (including motors and pumps) and lights were interfaced with the computer program allowing full control over a wide range of parameters governing the flow of the training and testing.</s><s>Although fully automatic, the software allowed the experimenter to modify all the parameters of the task and control the lights, sensors and motors online as needed.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Visual-tactile Stimulus Presentation</head><p><s>The stimulus was a black and white square-wave grating within a circular 9.8 cm-diameter circumference, built in-house by a 3D printer (3D Touch, BFB Technologies, Figure <ref type="figure" target="#fig_13">1A</ref>).</s><s>It was mounted on a stepper-motor and rotated to generate the trial's intended orientation (Figure <ref type="figure">1B</ref>).</s><s>Within behavioral testing sessions each stimulus orientation was sampled from a uniform distribution in 5 steps between À45 and 135 and presented in a semi-random fashion (sampling without replacement).</s><s>In neuronal recording sessions, stimuli were sampled in 15 steps from 0 to 90 to allow a greater quantity of neuronal data for each orientation.</s></p><p><s>The depth and width of the grooves was 3.5 mm.</s><s>Visual acuity is measured in cycles per degree (cpd), an assessment of the number of lines that can be seen as distinct within a degree of the visual field:</s></p><formula xml:id="formula_2">Acuity = 1 2 3 tan À1 À h d Á cpd</formula><p><s>where h is the width of each line in the stimulus and d is the distance from the eye.</s><s>Considering the 3 cm distance behind the opaque panel (Figure <ref type="figure" target="#fig_13">S1A</ref>), at the moment of panel opening each cycle of the 14 cycles would occupy 23tan À1 ð3:5=30Þ = 13:31 of visual angle, for a total stimulus coverage of about 117 .</s><s>The spatial frequency of the gratings would be 1=ð23tan À1 ð3:5=30ÞÞ = 0:075 cycles per degree of visual angle.</s><s>As the normal visual acuity of Long-Evans rats has been estimated as $1 cpd <ref type="bibr" target="#b49">(Prusky et al., 2002)</ref>, the bars would be expected to be resolvable.</s><s>Rats also have a large depth of focus, from 7 cm to infinity <ref type="bibr" target="#b47">(Powers and Green, 1978)</ref>.</s><s>The width of the binocular field directly in front of the rat's nose, generally considered the animal's binocular viewing area <ref type="bibr" target="#b41">(Mei et al., 2012)</ref>, ranges from approximately 40 -110 , depending on head pitch <ref type="bibr" target="#b60">(Wallace et al., 2013)</ref>.</s><s>The 117 stimulus should thus completely cover the rat's binocular visual field.</s><s>The apparatus allowed stimuli to be explored in three different conditions.</s><s>In the visual-only condition (V), ambient light was set to 10.24 cd/mm 2 (Konica Minolta LS-100 luminance meter, Tokyo) and a transparent panel in front of the illuminated stimulus prevented tactile contact.</s><s>In the tactile-only condition (T), the transparent panel was rotated out of the head-poke and the rat leaned forward to examine the stimulus with whiskers and snout in the dark; ambient light measured as 0 cd/mm 2 .</s><s>In the visual-tactile (VT) condition, rats were able to both see and touch the stimulus.</s><s>In a control condition, rats could neither see nor touch the stimulus (transparent panel in front of the stimulus and luminance set to 0).</s></p><p><s>The stimulus stepper-motor was controlled through a feedback system with a digital step counter to maintain the exact desired orientation and prevent possible changes due to the rat's contact with the stimulus, e.g., the rat could not rotate the stimulus with its paws.</s><s>They contacted the object with the macrovibrissae (the long whiskers arranged in rows A-E) and the microvibrissae, which are much shorter and are clustered around the nose and lips <ref type="bibr" target="#b6">(Brecht et al., 1997)</ref>.</s><s>Rats mostly projected their whiskers forward and made very small movements (see Movie S1) perhaps engaging in ''foveal'' whisking <ref type="bibr" target="#b5">(Berg and Kleinfeld, 2003)</ref>.</s><s>In the many thousands of examined video-recorded trials taken from the entire set of rats, no observation was made of a T or VT trial in which the animal reached out to contact the object with its paws.</s><s>As evident in Movie S1, due to the structure of the head-hole (or for implanted rats, head-slit), it was essentially impossible for the rats to extent their paws toward the stimulus delivery area to reach the stimulus; rather they held onto a horizontal bar inside the box arena and extended their head toward the stimulus.</s><s>The head opening did not extend vertically downward far enough to allow the rat to comfortably pass its paw between its head and the edge of the opening.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Behavioral Task and Training</head><p><s>Duration of training to reach stable performance was typically 4-6 weeks, with 1 session per day, and varied according to individual differences in rate of learning.</s><s>The training protocol proceeded across the following stages: Stage 1: Handling For half an hour each day, for 5-7 days, the investigator held and petted the rat and fed it by hand and a dropper pipette.</s><s>There was no water restriction.</s><s>Stage 2: Training to Head-poke and Collect the Reward From this stage onward, a water restriction schedule was implemented, whereby the rat collected reward in the apparatus and had free access to water immediately after each session and during the weekend.</s><s>As the first step of this stage, the rat learned to interrupt the LED beam with its head to open the opaque panel.</s><s>With panel open, the rat was allowed to examine the stimulus by V and T signals; only the cardinal orientations, 0 and 90 , were presented.</s><s>After opening of the opaque panel, reward was available at either spout.</s><s>Rats learned in &lt; 10 trials that reward was triggered by licking.</s><s>This stage usually lasted 1 day.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Stage 3: Implementation of the Stimulus Rule on Cardinal Orientations</head><p><s>Training continued in the VT condition.</s><s>Only the cardinal orientations, 0 and 90 , were presented.</s><s>The rule associating grating orientation with the side of reward availability was implemented, however if the first choice was wrong, the rat was allowed to proceed to the opposite (correct) spout, where the reward was dispensed immediately.</s><s>The first lick was regarded as the correct/incorrect response for performance measures.</s><s>By this 'error remediation' protocol, the rat began to detect the relationship between stimulus features and reward location.</s><s>This not only kept it motivated in the task but also gave it further opportunities for stimulus/reward association since it could sample the stimulus during error remediation.</s><s>This stage usually lasted 1-5 days.</s><s>Stage 4: Introducing Delay as a Punishment As before, only the cardinal orientations, 0 and 90 , were presented.</s><s>Stimulus examination was in the VT condition.</s><s>In this stage, a short delay (0.5-2.5 s) was introduced if the rat licked the incorrect spout, after which it could obtain the reward to the opposite (correct) spout.</s><s>This stage usually lasted 1-3 days.</s><s>Stage 5: Rewarding Correct Response Only As before, only the cardinal orientations, 0 and 90 , were presented.</s><s>Stimulus examination was in the VT condition.</s><s>Now the rat was rewarded only when it licked the correct spout as a first choice, and the trial ended with a delay of 1-2 s (as punishment) if it licked the incorrect spout.</s><s>Faced with gradually increasing error costs across Stages 3-5, they performed above 75% correct in as few as 2 to 7 days (Figure <ref type="figure" target="#fig_8">S1C</ref>).</s><s>Typically the rat completed 200-300 trials in these initial training stages.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Stage 6: Training to Discriminate Cardinal Orientations in Interleaved Modality Conditions</head><p><s>The rat was presented with interleaved V, T, and VT trials with equal probability in a random sequence.</s><s>In the first session of this stage, rats could perform with accuracy of 70%-90% in the V and T conditions, suggesting that the percept of the object in the previous multimodal (VT) condition was naturally extended to the unimodal V and T conditions.</s><s>This stage usually lasted 1-5 days (Figure <ref type="figure" target="#fig_8">S1C</ref>).</s><s>In this stage, all of the orientations were presented within each category (i.e., 0 -45 versus 45 -90 ; Figure <ref type="figure">1B</ref>) in 5 angular steps.</s><s>At 45 the reward was given with 50% probability at either spout.</s><s>The rat received equal numbers of trials in each orientation and in each modality.</s><s>This stage usually lasted 5-14 days (Figure <ref type="figure" target="#fig_8">S1E</ref>).</s></p><p><s>With stable performance achieved, the subsequent sessions were taken as final test data.</s><s>Behavioral measures were taken with stimuli in 5 steps, however in neurophysiological recording sessions, in order to collect as much neuronal data per condition as possible, the resolution was reduced to 15 steps.</s><s>Rats usually completed 300-500 trials per recording session.</s><s>Similar to the standard task, trials of all modalities were interleaved.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Random Modality Training</head><p><s>We trained four rats in the random modality protocol to assess whether multimodal enhancement could have been caused by training.</s><s>The difference between the random modality and standard protocols was the presentation of randomly interleaved V, T, and VT trials with equal probability from Stage 2 onward; in other words, Stage 6 did not constitute a separate stage in this training protocol.</s><s>Progress in Stages 3-5 was more difficult for these rats and required $3-5 weeks of training.</s><s>This probably occurred because discovering the rule of the task and stimulus/reward contingency was more complex: rats might have assumed that stimulus modality (e.g., absence or presence of the light and transparent panel) was a salient fact and had to learn to ignore this factor (Figure <ref type="figure" target="#fig_8">S1D</ref>).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Control Experiments Exclusion of Olfaction</head><p><s>Since olfaction has been implicated in the performance of object recognition tasks ostensibly dependent on other sensory modalities <ref type="bibr" target="#b3">(Astur et al., 2002)</ref>, we carried out five control procedures.</s><s>First, we washed the stimulus object with soap and water before and after each training session.</s><s>In addition, before each session, we wiped the stimulus surface and grooves with a multi-purpose disinfectant solution <ref type="bibr">(Virkon, DuPont, Wilmington, DE)</ref>.</s><s>Second, once rats learned the easy conditions (Stage 6), for 3-4 sessions we paused the experiment every 10 trials, wiped the stimulus with the disinfectant solution and put it back, letting the rat continue the task.</s><s>Third, we substituted different copies of the stimulus on different trials, which would confuse the rat if it were using olfactory cues.</s><s>Fourth, we printed an object where tactile features (raised bars) were absent but the stimulus was otherwise identical to the standard stimulus (the visual gratings were 2D printed on the object).</s><s>With this stimulus, rats could only perform the categorization task above chance level in V and VT trials but not on T trials.</s><s>Importantly, multisensory enhancement was not observed-the performance in VT trials was similar to that of V, confirming not only the absence of olfactory cues, but also a lack of visual distortion due to the transparent screen used on V trials.</s><s>Finally, on randomly selected trials the stepping motor rotated the stimulus 180 in a random fashion.</s><s>Doing so maintained the orientation but would cause a left-right reversal of any olfactory cues.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Exclusion of the Motor's Acoustic Noise</head><p><s>If detectable, the noise made by the stepping motor could inform the rat of the change in orientation between trials according to its duration.</s><s>First, we sought to assess whether the sound of the motors fell within the acoustic sensitivity range of Long-Evans rats.</s><s>We recorded sounds (LAN-XI type 3052; Bruel and Kjaer, Naerum, Denmark) during all possible movements of the stimulus motor and examined the frequency spectrum.</s><s>Figure <ref type="figure" target="#fig_8">S1B</ref> shows the frequency spectrum of the motor noise in comparison to the measured hearing range of rats reported previously.</s><s>The highest frequencies generated by the motor were below 500 Hz signifying that rats, which possess the higher-frequency hearing characteristic of mammals <ref type="bibr" target="#b24">(Heffner et al., 1994;</ref><ref type="bibr" target="#b29">Kelly and Masterton, 1977;</ref><ref type="bibr" target="#b40">Masterton and Diamond, 1973;</ref><ref type="bibr" target="#b44">O ¨lveczky, 2011)</ref>, would be expected to be insensitive to such sounds.</s></p><p><s>Nevertheless, as a further caution we implemented an algorithm that generated a series of 2-4 random clockwise and counterclockwise rotations, with variable degrees of rotation, before concluding at the desired orientation.</s><s>Change duration was thus uncoupled to tested orientation.</s><s>In a final control experiment, in several sessions we set the object orientation by hand between trials.</s><s>A nearby motor, unconnected to the object, set orientations uncorrelated with the one accessible in the apparatus.</s><s>The rats responded to the orientation of the manually controlled orientation, not the inaccessible motor-controlled orientation, indicating that they used the intended visual and tactile cues, not the motor noise.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Catch Trials</head><p><s>During each test session, in 4% of trials the rat was not allowed to either see or touch the stimulus-the transparent panel remained in front of the stimulus and white light was off.</s><s>Performance was not significantly different from the expected chance performance of 50% (Figure <ref type="figure" target="#fig_9">S2H</ref>).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Acquisition of Neuronal Data</head><p><s>After rats showed stable performance in the behavioral task (&gt; 75% correct and consistent slope of psychometric curve over the most recent 15 sessions), they underwent a surgical operation for electrode implantation.</s></p><p><s>Five of the Long-Evans rats trained in the behavioral task were used for neuronal recordings.</s><s>Two days prior to surgery rats were housed individually to habituate them to the cage conditions and had access to food and water ad libitum.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Microelectrode devices</head><p><s>Depending on the desired duration of the neuronal recordings and intended neuronal dataset rats were implanted either with fixed microwire array electrodes or custom-made movable arrays.</s><s>Fixed Microwire arrays (ZIF-Clip, Tucker-Davis Technologies, Alachua, FL) were comprised of 16 or 32 polyimide-insulated tungsten wires of 33 mm diameter, 250 mm electrode spacing and 375 mm row spacing (Figure <ref type="figure" target="#fig_13">S3A</ref>).</s><s>Each wire was individually laser-cut to the desired length and configuration with a 45 angle of cut at the electrode tip.</s><s>The impedance of the each wire was 100-300 kU (tested at 1 kHz in saline), and around 150-400 kU when measured in vivo.</s><s>Reference and ground wires were connected to the arrays with impedance 20 kU.</s><s>The arrays were designed in a way that wires with two different lengths were interleaved.</s><s>This resulted in half of the electrodes having 400 mm tip-length difference with the others.</s><s>Through this configuration we could record simultaneously from two different depths with a single array.</s></p><p><s>As an alternative method, we developed a custom-made miniaturized movable microdrive for microwire arrays (Figure <ref type="figure" target="#fig_10">S3B</ref>).</s><s>The 16 or 32 channel microwire array used in these drives had similar build specification and electrical properties as the fixed arrays.</s><s>However, the electrodes were connected to the implant connector via a flexible printed circuit board that allowed the array end to be advanced or retracted by a screw.</s><s>The arrays were advanced 50-100 mm after each recording session.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>General Surgical Procedures</head><p><s>Animals were anesthetized with Isoflurane (2.5% for induction and craniotomy, 1.5% for maintenance) delivered through a snout mask.</s><s>Anesthesia was maintained by monitoring respiration as well as foot pinch responses throughout the surgical procedure.</s><s>The animals were placed in a stereotaxic apparatus (Harvard Apparatus, Holliston, MA).</s><s>Ophthalmic ointment (Epigel, Ceva, Libourne, France) was applied to keep the eyes moistened throughout surgery.</s></p><p><s>In order to keep the heart rate constant and prevent mucus secretion in the airways, animals were injected with atropine (1.5 mg/kg) one hour after the onset of anesthesia.</s><s>Half of the dose of analgesic (Rymadil, 5 mg/kg) was injected one hour after the onset of anesthesia and the rest of the dose was injected at the end of the surgery before waking the animal.</s><s>Antibiotic (Baytril, 5 mg/kg) was also injected before waking the rat.</s></p><p><s>Rats were then given antibiotic enrofloxacin (Baytril; 5 mg/kg delivered through the water bottle) for up to 48 hr after surgery.</s><s>During the one-week recovery time, rats had unlimited access to water and food.</s><s>Recording sessions in the behavioral apparatus began thereafter.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Electrode Implantation</head><p><s>After shaving and sterilizing the scalp with iodine solution, lidocaine topical gel was applied to provide local analgesia before performing scalp incisions.</s><s>Then the skull was cleaned and three to four anchoring screws were fixed in the skull to support the dental cement and the microdrive.</s><s>One of the screws was advanced deep enough to touch the dura and served as the reference and another one served as the ground (in some cases reference and ground wires were shorted).</s></p><p><s>The craniotomy was made above the left PPC (centered 3.8 mm posterior to bregma, 2.5 mm left of midline, $2 mm anteroposterior; $3.5 mm mediolateral in size).</s><s>Although the craniotomy was made as small as possible, in the case of larger craniotomies we performed additional steps to minimize brain dimpling during electrode insertion.</s><s>First, dura mater was removed using a small hypodermic needle (guage-25) whose tip was bent to form a small hook.</s><s>Then a drop of sterile Vaseline ointment was put in the middle of the craniotomy and the surgical cyanoacrylate adhesive (Histoacryl, B.Braun, Melsungen, Germany) was applied directly to the pial surface bordering the edge of the cranial opening.</s><s>This procedure fastened the pia mater to the overlying bone edge and the resulting surface tension prevented the brain from depressing under the advancing electrodes.</s><s>The hydrophobic ointment in the middle of craniotomy prevented the spread of tissue adhesive on the brain.</s></p><p><s>With the brain anchored to the bone, the 16 or 32 channel microwire arrays were inserted by slowly advancing a stereotaxic micromanipulator (SM-25C, Narashige).</s><s>While lowering the arrays during implantation, the quality of raw signals was monitored and the detected spikes were clustered and sorted online using the OpenEx toolbox (Tucker-Davis Technologies).</s><s>The array was fixed at a depth of $1100 mm below the pial surface, where it became possible to distinguish the spontaneous firing of action potentials.</s><s>The depth of the recording site is consistent with an electrode tip position in cortical layer 4. However our analyses and conclusions do not depend on the precise laminar localization of the neurons.</s></p><p><s>Once at the desired depth, the remaining exposed brain surface was either covered with bio-compatible silicon (KwikSil, World Precision Instruments, Sarasota, FL) or a custom-made antibiotic containing Vaseline based ointment depending on the type of electrode array implanted-fixed or movable microdrive respectively.</s><s>The fixed array or the body of microdrive was then attached to the skull by dental cement (SEcure Starter Kit, Sun Medical, Moriyama, Japan).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Electrophysiological Recordings</head><p><s>After passing through a unity-gain digital headstage amplifier chip (Intan Technologies, Los Angeles, CA), physiological recordings were digitized at a sampling rate of 25 kHz directly inside the headstage clip (ZCD-32, Tucker-Davis Technologies).</s><s>Digitized signals were then routed to a digital commutator (ACO-32, Tucker-Davis Technologies).</s><s>This active commutator prevented twisting or binding of the headstage cable while reliably tracking rotation on the headstage cable.</s><s>The signals were passed to a digital headstage manifold (PZ-4, Tucker-Davis Technologies) through a single cable for transfer to a digital signal processor base station (RZ-2, Tucker-Davis Technologies) via optical fibers, where they were amplified and stored on a computer.</s><s>Together with the neuronal data, all of the event-related signals from the sensors, lights and motors in the behavioral apparatus were sent synchronously to the RZ-2 DSP, digitized and stored.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Histology</head><p><s>At the conclusion of the series of electrophysiological recording sessions, the rat was deeply anesthetized with Urethane (1.5 mg/kg).</s><s>To mark the final positions of electrode tips, electrolytic microlesions were made by passing 10 mA current for a through each electrode for 10 s to achieve optimal charge density necessary for lesioning.</s><s>After lesioning, the animal was perfused transcardially with 4% paraformaldehyde.</s><s>The brains was extracted and postfixed in 4% paraformaldehyde for 24-48 hr and then in sucrose solution (15% solution then 30% solution).</s><s>After postfixation, 30 mm coronal sections of the brains were cut on a microtome (SM2010-R Sliding microtome, Leica, Wetzlar, Germany).</s><s>Slides were Nissl-stained and electrode trajectories were reconstructed under a microscope.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Quantification and Statistical Analysis Analysis of Behavioral Data</head><p><s>We analyzed the behavioral data in MATLAB (MathWorks, Natick, MA) and LabVIEW.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Generation of Psychometric Curves</head><p><s>To quantify a single rat's performance, we fit psychometric curves to its choice data separately for each modality.</s><s>For a given orientation, we calculated the proportion of trials categorized as vertical.</s><s>Ideally rats would categorize all trials with angle greater than 45 as vertical and all trials with angle less than 45 as horizontal.</s><s>For 45 trials, choices should be evenly distributed between vertical and horizontal.</s><s>However, task difficulty grows in the vicinity of 45 , such that real performance is better described by a sigmoid function with an inflection point at the point of subjective equality (PSE), the orientation at which subjects report the stimulus with equal likelihood as horizontal or vertical.</s><s>In unbiased rats, the PSE should be at 45 .</s><s>We generated psychometric functions using a cumulative Gaussian function with the general form given in equation below based on <ref type="bibr" target="#b63">(Wichmann and Hill, 2001)</ref>.</s><s>The parameter estimation was then performed in MATLAB using maximum-likelihood estimation: jðx; m; s; g; lÞ = g + ð1 À g À lÞFðx; m; sÞ:</s></p><p><s>The two-parameter function Fðx; m; sÞ, is defined by a cumulative Gaussian distribution, as follows:</s></p><formula xml:id="formula_3">Fðx; m; sÞ = 1 2 1 + erf x À m s ffiffiffi 2 p !</formula><p><s>where x is the stimulus orientation, g is the lower-bound of the function j, and l is the lapse rate.</s><s>Often, g and l are considered to arise from stimulus-independent mechanisms of guessing and lapsing.</s><s>m is the mean of the probability distribution that determines the displacement along the abscissa of the psychometric function-a reflection of the subject's bias-and s is the standard deviation of the cumulative Gaussian distribution.</s><s>s determines the slope of the psychometric function, a common measure of acuity.</s><s>To generate the psychometric curves, we utilized the data corresponding to the range of orientations from À45 to 135 , with data from orientations À45 -0 and 90 -135 reflected along the horizontal and vertical axes, respectively (e.g., responses to 115 trials were merged with responses to 75 trials).</s><s>This allowed all data to fit onto one sigmoid, extending from 0 to 90 .</s><s>Test of Significance for the Fitted Psychometric Curves Errors around the performance value for each orientation and modality condition were expressed as a 95% binomial proportion confidence interval computed by approximating the distribution of errors about a binomially-distributed observation, b p, with a normal distribution:</s></p><formula xml:id="formula_4">b p ± 1:96 ffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffi ffi 1 n b pð1 À b pÞ r</formula><p><s>where b p is the proportion of correct trials (Bernoulli) and n is the number of trials.</s><s>For statistical tests of significance, we performed a non-parametric test based on bootstrapping, as follows.</s><s>We computed a distribution of the peak slope values from the first derivatives of the fitted functions based on 1,000 resamples of the performance data.</s><s>We then performed pairwise comparisons between all the slope values generated via bootstrapping from fitted psychometric function of each sensory condition, calculated the overlap between the distributions and computed the p-values.</s><s>The same procedure was repeated for tests of significance for other psychometric curve parameters such as PSE and lapse rates (Figure <ref type="figure" target="#fig_13">S2A</ref>).</s><s>Modeling Behavioral Data with Bayesian Cue Combination According to the linear ideal-observer model of cue integration <ref type="bibr" target="#b2">(Alais and Burr, 2004;</ref><ref type="bibr" target="#b14">Ernst and Banks, 2002;</ref><ref type="bibr" target="#b27">Jacobs, 1999;</ref><ref type="bibr" target="#b33">Ko ¨rding and Wolpert, 2006;</ref><ref type="bibr" target="#b35">Landy et al., 2011)</ref>, the bimodal sensory signal, S vt , arises from linear summation of two unimodal signals as follows:</s></p><formula xml:id="formula_5">S vt = w v S v + w t S t</formula><p><s>where S v is visual orientation signal and S t is tactile orientation signal.</s><s>If each S is considered a Gaussian random variable with mean, m, and variance, s 2 , then the optimal estimate of S vt , can be computed by setting the weights (w v , w t ) proportional to the reliability (i.e., inverse variance) of S v and S t .</s></p><p><s>The bimodal reliability will then be equal to the sum of the unimodal cue reliabilities:</s></p><formula xml:id="formula_6">1 s 2 vt = 1 s 2 v + 1 s 2 t :</formula><p><s>We fitted the psychometric data with a cumulative Gaussian function yielding two parameters: the point of subjective equality (mean of the best fitting cumulative Gaussian function) and the threshold (as its standard deviation, s).</s><s>Solving the equation above for s vt gives the optimal combined threshold from two unimodal thresholds.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Information Theoretic Analysis of Behavioral Data</head><p><s>To quantify the information extracted by the rat in each sensory modality we performed a mutual information analysis.</s><s>We assumed that the information extracted by the rat about the stimulus orientation was converted directly into a choice; following this assumption, the rat's behavioral accuracy allows a direct estimate of the signal present in the sensory system.</s><s>The quantity of information that the behavioral response (left or right) conveys about the stimulus category (horizontal or vertical) can be quantified by Shannon's mutual information formula <ref type="bibr" target="#b8">(Cover and Thomas, 2012;</ref><ref type="bibr" target="#b57">Shannon, 1948)</ref> IðR; SÞ = X r;s PðsÞPðr j sÞlog 2 Pðr j sÞ PðrÞ :</s></p><p><s>where PðsÞ is the probability of presentation of a given stimulus category (horizontal or vertical), Pðr j sÞ is the conditional probability of the rat's response (right or left choice) given the category of stimulus, and PðrÞ is the marginal probability of response r (rat's choice to left or right) unconditional on the stimulus category.</s><s>All of the information values in equation above were computed using Information Breakdown Toolbox <ref type="bibr" target="#b39">(Magri et al., 2009)</ref>.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Neuronal Data Analysis</head><p><s>Spike detection and sorting were performed using automatic MATLAB clustering algorithms (Wave_Clus; see <ref type="bibr" target="#b50">Quiroga et al., 2004)</ref>.</s></p><p><s>Our intention was to analyze only well-separated single units based on interspike interval histogram with refractory period as well as stable waveform and firing rates throughout the recording session.</s><s>However, single-tip electrode recordings, unlike tetrode recordings, can allow some multi-unit records to leak into the dataset.</s><s>Multi-unit recordings, however, would be expected to show reduced functional tuning (e.g., orientation or category) since the distinct properties of single-units would be pooled and diluted.</s><s>The high degree of tuning present in most recordings is a further argument for generally robust single-unit sorting.</s><s>An initial analysis of neuronal responses included a continuous-time data analysis approach.</s><s>We first convolved the spike train of each neuron (with 1 ms resolution) with Gaussian kernels ðs = 50 msÞ to obtain spike density functions.</s><s>Kernels were corrected for the edge effect.</s><s>Peri-event time histograms (PETHs) were computed by considering spike times separately in relation to two specific events, depending on the intended analysis: stimulus onset (defined by the opening of the opaque panel) and time of first lick.</s><s>The spike trains for these epochs were aligned to the stimulus onset or to the first response lick, respectively.</s><s>Onset-aligned or first lick-aligned time-dependent spike density functions, which give an estimate of the instantaneous firing rate, were used for the rest of the analysis explained below.</s></p><p><s>For some analyses we computed Shannon's Mutual Information <ref type="bibr" target="#b57">(Shannon, 1948)</ref>, hereafter referred to simply as information.</s><s>Information measures how much knowledge of the neuronal response reduces an observer's uncertainty (or entropy) about the parameter of interest.</s><s>In this formulation, the amount of information which can be extracted from the firing rate of a neuron R, about the task-related parameter, S, can be computed as:</s></p><formula xml:id="formula_7">IðR; SÞ = X r;s</formula><p><s>PðsÞPðr j sÞlog 2 Pðr j sÞ PðrÞ :</s></p><p><s>where PðsÞ is the probability of presentation of a given task parameter, s, Pðr j sÞ is the conditional probability of observing a neuronal response, r, given the presentation of the task parameter, s, and PðrÞ is the marginal probability occurrence of neuronal response, r, among all possible responses unconditional on the task parameter.</s><s>For example when measuring information about stimulus orientation, PðsÞ is the probability of a given stimulus orientation.</s></p><p><s>When estimating the information in the neuronal response, we were concerned about spurious information values caused by the inherent correlations between task parameters.</s><s>Therefore, to determine whether neurons encode the stimulus orientation in a graded manner, we computed the stimulus information that could not be explained by other possible parameters (like future action of the animal).</s><s>Specifically, we measured conditional stimulus information:</s></p><p><s>IðR; C j qÞ = IðR; C; qÞ À IðR; qÞ likewise, IðR; q j CÞ = IðR; C; qÞ À IðR; CÞ where, q is the grating orientation, C is the binary action of the animal (left or right), R, is the neuron's firing rate, IðR; C; qÞ, is the joint mutual information between firing rate and stimulus orientation and rat's choice, IðR; q j CÞ is the information between firing rate of the neuron and stimulus orientation, conditioned on animal's decision.</s><s>To solve the complementary inherent correlation, we computed IðR; C j qÞ, the mutual information between firing rate and rat's choice, conditioned on stimulus orientation.</s></p><p><s>To quantify neuronal selectivity for category and modality, we used an ideal observer decoding based on ROC analysis <ref type="bibr" target="#b21">(Green and Swets, 1966)</ref>.</s><s>PETHs from the pre-decision epoch were constructed from spike trains by averaging firing rates in 1 ms bins and smoothing with a 50 ms Gaussian kernel.</s><s>Trials were grouped according to two different variables: stimulus category (assessed by the rat's response, left or right) and the sensory modality available for sensing orientation (visual versus tactile).</s><s>The ROC analysis was then carried out on the distribution of the group of trials from the smoothed spike trains <ref type="bibr" target="#b15">(Feierstein et al., 2006;</ref><ref type="bibr" target="#b53">Raposo et al., 2014)</ref>.</s><s>Category and modality preference were calculated from the area under the ROC curve (AUC) and defined as 23ðAUC À 0:5Þ This value could range from À1 to 1, where À1 indicates that the neuron always fired more preceding right choice and 1 means that the neuron always fired more preceding left choice.</s><s>Similarly a modality preference of À1 indicates that neuron always fired more for tactile trials and a modality preference of 1 means that the neuron always fired more for visual trials.</s><s>The modality preference was calculated for leftward and rightward choices separately and was then averaged.</s></p><p><s>In order to determine whether the activity of a PPC neuronal population encoded the rat's choices on a trial by trial basis, we used Fisher linear discriminant analysis (LDA) <ref type="bibr" target="#b12">(Duda et al., 2012;</ref><ref type="bibr" target="#b59">Vencatasawmy and Krzanowski, 2002)</ref> as a classifier.</s><s>The classifier finds the most effective linear boundary to separate the activity of the population of neurons according to the rat's choices, left versus right.</s><s>The classifier was trained on population responses in a 300 ms epoch before the reward spout lick and made trial-by-trial predictions of rats' choices according to the following procedure.</s></p><p><s>First we performed a dimensionality reduction using singular value decomposition (SVD) to identify the dimensions in neuronal space that captured the most variance in the data.</s><s>For each recording session the data were summarized into a matrix, M, with size N3T whose columns correspond to the average of smoothed, z-scored population responses of N neurons in T trials in a single session <ref type="bibr">(N = 65, 32, 66, 61, 83, 53, 82, 36, 81, 63)</ref>.</s><s>SVD performed singular value decomposition of matrix M, such that M = U:S:V T , where S is the diagonal matrix whose diagonal elements are non-negative singular values, and U and V are left and right singular vectors respectively.</s><s>Then we chose the first n ðn &lt; = NÞ columns of U that correspond to the 80% explained variance and projected M onto M Ã as follows:</s></p><p><s>M Ã = U T n : M Then by reprojecting the n-dimensional population vector ðM Ã Þ onto a line where the samples of each choice are optimally separated, the LDA found the optimized projection directions ðvÞ whereby the between-class variance in the data is maximized relative to the within-class variance.</s><s>Defining x L and x R the centers of the cluster of points corresponding to choice left and choice right, respectively, the within-class scatter matrix ðS w Þ is given by:</s></p><formula xml:id="formula_8">S w = S 1 + S 2 = X x˛L ðx À x L Þðx À x L Þ T + X x˛R ðx À x R Þðx À x R Þ T</formula><p><s>And the optimal direction that separates the points of class 1 and class 2 can be shown to be: (A) View of the behavioral apparatus from above.</s><s>Labels on the photo refer to the fol-lowing components.</s><s>A: the main chamber, B: stimulus and stepper motor controller together with digital step counter, C: the reward delivery area and licking sensors, D and E: transparent and opaque panels respectively, F and G: the pumps which drive the syringes loaded with diluted juice, H: the electronic control box, housing the microcontroller-based D/A boards and sensors and lights controllers, I: the high-power infrared light source attached to optic fibers.</s><s>(B) Acoustic frequency spectrum of stimulus motor.</s><s>Comparison of the noise of the stimulus motor with previously reported hearing threshold of rats shows sound cues were below rats' acoustic sensitivity.</s><s>Black lines, the hearing threshold of rats according to different references.</s><s>Blue line, frequency content of the stimulus motor noise.</s><s>K: <ref type="bibr" target="#b29">(Kelly and Masterton, 1977)</ref>, C: <ref type="bibr" target="#b9">(Cowles and Pennington, 1943)</ref>, J: <ref type="bibr" target="#b28">(Jamison, 1951)</ref>, G: Lower frequency range: <ref type="bibr" target="#b19">(Gourevitch, 1965)</ref>, Higher frequency range: <ref type="bibr" target="#b20">(Gourevitch and Hack, 1966)</ref>.</s><s>(C) The performance through training of a representative rat (number 6).</s><s>The figure plots the rat's learning to discriminate 0 and 90 degrees.</s><s>See Methods for the stages of training.</s><s>The plot on the right shows the performance across the first 3 days of Stage 6 in separate plots for each modality condition (D) Learning curve during random modality training.</s><s>Learning the task in random modality training was more difficult for the rats compared with the canonical protocol that began with VT.</s><s>Four rats were trained using this protocol.</s></p><formula xml:id="formula_9">v = S À1 w ðx L À x R Þ Next,</formula><p><s>The curve shows the performance in stages 2-5, with the difference that rats were presented with interleaved modalities from the beginning of their training (from stage 2).</s><s>(E) Improvement in a representative rat's performance (rat 7), is evident from a gradual increase in the slope of the psychometric curve (arrow mark) from first sessions (light colored) to later sessions (darker colored) as well as change in the PSE (less bias in later sessions).</s><s>Each curve is fitted on the data of 3 consecutive days with 1 overlapping day.</s><s>(A) Normalized bootstrap distributions for maximum psychometric curve slope (left), lapse rate (middle) and point of subjective equality (right) values based on 1,000 rounds of resampling in each modality for all rats averaged together.</s><s>For all three measures, the modality-specific distributions are visibly distinct from each other.</s><s>In the VT condition: the slopes are much larger than V-only or T-only, the lapse rates are lower and the points of subjective equality closer to 45 degrees, all indicating multisensory enhancement.</s><s>Numbers represent p-values for each test of statistical significance.</s><s>(B) Individual rats performed best on bimodal trials, independently of the individual's preferred modality, as indicated by the decrease in σ in the VT versus V and T conditions.</s><s>Error bars indicate 95% confidence intervals by bootstrapping.</s><s>(C) Cumulative performance of 10 rats who were well-trained with stimuli in the range of 0-90 degrees as compared with cumulative performance on trials with stimulus orientations ranging from 90-135 and -45 to 0 degrees (Figure <ref type="figure">1B</ref>, striped sectors) interleaved with the familiar 0-90 degree trials in the same session.</s><s>In the first such session, each rat performed equally well on the new (black points) versus the familiar stimuli (red points).</s><s>Numbers indicate p-values for each rat (bootstrap test).</s><s>Error bars show 95% binomial confidence intervals.</s><s>(D) Bayesian prediction of underlying threshold (σ, abscissa) and Mutual Information (ordinate) both suggest that in the majority of rats the signals carried by the two sensory channels were not merged independently but were combined in a synergistic manner.</s><s>Data points in this plot show the normalized difference between the predicted and bimodal σ (x-axis) and the difference between sum of V and T information and VT information for each rat.</s><s>The two measures are larger than zero for most rats and are correlated, linear regression R=0.6.</s><s>(E) Box plot including the interquartile range for response times considering all sensory conditions and stimulus orientations for all rats.</s><s>Whiskers indicate variability outside the upper and lower quartiles.</s><s>(F) Box plot of response times, separately for each rat in each modality.</s><s>Circles; median, rectangles; upper and lower quartiles, dots; outliers.</s><s>(G) Upper: Response times averaged across all test sessions for all rats.</s><s>Lower: Data from V, T, and VT trials are plotted separately.</s><s>Data show mean±SEM.</s><s>Response time distributions for all rats in each modality separately (bottom).</s><s>(H) Performance on catch trials was not significantly different from the expected chance performance of 50%.</s><s>Data show mean±SEM.</s><s>Movie S1: Hi-speed video recording from a tactile, visual and visual-tactile trial of a representative rat, related to Figure <ref type="figure">1</ref>.</s><s>Video (slowed 16.5x) showing three example trials of a rat in V, T and VT conditions respectively.</s></p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head/><label/><figDesc><div><p><s>Figure 1.</s><s>Visual-Tactile Orientation Categorization Task</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 2 .</head><label>2</label><figDesc><div><p><s>Figure 2. Supralinear Performance through the Merging of Touch and Vision</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head/><label/><figDesc><div><p><s>(C) Comparison of the thresholds predicted by linear combination of V and T signals based on Bayesian cue combination model (ordinate) with measured thresholds on VT trials (abscissa).</s><s>Each point corresponds to one rat.</s><s>Error bars indicate 95% confidence intervals by bootstrapping.</s><s>(D) Comparison of mutual information between behavioral choice and stimulus category in VT trials (ordinate) with the mutual information between behavioral choice and stimulus category summated from V and T trials (abscissa).</s><s>Each point corresponds to one rat.</s><s>Error bars indicate 95% confidence intervals by bootstrapping.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Figure 3 .</head><label>3</label><figDesc><div><p><s>Figure 3. Encoding of Stimulus Orientation and Stimulus Category in Posterior Parietal Cortex (A) Upper: the target area, PPC (green), is located between visual cortex (blue) and the vibrissal region of somatosensory cortex, Bf.</s><s>Lower: histological section demonstrating recording sites in the LPtA zone of PPC according to Paxinos and Watson (2007).</s><s>(B) Upper left: example PPC neuron action potentials (150 single waveforms and their average, black).</s><s>Upper right: interspike interval histogram.</s><s>Lower: raster plot showing the unit's firing on 250 randomly selected trials.</s><s>Modality conditions (V, T, and VT) are labeled by color.</s><s>Firing rate, computed in a window of 1 ms and smoothed with a Gaussian (s = 50 ms), is plotted with the same color code.</s><s>Shaded bands are ±SEM.</s><s>(C and D) Raster plots (left plots), peri-event time histograms (PETHs, middle plots, smoothed with a Gaussian kernel s = 50 ms), and angular tuning curves (right plots, separated by modality) of four example PPC neurons.</s><s>Error trials and trials with 45 orientation are excluded.</s><s>Trials are grouped by stimulus orientation (see color key).</s><s>Tuning curves show average firing rate for trials grouped with the same stimulus orientation in a 300 ms window preceding the reward spout lick.</s><s>Data points show the average firing rate per angle ±SEM.</s><s>The curves are cumulative Gaussian fits (see STAR Methods).</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Figure 4 .</head><label>4</label><figDesc><div><p><s>Figure 4. Supramodal Responses in Posterior Parietal Cortex(A) Each point denotes the average firing rates of one neuron (total, 622 neurons) in a 300 ms window preceding the reward spout lick in V, T, and VT trials, separately.</s><s>Points are clustered about a line (orange) corresponding to equal responses under the three modality conditions.</s><s>Data are not separated according to orientation.</s><s>(B) Separated by angles (colors), points indicate the firing rate of all neurons, again in the 300 ms window preceding the reward spout lick, in T (abscissa) versus V (ordinate) trials.</s><s>R is the Pearson linear correlation coefficient.</s><s>(C) Upper plots: mean firing rates on T (abscissa) versus V (ordinate) trials for each of the six tested orientations for two neurons.</s><s>Linear regression coefficient and slope are reported on the plot.</s><s>The neuron in the left panel was also illustrated in the lower plot of Figure3Cand the neuron in the right panel from the upper plot of Figure3D.</s><s>Data points show the average firing rate per angle ±SEM.</s><s>Lower plots: histograms are the distributions of the linear regression coefficients for all neurons (left) and slopes for neurons with statistically significant regression coefficient (right).</s><s>(D) Upper histogram: modality selectivity for a population of 622 PPC neurons.</s><s>Positive index values correspond to higher firing rate for V trials and negative values to higher firing for T trials.</s><s>Lower histogram: category selectivity for the same population of neurons.</s><s>Positive index values correspond to higher firing rate for leftward choices and negative values to higher firing for rightward choices.</s><s>See FigureS4for time course of selectivity index measured for each neuron.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Figure 5 .</head><label>5</label><figDesc><div><p><s>Figure 5. Joint Information about Stimulus Orientation and Category in Posterior Parietal Cortex</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Figure 6 .</head><label>6</label><figDesc><div><p><s>Figure 6.</s><s>Choices Are Encoded by Neuronal Population Activity (A) Illustration of the linear discriminant classifier used to decode choices from the population activity.</s><s>The clouds of circles and triangles show the sets of response population vectors produced in different trials of a single recording session.</s><s>Circles are associated with turning to the left spout, triangles with the right spout.</s><s>Symbols representing data from training trials have no border, while the symbols representing data from test trials have a black border and are grouped within the dashed boundaries.</s><s>Since the test data fall on the correct side of the discrimination boundary (near the training trials of the same symbol), the performance in this schematic dataset would be perfect.(B)</s><s>Actual trial-by-trial performance of the decoder for each session separately (ten sessions from five rats) is in gray.</s><s>Black is average across sessions.</s><s>Decoder performance is measured based on neuronal activity aligned to the time of first response lick; 100 ms windows shifted in 50 ms steps.</s><s>True decoder performance surpasses 90% correct.</s><s>(C) Average psychometric curves (see STAR Methods for the fit) based on decoding neuronal responses (solid lines) and the rats' observed psychometric curves (dashed lines).</s><s>Data are presented as mean ±SEM.</s><s>See FigureS5Bfor individual sessions and modalities.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head/><label/><figDesc><div><p><s>Stage 7: Training to Discriminate the Full Range of Orientations in Interleaved Modality Conditions</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><head>Figure S1 :</head><label>S1</label><figDesc><div><p><s>Figure S1: Details on training and testing, related to Figures 1 and 2.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_9"><head>Figure S2 :</head><label>S2</label><figDesc><div><p><s>Figure S2: Details on the analysis of behavioral data, related to Figure 2.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_10"><head>Figure S3 :</head><label>S3</label><figDesc><div><p><s>Figure S3: Implants for electrophysiology, related to Figure 3 and START Methods on acquisition of neuronal data.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_11"><head>Figure S4 :</head><label>S4</label><figDesc><div><p><s>Figure S4: Selectivity analysis on a population of 622 PPC neurons, related to Figure 4.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_12"><head>( A )Figure S5 :</head><label>AS5</label><figDesc><div><p><s>Figure S5: Details on the neuronal classifier, related to Figure 6.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_13"><head>( A )</head><label>A</label><figDesc><div><p><s>Plots are classifier weight associated with each neuron for separate recording sessions (10 days), ordered by magnitude.</s><s>Almost all neuronal weights were nonzero in each session, indicating that every neuron in the population contributed to the classifier's performance.</s><s>(B) Psychometric curves based on decoding neuronal responses (solid lines) compared to the rats' observed psychometric curves (dashed lines) in each tested modality condition (colors) for all 10 sessions separately.</s><s>(C) The signal carried by the PPC population also closely paralleled behavior when the classifier training set included the modality of the test trial.</s><s>Data are presented as mean±SEM.</s></p></div></figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>TABLE d</head><label>d</label><figDesc><div><p><s>CONTACT FOR REAGENT AND RESOURCE SHARING d EXPERIMENTAL MODEL AND SUBJECT DETAILS</s></p></div></figDesc><table/><note><p><s>d METHOD DETAILS B Apparatus B Visual-tactile Stimulus Presentation B Behavioral Task and Training B Random Modality Training B Control Experiments B Acquisition of Neuronal Data B Microelectrode devices B General Surgical Procedures B Electrode Implantation B Electrophysiological Recordings B Histology B Quantification and Statistical Analysis B Neuronal Data Analysis METHOD DETAILS</s></p></note></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="626" xml:id="foot_0"><p><s>Neuron 97, 626-639, February 7, 2018 ª 2018 The Authors.</s><s>Published by Elsevier Inc.</s><s>This is an open access article under the CC BY-NC-ND license (http://creativecommons.org/licenses/by-nc-nd/4.0/).</s></p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_1"><p><s>Neuron 97, 626-639, February 7, 2018 629</s></p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_2"><p><s>Neuron 97, 626-639, February 7, 2018 633</s></p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_3"><p><s>Neuron 97, 626-639.e1-e8,</s><s>February 7, 2018 e2</s></p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_4"><p><s>e3 Neuron 97, 626-639.e1-e8,</s><s>February 7, 2018</s></p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_5"><p><s>Neuron 97, 626-639.e1-e8,</s><s>February 7, 2018 e4</s></p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_6"><p><s>e5 Neuron 97, 626-639.e1-e8,</s><s>February 7, 2018</s></p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_7"><p><s>Neuron 97, 626-639.e1-e8,</s><s>February 7, 2018 e6</s></p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_8"><p><s>e7 Neuron 97, 626-639.e1-e8,</s><s>February 7, 2018</s></p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_9"><p><s>Neuron 97, 626-639.e1-e8,</s><s>February 7, 2018 e8</s></p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>ACKNOWLEDGMENTS</head><p>We acknowledge the financial support of the <rs type="funder">Human Frontier Science Program</rs> (M.E.D. and D.Z.) (http://www.hfsp.org;project <rs type="grantNumber">RGP0015/2013</rs>), the <rs type="funder">European Research Council</rs> advanced grant CONCEPT (M.E.D.) (http:// erc.europa.eu;project <rs type="grantNumber">294498</rs>), the <rs type="funder">European Research Council consolidator</rs> grant <rs type="grantNumber">LEARN2SEE</rs> (D.Z.) (project <rs type="grantNumber">616803</rs>), and <rs type="funder">Italian MIUR</rs> grant HANDBOT (http://hubmiur.pubblica.istruzione.it/web/ricerca/home;project <rs type="projectName">GA 280778</rs>).The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.<rs type="person">Laura Carbonari</rs> and <rs type="person">Giuseppe Cazzetta</rs> assisted in animal training and behavioral data acquisition.<rs type="person">Marco Gigante</rs> and <rs type="person">Rudi Laco</rs> helped in instrumentation and realization of the experimental setup and stimuli.<rs type="person">Alessandro Di Filippo</rs> contributed to the development of the experimental rig.<rs type="person">Fabrizio Manzino</rs> and <rs type="person">Fabio Meneghini</rs> provided support with <rs type="person">LabView programs.Erik Zorzin</rs> assisted in implementing the electronic circuits.<rs type="person">Francesca Pulecchi</rs> assisted surgical procedures and performed histologies.We are grateful to members of the <rs type="institution">Diamond and Zoccolan labs</rs>, particularly <rs type="person">Romain Brasselet</rs>, <rs type="person">Sebastian Reinartz</rs>, and <rs type="person">Arash Fassihi</rs>, for fruitful comments and discussions.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_C5gc3BM">
+					<idno type="grant-number">RGP0015/2013</idno>
+				</org>
+				<org type="funding" xml:id="_pnmDkak">
+					<idno type="grant-number">294498</idno>
+				</org>
+				<org type="funding" xml:id="_eJ4WM47">
+					<idno type="grant-number">LEARN2SEE</idno>
+				</org>
+				<org type="funded-project" xml:id="_M7m76Qx">
+					<idno type="grant-number">616803</idno>
+					<orgName type="project" subtype="full">GA 280778</orgName>
+				</org>
+			</listOrg>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>SUPPLEMENTAL INFORMATION</head><p><s>Supplemental Information includes five figures, one movie, and one item and can be found with this article at https://doi.org/10.1016/j.neuron.2018.</s><s>01.003.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>AUTHOR CONTRIBUTIONS</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Conceptualization</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>DECLARATION OF INTERESTS</head><p><s>The authors declare no competing interests.</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>STAR+METHODS KEY RESOURCES TABLE CONTACT FOR REAGENT AND RESOURCE SHARING</head><p><s>Further information and requests for resources and reagents should be directed to and will be fulfilled by the Lead Contact, Mathew E. Diamond (diamond@sissa.it).</s></p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>EXPERIMENTAL MODEL AND SUBJECT DETAILS</head><p><s>Twelve male Long-Evans rats (Charles River Laboratories, Calco, Italy) were used.</s><s>They were caged in pairs, except for implanted rats which were housed alone.</s><s>They were maintained on a 12/12 hr light/dark cycle; experiments were conducted during the light phase.</s><s>Upon arrival they were 8 weeks old, weighing approximately 250 g, and typically grew to over 600 g over the course of the study.</s><s>They had free access to food in the cage.</s><s>To promote motivation in the behavioral task, rats were water-deprived on days of training/testing.</s><s>During each session they received 17-22 mL of pear juice diluted in water (1 unit juice: 4 units water) as reward.</s><s>After the session they were given access to water ad libitum for 1 hr, though they were rarely thirsty.</s><s>Rats were examined weekly by a veterinarian.</s><s>Protocols conformed to international norms and were approved by the Ethics Committee of SISSA and by the Italian Health Ministry (license numbers 569/2015-PR and 570/2015-PR).</s></p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Behavioral study of whisker-mediated vibration sensation in rats</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Adibi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Diamond</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Arabzadeh</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. Natl. Acad. Sci. USA</title>
+		<imprint>
+			<biblScope unit="volume">109</biblScope>
+			<biblScope unit="page" from="971" to="976"/>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Organization of corticocortical connections in the parietal cortex of the rat</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Akers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">P</forename><surname>Killackey</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Comp. Neurol</title>
+		<imprint>
+			<biblScope unit="volume">181</biblScope>
+			<biblScope unit="page">637</biblScope>
+			<date type="published" when="1978-02-07">1978. February 7, 2018</date>
+		</imprint>
+	</monogr>
+	<note>Neuron</note>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">The ventriloquist effect results from near-optimal bimodal integration</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Alais</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Burr</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Curr. Biol</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="257" to="262"/>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">A role for olfaction in object recognition by normal and hippocampal-damaged rats</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">S</forename><surname>Astur</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Klein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">G</forename><surname>Mumby</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">K</forename><surname>Protz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Sutherland</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">M</forename><surname>Martin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neurobiol. Learn. Mem</title>
+		<imprint>
+			<biblScope unit="volume">78</biblScope>
+			<biblScope unit="page" from="186" to="191"/>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Bayesian integration of visual and auditory signals for spatial localization</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">W</forename><surname>Battaglia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Jacobs</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">N</forename><surname>Aslin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Opt. Soc. Am. A Opt. Image Sci. Vis</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="page" from="1391" to="1397"/>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Rhythmic whisking by rat: retraction as well as protraction of the vibrissae is under active muscular control</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">W</forename><surname>Berg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Kleinfeld</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurophysiol</title>
+		<imprint>
+			<biblScope unit="volume">89</biblScope>
+			<biblScope unit="page" from="104" to="117"/>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Functional architecture of the mystacial vibrissae</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Brecht</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Preilowski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Merzenich</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Behav. Brain Res</title>
+		<imprint>
+			<biblScope unit="volume">84</biblScope>
+			<biblScope unit="page" from="81" to="97"/>
+			<date type="published" when="1997">1997</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Posterior parietal cortex in rhesus monkey: II. Evidence for segregated corticocortical networks linking sensory and limbic areas with the frontal lobe</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Cavada</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">S</forename><surname>Goldman-Rakic</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Comp. Neurol</title>
+		<imprint>
+			<biblScope unit="volume">287</biblScope>
+			<biblScope unit="page" from="422" to="445"/>
+			<date type="published" when="1989">1989</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<monogr>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">M</forename><surname>Cover</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Thomas</surname></persName>
+		</author>
+		<title level="m">Elements of Information Theory</title>
+		<imprint>
+			<publisher>John Wiley &amp; Sons</publisher>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">An improved conditioning technique for determining auditory acuity of the rat</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">T</forename><surname>Cowles</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">A</forename><surname>Pennington</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Psychol</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page" from="41" to="47"/>
+			<date type="published" when="1943">1943</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<monogr>
+		<title level="m" type="main">Optimal multisensory decision-making in a reaction-time task</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Drugowitsch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">C</forename><surname>Deangelis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">M</forename><surname>Klier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">E</forename><surname>Angelaki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Pouget</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note>eLife 3, e03005</note>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<monogr>
+		<title level="m" type="main">Tuning the speed-accuracy trade-off to maximize reward rate in multisensory decision-making</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Drugowitsch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">C</forename><surname>Deangelis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">E</forename><surname>Angelaki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Pouget</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>eLife 4, e06678</note>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<monogr>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">O</forename><surname>Duda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">E</forename><surname>Hart</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">G</forename><surname>Stork</surname></persName>
+		</author>
+		<title level="m">Pattern Classification</title>
+		<imprint>
+			<publisher>John Wiley &amp; Sons</publisher>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<monogr>
+		<title level="m" type="main">Distinct effects of prefrontal and parietal cortex inactivations on an accumulation of evidence task in the rat</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">C</forename><surname>Erlich</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">W</forename><surname>Brunton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">A</forename><surname>Duan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">D</forename><surname>Hanks</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">D</forename><surname>Brody</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note>eLife 4, e05457</note>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Humans integrate visual and haptic information in a statistically optimal fashion</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">O</forename><surname>Ernst</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">S</forename><surname>Banks</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">415</biblScope>
+			<biblScope unit="page" from="429" to="433"/>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Representation of spatial goals in rat orbitofrontal cortex</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">E</forename><surname>Feierstein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">C</forename><surname>Quirk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Uchida</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">L</forename><surname>Sosulski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">F</forename><surname>Mainen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">51</biblScope>
+			<biblScope unit="page" from="495" to="507"/>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Dynamic reweighting of visual and vestibular cues during self-motion perception</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">R</forename><surname>Fetsch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">H</forename><surname>Turner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">C</forename><surname>Deangelis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">E</forename><surname>Angelaki</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page" from="15601" to="15612"/>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Neural correlates of reliability-based cue weighting during multisensory integration</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">R</forename><surname>Fetsch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Pouget</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">C</forename><surname>Deangelis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">E</forename><surname>Angelaki</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page" from="146" to="154"/>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Bridging the gap between theories of sensory cue integration and the physiology of multisensory neurons</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">R</forename><surname>Fetsch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">C</forename><surname>Deangelis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">E</forename><surname>Angelaki</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Rev. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page" from="429" to="442"/>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Auditory masking in the rat</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Gourevitch</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Acoust. Soc. Am</title>
+		<imprint>
+			<biblScope unit="volume">37</biblScope>
+			<biblScope unit="page" from="439" to="443"/>
+			<date type="published" when="1965">1965</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Audibility in the rat</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Gourevitch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">H</forename><surname>Hack</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Comp. Physiol. Psychol</title>
+		<imprint>
+			<biblScope unit="volume">62</biblScope>
+			<biblScope unit="page" from="289" to="291"/>
+			<date type="published" when="1966">1966</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<monogr>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">M</forename><surname>Green</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Swets</surname></persName>
+		</author>
+		<title level="m">Signal Detection Theory and Psycophysics</title>
+		<imprint>
+			<publisher>John Wiley &amp; Sons</publisher>
+			<date type="published" when="1966">1966</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Flow of cortical activity underlying a tactile decision in mice</title>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">V</forename><surname>Guo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Huber</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Ophir</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Gutnisky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">T</forename><surname>Ting</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Feng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Svoboda</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">81</biblScope>
+			<biblScope unit="page" from="179" to="194"/>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Choice-specific sequences in parietal cortex during a virtual-navigation decision task</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">D</forename><surname>Harvey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Coen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">W</forename><surname>Tank</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">484</biblScope>
+			<biblScope unit="page" from="62" to="68"/>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Audiogram of the hooded Norway rat</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">E</forename><surname>Heffner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">S</forename><surname>Heffner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Contos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Ott</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Hear. Res</title>
+		<imprint>
+			<biblScope unit="volume">73</biblScope>
+			<biblScope unit="page" from="244" to="247"/>
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Cross-modality sharpening of visual cortical processing through layer-1-mediated inhibition and disinhibition</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">A</forename><surname>Ibrahim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Mesik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X.-Y</forename><surname>Ji</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Fang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H.-F</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y.-T</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Zingg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">I</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">W</forename><surname>Tao</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">89</biblScope>
+			<biblScope unit="page" from="1031" to="1045"/>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Sound-driven synaptic inhibition in primary visual cortex</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Iurilli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ghezzi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">U</forename><surname>Olcese</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Lassi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Nazzaro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Tonini</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Tucci</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Benfenati</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Medini</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">73</biblScope>
+			<biblScope unit="page" from="814" to="828"/>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Optimal integration of texture and motion cues to depth</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Jacobs</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Vision Res</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="page" from="3621" to="3629"/>
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Measurement of auditory intensity thresholds in the rat by conditioning of an autonomic response</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Jamison</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Comp. Physiol. Psychol</title>
+		<imprint>
+			<biblScope unit="volume">44</biblScope>
+			<biblScope unit="page" from="118" to="125"/>
+			<date type="published" when="1951">1951</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Auditory sensitivity of the albino rat</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">B</forename><surname>Kelly</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Masterton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Comp. Physiol. Psychol</title>
+		<imprint>
+			<biblScope unit="volume">91</biblScope>
+			<biblScope unit="page" from="930" to="936"/>
+			<date type="published" when="1977">1977</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Bounded integration in parietal cortex underlies decisions even when viewing duration is dictated by the environment</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Kiani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">D</forename><surname>Hanks</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">N</forename><surname>Shadlen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="3017" to="3029"/>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Integration of direction cues is invariant to the temporal gap between them</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Kiani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">K</forename><surname>Churchland</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">N</forename><surname>Shadlen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="16483" to="16489"/>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Behavioural and anatomical studies of the posterior parietal cortex in the rat</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Kolb</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Walkey</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Behav. Brain Res</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="page" from="127" to="145"/>
+			<date type="published" when="1987">1987</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Bayesian decision theory in sensorimotor control</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">P</forename><surname>Ko ¨rding</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">M</forename><surname>Wolpert</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Trends Cogn. Sci</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page" from="319" to="326"/>
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<monogr>
+		<title level="m" type="main">The organization of neocortex in mammals: are species differences really so different? Trends Neurosci</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Krubitzer</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1995">1995</date>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="408" to="417"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<monogr>
+		<title level="m" type="main">Ideal-observer models of cue integration</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">S</forename><surname>Landy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">S</forename><surname>Banks</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">C</forename><surname>Knill</surname></persName>
+		</author>
+		<editor>Sensory Cue Integration, J. Trommershauser, K. Kording, and M.S. Landy</editor>
+		<imprint>
+			<date type="published" when="2011">2011</date>
+			<publisher>Oxford University Press</publisher>
+			<biblScope unit="page" from="5" to="29"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Connections of the medial posterior parietal cortex (area 7m) in the monkey</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">R</forename><surname>Leichnetz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Anat. Rec</title>
+		<imprint>
+			<biblScope unit="volume">263</biblScope>
+			<biblScope unit="page" from="215" to="236"/>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Posterior parietal cortex guides visual decisions in rats</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Licata</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">T</forename><surname>Kaufman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Raposo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">B</forename><surname>Ryan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Sheppard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">K</forename><surname>Churchland</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">37</biblScope>
+			<biblScope unit="page" from="4954" to="4966"/>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Asymmetric multisensory interactions of visual and somatosensory responses in a region of the rat parietal cortex</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">T</forename><surname>Lippert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Takagaki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Kayser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">W</forename><surname>Ohl</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS One</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page">63631</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">A toolbox for the fast information analysis of multiple-site LFP, EEG and spike train recordings</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Magri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Whittingstall</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Singh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">K</forename><surname>Logothetis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Panzeri</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">BMC Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page">81</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<monogr>
+		<title level="m" type="main">Hearing: central neural mechanisms. In Handbook of Perception III: Biology of Perceptual Systems</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Masterton</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">T</forename><surname>Diamond</surname></persName>
+		</author>
+		<editor>E.C. Carterette and M.P. Friedman</editor>
+		<imprint>
+			<date type="published" when="1973">1973</date>
+			<publisher>Academic Press</publisher>
+			<biblScope unit="page" from="407" to="482"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<monogr>
+		<author>
+			<persName><forename type="first">N</forename><surname>Mei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">R</forename><surname>Martin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Gallego</surname></persName>
+		</author>
+		<title level="m">Progress in Sensory Physiology</title>
+		<meeting><address><addrLine>Berlin Heidelberg</addrLine></address></meeting>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Direct connections of rat visual cortex with sensory, motor, and association cortices</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">W</forename><surname>Miller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">A</forename><surname>Vogt</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Comp. Neurol</title>
+		<imprint>
+			<biblScope unit="volume">226</biblScope>
+			<biblScope unit="page" from="184" to="202"/>
+			<date type="published" when="1984">1984</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Cellular and synaptic architecture of multisensory integration in the mouse neocortex</title>
+		<author>
+			<persName><forename type="first">U</forename><surname>Olcese</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Iurilli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Medini</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neuron</title>
+		<imprint>
+			<biblScope unit="volume">79</biblScope>
+			<biblScope unit="page" from="579" to="593"/>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Motoring ahead with rodents</title>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">P</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Curr. Opin. Neurobiol</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="page" from="571" to="578"/>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<monogr>
+		<author>
+			<persName><forename type="first">G</forename><surname>Paxinos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Watson</surname></persName>
+		</author>
+		<title level="m">The Rat Brain in Stereotaxic Coordinates, Hard Cover Edition</title>
+		<imprint>
+			<publisher>Elsevier Science</publisher>
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Whisker-based discrimination of object orientation determined with a rapid training paradigm</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">B</forename><surname>Polley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Rickert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">D</forename><surname>Frostig</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neurobiol. Learn. Mem</title>
+		<imprint>
+			<biblScope unit="volume">83</biblScope>
+			<biblScope unit="page" from="134" to="142"/>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Single retinal ganglion cell responses in the dark-reared rat: grating acuity, contrast sensitivity, and defocusing</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">K</forename><surname>Powers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">G</forename><surname>Green</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Vision Res</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="page" from="1533" to="1539"/>
+			<date type="published" when="1978">1978</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Active touch sensing</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">J</forename><surname>Prescott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Diamond</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Wing</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Philos. Trans. R. Soc. Lond. B Biol. Sci</title>
+		<imprint>
+			<biblScope unit="volume">366</biblScope>
+			<biblScope unit="page" from="2989" to="2995"/>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Variation in visual acuity within pigmented, and between pigmented and albino rat strains</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">T</forename><surname>Prusky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">T</forename><surname>Harker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Douglas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">Q</forename><surname>Whishaw</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Behav. Brain Res</title>
+		<imprint>
+			<biblScope unit="volume">136</biblScope>
+			<biblScope unit="page" from="339" to="348"/>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">Unsupervised spike detection and sorting with wavelets and superparamagnetic clustering</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">Q</forename><surname>Quiroga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Nadasdy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Ben-Shaul</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Neural Comput</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="1661" to="1687"/>
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">Invariant visual representation by single neurons in the human brain</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">Q</forename><surname>Quiroga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Reddy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Kreiman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Koch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Fried</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">435</biblScope>
+			<biblScope unit="page" from="1102" to="1107"/>
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">Multisensory decision-making in rats and humans</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Raposo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">P</forename><surname>Sheppard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">R</forename><surname>Schrater</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">K</forename><surname>Churchland</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page" from="3726" to="3735"/>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">A category-free neural population supports evolving demands during decision-making</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Raposo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">T</forename><surname>Kaufman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">K</forename><surname>Churchland</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="1784" to="1792"/>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title level="a" type="main">Rat posterior parietal cortex: topography of corticocortical and thalamic connections</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">L</forename><surname>Reep</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">C</forename><surname>Chandler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>King</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">V</forename><surname>Corwin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Exp. Brain Res</title>
+		<imprint>
+			<biblScope unit="volume">100</biblScope>
+			<biblScope unit="page" from="67" to="84"/>
+			<date type="published" when="1994">1994</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<analytic>
+		<title level="a" type="main">Coordinated population activity underlying texture discrimination in rat barrel cortex</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Safaai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Heimendahl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Sorando</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">E</forename><surname>Diamond</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Maravall</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="5843" to="5855"/>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title level="a" type="main">Convergent approaches toward the study of multisensory perception</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">K</forename><surname>Sarko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ghose</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">T</forename><surname>Wallace</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Front. Syst. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="page">81</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<analytic>
+		<title level="a" type="main">A mathematical theory of communication</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">E</forename><surname>Shannon</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Bell Syst. Tech. J</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="page" from="623" to="656"/>
+			<date type="published" when="1948">1948</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title level="a" type="main">Transformation-tolerant object recognition in rats revealed by visual priming</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Tafazoli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Di Filippo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Zoccolan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page" from="21" to="34"/>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<monogr>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">P</forename><surname>Vencatasawmy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">J</forename><surname>Krzanowski</surname></persName>
+		</author>
+		<title level="m">Principles of Multivariate Analysis: A User's Perspective</title>
+		<imprint>
+			<publisher>Oxford University Press</publisher>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<analytic>
+		<title level="a" type="main">Rats maintain an overhead binocular field at the expense of constant fusion</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Wallace</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">S</forename><surname>Greenberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Sawinski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Rulla</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Notaro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">N D</forename><surname>Kerr</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">498</biblScope>
+			<biblScope unit="page" from="65" to="69"/>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b61">
+	<analytic>
+		<title level="a" type="main">Network analysis of corticocortical connections reveals ventral and dorsal processing streams in mouse visual cortex</title>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Sporns</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Burkhalter</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page" from="4386" to="4399"/>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b62">
+	<analytic>
+		<title level="a" type="main">Navigating from hippocampus to parietal cortex</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Whitlock</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Sutherland</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">P</forename><surname>Witter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M.-B</forename><surname>Moser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">I</forename><surname>Moser</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Proc. Natl. Acad. Sci. USA</title>
+		<imprint>
+			<biblScope unit="volume">105</biblScope>
+			<biblScope unit="page" from="14755" to="14762"/>
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b63">
+	<analytic>
+		<title level="a" type="main">The psychometric function: I. Fitting, sampling, and goodness of fit</title>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">A</forename><surname>Wichmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">J</forename><surname>Hill</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Percept. Psychophys</title>
+		<imprint>
+			<biblScope unit="volume">63</biblScope>
+			<biblScope unit="page" from="1293" to="1313"/>
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b64">
+	<analytic>
+		<title level="a" type="main">Cortical connectivity maps reveal anatomically distinct areas in the parietal cortex of the rat</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Wilber</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">J</forename><surname>Clark</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Demecha</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Mesina</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Vos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">L</forename><surname>Mcnaughton</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Front. Neural Circuits</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page">146</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b65">
+	<analytic>
+		<title level="a" type="main">Invariant visual object recognition and shape processing in rats</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Zoccolan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Behav. Brain Res</title>
+		<imprint>
+			<biblScope unit="volume">285</biblScope>
+			<biblScope unit="page" from="10" to="33"/>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

@@ -1,0 +1,1237 @@
+[
+  {
+    "claim_id": "C1",
+    "claim": "Rats can combine vision and touch to distinguish two grating orientation categories.",
+    "claim_type": "EXPLICIT",
+    "source": "Rats combine vision and touch to distinguish two grating orientation categories",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is stated directly in the highlights section of the manuscript.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C2",
+    "claim": "Performance with vision and touch together reveals synergy between the two channels.",
+    "claim_type": "EXPLICIT",
+    "source": "Performance with vision and touch together reveals synergy between the two channels",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is stated directly in the highlights section and supported by experimental data showing supralinear combination.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C3",
+    "claim": "Posterior parietal cortex (PPC) neuronal responses are invariant to modality.",
+    "claim_type": "EXPLICIT",
+    "source": "Posterior parietal cortex (PPC) neuronal responses are invariant to modality",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is stated in the highlights and supported by neurophysiological recordings showing similar responses across modalities.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C4",
+    "claim": "Humans, non-human primates, and rodents demonstrate heightened accuracy of perceptual judgements when multiple cues are combined.",
+    "claim_type": "EXPLICIT",
+    "source": "In psychophysical studies, humans, non-human primates, and rodents demonstrate heightened accuracy of perceptual judgements when multiple cues are combined, and in some studies the increase in accuracy approximates that of a statistically optimal observer (Alais and Burr, 2004; Battaglia et al., 2003; Ernst and Banks, 2002; Fetsch et al., 2009; Guo et al., 2014; Jacobs, 1999; Raposo et al., 2012)",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This claim is supported by multiple citations to previous research.",
+    "evidence_type": [
+      "CITATION"
+    ]
+  },
+  {
+    "claim_id": "C5",
+    "claim": "Object recognition is usually attributed to neocortical processing.",
+    "claim_type": "EXPLICIT",
+    "source": "Since object recognition is usually attributed to neocortical processing, here we examine the posterior parietal cortex (PPC), situated between primary somatosensory and visual cortices and a target of both (Akers and Killackey, 1978; Krubitzer, 1995; Reep et al., 1994; Whitlock et al., 2008; Wilber et al., 2014)",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is stated as established knowledge and supported by citations.",
+    "evidence_type": [
+      "KNOWLEDGE",
+      "CITATION"
+    ]
+  },
+  {
+    "claim_id": "C6",
+    "claim": "PPC is situated between primary somatosensory and visual cortices and is a target of both.",
+    "claim_type": "EXPLICIT",
+    "source": "here we examine the posterior parietal cortex (PPC), situated between primary somatosensory and visual cortices and a target of both (Akers and Killackey, 1978; Krubitzer, 1995; Reep et al., 1994; Whitlock et al., 2008; Wilber et al., 2014)",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This anatomical fact is supported by multiple citations.",
+    "evidence_type": [
+      "CITATION",
+      "KNOWLEDGE"
+    ]
+  },
+  {
+    "claim_id": "C7",
+    "claim": "PPC is a good candidate for visual-tactile convergence.",
+    "claim_type": "EXPLICIT",
+    "source": "PPC is a good candidate for visual-tactile convergence (Olcese et al., 2013)",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is stated as a hypothesis supported by a citation.",
+    "evidence_type": [
+      "CITATION",
+      "INFERENCE"
+    ]
+  },
+  {
+    "claim_id": "C8",
+    "claim": "In rodents the degree of multisensory convergence within PPC is debated.",
+    "claim_type": "EXPLICIT",
+    "source": "although in rodents the degree of multisensory convergence within it is debated (Erlich et al., 2015; Harvey et al., 2012; Licata et al., 2017; Lippert et al., 2013; Raposo et al., 2014)",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is stated as an ongoing debate in the literature, supported by citations.",
+    "evidence_type": [
+      "CITATION"
+    ]
+  },
+  {
+    "claim_id": "C9",
+    "claim": "The discriminandum had a circular boundary (98 mm diameter) and raised parallel bars (width and depth of 3.5 mm), alternately colored white and black.",
+    "claim_type": "EXPLICIT",
+    "source": "The discriminandum, pictured in Figure 1A, had a circular boundary (98 mm diameter) and raised parallel bars (width and depth of 3.5 mm), alternately colored white and black",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "This describes the physical properties of the experimental stimulus.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C10",
+    "claim": "Rats were trained to categorize orientations in the range of 0-45\u00b0 as horizontal, and orientations in the range of 45-90\u00b0 as vertical.",
+    "claim_type": "EXPLICIT",
+    "source": "Rats were trained to encounter the object to judge its orientation on each trial, categorizing orientations in the range of 0 -45 as horizontal, and orientations in the range of 45 -90 as vertical (Figure 1B; also see STAR Methods and Figure S1)",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "This describes the training protocol used in the experiment.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C11",
+    "claim": "Rats differed in their modality-specific acuity.",
+    "claim_type": "EXPLICIT",
+    "source": "Figure 2A reveals that rats differed in their modality-specific acuity: rat 3 performed better in the T condition (left), while rats 12 and 1 performed better in the V condition (middle and right)",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "This is demonstrated by the psychometric curves shown in Figure 2A.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C12",
+    "claim": "All three example rats performed better in the VT condition than in V or T alone.",
+    "claim_type": "EXPLICIT",
+    "source": "All three example rats performed better in the VT condition than in V or T alone",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is shown in the psychometric curves in Figure 2A.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C13",
+    "claim": "The boost in performance in the VT condition indicates that rats did not select and rely upon the single, preferred channel.",
+    "claim_type": "EXPLICIT",
+    "source": "The boost in performance in the VT condition indicates that, when both modalities were available, rats did not select and rely upon the single, preferred channel; instead, they benefited from the access to both channels of sensory input (Figure S2B)",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "This is an inference drawn from the observed performance improvement in bimodal trials.",
+    "evidence_type": [
+      "DATA",
+      "INFERENCE"
+    ]
+  },
+  {
+    "claim_id": "C14",
+    "claim": "Rats showed, on average, good orientation acuity using their whiskers and snout (T) and slightly better performance using vision (V).",
+    "claim_type": "EXPLICIT",
+    "source": "Rats showed, on average, good orientation acuity using their whiskers and snout (T) and slightly better performance using vision (V)",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is shown in the average psychometric curves across rats in Figure 2B.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C15",
+    "claim": "Performance was markedly superior in the VT condition, indicating multisensory enhancement.",
+    "claim_type": "EXPLICIT",
+    "source": "Performance was markedly superior in the VT condition, indicating multisensory enhancement, consistent with Figure 2A",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "This is demonstrated by the psychometric curves showing better performance in VT trials.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C16",
+    "claim": "The decrease in \u03c3 in the VT versus V and T conditions was significant for all rats.",
+    "claim_type": "EXPLICIT",
+    "source": "the decrease in s in the VT versus V and T conditions was significant for all rats (Figures S2A and S2B, bootstrap test, p < 0.001)",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "This is supported by statistical testing shown in supplementary figures.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C17",
+    "claim": "In the VT condition, rats showed reduced lapse rates compared to V and T.",
+    "claim_type": "EXPLICIT",
+    "source": "In the VT condition, rats also showed reduced lapse rates compared to V and T (i.e., fewer errors on ''easy'' trials, those near the 0 and 90 orientations, p = 0.000 for all conditions in average curve; Figure S2A, bootstrap test)",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "This is demonstrated by statistical analysis of error rates.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C18",
+    "claim": "Rats showed a more accurate detection of the horizontal and vertical boundary in the VT condition.",
+    "claim_type": "EXPLICIT",
+    "source": "and a more accurate detection of the horizontal and vertical boundary, assessed by the point of subjective equality (PSE closer to 45 , p < 0.02 for V and T in average curve compared to VT; Figure S2A, bootstrap test)",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "This is shown by PSE measurements closer to 45 degrees in VT trials.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C19",
+    "claim": "VT benefit was greater versus T than versus V.",
+    "claim_type": "EXPLICIT",
+    "source": "Overall, VT benefit was greater versus T than versus V, an outcome of the better V versus T unimodal performance",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is an inference from the relative performance differences.",
+    "evidence_type": [
+      "DATA",
+      "INFERENCE"
+    ]
+  },
+  {
+    "claim_id": "C20",
+    "claim": "At 45\u00b0, performance can be no better than chance; thus, multisensory integration provided no benefit.",
+    "claim_type": "EXPLICIT",
+    "source": "At 45 , performance can be no better than chance; thus, multisensory integration provided no benefit",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a logical inference based on the task design where 45\u00b0 is the category boundary.",
+    "evidence_type": [
+      "INFERENCE",
+      "KNOWLEDGE"
+    ]
+  },
+  {
+    "claim_id": "C21",
+    "claim": "At the cardinal orientations, 0\u00b0 and 90\u00b0, performance in V and T conditions was high, so that multisensory integration could offer limited benefit.",
+    "claim_type": "EXPLICIT",
+    "source": "At the cardinal orientations, 0 and 90 , performance in V and T conditions was high, so that multisensory integration could offer limited benefit",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is an inference from the observed ceiling effects at extreme orientations.",
+    "evidence_type": [
+      "DATA",
+      "INFERENCE"
+    ]
+  },
+  {
+    "claim_id": "C22",
+    "claim": "At the intermediate orientations, 20-35\u00b0 and 55-70\u00b0, the benefit obtained by combining information from the two modalities was greatest.",
+    "claim_type": "EXPLICIT",
+    "source": "At the intermediate orientations, 20 -35 and 55 -70 , the benefit obtained by combining information from the two modalities was greatest",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is shown in the inset of Figure 2B showing orientation-dependent benefit.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C23",
+    "claim": "In the first session with novel orientations, each rat performed equally well on the new versus the familiar stimuli.",
+    "claim_type": "EXPLICIT",
+    "source": "In the first such session, each rat performed equally well on the new versus the familiar stimuli (bootstrap test, all rats p > 0.29; Figure S2C)",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "This is demonstrated by statistical comparison of performance on novel vs. familiar orientations.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C24",
+    "claim": "Rats seemed to solve the task by measuring the difference between the encountered orientation and the cardinal orientations of 'horizontal' and 'vertical.'",
+    "claim_type": "EXPLICIT",
+    "source": "Thus, rats seemed to solve the task by measuring the difference between the encountered orientation and the cardinal orientations of ''horizontal'' and ''vertical.''",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is an inference from the generalization behavior observed.",
+    "evidence_type": [
+      "DATA",
+      "INFERENCE"
+    ]
+  },
+  {
+    "claim_id": "C25",
+    "claim": "Rats were able to generalize this categorization rule to new stimuli upon the first instance.",
+    "claim_type": "EXPLICIT",
+    "source": "They were able to generalize this categorization rule to new stimuli upon the first instance, consistent with the ability of rats to generalize visual object recognition to novel views (Tafazoli et al., 2012)",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is demonstrated by immediate performance on novel orientations and supported by citation.",
+    "evidence_type": [
+      "DATA",
+      "CITATION"
+    ]
+  },
+  {
+    "claim_id": "C26",
+    "claim": "9 out of 12 rats combined V and T signals in a supralinear manner.",
+    "claim_type": "EXPLICIT",
+    "source": "9 out of 12 rats combined V and T signals in a supralinear manner (similar to rat 1 in Figure 2A), 2 in a linear manner (similar to rat 3 in Figure 2A), and 1 sublinearly (rat 12 in Figure 2A)",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "This is shown in Figure 2C comparing measured vs. predicted thresholds.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C27",
+    "claim": "8 out of 12 rats combined V and T signals in a strongly supralinear manner based on mutual information analysis.",
+    "claim_type": "EXPLICIT",
+    "source": "Figure 2D shows that 8 out of 12 rats combined V and T signals in a strongly supralinear manner, 2 rats close to supralinear (one error bar overlies the diagonal), 1 in a linear manner (both error bars overlie the diagonal), and 1 in a sublinear manner",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "This is demonstrated by mutual information analysis shown in Figure 2D.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C28",
+    "claim": "In the majority of rats the signals carried by the two sensory channels were not merged independently but were combined in a synergistic manner.",
+    "claim_type": "EXPLICIT",
+    "source": "In summary, two analyses-Bayesian prediction of underlying threshold and MI-both suggest that in the majority of rats the signals carried by the two sensory channels were not merged independently but were combined in a synergistic manner (the two measures are correlated, linear regression R = 0.6; Figure S2D)",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "This conclusion is drawn from two independent analyses showing supralinear combination.",
+    "evidence_type": [
+      "DATA",
+      "INFERENCE"
+    ]
+  },
+  {
+    "claim_id": "C29",
+    "claim": "Response times were 435-734 ms (interquartile range).",
+    "claim_type": "EXPLICIT",
+    "source": "Considering all sensory conditions and stimulus orientations, response times were 435-734 ms (interquartile range; Figure S2E)",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "This is a direct measurement from the behavioral data.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C30",
+    "claim": "Response times were longer for orientations close to the category boundary, 45\u00b0.",
+    "claim_type": "EXPLICIT",
+    "source": "With trials sorted according to stimulus orientation, it becomes apparent that response times were longer for orientations close to the category boundary, 45 (Figure 2G)",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "This is shown in Figure 2G plotting response time vs. orientation.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C31",
+    "claim": "The rats seemed to try to acquire additional evidence on difficult trials rather than undersampling them.",
+    "claim_type": "EXPLICIT",
+    "source": "Thus, rather than undersampling the difficult orientation due to reduced reward likelihood, the rats in fact seemed to try to acquire additional evidence",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is an inference from the longer response times on difficult trials.",
+    "evidence_type": [
+      "DATA",
+      "INFERENCE"
+    ]
+  },
+  {
+    "claim_id": "C32",
+    "claim": "The distributions of response times differed little according to trial modality condition.",
+    "claim_type": "EXPLICIT",
+    "source": "The distributions differed little according to trial modality condition (Figures S2F and S2G)",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "This is shown in supplementary figures comparing response time distributions.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C33",
+    "claim": "The neuron had a stable firing rate of about 2 spikes/s as the rat awaited the trial onset.",
+    "claim_type": "EXPLICIT",
+    "source": "The neuron had a stable firing rate of about 2 spikes/s as the rat awaited the trial onset",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is observed in the neuronal recording data shown in Figure 3B.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C34",
+    "claim": "About 200 ms after trial onset, the neuron's firing rate ramped upward and remained at about 8 spikes/s until 1 s after trial onset.",
+    "claim_type": "EXPLICIT",
+    "source": "About 200 ms after trial onset, the neuron's firing rate ramped upward and remained at about 8 spikes/s until 1 s after trial onset",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is observed in the neuronal recording data shown in Figure 3B.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C35",
+    "claim": "Similar temporal profiles characterized V, T, and VT trials for the example neuron.",
+    "claim_type": "EXPLICIT",
+    "source": "Similar temporal profiles characterized V, T, and VT trials",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is shown in the firing rate plots for the example neuron in Figure 3B.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C36",
+    "claim": "The first example neuron's firing rates were modulated by stimulus orientation, firing at a progressively higher rate as angle increased from 0\u00b0 to 90\u00b0.",
+    "claim_type": "EXPLICIT",
+    "source": "The angular tuning curves (right plots, separated by modality, based on neuronal data in a 300 ms window preceding the reward spout lick) highlight that the two neurons' firing rates were modulated by stimulus orientation, the first firing at a progressively higher rate as angle increased from 0 to 90",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "This is shown in the tuning curves in Figure 3C.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C37",
+    "claim": "The second example neuron's firing rates were modulated by stimulus orientation, firing at a progressively lower rate from 0\u00b0 to 90\u00b0.",
+    "claim_type": "EXPLICIT",
+    "source": "and the second firing at a progressively lower rate from 0 to 90",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is shown in the tuning curves in Figure 3C.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C38",
+    "claim": "Two example neurons carried a large signal about stimulus category, with firing rates deviating according to the upcoming action (left or right).",
+    "claim_type": "EXPLICIT",
+    "source": "By contrast, Figure 3D shows two neurons that carried a large signal about stimulus category: firing rates deviated according to the upcoming action (left or right)",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "This is shown in the PETHs and tuning curves in Figure 3D.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C39",
+    "claim": "The category-selective neurons were poorly modulated by stimulus orientation within a choice category.",
+    "claim_type": "EXPLICIT",
+    "source": "The angular tuning curves indicate that they were poorly modulated by stimulus orientation within a choice category",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is shown in the tuning curves in Figure 3D.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C40",
+    "claim": "While neuronal firing could vary according to orientation or category, it was largely invariant to differences in modality.",
+    "claim_type": "EXPLICIT",
+    "source": "The tuning curves of Figure 3C and 3D suggest that, while neuronal firing could vary according to orientation (first pair of neurons) or category (second pair of neurons), it was largely invariant to differences in modality (in right plots, compare green, blue, and red curves)",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "This is shown by comparing the tuning curves across modalities in Figures 3C and 3D.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C41",
+    "claim": "A given neuron's overall engagement in the task was nearly equal under the three modality conditions.",
+    "claim_type": "EXPLICIT",
+    "source": "The proximity of nearly all points to the diagonal line attests to the supramodal character of these neurons: a given neuron's overall engagement in the task was nearly equal under the three modality conditions",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "This is shown in Figure 4A plotting firing rates across modalities.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C42",
+    "claim": "The independence of firing rate on modality held across the six stimulus orientations.",
+    "claim_type": "EXPLICIT",
+    "source": "The independence of firing rate on modality held across the six stimulus orientations; the Pearson linear correlation coefficient, R, between firing rate on V and T trials ranged from 0.96 to 0.99",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is shown in Figure 4B with high correlation coefficients.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C43",
+    "claim": "Just 5% (30 out of 622) of neurons were selective (p < 0.01) for stimulus modality.",
+    "claim_type": "EXPLICIT",
+    "source": "Just 5% (30 out of 622) were selective (p < 0.01; permutation test) for stimulus modality, and the analysis does not point to an overall preference for either modality among these 30 neurons",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is shown in the modality selectivity histogram in Figure 4D.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C44",
+    "claim": "Over 50% of neurons (318 out of 622) were significantly selective (p < 0.01) for the upcoming choice of the rat.",
+    "claim_type": "EXPLICIT",
+    "source": "Figure 4D, lower histogram, shows the distribution of category selectivity for the same population of neurons; over 50% of neurons (318 out of 622) were significantly selective (p < 0.01; permutation test) for the upcoming choice of the rat",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "This is shown in the category selectivity histogram in Figure 4D.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C45",
+    "claim": "A greater number of neurons (219 out of 318 neurons) was selective for turns to the right than to the left, suggesting overall opposite-side preference in left PPC.",
+    "claim_type": "EXPLICIT",
+    "source": "A greater number of neurons (219 out of 318 neurons) was selective for turns to the right (index < 0) than to the left (index > 0), suggesting overall opposite-side preference in left PPC",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is shown in the distribution of category selectivity indices in Figure 4D.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C46",
+    "claim": "This population of neurons did not appear to be informative about the modality of the stimulus but instead generated a robust signal about stimulus properties-orientation and the choice category associated with that orientation-irrespective of modality.",
+    "claim_type": "EXPLICIT",
+    "source": "In sum, this population of neurons did not appear to be informative about the modality of the stimulus but instead generated a robust signal about stimulus properties-orientation and the choice category associated with that orientation-irrespective of modality (also see Figure S4)",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "This is a summary conclusion drawn from the selectivity analyses.",
+    "evidence_type": [
+      "DATA",
+      "INFERENCE"
+    ]
+  },
+  {
+    "claim_id": "C47",
+    "claim": "About 50% of neurons (315 out 622, p < 0.01) carried significant information about category conditional on angle.",
+    "claim_type": "EXPLICIT",
+    "source": "About 50% of neurons (315 out 622, p < 0.01) carried significant information about category conditional on angle (blue triangles and blue histogram projection)",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "This is shown in Figure 5 using conditional mutual information analysis.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C48",
+    "claim": "About 45% of neurons (284 out of 622, p < 0.01) carried significant information about stimulus angle conditional upon perceived category.",
+    "claim_type": "EXPLICIT",
+    "source": "About 45% of neurons (284 out of 622, p < 0.01) carried significant information about stimulus angle conditional upon perceived category (brick-colored triangles and histogram projection)",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "This is shown in Figure 5 using conditional mutual information analysis.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C49",
+    "claim": "About 38% of neurons (239 out of 622, p < 0.01) carried significant conditional information about both orientation and choice.",
+    "claim_type": "EXPLICIT",
+    "source": "About 38% of neurons (239 out of 622, p < 0.01, bootstrap test) carried significant conditional information about both orientation and choice (stars and ochre-colored histograms and squares)",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "This is shown in Figure 5 using conditional mutual information analysis.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C50",
+    "claim": "78% of neurons that carried information about both angle and category were clustered between the bands around the diagonal, indicating that PPC neurons tended to express both stimulus coding and category coding.",
+    "claim_type": "EXPLICIT",
+    "source": "the fact that 78% of neurons that carried information about both angle and category were clustered between the bands indicates that PPC neurons tended to express both stimulus coding and category coding",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is shown in Figure 5 by the distribution of neurons along the diagonal.",
+    "evidence_type": [
+      "DATA",
+      "INFERENCE"
+    ]
+  },
+  {
+    "claim_id": "C51",
+    "claim": "The simultaneous representation of both task properties suggests that PPC is involved in a supramodal stimulus-to-category transformation.",
+    "claim_type": "EXPLICIT",
+    "source": "The simultaneous representation of both task properties suggests that PPC is involved in a supramodal stimulus-to-category transformation",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is an inference from the joint coding of orientation and category.",
+    "evidence_type": [
+      "DATA",
+      "INFERENCE"
+    ]
+  },
+  {
+    "claim_id": "C52",
+    "claim": "The classifier was able to determine a boundary that could separate the population's activity into two states associated with the rat's two choices.",
+    "claim_type": "EXPLICIT",
+    "source": "As schematically illustrated for one typical session (Figure 6A), the classifier was able to determine a boundary that could separate the population's activity into two states associated with the rat's two choices",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "This is demonstrated by the linear discriminant analysis shown in Figure 6A.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C53",
+    "claim": "About 1 s before the response, the decoder's performance was around 50%.",
+    "claim_type": "EXPLICIT",
+    "source": "About 1 s before the response (i.e., before trial onset), the decoder's performance was around 50%",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is shown in Figure 6B plotting decoder performance over time.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C54",
+    "claim": "This suggests that the PPC population did not manifest a choice bias before encountering the stimulus.",
+    "claim_type": "EXPLICIT",
+    "source": "This suggests that the PPC population did not manifest a choice bias before encountering the stimulus",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is an inference from the chance-level decoder performance before trial onset.",
+    "evidence_type": [
+      "DATA",
+      "INFERENCE"
+    ]
+  },
+  {
+    "claim_id": "C55",
+    "claim": "Performance gradually increased to >90% on average by around 250 ms before the response lick.",
+    "claim_type": "EXPLICIT",
+    "source": "Performance gradually increased to >90% on average by around 250 ms before the response lick",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is shown in Figure 6B plotting decoder performance over time.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C56",
+    "claim": "Peak decoder performance measured in 5 rats ranged from 91% to 99% (9 sessions), with 1 session at 70% (p < 0.001).",
+    "claim_type": "EXPLICIT",
+    "source": "Peak decoder performance measured in 5 rats ranged from 91% to 99% (9 sessions), with 1 session at 70% (p < 0.001, permutation test)",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a summary of decoder performance across recording sessions.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C57",
+    "claim": "Almost all neuronal weights were non-zero in each session, indicating that every neuron in the population contributed to the classifier's performance.",
+    "claim_type": "EXPLICIT",
+    "source": "Almost all neuronal weights were non-zero in each session, indicating that every neuron in the population contributed to the classifier's performance (Figure S5A)",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "This is shown in supplementary Figure S5A plotting classifier weights.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C58",
+    "claim": "Across different modalities, the signal carried by the PPC population closely paralleled behavior.",
+    "claim_type": "EXPLICIT",
+    "source": "Across different modalities, the signal carried by the PPC population closely paralleled behavior",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is shown in Figure 6C comparing decoded and actual psychometric curves.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C59",
+    "claim": "The population code was supramodal and could account for the rats' behavior.",
+    "claim_type": "EXPLICIT",
+    "source": "Notably, since for each trial the classifier was trained using only trials with modality different from the test trial, we can conclude that the population code was supramodal and could account for the rats' behavior (Figure S5B)",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "This is demonstrated by successful cross-modality decoding.",
+    "evidence_type": [
+      "DATA",
+      "INFERENCE"
+    ]
+  },
+  {
+    "claim_id": "C60",
+    "claim": "Rats were able to perform fine orientation discriminations in the purely visual (V) condition, confirming that the visual capacities of Long-Evans rats might be widely underestimated.",
+    "claim_type": "EXPLICIT",
+    "source": "Rats were able to perform fine orientation discriminations in the purely visual (V) condition, confirming that the visual capacities of Long-Evans rats might be widely underestimated (Zoccolan, 2015)",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a conclusion drawn from the behavioral data and supported by citation.",
+    "evidence_type": [
+      "DATA",
+      "CITATION",
+      "INFERENCE"
+    ]
+  },
+  {
+    "claim_id": "C61",
+    "claim": "In the purely tactile (T) condition, rats were also able to perform fine orientation discriminations using their snout and whiskers.",
+    "claim_type": "EXPLICIT",
+    "source": "In the purely tactile (T) condition, rats were also able to perform fine orientation discriminations using their snout and whiskers",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is demonstrated by the behavioral performance in tactile-only trials.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C62",
+    "claim": "In both modalities rats were sensitive to 5\u00b0 angle differences.",
+    "claim_type": "EXPLICIT",
+    "source": "In our study, in both modalities rats were sensitive to 5 angle differences (e.g., non-overlapping error bars for neighboring angles in Figures 2A and 2B)",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "This is shown by the psychometric curves with distinguishable performance at 5\u00b0 intervals.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C63",
+    "claim": "Within the set of rats, some performed better in the V condition and others in the T condition.",
+    "claim_type": "EXPLICIT",
+    "source": "Within our set of rats, some performed better in the V condition and others in the T condition",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is shown in Figure 2A with individual rat differences.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C64",
+    "claim": "The majority of rats exhibited actual VT performance significantly better than that predicted by the standard Bayesian ideal-observer model.",
+    "claim_type": "EXPLICIT",
+    "source": "The majority of rats exhibited actual VT performance significantly better than that predicted by the standard Bayesian ideal-observer model",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is shown in Figures 2C and 2D comparing observed vs. predicted performance.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C65",
+    "claim": "Supralinear behavioral combination of sensory channels has been found in previous studies.",
+    "claim_type": "EXPLICIT",
+    "source": "Supralinear behavioral combination of sensory channels has been found in previous studies (Fetsch et al., 2009, 2011; Kiani et al., 2013; Raposo et al., 2012)",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is supported by citations to previous research.",
+    "evidence_type": [
+      "CITATION"
+    ]
+  },
+  {
+    "claim_id": "C66",
+    "claim": "Supralinear combination could occur if the information available on unimodal trials were only partially exploited, while the information available on bimodal trials were completely exploited.",
+    "claim_type": "EXPLICIT",
+    "source": "It could occur if the information available on unimodal trials were only partially exploited, while the information available on bimodal trials were completely exploited",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a theoretical explanation for supralinear combination.",
+    "evidence_type": [
+      "SPECULATION",
+      "CITATION"
+    ]
+  },
+  {
+    "claim_id": "C67",
+    "claim": "In all modality conditions, rats' response time was nearly 150 ms longer on trials with orientation near the 45\u00b0 category boundary.",
+    "claim_type": "EXPLICIT",
+    "source": "In all modality conditions, rats' response time was nearly 150 ms longer on trials with orientation near the 45 category boundary (Figure 2G), indicating that they did not truncate the collection of evidence on more difficult trials",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "This is shown in Figure 2G and argues against reduced attention on difficult trials.",
+    "evidence_type": [
+      "DATA",
+      "INFERENCE"
+    ]
+  },
+  {
+    "claim_id": "C68",
+    "claim": "Response time distributions were similar across the three modality conditions.",
+    "claim_type": "EXPLICIT",
+    "source": "Similarly, response time distributions were similar across the three modality conditions (Figure S2F), suggesting an attempt to accumulate sensory evidence on unimodal trials just as on bimodal trials",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "This is shown in supplementary figures and argues against differential motivation.",
+    "evidence_type": [
+      "DATA",
+      "INFERENCE"
+    ]
+  },
+  {
+    "claim_id": "C69",
+    "claim": "Comparing across sessions, rats still combined V and T signals in a supralinear fashion to guide VT performance in block design experiments.",
+    "claim_type": "EXPLICIT",
+    "source": "Yet, comparing across sessions, rats still combined V and T signals in a supralinear fashion to guide VT performance (Figure 2F)",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "This is shown in Figure 2F for block design experiments.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C70",
+    "claim": "The observed supralinearity could result from a violation of the independence assumption - visual and tactile signals might not be processed independently in bimodal trials.",
+    "claim_type": "EXPLICIT",
+    "source": "The observed supralinearity could result from a violation of that assumption-visual and tactile signals might not be processed independently in bimodal trials",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a proposed explanation for the observed supralinear combination.",
+    "evidence_type": [
+      "SPECULATION",
+      "INFERENCE"
+    ]
+  },
+  {
+    "claim_id": "C71",
+    "claim": "The visual cue might help the rat palpate the surface with its whiskers more efficiently, boosting the tactile signal.",
+    "claim_type": "EXPLICIT",
+    "source": "For instance, the visual cue might help the rat palpate the surface with its whiskers more efficiently, boosting the tactile signal (Prescott et al., 2011)",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a speculative explanation supported by citation.",
+    "evidence_type": [
+      "SPECULATION",
+      "CITATION"
+    ]
+  },
+  {
+    "claim_id": "C72",
+    "claim": "Inhibition between cortical regions could allow activity evoked through one modality to suppress the non-specific noise in the other modality's stimulus representation.",
+    "claim_type": "EXPLICIT",
+    "source": "Inhibition between cortical regions could allow activity evoked through one modality to suppress the non-specific noise in the other modality's stimulus representation",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a proposed mechanism for synergistic multisensory integration.",
+    "evidence_type": [
+      "SPECULATION"
+    ]
+  },
+  {
+    "claim_id": "C73",
+    "claim": "In the mouse, activation of auditory cortex by a noise burst drives local GABAergic inhibition in the primary visual cortex, via cortico-cortical connections.",
+    "claim_type": "EXPLICIT",
+    "source": "In the mouse, activation of auditory cortex by a noise burst drives local GABAergic inhibition in the primary visual cortex, via cortico-cortical connections (Iurilli et al., 2012)",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is evidence for cross-modal cortical interactions, supported by citation.",
+    "evidence_type": [
+      "CITATION"
+    ]
+  },
+  {
+    "claim_id": "C74",
+    "claim": "Brief pulses of auditory noise sharpen orientation selectivity of L2/L3 pyramidal neurons in primary visual cortex.",
+    "claim_type": "EXPLICIT",
+    "source": "Similarly, brief pulses of auditory noise sharpen orientation selectivity of L2/L3 pyramidal neurons in primary visual cortex (Ibrahim et al., 2016)",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is evidence for cross-modal enhancement, supported by citation.",
+    "evidence_type": [
+      "CITATION"
+    ]
+  },
+  {
+    "claim_id": "C75",
+    "claim": "Primate PPC receives input from cortical areas representing multiple sensory modalities and communicates back to these territories.",
+    "claim_type": "EXPLICIT",
+    "source": "Primate PPC receives input from cortical areas representing multiple sensory modalities and communicates back to these territories (Cavada and Goldman-Rakic, 1989; Leichnetz, 2001)",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is established anatomical knowledge supported by citations.",
+    "evidence_type": [
+      "CITATION",
+      "KNOWLEDGE"
+    ]
+  },
+  {
+    "claim_id": "C76",
+    "claim": "PPC in rats is held to be homologous to primate PPC, as it shares the characteristic reciprocal connectivity with sensory, frontal, temporal, and limbic cortical regions.",
+    "claim_type": "EXPLICIT",
+    "source": "PPC in rats is held to be homologous to primate PPC, as it shares the characteristic reciprocal connectivity with sensory, frontal, temporal, and limbic cortical regions (Akers and Killackey, 1978; Miller and Vogt, 1984; Reep et al., 1994; Whitlock et al., 2008; Wilber et al., 2014)",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is established anatomical knowledge supported by citations.",
+    "evidence_type": [
+      "CITATION",
+      "KNOWLEDGE"
+    ]
+  },
+  {
+    "claim_id": "C77",
+    "claim": "PPC is well positioned to receive unimodal sensory signals and transmit a processed form of those signals to downstream cortical regions.",
+    "claim_type": "EXPLICIT",
+    "source": "It is thus well positioned to receive unimodal sensory signals (Kolb and Walkey, 1987; Olcese et al., 2013; Reep et al., 1994) and transmit a processed form of those signals to downstream cortical regions",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is an inference from anatomical connectivity supported by citations.",
+    "evidence_type": [
+      "CITATION",
+      "INFERENCE"
+    ]
+  },
+  {
+    "claim_id": "C78",
+    "claim": "Each neuron's firing rates were the same under the V, T, and VT conditions.",
+    "claim_type": "EXPLICIT",
+    "source": "Each neuron's firing rates were the same under the V, T, and VT conditions",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is demonstrated by the neuronal recordings shown in Figures 3 and 4.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C79",
+    "claim": "The orientation and category signal carried by neurons in the three modality conditions could not be distinguished except by its greater robustness in VT trials.",
+    "claim_type": "EXPLICIT",
+    "source": "Indeed, the orientation and category signal carried by neurons in the three modality conditions could not be distinguished except by its greater robustness in VT trials-mirroring the greater behavioral robustness in VT trials (Figure 6C)",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "This is shown by comparing neuronal signals across modalities.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C80",
+    "claim": "An individual neuron could show graded steps in firing rate within an orientation category (stronger angle tuning) or else a large step in firing rate around 45\u00b0 (stronger category tuning).",
+    "claim_type": "EXPLICIT",
+    "source": "Since orientation and perceived category were correlated, the two forms of coding were distributed along a single dimension, such that an individual neuron could show graded steps in firing rate within an orientation category (thus, stronger angle tuning) or else a large step in firing rate around 45 (thus, stronger category tuning)",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is shown in the conditional information analysis in Figure 5.",
+    "evidence_type": [
+      "DATA",
+      "INFERENCE"
+    ]
+  },
+  {
+    "claim_id": "C81",
+    "claim": "When tested, the classifier replicated the rat's behavior on over 90% of trials.",
+    "claim_type": "EXPLICIT",
+    "source": "When tested, the classifier replicated the rat's behavior on over 90% of trials (Figure 6B)",
+    "source_type": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "evidence": "This is shown in Figure 6B plotting decoder performance.",
+    "evidence_type": [
+      "DATA"
+    ]
+  },
+  {
+    "claim_id": "C82",
+    "claim": "PPC contributes to the formation of a supramodal representation of the object and participates in the percept-to-action transformation carried out by a network of cortical regions.",
+    "claim_type": "EXPLICIT",
+    "source": "Considering together the two key properties, we suggest that PPC contributes to the formation of a supramodal representation of the object and participates in the percept-to-action transformation carried out by a network of cortical regions",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a conclusion drawn from the neuronal data showing supramodal coding and choice prediction.",
+    "evidence_type": [
+      "DATA",
+      "INFERENCE"
+    ]
+  },
+  {
+    "claim_id": "C83",
+    "claim": "While PPC could receive orientation-tuned signals from earlier stages of visual cortical processing, tactile orientation tuning has not been reported in barrel cortex and may be generated in PPC to meet specific behavioral demands.",
+    "claim_type": "EXPLICIT",
+    "source": "While PPC could receive orientation-tuned signals from earlier stages of visual cortical processing (Wang et al., 2012), tactile orientation tuning has not been reported in barrel cortex and may be generated in PPC to meet specific behavioral demands",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is an inference about the origin of tactile orientation tuning, supported by citation.",
+    "evidence_type": [
+      "CITATION",
+      "INFERENCE",
+      "SPECULATION"
+    ]
+  },
+  {
+    "claim_id": "C84",
+    "claim": "The reward rule boundary of 45\u00b0 was set arbitrarily, and its neuronal correlate must also be generated to meet behavioral demands.",
+    "claim_type": "EXPLICIT",
+    "source": "Furthermore, the reward rule boundary of 45 was set arbitrarily, and its neuronal correlate must also be generated to meet behavioral demands",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is an inference about the learned nature of category boundaries.",
+    "evidence_type": [
+      "INFERENCE"
+    ]
+  },
+  {
+    "claim_id": "C85",
+    "claim": "The functional properties of PPC neurons are not hardwired but rather emerge through a learning process in order to solve the requirements of ongoing tasks.",
+    "claim_type": "EXPLICIT",
+    "source": "These observations lead to the conclusion that the functional properties of PPC neurons are not hardwired but rather emerge through a learning process in order to solve the requirements of ongoing tasks",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a conclusion drawn from the task-dependent nature of neuronal responses.",
+    "evidence_type": [
+      "INFERENCE"
+    ]
+  },
+  {
+    "claim_id": "C86",
+    "claim": "In a recent study in which rats judged the quantities of auditory and/or visual pulses in a train, many neurons in PPC responded differentially on trials of the two modalities.",
+    "claim_type": "EXPLICIT",
+    "source": "In a recent study in which rats judged the quantities of auditory and/or visual pulses in a train, many neurons in PPC responded differentially on trials of the two modalities; indeed, modality itself could be decoded from neuronal firing (Raposo et al., 2014)",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a summary of findings from a cited study.",
+    "evidence_type": [
+      "CITATION"
+    ]
+  },
+  {
+    "claim_id": "C87",
+    "claim": "Supramodal coding is a consequence of the nearly simultaneous arrival in PPC of congruous signals, through two sensory channels, about a real object.",
+    "claim_type": "EXPLICIT",
+    "source": "We hypothesize that supramodal coding is a consequence of the nearly simultaneous arrival in PPC of congruous signals, through two sensory channels, about a real object",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a hypothesis proposed to explain the observed supramodal coding.",
+    "evidence_type": [
+      "SPECULATION"
+    ]
+  },
+  {
+    "claim_id": "C88",
+    "claim": "Coherence between modalities might better reflect the statistics of the real world.",
+    "claim_type": "EXPLICIT",
+    "source": "Coherence between modalities, as in our study, might better reflect the statistics of the real world",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a speculation about ecological validity.",
+    "evidence_type": [
+      "SPECULATION"
+    ]
+  },
+  {
+    "claim_id": "C89",
+    "claim": "Vision and touch have likely evolved together to explore the shape, form, and spatial properties of the environment.",
+    "claim_type": "EXPLICIT",
+    "source": "Vision and touch have likely evolved together to explore the shape, form, and spatial properties of the environment",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a speculation based on evolutionary considerations.",
+    "evidence_type": [
+      "SPECULATION",
+      "KNOWLEDGE"
+    ]
+  },
+  {
+    "claim_id": "C90",
+    "claim": "The brain's capacity to call up knowledge about things independently of sensory input channel requires a stage of processing in which the same information is encoded by both channels.",
+    "claim_type": "EXPLICIT",
+    "source": "In general, the brain's capacity to call up knowledge about things independently of sensory input channel (Quiroga et al., 2005) requires a stage of processing in which the same information is encoded by both channels, and PPC seems to contribute to this abstraction of stimuli from sensory domains",
+    "source_type": [
+      "TEXT"
+    ],
+    "evidence": "This is a conclusion about the functional role of PPC, supported by citation.",
+    "evidence_type": [
+      "INFERENCE",
+      "CITATION"
+    ]
+  }
+]

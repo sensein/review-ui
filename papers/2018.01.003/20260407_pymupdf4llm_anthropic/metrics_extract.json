@@ -1,0 +1,14 @@
+{
+  "command": "cllm extract ../2018.01.003.md -o claims.json -f",
+  "model": "claude-sonnet-4-5-20250929",
+  "created_at": 1775606550,
+  "input_tokens": 37341,
+  "cached_tokens": 0,
+  "output_tokens": 16669,
+  "total_tokens": 54010,
+  "input_cost": 0.112023,
+  "cached_cost": 0.0,
+  "output_cost": 0.250035,
+  "total_cost": 0.362058,
+  "processing_time_sec": 258.77537298202515
+}

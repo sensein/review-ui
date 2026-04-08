@@ -1,0 +1,14 @@
+{
+  "command": "cllm eval ../elife-66429-v2.md -c claims.json -o eval_llm.json",
+  "model": "claude-sonnet-4-5-20250929",
+  "created_at": 1775493422,
+  "input_tokens": 39522,
+  "cached_tokens": 0,
+  "output_tokens": 2342,
+  "total_tokens": 41864,
+  "input_cost": 0.118566,
+  "cached_cost": 0.0,
+  "output_cost": 0.03513,
+  "total_cost": 0.153696,
+  "processing_time_sec": 55.186363220214844
+}
