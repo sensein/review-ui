@@ -39,11 +39,15 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 # ── Optional: sentence-transformers for better semantic similarity ─────────────
-try:
+def _load_st_model():
     from sentence_transformers import SentenceTransformer
-    _ST_MODEL = SentenceTransformer("all-MiniLM-L6-v2")
+    return SentenceTransformer("all-MiniLM-L6-v2")
+
+try:
+    _ST_MODEL = _load_st_model()
     USE_SEMANTIC = True
-except ImportError:
+except Exception:
+    _ST_MODEL = None
     USE_SEMANTIC = False
 
 
@@ -161,7 +165,11 @@ def embed(texts: list[str]) -> np.ndarray:
     if USE_SEMANTIC:
         return _ST_MODEL.encode(texts, show_progress_bar=False)
     vec = TfidfVectorizer(ngram_range=(1, 2), min_df=1)
-    return vec.fit_transform(texts).toarray()
+    try:
+        return vec.fit_transform(texts).toarray()
+    except ValueError:
+        # Empty vocabulary (all texts are empty or contain only stop words)
+        return np.zeros((len(texts), 1))
 
 
 # ── Greedy matching ───────────────────────────────────────────────────────────
@@ -505,8 +513,8 @@ def main():
         ],
     }
 
-    with open(args.output, "w") as f:
-        json.dump(out, f, indent=2)
+    with open(args.output, "w", encoding="utf-8") as f:
+        json.dump(out, f, indent=2, ensure_ascii=False)
 
 
 if __name__ == "__main__":
