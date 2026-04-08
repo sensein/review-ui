@@ -39,12 +39,25 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 # ── Optional: sentence-transformers for better semantic similarity ─────────────
+_ST_MODEL = None
+
 try:
-    from sentence_transformers import SentenceTransformer
-    _ST_MODEL = SentenceTransformer("all-MiniLM-L6-v2")
+    import sentence_transformers as _st_pkg  # noqa: F401 — availability check only
     USE_SEMANTIC = True
 except ImportError:
     USE_SEMANTIC = False
+
+
+def _get_st_model():
+    """Load the SentenceTransformer model on first use (lazy init)."""
+    global _ST_MODEL, USE_SEMANTIC
+    if _ST_MODEL is None:
+        try:
+            from sentence_transformers import SentenceTransformer
+            _ST_MODEL = SentenceTransformer("all-MiniLM-L6-v2")
+        except Exception:
+            USE_SEMANTIC = False
+    return _ST_MODEL
 
 
 # ── Data models ───────────────────────────────────────────────────────────────
@@ -159,9 +172,13 @@ def embed(texts: list[str]) -> np.ndarray:
     if not texts:
         return np.empty((0, 1))
     if USE_SEMANTIC:
-        return _ST_MODEL.encode(texts, show_progress_bar=False)
+        return _get_st_model().encode(texts, show_progress_bar=False)
     vec = TfidfVectorizer(ngram_range=(1, 2), min_df=1)
-    return vec.fit_transform(texts).toarray()
+    try:
+        return vec.fit_transform(texts).toarray()
+    except ValueError:
+        # Empty vocabulary (all texts are empty or contain only stop words)
+        return np.zeros((len(texts), 1))
 
 
 # ── Greedy matching ───────────────────────────────────────────────────────────
@@ -505,8 +522,8 @@ def main():
         ],
     }
 
-    with open(args.output, "w") as f:
-        json.dump(out, f, indent=2)
+    with open(args.output, "w", encoding="utf-8") as f:
+        json.dump(out, f, indent=2, ensure_ascii=False)
 
 
 if __name__ == "__main__":

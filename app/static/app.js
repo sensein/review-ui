@@ -223,7 +223,7 @@
     async function loadResultsComparison(paperId) {
         resultsComparisonSection.classList.add("hidden");
         resultsComparisonSection.innerHTML = "";
-        const res = await fetch(`/api/papers/${paperId}/results-comparison`);
+        const res = await fetch(`/api/papers/${encodeURIComponent(paperId)}/results-comparison`);
         if (!res.ok) return;
         const data = await res.json();
         renderResultsComparison(data);
