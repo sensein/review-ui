@@ -39,16 +39,25 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 # ── Optional: sentence-transformers for better semantic similarity ─────────────
-def _load_st_model():
-    from sentence_transformers import SentenceTransformer
-    return SentenceTransformer("all-MiniLM-L6-v2")
+_ST_MODEL = None
 
 try:
-    _ST_MODEL = _load_st_model()
+    import sentence_transformers as _st_pkg  # noqa: F401 — availability check only
     USE_SEMANTIC = True
-except Exception:
-    _ST_MODEL = None
+except ImportError:
     USE_SEMANTIC = False
+
+
+def _get_st_model():
+    """Load the SentenceTransformer model on first use (lazy init)."""
+    global _ST_MODEL, USE_SEMANTIC
+    if _ST_MODEL is None:
+        try:
+            from sentence_transformers import SentenceTransformer
+            _ST_MODEL = SentenceTransformer("all-MiniLM-L6-v2")
+        except Exception:
+            USE_SEMANTIC = False
+    return _ST_MODEL
 
 
 # ── Data models ───────────────────────────────────────────────────────────────
@@ -163,7 +172,7 @@ def embed(texts: list[str]) -> np.ndarray:
     if not texts:
         return np.empty((0, 1))
     if USE_SEMANTIC:
-        return _ST_MODEL.encode(texts, show_progress_bar=False)
+        return _get_st_model().encode(texts, show_progress_bar=False)
     vec = TfidfVectorizer(ngram_range=(1, 2), min_df=1)
     try:
         return vec.fit_transform(texts).toarray()
