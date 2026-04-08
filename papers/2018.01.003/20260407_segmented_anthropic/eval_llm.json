@@ -1,0 +1,277 @@
+[
+  {
+    "result_id": "R1",
+    "claim_ids": [
+      "C1",
+      "C11",
+      "C12",
+      "C13",
+      "C14",
+      "C15",
+      "C60",
+      "C61",
+      "C62",
+      "C63"
+    ],
+    "result": "Rats can perform fine orientation discrimination using vision alone, touch alone, or both modalities together, with individual rats showing different modality-specific acuities but all performing better when both modalities are available.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C1, C11-C15, and C60-C63 collectively demonstrate that rats successfully discriminated grating orientations across all sensory conditions. The psychometric data (C11, C14, C62) show sensitivity to 5\u00b0 differences in both modalities, with individual variability in preferred modality (C11, C63). The consistent improvement in bimodal (VT) trials (C12, C15) is well-documented with statistical support (C16-C18).",
+    "result_type": "MAJOR"
+  },
+  {
+    "result_id": "R2",
+    "claim_ids": [
+      "C16",
+      "C17",
+      "C18",
+      "C19",
+      "C20",
+      "C21",
+      "C22",
+      "C26",
+      "C27",
+      "C28",
+      "C64"
+    ],
+    "result": "Rats combined visual and tactile signals in a supralinear manner, exceeding predictions from a Bayesian ideal-observer model, with the greatest benefit at intermediate orientations.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C16-C22 and C26-C28 provide converging evidence for supralinear integration through multiple analyses (Bayesian threshold prediction and mutual information). Statistical significance is demonstrated (C16, p<0.001), and the orientation-dependent benefit is quantified (C20-C22). The majority of rats (9/12 by threshold, 8/12 by MI) showed supralinear combination (C26-C27), with correlation between methods (C28, R=0.6).",
+    "result_type": "MAJOR"
+  },
+  {
+    "result_id": "R3",
+    "claim_ids": [
+      "C23",
+      "C24",
+      "C25"
+    ],
+    "result": "Rats generalized the orientation categorization rule to novel stimuli immediately upon first presentation, suggesting they solved the task by measuring angular distance from cardinal orientations.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C23-C25 demonstrate immediate generalization to novel orientations (90-135\u00b0 and -45-0\u00b0) with no performance difference from familiar stimuli (p>0.29 for all rats, C23). This supports the inference that rats used a distance-from-cardinal strategy (C24) rather than memorizing specific orientations, consistent with prior work on visual object recognition (C25).",
+    "result_type": "MINOR"
+  },
+  {
+    "result_id": "R4",
+    "claim_ids": [
+      "C29",
+      "C30",
+      "C31",
+      "C32",
+      "C67",
+      "C68"
+    ],
+    "result": "Response times were longer for difficult trials near the category boundary and similar across modality conditions, indicating rats did not differentially truncate evidence accumulation based on trial difficulty or modality.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C29-C32 and C67-C68 show response times increased by ~150ms for orientations near 45\u00b0 (C30, C67) but were similar across modalities (C32, C68). This pattern argues against reduced attention or premature evidence truncation on difficult or unimodal trials, supporting the interpretation that supralinear performance reflects genuine sensory integration rather than motivational differences.",
+    "result_type": "MINOR"
+  },
+  {
+    "result_id": "R5",
+    "claim_ids": [
+      "C69"
+    ],
+    "result": "Supralinear combination persisted in block design experiments where modality conditions were not interleaved.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claim C69 demonstrates that supralinear integration occurred even when unimodal and bimodal trials were presented in separate blocks, addressing the alternative explanation that rats might have reduced motivation on interleaved unimodal trials. This control strengthens the conclusion that supralinearity reflects genuine sensory integration mechanisms.",
+    "result_type": "MINOR"
+  },
+  {
+    "result_id": "R6",
+    "claim_ids": [
+      "C33",
+      "C34",
+      "C35",
+      "C36",
+      "C37",
+      "C38",
+      "C39"
+    ],
+    "result": "Individual PPC neurons showed task-related firing patterns that encoded either stimulus orientation in a graded manner or stimulus category with sharp transitions at the boundary, with similar temporal profiles across modalities.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C33-C39 describe well-documented single-neuron responses with clear examples. The temporal dynamics (C33-C35) and tuning properties (C36-C39) are directly observable in the neurophysiological data. The distinction between orientation-tuned and category-tuned neurons is demonstrated with specific examples and quantified in later population analyses.",
+    "result_type": "MAJOR"
+  },
+  {
+    "result_id": "R7",
+    "claim_ids": [
+      "C40",
+      "C41",
+      "C42",
+      "C43",
+      "C46",
+      "C78"
+    ],
+    "result": "PPC neuronal responses were largely invariant to stimulus modality, with only 5% of neurons showing modality selectivity, while firing rates remained consistent across visual, tactile, and bimodal conditions.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C40-C43, C46, and C78 provide strong evidence for modality invariance through multiple analyses: visual comparison of tuning curves (C40), population scatter plots near diagonal (C41), high correlation across orientations (C42, R=0.96-0.99), and low proportion of modality-selective neurons (C43, 5%). The statistical rigor (permutation tests, p<0.01) and consistency across analyses support this conclusion.",
+    "result_type": "MAJOR"
+  },
+  {
+    "result_id": "R8",
+    "claim_ids": [
+      "C44",
+      "C45"
+    ],
+    "result": "Over 50% of PPC neurons showed significant selectivity for the rat's upcoming choice, with a bias toward contralateral (right) choices in left PPC.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C44-C45 demonstrate robust category/choice selectivity (318/622 neurons, p<0.01) with clear lateralization (219/318 preferring contralateral choices). The statistical testing is appropriate (permutation tests) and the sample size is substantial. This contrasts sharply with the low modality selectivity, supporting the supramodal interpretation.",
+    "result_type": "MAJOR"
+  },
+  {
+    "result_id": "R9",
+    "claim_ids": [
+      "C47",
+      "C48",
+      "C49",
+      "C50",
+      "C51",
+      "C80"
+    ],
+    "result": "PPC neurons jointly encoded stimulus orientation and category through conditional information analysis, with 78% of informative neurons showing both types of coding distributed along a continuum, suggesting PPC participates in stimulus-to-category transformation.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C47-C51 and C80 employ sophisticated conditional mutual information analysis to disentangle correlated task parameters. The finding that ~50% encode category (C47), ~45% encode orientation (C48), and ~38% encode both (C49), with 78% clustering near the diagonal (C50), provides strong evidence for mixed coding. The statistical significance (p<0.01) and the methodological approach to address correlation are appropriate.",
+    "result_type": "MAJOR"
+  },
+  {
+    "result_id": "R10",
+    "claim_ids": [
+      "C52",
+      "C53",
+      "C54",
+      "C55",
+      "C56",
+      "C57",
+      "C81"
+    ],
+    "result": "A linear classifier trained on PPC population activity could predict rats' choices with >90% accuracy, with performance increasing from chance before stimulus onset to >90% by 250ms before response, and nearly all neurons contributing to classification.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C52-C57 and C81 demonstrate successful population decoding with appropriate methodology (linear discriminant analysis, cross-validation). The temporal dynamics (C53-C55) show meaningful evolution from chance to high accuracy. The high performance (91-99% in 9/10 sessions, C56) and distributed contribution of neurons (C57) support the conclusion that PPC population activity encodes choice information.",
+    "result_type": "MAJOR"
+  },
+  {
+    "result_id": "R11",
+    "claim_ids": [
+      "C58",
+      "C59",
+      "C79"
+    ],
+    "result": "The PPC population code was supramodal, as demonstrated by successful cross-modality decoding where classifiers trained on one modality could predict behavior on different modalities, with signals paralleling behavioral performance across conditions.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C58-C59 and C79 provide critical evidence for supramodal coding through cross-modality generalization. The classifier's ability to decode choices when trained on different modalities than the test trial (C59) is a strong test of modality invariance. The parallel between neural decoding and behavioral psychometric curves (C58, C79) links neural activity to behavior.",
+    "result_type": "MAJOR"
+  },
+  {
+    "result_id": "R12",
+    "claim_ids": [
+      "C82",
+      "C85"
+    ],
+    "result": "PPC contributes to forming supramodal object representations and participates in percept-to-action transformation, with functional properties emerging through learning rather than being hardwired.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C82 and C85 represent integrative conclusions drawn from the combined behavioral and neurophysiological evidence. The supramodal coding (C40-C46), joint orientation/category representation (C47-C51), and successful population decoding (C52-C59) collectively support C82. The task-dependent nature of orientation tuning and arbitrary category boundary (C83-C84) support C85. However, these are correlational conclusions; causal evidence would require perturbation experiments.",
+    "result_type": "MAJOR"
+  },
+  {
+    "result_id": "R13",
+    "claim_ids": [
+      "C66",
+      "C70",
+      "C71",
+      "C72"
+    ],
+    "result": "Supralinear combination may result from violation of the independence assumption, potentially through behavioral strategies (visual guidance of tactile exploration) or neural mechanisms (cross-modal inhibition of noise).",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "UNCERTAIN",
+    "evaluation": "Claims C66 and C70-C72 propose mechanisms for supralinear integration but are explicitly speculative (C66, C70-C72 use 'could' and 'might'). While C71 and C72 cite relevant literature on cross-modal interactions, no direct evidence is provided in this study to distinguish between these mechanisms. The speculation is reasonable but requires additional experiments (e.g., kinematic analysis, perturbation studies) for validation.",
+    "result_type": "MINOR"
+  },
+  {
+    "result_id": "R14",
+    "claim_ids": [
+      "C83",
+      "C84"
+    ],
+    "result": "Tactile orientation tuning may be generated in PPC rather than inherited from barrel cortex, and the arbitrary 45\u00b0 category boundary must be learned, suggesting task-dependent plasticity.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "UNCERTAIN",
+    "evaluation": "Claims C83-C84 make reasonable inferences about the origin of neural tuning properties but lack direct evidence. C83 notes the absence of tactile orientation tuning reports in barrel cortex but doesn't rule out its existence or test PPC's role causally. C84 correctly identifies the arbitrary nature of the boundary but doesn't demonstrate learning mechanisms. These are plausible interpretations requiring additional experiments (e.g., inactivation, developmental studies).",
+    "result_type": "MINOR"
+  },
+  {
+    "result_id": "R15",
+    "claim_ids": [
+      "C87",
+      "C88",
+      "C89"
+    ],
+    "result": "Supramodal coding may arise from simultaneous arrival of congruent signals about real objects, reflecting ecological statistics and evolutionary co-development of vision and touch.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "UNCERTAIN",
+    "evaluation": "Claims C87-C89 are explicitly hypothetical (C87 states 'We hypothesize', C88-C89 use 'might' and 'likely'). While these are reasonable evolutionary and ecological considerations, they are not tested in this study. The contrast with C86 (modality-specific coding in a different task) is suggestive but not conclusive. These ideas require comparative studies across tasks and species.",
+    "result_type": "MINOR"
+  },
+  {
+    "result_id": "R16",
+    "claim_ids": [
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C65",
+      "C73",
+      "C74",
+      "C75",
+      "C76",
+      "C77",
+      "C86",
+      "C90"
+    ],
+    "result": "The study builds on established knowledge about multisensory integration, PPC anatomy and function, and cross-modal cortical interactions from prior literature.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C4-C8, C65, C73-C77, C86, and C90 appropriately cite and summarize prior work. These provide context for the current study and are supported by the referenced literature. The citations appear accurate and relevant, establishing the scientific foundation for the experimental questions and interpretations.",
+    "result_type": "MINOR"
+  },
+  {
+    "result_id": "R17",
+    "claim_ids": [
+      "C9",
+      "C10"
+    ],
+    "result": "The experimental stimulus was a 98mm diameter circular grating with 3.5mm raised bars, and rats were trained to categorize orientations 0-45\u00b0 as horizontal and 45-90\u00b0 as vertical.",
+    "reviewer_id": "OpenEval",
+    "reviewer_name": "OpenEval",
+    "evaluation_type": "SUPPORTED",
+    "evaluation": "Claims C9-C10 describe the experimental design and are directly verifiable from the methods and figures. These are factual descriptions of the apparatus and training protocol that form the basis for all subsequent results.",
+    "result_type": "MINOR"
+  }
+]
